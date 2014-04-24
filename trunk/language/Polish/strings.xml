@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+
+<strings>
+	<!--Dialog etykiety-->
+	<string id="31000">Tom wyciszony</string>
+	<string id="31001">Praca...</string>
+	<!--Puste ciagi z id 31002 do 31021-->
+	<!--Etykiety # Page-->
+	<string id="31022">Muzyka Pliki</string>
+	<!--Pusty ciag znaków o identyfikatorze 31023-->
+	<string id="31024">Strony</string>
+	<string id="31025">Przedmioty</string>
+	<string id="31026">Video Library</string>
+	<string id="31027">Muzyka Biblioteka</string>
+	<!--Puste ciagi z id 31028 do 31029-->
+	<!--Viewmode etykiety-->
+	<string id="31030">Fanart</string>
+	<string id="31031">Pelna lista</string>
+	<string id="31032">Przeplyw okladki</string>
+	<string id="31033">Kciuk Pic</string>
+	<string id="31034">Szeroki ikony</string>
+	<string id="31035">Slajdów</string>
+	<string id="31036">Polaroid</string>
+	<!--Pusty ciag znaków o identyfikatorze 31037-->
+	<string id="31038">Scianie</string>
+	<string id="31039">Produkt</string>
+	<string id="31040">Jukebox</string>
+	<!--Pusty ciag znaków o identyfikatorze 31041-->
+	<!--Rózne etykiety-->
+	<string id="31042">Gry</string>
+	<string id="31043">Wstrzymane</string>
+	<string id="31044">PRZODU</string>
+	<string id="31045">TYLU</string>
+	<string id="31046">Witamy w XBMC - Zaloguj sie</string>
+	<string id="31047">Ostatnie logowanie</string>
+	<!--Puste ciagi z id 31048 do 31049-->
+	<string id="31050">Zakonczeniem czasu</string>
+	<string id="31051">Shutdown 90 minut</string>
+	<string id="31052">IMDB</string>
+	<!--Lyrics Script Dodatkowe etykiety-->
+	<string id="31053">XBMC piosenek</string>
+	<!--Pusty ciag znaków o identyfikatorze 31054-->
+	<!--Etykiety Playlist Editor-->
+	<string id="31055">Otwórz playliste</string>
+	<string id="31056">Zapisz liste odtwarzania</string>
+	<string id="31057">Zamknij playliste</string>
+	<string id="31058">Plików muzycznych systemu</string>
+	<string id="31059">Biezacej listy odtwarzania</string>
+	<string id="31060">Ten plik jest ulozone, wybrac czesc, która chcesz grac z.</string>
+	<!--Puste ciagi z id 31061 do 31100-->
+	<!--Ustawienia skóry etykiety-->
+	<string id="31101">Opcje ekranu glównego</string>
+	<string id="31102">Tla</string>
+	<string id="31103">Pokaz tytuly przewijania</string>
+	<string id="31104">Ukryj przypadki</string>
+	<string id="31105">Wylacz animacje case</string>
+	<string id="31106">Rózne opcje</string>
+	<!--Puste ciagi z id 31107 do 31108-->
+	<string id="31109">Wlacz logo</string>
+	<string id="31110">Animowane fanart</string>
+	<!--Pusty ciag znaków o identyfikatorze 31111-->
+	<string id="31112">Uzywaj wizualizacji w tle</string>
+	<string id="31113">Pojedynczego obrazu</string>
+	<string id="31114">Multi obraz</string>
+	<string id="31115">Trybie awaryjnym</string>
+	<string id="31116">Szerokie przyciski menu bocznym</string>
+	<string id="31117">Szerokie przyciski menu do domu</string>
+	<string id="31118">Menu glównym poziome</string>
+	<string id="31119">Ukryj wizualizacji w tle</string>
+	<!--Puste ciagi z id 31120 do 31121-->
+	<string id="31122">Warunkowe</string>
+	<string id="31123">Ukryj film w tle</string>
+	<!--Pusty ciag znaków o identyfikatorze 31124-->
+	<string id="31125">Wlacz cdArt</string>
+	<string id="31126">Wlacz clearArt</string>
+	<string id="31127">Sciezke folderu Muzyka</string>
+	<!--Puste ciagi z id 31128 do 31132-->
+	<string id="31133">Zamówienie Zastosowanie Artysta-album albumy</string>
+	<string id="31134">Animowane tla</string>
+	<string id="31135">Animowane ikony pogody</string>
+	<string id="31136">Ikony Zastosowanie Gatunek</string>
+	<string id="31137">Pokaz flagi mediów</string>
+	<string id="31138">Niestandardowe Shutdown Menu</string>
+	<string id="31139">Wpisz plakaty</string>
+	<string id="31140">Nienawidze przezroczystosc!</string>
+	<!--Pusty ciag znaków o identyfikatorze 31141-->
+	<string id="31142">Fanart - Sredni lista</string>
+	<string id="31143">Fanart - Krótka lista</string>
+	<string id="31144">Fanart - Dluga lista</string>
+	<!--Pusty ciag znaków o identyfikatorze 31145-->
+	<string id="31146">Zawsze grac przyczepy Graj</string>
+	<!--Puste ciagi z id 31147 do 31148-->
+	<string id="31149">Przyczepy ikone Ukryj</string>
+	<string id="31150">Etykieta przycisku:</string>
+	<string id="31151">Nazwa Zródlo:</string>
+	<!--Pusty ciag znaków o identyfikatorze 31152-->
+	<string id="31153">Ikone Pogoda</string>
+	<string id="31154">Aplikacji</string>
+	<string id="31155">Polecenia:</string>
+	<string id="31156">Ulubione</string>
+	<string id="31157">Wybierz ulubione:</string>
+	<string id="31158">Zmien ustawienia...</string>
+	<string id="31159">[B]KONFIGURACJA USTAWIEN WIDEO[/B][CR]Zarzadzaj biblioteki wideo - Ustaw opcje odtwarzania wideo - Zmien opcje wideo Lista[CR]Ustaw czcionki napisów</string>
+	<string id="31160">[B]KONFIGURACJA USTAWIEN TV[/B][CR]Zmien fullscreen informacji - Zarzadzanie ustawieniami dane EPG[CR]Konfiguruj opcje nagrywania</string>
+	<string id="31161">[B]KONFIGURACJA MUSIC USTAWIEN[/B][CR]Zarzadzaj swoja biblioteke muzyczna - Ustaw opcje odtwarzania muzyki muzyka - Zmien opcje[CR]Skladania piosenka Konfiguracja listing - ustawic opcje karaoke</string>
+	<string id="31162">[B]KONFIGURACJA USTAWIEN OBRAZU[/B][CR]Ustaw obraz opcje Lista[CR]Konfiguracja slajdów</string>
+	<string id="31163">[B]KONFIGURACJA USTAWIEN POGODY[/B][CR]Ustaw trzy miasta, aby zebrac informacje o pogodzie[CR]Wybierz addon pogody</string>
+	<string id="31164">[B]USTAWIENIA SYSTEMU KONFIGURACJA[/B][CR]Ustawienia i kalibracje monitorów - Konfiguracja Konfiguracja wyjscia audio - Pilot[CR]Ustaw opcje oszczedzania energii - Wlacz debugowanie - Konfiguracja zamka mistrz</string>
+	<string id="31165">[B]SERWIS USTAWIENIA KONFIGURACJA[/B][CR]Kontrole instalacji XBMC poprzez UPnP i HTTP - Konfiguracja udostepniania plików[CR]Wlacz AirPlay</string>
+	<string id="31166">[B]KONFIGURACJA USTAWIEN PROFIL[/B][CR]Wybierz XBMC profilu uzytkownika [CR], Aby zalogowac sie i kontynuowac</string>
+	<string id="31167">[B]KONFIGURACJA USTAWIEN WYGLAD[/B][CR]Wybierz skóry - jezyk i region Ustaw - Zmien plik opcji Lista[CR]Ustaw wygaszacz ekranu</string>
+	<string id="31168">[B]KONFIGURACJA USTAWIEN DLA SKÓRY[/B][CR]Ustaw przezroczystosc! skóra - Dodawanie i usuwanie pozycji menu domu[CR]Zmiana tla skóry</string>
+	<string id="31169">[B]KONFIGURACJA DODATKI[/B][CR]Zarzadzaj zainstalowanymi dodatki - Znajdz i zainstalowac dodatki z xbmc.org[CR]Edytuj Dodaj na Ustawienia</string>
+	<string id="31170">[B]SPRAWDZ INFORMACJE SYTEM[/B][CR]Pokaz swój sprzet - Sprawdz biezace ustawienia sieci[CR]Monitoruj bezplatny discspace</string>
+	<string id="31171">Uzyj sezon fanart</string>
+	<string id="31172">Uzyj dodatkowego fanart</string>
+	<string id="31173">Uzyj dodatkowych kciuki</string>
+	<string id="31174">Losowe pozycje</string>
+	<string id="31175">Losowo</string>
+	<!--Pusty ciag znaków o identyfikatorze 31176-->
+	<string id="31177">Wlacz tryb dotykowy</string>
+	<string id="31178">Wlacz tryb kiosk</string>
+	<string id="31179">Nastepny odcinek:</string>
+	<string id="31180">Wykorzystanie wideo w tle</string>
+	<string id="31181">Pokaz banery na liscie</string>
+	<string id="31182">Ukryj informacje panel</string>
+	<string id="31183">Uzyj wlasnego logo</string>
+	<string id="31184">Dostosuj wizualizacji w tle</string>
+	<string id="31185">Notowane pokazy</string>
+	<string id="31186">Wietrzenie dzisiaj</string>
+	<string id="31187">Uzyj rodzajowe tla</string>
+	<string id="31188">Polecane pozycji</string>
+	<string id="31189">Wskazówka</string>
+	<string id="31190">Wybierz dodatek:</string>
+	<!--Puste ciagi od 31191 do 31199 id-->
+	<!--Ustawienia skryptu etykiety-->
+	<string id="31200">Niestandardowe rozszerzenia mozliwosci</string>
+	<!--Puste ciagi z id 31201 do 31209-->
+	<string id="31210">Wlacz TvTunes dodatku</string>
+	<string id="31211">Wlacz NextAired dodatek</string>
+	<string id="31212">Wlacz Qlock dodatek</string>
+	<string id="31213">Przycisk Cinema Experience Pokaz w oknie dialogowym Informacja o filmie</string>
+	<string id="31214">Zintegruj Cinema robic w domu przyciski menu filmu</string>
+	<string id="31215">Ukryj przycisk GlobalSearch</string>
+	<string id="31216">Dodatki</string>
+	<!--Puste ciagi z id 31217 do 31218-->
+	<string id="31219">Logo</string>
+	<string id="31220">ClearArt</string>
+	<string id="31221">Extra Fanart</string>
+	<string id="31222">TV Tune</string>
+	<string id="31223">Ocena update</string>
+	<string id="31224">Extra Kciuki</string>
+	<string id="31225">Artysta pokaz rozszerzenia</string>
+	<string id="31226">Aktor informacji</string>
+	<string id="31227">Informacji dyrektora</string>
+	<string id="31228">Informacji Writer</string>
+	<string id="31229">Discart</string>
+	<!--Puste ciagi z id 31230 do 31300-->
+	<string id="31301">GRACZ</string>
+	<string id="31302">START</string>
+	<string id="31303">QUIT</string>
+	<string id="31304">Podaj imiona graczy...</string>
+	<string id="31305">Twoja kolej</string>
+	<string id="31306">Wcisnij UP, aby kontynuowac...</string>
+	<string id="31307">Ocena</string>
+	<string id="31308">Zwyciestw</string>
+	<string id="31309">Wygral</string>
+	<!--Puste ciagi z id 31310 do 31399-->
+	<!--Strona glówna etykiety-->
+	<string id="31400">Nowy:</string>
+	<!--Puste ciagi od 31401 do 31408 id-->
+	<string id="31409">Gracz kontroluje</string>
+	<string id="31410">Ostatnio dodane</string>
+	<string id="31411">Ostatnio odtwarzane</string>
+	<!--Puste ciagi z id 31412 do 31500-->
+	<!--Temp PVR etykiety-->
+	<string id="31501">Informacji Pokaz tv</string>
+	<!--Puste ciagi z id 31502 do 31599-->
+	<!--Etykiety Pogoda-->
+	<string id="31600">10 dni</string>
+	<!--Puste ciagi od 31601 do 31604 id-->
+	<string id="31605">Prognoza pogody dostarczone przez:</string>
+	<!--Puste ciagi z id 31606 do 31700-->
+	<!--Etykiety Font-->
+	<string id="31701">Domyslny</string>
+	<string id="31702">Arial</string>
+	<string id="31703">Domyslnie Big</string>
+	<string id="31704">Arial Big</string>
+	<string id="31705">Domyslnie Big Bold</string>
+	<string id="31706">Arial Big Bold</string>
+</strings>

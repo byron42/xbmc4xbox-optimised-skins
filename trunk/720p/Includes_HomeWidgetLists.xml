@@ -1,0 +1,612 @@
+<includes>
+	
+	<include name="RandomMoviesList">
+		<item>
+			<label>$INFO[Window.Property(RandomMovie.1.Title)]</label>
+			<label2>$INFO[Window.Property(RandomMovie.1.Year)]</label2>
+			<thumb>$INFO[Window.Property(RandomMovie.1.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomMovie.1.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomMovie.1.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomMovie.2.Title)]</label>
+			<label2>$INFO[Window.Property(RandomMovie.2.Year)]</label2>
+			<thumb>$INFO[Window.Property(RandomMovie.2.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomMovie.2.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomMovie.2.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomMovie.3.Title)]</label>
+			<label2>$INFO[Window.Property(RandomMovie.3.Year)]</label2>
+			<thumb>$INFO[Window.Property(RandomMovie.3.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomMovie.3.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomMovie.3.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomMovie.4.Title)]</label>
+			<label2>$INFO[Window.Property(RandomMovie.4.Year)]</label2>
+			<thumb>$INFO[Window.Property(RandomMovie.4.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomMovie.4.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomMovie.4.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomMovie.5.Title)]</label>
+			<label2>$INFO[Window.Property(RandomMovie.5.Year)]</label2>
+			<thumb>$INFO[Window.Property(RandomMovie.5.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomMovie.5.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomMovie.5.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomMovie.6.Title)]</label>
+			<label2>$INFO[Window.Property(RandomMovie.6.Year)]</label2>
+			<thumb>$INFO[Window.Property(RandomMovie.6.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomMovie.6.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomMovie.6.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomMovie.7.Title)]</label>
+			<label2>$INFO[Window.Property(RandomMovie.7.Year)]</label2>
+			<thumb>$INFO[Window.Property(RandomMovie.7.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomMovie.7.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomMovie.7.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomMovie.8.Title)]</label>
+			<label2>$INFO[Window.Property(RandomMovie.8.Year)]</label2>
+			<thumb>$INFO[Window.Property(RandomMovie.8.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomMovie.8.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomMovie.8.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomMovie.9.Title)]</label>
+			<label2>$INFO[Window.Property(RandomMovie.9.Year)]</label2>
+			<thumb>$INFO[Window.Property(RandomMovie.9.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomMovie.9.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomMovie.9.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomMovie.10.Title)]</label>
+			<label2>$INFO[Window.Property(RandomMovie.10.Year)]</label2>
+			<thumb>$INFO[Window.Property(RandomMovie.10.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomMovie.10.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomMovie.10.Path)]</onclick>
+		</item>
+	</include>
+	<include name="RecommendedMoviesList">
+		<item>
+			<label>$INFO[Window.Property(RecommendedMovie.1.Title)]</label>
+			<label2>$INFO[Window.Property(RecommendedMovie.1.Year)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedMovie.1.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedMovie.1.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedMovie.1.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedMovie.1.Title))</visible>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedMovie.2.Title)]</label>
+			<label2>$INFO[Window.Property(RecommendedMovie.2.Year)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedMovie.2.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedMovie.2.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedMovie.2.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedMovie.2.Title))</visible>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedMovie.3.Title)]</label>
+			<label2>$INFO[Window.Property(RecommendedMovie.3.Year)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedMovie.3.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedMovie.3.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedMovie.3.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedMovie.3.Title))</visible>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedMovie.4.Title)]</label>
+			<label2>$INFO[Window.Property(RecommendedMovie.4.Year)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedMovie.4.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedMovie.4.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedMovie.4.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedMovie.4.Title))</visible>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedMovie.5.Title)]</label>
+			<label2>$INFO[Window.Property(RecommendedMovie.5.Year)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedMovie.5.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedMovie.5.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedMovie.5.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedMovie.5.Title))</visible>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedMovie.6.Title)]</label>
+			<label2>$INFO[Window.Property(RecommendedMovie.6.Year)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedMovie.6.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedMovie.6.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedMovie.6.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedMovie.6.Title))</visible>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedMovie.7.Title)]</label>
+			<label2>$INFO[Window.Property(RecommendedMovie.7.Year)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedMovie.7.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedMovie.7.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedMovie.7.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedMovie.7.Title))</visible>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedMovie.8.Title)]</label>
+			<label2>$INFO[Window.Property(RecommendedMovie.8.Year)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedMovie.8.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedMovie.8.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedMovie.8.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedMovie.8.Title))</visible>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedMovie.9.Title)]</label>
+			<label2>$INFO[Window.Property(RecommendedMovie.9.Year)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedMovie.9.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedMovie.9.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedMovie.9.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedMovie.9.Title))</visible>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedMovie.10.Title)]</label>
+			<label2>$INFO[Window.Property(RecommendedMovie.10.Year)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedMovie.10.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedMovie.10.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedMovie.10.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedMovie.10.Title))</visible>
+		</item>
+	</include>
+	
+	<include name="RandomEpisodesList">
+		<item>
+			<label>$INFO[Window.Property(RandomEpisode.1.TVShowTitle)]</label>
+			<label2>$INFO[Window.Property(RandomEpisode.1.EpisodeNo),, - ]$INFO[Window.Property(RandomEpisode.1.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomEpisode.1.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomEpisode.1.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomEpisode.1.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomEpisode.2.TVShowTitle)]</label>
+			<label2>$INFO[Window.Property(RandomEpisode.2.EpisodeNo),, - ]$INFO[Window.Property(RandomEpisode.2.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomEpisode.2.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomEpisode.2.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomEpisode.2.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomEpisode.3.TVShowTitle)]</label>
+			<label2>$INFO[Window.Property(RandomEpisode.3.EpisodeNo),, - ]$INFO[Window.Property(RandomEpisode.3.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomEpisode.3.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomEpisode.3.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomEpisode.3.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomEpisode.4.TVShowTitle)]</label>
+			<label2>$INFO[Window.Property(RandomEpisode.4.EpisodeNo),, - ]$INFO[Window.Property(RandomEpisode.4.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomEpisode.4.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomEpisode.4.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomEpisode.4.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomEpisode.5.TVShowTitle)]</label>
+			<label2>$INFO[Window.Property(RandomEpisode.5.EpisodeNo),, - ]$INFO[Window.Property(RandomEpisode.5.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomEpisode.5.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomEpisode.5.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomEpisode.5.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomEpisode.6.TVShowTitle)]</label>
+			<label2>$INFO[Window.Property(RandomEpisode.6.EpisodeNo),, - ]$INFO[Window.Property(RandomEpisode.6.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomEpisode.6.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomEpisode.6.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomEpisode.6.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomEpisode.7.TVShowTitle)]</label>
+			<label2>$INFO[Window.Property(RandomEpisode.7.EpisodeNo),, - ]$INFO[Window.Property(RandomEpisode.7.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomEpisode.7.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomEpisode.7.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomEpisode.7.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomEpisode.8.TVShowTitle)]</label>
+			<label2>$INFO[Window.Property(RandomEpisode.8.EpisodeNo),, - ]$INFO[Window.Property(RandomEpisode.8.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomEpisode.8.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomEpisode.8.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomEpisode.8.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomEpisode.9.TVShowTitle)]</label>
+			<label2>$INFO[Window.Property(RandomEpisode.9.EpisodeNo),, - ]$INFO[Window.Property(RandomEpisode.9.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomEpisode.9.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomEpisode.9.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomEpisode.9.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomEpisode.10.TVShowTitle)]</label>
+			<label2>$INFO[Window.Property(RandomEpisode.10.EpisodeNo),, - ]$INFO[Window.Property(RandomEpisode.10.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomEpisode.10.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomEpisode.10.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomEpisode.10.Path)]</onclick>
+		</item>
+	</include>
+	<include name="RecommendedEpisodesList">
+		<item>
+			<label>$INFO[Window.Property(RecommendedEpisode.1.TVShowTitle)]</label>
+			<label2>$INFO[Window.Property(RecommendedEpisode.1.EpisodeNo),, - ]$INFO[Window.Property(RecommendedEpisode.1.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedEpisode.1.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedEpisode.1.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedEpisode.1.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedEpisode.1.Title))</visible>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedEpisode.2.TVShowTitle)]</label>
+			<label2>$INFO[Window.Property(RecommendedEpisode.2.EpisodeNo),, - ]$INFO[Window.Property(RecommendedEpisode.2.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedEpisode.2.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedEpisode.2.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedEpisode.2.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedEpisode.2.Title))</visible>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedEpisode.3.TVShowTitle)]</label>
+			<label2>$INFO[Window.Property(RecommendedEpisode.3.EpisodeNo),, - ]$INFO[Window.Property(RecommendedEpisode.3.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedEpisode.3.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedEpisode.3.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedEpisode.3.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedEpisode.3.Title))</visible>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedEpisode.4.TVShowTitle)]</label>
+			<label2>$INFO[Window.Property(RecommendedEpisode.4.EpisodeNo),, - ]$INFO[Window.Property(RecommendedEpisode.4.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedEpisode.4.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedEpisode.4.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedEpisode.4.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedEpisode.4.Title))</visible>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedEpisode.5.TVShowTitle)]</label>
+			<label2>$INFO[Window.Property(RecommendedEpisode.5.EpisodeNo),, - ]$INFO[Window.Property(RecommendedEpisode.5.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedEpisode.5.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedEpisode.5.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedEpisode.5.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedEpisode.5.Title))</visible>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedEpisode.6.TVShowTitle)]</label>
+			<label2>$INFO[Window.Property(RecommendedEpisode.6.EpisodeNo),, - ]$INFO[Window.Property(RecommendedEpisode.6.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedEpisode.6.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedEpisode.6.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedEpisode.6.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedEpisode.6.Title))</visible>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedEpisode.7.TVShowTitle)]</label>
+			<label2>$INFO[Window.Property(RecommendedEpisode.7.EpisodeNo),, - ]$INFO[Window.Property(RecommendedEpisode.7.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedEpisode.7.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedEpisode.7.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedEpisode.7.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedEpisode.7.Title))</visible>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedEpisode.8.TVShowTitle)]</label>
+			<label2>$INFO[Window.Property(RecommendedEpisode.8.EpisodeNo),, - ]$INFO[Window.Property(RecommendedEpisode.8.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedEpisode.8.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedEpisode.8.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedEpisode.8.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedEpisode.8.Title))</visible>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedEpisode.9.TVShowTitle)]</label>
+			<label2>$INFO[Window.Property(RecommendedEpisode.9.EpisodeNo),, - ]$INFO[Window.Property(RecommendedEpisode.9.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedEpisode.9.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedEpisode.9.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedEpisode.9.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedEpisode.9.Title))</visible>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedEpisode.10.TVShowTitle)]</label>
+			<label2>$INFO[Window.Property(RecommendedEpisode.10.EpisodeNo),, - ]$INFO[Window.Property(RecommendedEpisode.10.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedEpisode.10.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedEpisode.10.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedEpisode.10.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedEpisode.10.Title))</visible>
+		</item>
+	</include>
+	
+	<include name="RandomMusicVideosList">
+		<item>
+			<label>$INFO[Window.Property(RandomMusicVideo.1.Artist)]</label>
+			<label2>$INFO[Window.Property(RandomMusicVideo.1.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomMusicVideo.1.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomMusicVideo.1.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomMusicVideo.1.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomMusicVideo.2.Artist)]</label>
+			<label2>$INFO[Window.Property(RandomMusicVideo.2.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomMusicVideo.2.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomMusicVideo.2.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomMusicVideo.2.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomMusicVideo.3.Artist)]</label>
+			<label2>$INFO[Window.Property(RandomMusicVideo.3.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomMusicVideo.3.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomMusicVideo.3.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomMusicVideo.3.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomMusicVideo.4.Artist)]</label>
+			<label2>$INFO[Window.Property(RandomMusicVideo.4.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomMusicVideo.4.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomMusicVideo.4.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomMusicVideo.4.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomMusicVideo.5.Artist)]</label>
+			<label2>$INFO[Window.Property(RandomMusicVideo.5.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomMusicVideo.5.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomMusicVideo.5.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomMusicVideo.5.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomMusicVideo.6.Artist)]</label>
+			<label2>$INFO[Window.Property(RandomMusicVideo.6.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomMusicVideo.6.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomMusicVideo.6.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomMusicVideo.6.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomMusicVideo.7.Artist)]</label>
+			<label2>$INFO[Window.Property(RandomMusicVideo.7.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomMusicVideo.7.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomMusicVideo.7.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomMusicVideo.7.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomMusicVideo.8.Artist)]</label>
+			<label2>$INFO[Window.Property(RandomMusicVideo.8.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomMusicVideo.8.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomMusicVideo.8.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomMusicVideo.8.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomMusicVideo.9.Artist)]</label>
+			<label2>$INFO[Window.Property(RandomMusicVideo.9.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomMusicVideo.9.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomMusicVideo.9.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomMusicVideo.9.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomMusicVideo.10.Artist)]</label>
+			<label2>$INFO[Window.Property(RandomMusicVideo.10.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomMusicVideo.10.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomMusicVideo.10.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomMusicVideo.10.Path)]</onclick>
+		</item>
+	</include>
+	<include name="RecommendedMusicVideosList">
+		<item>
+			<label>$INFO[Window.Property(RecommendedMusicVideo.1.Artist)]</label>
+			<label2>$INFO[Window.Property(RecommendedMusicVideo.1.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedMusicVideo.1.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedMusicVideo.1.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedMusicVideo.1.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedMusicVideo.2.Artist)]</label>
+			<label2>$INFO[Window.Property(RecommendedMusicVideo.2.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedMusicVideo.2.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedMusicVideo.2.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedMusicVideo.2.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedMusicVideo.3.Artist)]</label>
+			<label2>$INFO[Window.Property(RecommendedMusicVideo.3.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedMusicVideo.3.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedMusicVideo.3.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedMusicVideo.3.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedMusicVideo.4.Artist)]</label>
+			<label2>$INFO[Window.Property(RecommendedMusicVideo.4.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedMusicVideo.4.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedMusicVideo.4.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedMusicVideo.4.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedMusicVideo.5.Artist)]</label>
+			<label2>$INFO[Window.Property(RecommendedMusicVideo.5.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedMusicVideo.5.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedMusicVideo.5.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedMusicVideo.5.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedMusicVideo.6.Artist)]</label>
+			<label2>$INFO[Window.Property(RecommendedMusicVideo.6.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedMusicVideo.6.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedMusicVideo.6.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedMusicVideo.6.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedMusicVideo.7.Artist)]</label>
+			<label2>$INFO[Window.Property(RecommendedMusicVideo.7.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedMusicVideo.7.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedMusicVideo.7.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedMusicVideo.7.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedMusicVideo.8.Artist)]</label>
+			<label2>$INFO[Window.Property(RecommendedMusicVideo.8.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedMusicVideo.8.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedMusicVideo.8.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedMusicVideo.8.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedMusicVideo.9.Artist)]</label>
+			<label2>$INFO[Window.Property(RecommendedMusicVideo.9.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedMusicVideo.9.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedMusicVideo.9.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedMusicVideo.9.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedMusicVideo.10.Artist)]</label>
+			<label2>$INFO[Window.Property(RecommendedMusicVideo.10.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedMusicVideo.10.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedMusicVideo.10.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedMusicVideo.10.Path)]</onclick>
+		</item>
+	</include>
+	
+	<include name="RandomAlbumsList">
+		<item>
+			<label>$INFO[Window.Property(RandomAlbum.1.Artist)]</label>
+			<label2>$INFO[Window.Property(RandomAlbum.1.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomAlbum.1.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomAlbum.1.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomAlbum.1.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomAlbum.2.Artist)]</label>
+			<label2>$INFO[Window.Property(RandomAlbum.2.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomAlbum.2.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomAlbum.2.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomAlbum.2.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomAlbum.3.Artist)]</label>
+			<label2>$INFO[Window.Property(RandomAlbum.3.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomAlbum.3.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomAlbum.3.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomAlbum.3.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomAlbum.4.Artist)]</label>
+			<label2>$INFO[Window.Property(RandomAlbum.4.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomAlbum.4.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomAlbum.4.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomAlbum.4.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomAlbum.5.Artist)]</label>
+			<label2>$INFO[Window.Property(RandomAlbum.5.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomAlbum.5.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomAlbum.5.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomAlbum.5.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomAlbum.6.Artist)]</label>
+			<label2>$INFO[Window.Property(RandomAlbum.6.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomAlbum.6.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomAlbum.6.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomAlbum.6.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomAlbum.7.Artist)]</label>
+			<label2>$INFO[Window.Property(RandomAlbum.7.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomAlbum.7.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomAlbum.7.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomAlbum.7.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomAlbum.8.Artist)]</label>
+			<label2>$INFO[Window.Property(RandomAlbum.8.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomAlbum.8.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomAlbum.8.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomAlbum.8.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomAlbum.9.Artist)]</label>
+			<label2>$INFO[Window.Property(RandomAlbum.9.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomAlbum.9.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomAlbum.9.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomAlbum.9.Path)]</onclick>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RandomAlbum.10.Artist)]</label>
+			<label2>$INFO[Window.Property(RandomAlbum.10.Title)]</label2>
+			<thumb>$INFO[Window.Property(RandomAlbum.10.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RandomAlbum.10.fanart)]</property>
+			<onclick>$INFO[Window.Property(RandomAlbum.10.Path)]</onclick>
+		</item>
+	</include>
+	<include name="RecommendedAlbumsList">
+		<item>
+			<label>$INFO[Window.Property(RecommendedAlbum.1.Artist)]</label>
+			<label2>$INFO[Window.Property(RecommendedAlbum.1.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedAlbum.1.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedAlbum.1.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedAlbum.1.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedAlbum.1.Title))</visible>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedAlbum.2.Artist)]</label>
+			<label2>$INFO[Window.Property(RecommendedAlbum.2.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedAlbum.2.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedAlbum.2.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedAlbum.2.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedAlbum.2.Title))</visible>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedAlbum.3.Artist)]</label>
+			<label2>$INFO[Window.Property(RecommendedAlbum.3.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedAlbum.3.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedAlbum.3.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedAlbum.3.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedAlbum.3.Title))</visible>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedAlbum.4.Artist)]</label>
+			<label2>$INFO[Window.Property(RecommendedAlbum.4.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedAlbum.4.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedAlbum.4.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedAlbum.4.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedAlbum.4.Title))</visible>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedAlbum.5.Artist)]</label>
+			<label2>$INFO[Window.Property(RecommendedAlbum.5.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedAlbum.5.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedAlbum.5.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedAlbum.5.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedAlbum.5.Title))</visible>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedAlbum.6.Artist)]</label>
+			<label2>$INFO[Window.Property(RecommendedAlbum.6.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedAlbum.6.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedAlbum.6.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedAlbum.6.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedAlbum.6.Title))</visible>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedAlbum.7.Artist)]</label>
+			<label2>$INFO[Window.Property(RecommendedAlbum.7.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedAlbum.7.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedAlbum.7.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedAlbum.7.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedAlbum.7.Title))</visible>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedAlbum.8.Artist)]</label>
+			<label2>$INFO[Window.Property(RecommendedAlbum.8.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedAlbum.8.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedAlbum.8.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedAlbum.8.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedAlbum.8.Title))</visible>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedAlbum.9.Artist)]</label>
+			<label2>$INFO[Window.Property(RecommendedAlbum.9.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedAlbum.9.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedAlbum.9.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedAlbum.9.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedAlbum.9.Title))</visible>
+		</item>
+		<item>
+			<label>$INFO[Window.Property(RecommendedAlbum.10.Artist)]</label>
+			<label2>$INFO[Window.Property(RecommendedAlbum.10.Title)]</label2>
+			<thumb>$INFO[Window.Property(RecommendedAlbum.10.Thumb)]</thumb>
+			<property name="FanartImage">$INFO[Window.Property(RecommendedAlbum.10.fanart)]</property>
+			<onclick>$INFO[Window.Property(RecommendedAlbum.10.Path)]</onclick>
+			<visible>!IsEmpty(Window.Property(RecommendedAlbum.10.Title))</visible>
+		</item>
+	</include>
+</includes>

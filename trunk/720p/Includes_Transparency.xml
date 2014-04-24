@@ -1,0 +1,176 @@
+<includes>
+	<include name="T-Level">
+		<include condition="Skin.String(Trans,10)" file="Includes_Transparency.xml">T-Level10</include>
+		<include condition="Skin.String(Trans,20)" file="Includes_Transparency.xml">T-Level20</include>
+		<include condition="Skin.String(Trans,30)" file="Includes_Transparency.xml">T-Level30</include>
+		<include condition="Skin.String(Trans,40)" file="Includes_Transparency.xml">T-Level40</include>
+		<include condition="Skin.String(Trans,50)" file="Includes_Transparency.xml">T-Level50</include>
+		<include condition="Skin.String(Trans,60)" file="Includes_Transparency.xml">T-Level60</include>
+		<include condition="Skin.String(Trans,70)" file="Includes_Transparency.xml">T-Level70</include>
+		<include condition="Skin.String(Trans,80)" file="Includes_Transparency.xml">T-Level80</include>
+		<include condition="Skin.String(Trans,90)" file="Includes_Transparency.xml">T-Level90</include>
+		<include condition="Skin.String(Trans,100)" file="Includes_Transparency.xml">T-Level100</include>
+	</include>
+	<include name="T-Level-SB">
+		<!-------------------------------------------------------------------(T-Level-SB)------------------->
+		<include condition="Skin.String(Trans,10)" file="Includes_Transparency.xml">T-Level-SB10</include>
+		<include condition="Skin.String(Trans,20)" file="Includes_Transparency.xml">T-Level-SB20</include>
+		<include condition="Skin.String(Trans,30)" file="Includes_Transparency.xml">T-Level-SB30</include>
+		<include condition="Skin.String(Trans,40)" file="Includes_Transparency.xml">T-Level-SB40</include>
+		<include condition="Skin.String(Trans,50)" file="Includes_Transparency.xml">T-Level-SB50</include>
+		<include condition="Skin.String(Trans,60)" file="Includes_Transparency.xml">T-Level-SB60</include>
+		<include condition="Skin.String(Trans,70)" file="Includes_Transparency.xml">T-Level-SB70</include>
+		<include condition="Skin.String(Trans,80)" file="Includes_Transparency.xml">T-Level-SB80</include>
+		<include condition="Skin.String(Trans,90)" file="Includes_Transparency.xml">T-Level-SB90</include>
+		<include condition="Skin.String(Trans,100)" file="Includes_Transparency.xml">T-Level-SB100</include>
+		<!-------------------------------------------------------------------(T-Level-SB)------------------->
+	</include>
+	
+	<include name="T-Level10">
+		<colordiffuse>18FFFFFF</colordiffuse>
+	</include>
+	<include name="T-Level20">
+		<colordiffuse>2FFFFFFF</colordiffuse>
+	</include>
+	<include name="T-Level30">
+		<colordiffuse>48FFFFFF</colordiffuse>
+	</include>
+	<include name="T-Level40">
+		<colordiffuse>5FFFFFFF</colordiffuse>
+	</include>
+	<include name="T-Level50">
+		<colordiffuse>78FFFFFF</colordiffuse>
+	</include>
+	<include name="T-Level60">
+		<colordiffuse>8FFFFFFF</colordiffuse>
+	</include>
+	<include name="T-Level70">
+		<colordiffuse>A8FFFFFF</colordiffuse>
+	</include>
+	<include name="T-Level80">
+		<colordiffuse>BFFFFFFF</colordiffuse>
+	</include>
+	<include name="T-Level90">
+		<colordiffuse>DFFFFFFF</colordiffuse>
+	</include>
+	<include name="T-Level100">
+		<colordiffuse>FFFFFFFF</colordiffuse>
+	</include>
+	<include name="T-Level-SB10">
+		<colordiffuse>98FFFFFF</colordiffuse>
+	</include>
+	<include name="T-Level-SB20">
+		<colordiffuse>AFFFFFFF</colordiffuse>
+	</include>
+	<include name="T-Level-SB30">
+		<colordiffuse>B8FFFFFF</colordiffuse>
+	</include>
+	<include name="T-Level-SB40">
+		<colordiffuse>BFFFFFFF</colordiffuse>
+	</include>
+	<include name="T-Level-SB50">
+		<colordiffuse>CBFFFFFF</colordiffuse>
+	</include>
+	<include name="T-Level-SB60">
+		<colordiffuse>D8FFFFFF</colordiffuse>
+	</include>
+	<include name="T-Level-SB70">
+		<colordiffuse>DFFFFFFF</colordiffuse>
+	</include>
+	<include name="T-Level-SB80">
+		<colordiffuse>E8FFFFFF</colordiffuse>
+	</include>
+	<include name="T-Level-SB90">
+		<colordiffuse>F4FFFFFF</colordiffuse>
+	</include>
+	<include name="T-Level-SB100">
+		<colordiffuse>FFFFFFFF</colordiffuse>
+	</include>
+
+	<include name="T-ButtonCommonValues1">
+		<texturefocus border="10">Button_Side_Focus2.png</texturefocus>
+		<texturenofocus border="10">Button_Side_NoFocus2.png</texturenofocus>
+		<!-------------------------------------------------------------------(T-Level-SB)------------------->
+		<include condition="Skin.String(Trans,10)" file="Includes_Transparency.xml">T-Level-SB10</include>
+		<include condition="Skin.String(Trans,20)" file="Includes_Transparency.xml">T-Level-SB20</include>
+		<include condition="Skin.String(Trans,30)" file="Includes_Transparency.xml">T-Level-SB30</include>
+		<include condition="Skin.String(Trans,40)" file="Includes_Transparency.xml">T-Level-SB40</include>
+		<include condition="Skin.String(Trans,50)" file="Includes_Transparency.xml">T-Level-SB50</include>
+		<include condition="Skin.String(Trans,60)" file="Includes_Transparency.xml">T-Level-SB60</include>
+		<include condition="Skin.String(Trans,70)" file="Includes_Transparency.xml">T-Level-SB70</include>
+		<include condition="Skin.String(Trans,80)" file="Includes_Transparency.xml">T-Level-SB80</include>
+		<include condition="Skin.String(Trans,90)" file="Includes_Transparency.xml">T-Level-SB90</include>
+		<include condition="Skin.String(Trans,100)" file="Includes_Transparency.xml">T-Level-SB100</include>
+		<!-------------------------------------------------------------------(T-Level-SB)------------------->
+	</include>
+	
+<!--UNUSED!-->
+	<include name="T-Underlay311">
+		<control type="image">
+			<posx>300</posx>
+			<posy>50</posy>
+			<width>980</width>
+			<height>210</height>
+			<texture diffuse="underlay-diffuse.png" border="0,11,0,11">underlay3.png</texture>
+			<!-------------------------------------------------------------------(T-Level)------------------->
+			<include condition="Skin.String(Trans,10)" file="Includes_Transparency.xml">T-Level10</include>
+			<include condition="Skin.String(Trans,20)" file="Includes_Transparency.xml">T-Level20</include>
+			<include condition="Skin.String(Trans,30)" file="Includes_Transparency.xml">T-Level30</include>
+			<include condition="Skin.String(Trans,40)" file="Includes_Transparency.xml">T-Level40</include>
+			<include condition="Skin.String(Trans,50)" file="Includes_Transparency.xml">T-Level50</include>
+			<include condition="Skin.String(Trans,60)" file="Includes_Transparency.xml">T-Level60</include>
+			<include condition="Skin.String(Trans,70)" file="Includes_Transparency.xml">T-Level70</include>
+			<include condition="Skin.String(Trans,80)" file="Includes_Transparency.xml">T-Level80</include>
+			<include condition="Skin.String(Trans,90)" file="Includes_Transparency.xml">T-Level90</include>
+			<include condition="Skin.String(Trans,100)" file="Includes_Transparency.xml">T-Level100</include>
+			<!-------------------------------------------------------------------(T-Level)------------------->
+		</control>
+	</include>
+	<include name="T-Underlay52">
+		<!----- (T-Underlay52) ------>
+		<control type="image">
+			<posx>-60</posx>
+			<posy>640</posy>
+			<width>1280</width>
+			<height>80</height>
+			<texture border="10">underlay5.png</texture>
+			<!-------------------------------------------------------------------(T-Level)------------------->
+			<include condition="Skin.String(Trans,10)" file="Includes_Transparency.xml">T-Level10</include>
+			<include condition="Skin.String(Trans,20)" file="Includes_Transparency.xml">T-Level20</include>
+			<include condition="Skin.String(Trans,30)" file="Includes_Transparency.xml">T-Level30</include>
+			<include condition="Skin.String(Trans,40)" file="Includes_Transparency.xml">T-Level40</include>
+			<include condition="Skin.String(Trans,50)" file="Includes_Transparency.xml">T-Level50</include>
+			<include condition="Skin.String(Trans,60)" file="Includes_Transparency.xml">T-Level60</include>
+			<include condition="Skin.String(Trans,70)" file="Includes_Transparency.xml">T-Level70</include>
+			<include condition="Skin.String(Trans,80)" file="Includes_Transparency.xml">T-Level80</include>
+			<include condition="Skin.String(Trans,90)" file="Includes_Transparency.xml">T-Level90</include>
+			<include condition="Skin.String(Trans,100)" file="Includes_Transparency.xml">T-Level100</include>
+			<!-------------------------------------------------------------------(T-Level)------------------->
+			
+		</control>
+	</include>
+	<include name="T-Underlay54">
+		<!----- (T-Underlay54) ------>
+		<control type="image">
+			<posx>240</posx>
+			<posy>630</posy>
+			<width>800</width>
+			<height>82</height>
+			<texture diffuse="underlay-diffuse.png" border="0,10,0,10">underlay5.png</texture>
+			<!-------------------------------------------------------------------(T-Level)------------------->
+			<include condition="Skin.String(Trans,10)" file="Includes_Transparency.xml">T-Level10</include>
+			<include condition="Skin.String(Trans,20)" file="Includes_Transparency.xml">T-Level20</include>
+			<include condition="Skin.String(Trans,30)" file="Includes_Transparency.xml">T-Level30</include>
+			<include condition="Skin.String(Trans,40)" file="Includes_Transparency.xml">T-Level40</include>
+			<include condition="Skin.String(Trans,50)" file="Includes_Transparency.xml">T-Level50</include>
+			<include condition="Skin.String(Trans,60)" file="Includes_Transparency.xml">T-Level60</include>
+			<include condition="Skin.String(Trans,70)" file="Includes_Transparency.xml">T-Level70</include>
+			<include condition="Skin.String(Trans,80)" file="Includes_Transparency.xml">T-Level80</include>
+			<include condition="Skin.String(Trans,90)" file="Includes_Transparency.xml">T-Level90</include>
+			<include condition="Skin.String(Trans,100)" file="Includes_Transparency.xml">T-Level100</include>
+			<!-------------------------------------------------------------------(T-Level)------------------->
+			
+		</control>
+	</include>
+	
+</includes>

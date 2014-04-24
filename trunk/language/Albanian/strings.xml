@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+
+<strings>
+	<!--Etiketat Dialog-->
+	<string id="31000">Vëllimi mbytur</string>
+	<string id="31001">Punimi...</string>
+	<!--Strings bosh nga id 31.002-31.021-->
+	<!--Faqe etiketat-->
+	<string id="31022">Muzikë Fajle</string>
+	<!--Varg i zbrazët me id 31.023-->
+	<string id="31024">Page</string>
+	<string id="31025">Items </string>
+	<string id="31026">Video Library</string>
+	<string id="31027">Music Library</string>
+	<!--Strings bosh nga id 31.028-31.029-->
+	<!--Etiketat Viewmode-->
+	<string id="31030">Fanart</string>
+	<string id="31031">Listën plotë</string>
+	<string id="31032">Cover rrjedhjen</string>
+	<string id="31033">Pic gishtin</string>
+	<string id="31034">Wide icons</string>
+	<string id="31035">Slide</string>
+	<string id="31036">Polaroid</string>
+	<!--Varg i zbrazët me id 31.037-->
+	<string id="31038">Murit</string>
+	<string id="31039">Item </string>
+	<string id="31040">Jukebox</string>
+	<!--Varg i zbrazët me id 31.041-->
+	<!--Misc etiketat-->
+	<string id="31042">Playing</string>
+	<string id="31043">Ndaluar</string>
+	<string id="31044">FAST PËRPARA</string>
+	<string id="31045">Rewind</string>
+	<string id="31046">Mirë se vini në XBMC - Të lutem identifikimi</string>
+	<string id="31047">Identifikimi i fundit</string>
+	<!--Strings bosh nga id 31.048-31.049-->
+	<string id="31050">Finish Koha</string>
+	<string id="31051">Shutdown në 90 minuta </string>
+	<string id="31052">IMDB</string>
+	<!--Lyrics Script etiketat Extra-->
+	<string id="31053">XBMC LYRICS</string>
+	<!--Varg i zbrazët me id 31.054-->
+	<!--Etiketat Playlist Editor-->
+	<string id="31055">Hapur playlist</string>
+	<string id="31056">Save playlist</string>
+	<string id="31057">Mbyll playlist</string>
+	<string id="31058">Fotografi muzikë Sistemit</string>
+	<string id="31059">Playlist aktual</string>
+	<string id="31060">Ky skedar është bërë pirg, zgjidhni pjesën që ju dëshironi për të luajtur nga.</string>
+	<!--Strings bosh nga id 31.061-31.100-->
+	<!--Skin Cilësimet etiketat-->
+	<string id="31101">Opsione ekran Kryesore</string>
+	<string id="31102">Backgrounds</string>
+	<string id="31103">Credit tituj scrolling</string>
+	<string id="31104">Fshih raste</string>
+	<string id="31105">Disable animacion rast</string>
+	<string id="31106">Ndryshme opsione</string>
+	<!--Strings bosh nga id 31.107-31.108-->
+	<string id="31109">Aktivizo logot</string>
+	<string id="31110">Animated Fanart</string>
+	<!--Varg i zbrazët me id 31111-->
+	<string id="31112">Përdore vizualizimi sfond</string>
+	<string id="31113">Imazh të vetëm</string>
+	<string id="31114">Multi Image</string>
+	<string id="31115">Safe Mode</string>
+	<string id="31116">Wide butonat menu anën</string>
+	<string id="31117">Wide butonat menu home</string>
+	<string id="31118">Menuja kryesore horizontale</string>
+	<string id="31119">Sfond Hide vizualizimi</string>
+	<!--Strings bosh nga id 31.120-31.121-->
+	<string id="31122">Kushtëzuar</string>
+	<string id="31123">Hide Video sfond</string>
+	<!--Varg i zbrazët me id 31.124-->
+	<string id="31125">Aktivizo cdArt</string>
+	<string id="31126">Aktivizo clearArt</string>
+	<string id="31127">Rrugën dosje Music</string>
+	<!--Strings bosh nga id 31.128-31.132-->
+	<string id="31133">Rendit Përdorimi Artist-e albumeve për albume</string>
+	<string id="31134">Animuar prejardhje</string>
+	<string id="31135">Animuar motit icons</string>
+	<string id="31136">Ikona Përdorimi zhanër</string>
+	<string id="31137">Shfaq flamujt e medias</string>
+	<string id="31138">Custom Shutdown Menu</string>
+	<string id="31139">Përdorimi postera</string>
+	<string id="31140">I urrej Transparencës!</string>
+	<!--Varg i zbrazët me id 31.141-->
+	<string id="31142">Fanart - Lista Medium</string>
+	<string id="31143">Fanart - Lista Short</string>
+	<string id="31144">Fanart - Lista e gjatë</string>
+	<!--Varg i zbrazët me id 31.145-->
+	<string id="31146">Gjithmonë luajnë trailers Fullscreen</string>
+	<!--Strings bosh nga id 31.147-31.148-->
+	<string id="31149">Hide rimorkio ikonën</string>
+	<string id="31150">Button etiketë:</string>
+	<string id="31151">Emri Burimi:</string>
+	<!--Varg i zbrazët me id 31.152-->
+	<string id="31153">Moti icon</string>
+	<string id="31154">Aplikimi</string>
+	<string id="31155">Komanda:</string>
+	<string id="31156">Preferuara</string>
+	<string id="31157">Zgjidhni preferuar:</string>
+	<string id="31158">Ndryshoni parametrat tuaj...</string>
+	<string id="31159">[B]SETTINGS KONFIGURONI VIDEO[/B][CR]Menaxho bibliotekës tuaj video - Set opsionet rishikim video - Ndryshimi Video renditur opsione[CR]Bëje fonts subtitle</string>
+	<string id="31160">[B]SETTINGS KONFIGURONI TV[/B][CR]Ndryshimi info ekran të plotë - Menaxho EPG dhënat settings[CR]Konfiguro opsione incizim</string>
+	<string id="31161">[B]SETTINGS KONFIGURONI MUSIC[/B][CR]Menaxho bibliotekën tuaj muzikë - muzikë Set rishikim opsionet - Ndryshimi muzikë listing opsione[CR]Setup paraqitjes song - Set opsionet karaoke</string>
+	<string id="31162">[B]SETTINGS KONFIGURONI PICTURE[/B][CR]foto Bëje renditur opsionet[CR]Konfiguro slideshows</string>
+	<string id="31163">[B]SETTINGS KONFIGURONI MOTI[/B][CR]Bëje tri qytete për të mbledhur informacion motit[CR]Zgjidh një motit addon</string>
+	<string id="31164">[B]PARAMETRAT E SISTEMIT TË KONFIGURUAR[/B][CR]Setup dhe kalibruar tregon - Konfiguro dalje audio - Setup kontrollet e largët[CR]Vendosni opsionet e kursimit të energjisë - Enable debugging - lock Setup mjeshtër</string>
+	<string id="31165">[B]SETTINGS SHËRBIMI KONFIGURONI[/B][CR]Setup kontrollin e XBMC nëpërmjet UPnP dhe HTTP - të konfiguroni file sharing[CR]Aktivizo AirPlay</string>
+	<string id="31166">[B]SETTINGS KONFIGURONI PROFILI[/B][CR]Zgjidhni të përdoruesit tuaj XBMC Profile[CR]Të identifikoheni dhe të vazhdojë</string>
+	<string id="31167">[B]SETTINGS KONFIGURONI PAMJEN[/B][CR]Zgjidh një lëkurë - Set gjuhën dhe rajonin - Ndrysho fotografinë renditur opsione[CR]Vendosni një screensaver</string>
+	<string id="31168">[B]SETTINGS KONFIGURONI SKIN[/B][CR]Setup e Transparencës! lëkurës - Shto dhe hiqni menu items në shtëpi[CR]Prejardhje Ndryshimi lëkurës</string>
+	<string id="31169">[B]KONFIGURONI SHTESASH[/B][CR]Menaxho tuaja të instaluara Shtesa - Browse për dhe instaloni Shtesa nga xbmc.org[CR]Modifiko dhëna settings</string>
+	<string id="31170">[B]KONTROLLO INFORMACION sytem[/B][CR]Shfaq hardware tuaj - Kontrolloni parametrat aktuale e rrjetit[CR]Monitor discspace falas</string>
+	<string id="31171">Fanart Përdorimi sezon</string>
+	<string id="31172">Përdorimi Fanart shtesë</string>
+	<string id="31173">Përdorimi bravo ekstra</string>
+	<string id="31174">Items rastësishme</string>
+	<string id="31175">Rastësishme</string>
+	<!--Varg i zbrazët me id 31.176-->
+	<string id="31177">Aktivizo modalitetin prekje</string>
+	<string id="31178">Aktivizo modalitetin kiosk</string>
+	<string id="31179">Episode Next:</string>
+	<string id="31180">Përdorimi videove background</string>
+	<string id="31181">Trego parulla në listë</string>
+	<string id="31182">Fshih panelin info</string>
+	<string id="31183">Përdorimi custom logo</string>
+	<string id="31184">Customize sfond vizualizimi</string>
+	<string id="31185">Tregon Listuara</string>
+	<string id="31186">Ajrimit sot</string>
+	<string id="31187">Prejardhje Përdorimi zhanër</string>
+	<string id="31188">Items Recommended</string>
+	<string id="31189">Këshillë</string>
+	<string id="31190">Zgjidhni shtesë:</string>
+	<!--Strings bosh nga id 31.191-31.199-->
+	<!--Script Cilësimet etiketat-->
+	<string id="31200">Custom shtesë opsionet</string>
+	<!--Strings bosh nga id 31.201-31.209-->
+	<string id="31210">Aktivizo TvTunes shtesë</string>
+	<string id="31211">Aktivizo NextAired shtesë</string>
+	<string id="31212">Aktivizo Qlock shtesë</string>
+	<string id="31213">Përvoja Trego Cinema butonin në info film dialogun</string>
+	<string id="31214">Integrimi Përvoja Cinema në butonat në shtëpi film menuja</string>
+	<string id="31215">Hide button GlobalSearch</string>
+	<string id="31216">Extras</string>
+	<!--Strings bosh nga id 31.217-31.218-->
+	<string id="31219">Logo</string>
+	<string id="31220">ClearArt</string>
+	<string id="31221">Extra Fanart</string>
+	<string id="31222">TV Tunën</string>
+	<string id="31223">Vlerësim Update</string>
+	<string id="31224">Extra Thumbs</string>
+	<string id="31225">Artist slideshow shtesë</string>
+	<string id="31226">Aktori info</string>
+	<string id="31227">Info Drejtorin</string>
+	<string id="31228">Info Writer</string>
+	<string id="31229">DiscArt</string>
+	<!--Strings bosh nga id 31.230-31.300-->
+	<string id="31301">PLAYER</string>
+	<string id="31302">START</string>
+	<string id="31303">QUIT</string>
+	<string id="31304">Ju lutem shkruani emrat e lojtar...</string>
+	<string id="31305">Është rradha juaj</string>
+	<string id="31306">Shtypni UP për të vazhduar...</string>
+	<string id="31307">Vota</string>
+	<string id="31308">Fiton</string>
+	<string id="31309">Ka fituar</string>
+	<!--Strings bosh nga id 31.310-31.399-->
+	<!--Faqja etiketat-->
+	<string id="31400">Të reja:</string>
+	<!--Strings bosh nga id 31.401-31.408-->
+	<string id="31409">Player Kontrollet</string>
+	<string id="31410">Shtuar Së Fundmi</string>
+	<string id="31411">Luajtur fundmi</string>
+	<!--Strings bosh nga id 31.412-31.500-->
+	<!--Temp etiketat PVR-->
+	<string id="31501">Info Trego TV</string>
+	<!--Strings bosh nga id 31.502-31.599-->
+	<!--Etiketat Moti-->
+	<string id="31600">10 Day</string>
+	<!--Strings bosh nga id 31.601-31.604-->
+	<string id="31605">Parashikimi i motit siguruar nga:</string>
+	<!--Strings bosh nga id 31.606-31.700-->
+	<!--Etiketat Font-->
+	<string id="31701">Default</string>
+	<string id="31702">Arial</string>
+	<string id="31703">Default Big</string>
+	<string id="31704">Arial Big</string>
+	<string id="31705">Default Big Bold</string>
+	<string id="31706">Arial Big Bold</string>
+</strings>

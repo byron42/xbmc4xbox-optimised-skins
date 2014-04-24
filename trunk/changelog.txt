@@ -1,0 +1,8 @@
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+1.16.14 Version 3.5.0 (backport by byron)
+
+--- initial release for xbox, was version 5.0.9 from ronie but that doesn't really apply
+    to us since our skinning engine isn't the same...I'll version it for us accoring to 
+    BuZz's releases of xbmc4xbox.

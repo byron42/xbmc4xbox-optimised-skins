@@ -1,0 +1,183 @@
+<includes> 	
+	<include name="list 1"> 	
+		<control type="image"> 	
+			<description>Fanart BG</description> 	
+			<width>1280</width> 	
+			<height>720</height> 	
+			<texture background="true">background.jpg</texture> 	
+			<aspectratio>scale</aspectratio> 	
+			<fadetime>300</fadetime> 	
+			<visible>Control.IsVisible(50)</visible> 	
+			<visible>IsEmpty(FanArt.Image)</visible> 	
+			<visible>IsEmpty(ListItem.Property(fanart_image))</visible> 	
+			<visible>!Skin.HasSetting(Background)</visible> 	
+			<animation effect="fade" time="300">WindowClose</animation> 	
+		</control> 	
+		<control type="multiimage"> 	
+			<posx>0</posx> 	
+			<posy>0</posy> 	
+			<width>1280</width> 	
+			<height>720</height> 	
+			<aspectratio>scale</aspectratio> 	
+			<imagepath>special://skin/images/Default Wallpaper</imagepath> 	
+			<info>Skin.String(CustomMenu)</info> 	
+			<visible>!Skin.HasSetting(CustomMenu)</visible> 	
+			<visible>IsEmpty(FanArt.Image)</visible> 	
+			<visible>IsEmpty(ListItem.Property(fanart_image))</visible> 	
+			<visible>Skin.HasSetting(Background)</visible> 	
+			<visible>Control.IsVisible(50)</visible> 	
+			<animation effect="fade" time="200">WindowClose</animation> 	
+		</control> 	
+		<control type="multiimage" description="Fanart Image"> 	
+			<posx>0</posx> 	
+			<posy>0</posy> 	
+			<width>1280</width> 	
+			<height>720</height> 	
+			<imagepath>-</imagepath> 	
+			<aspectratio>scale</aspectratio> 	
+			<info>Skin.String(CustomMenuFolder)</info> 	
+			<timeperimage>5000</timeperimage> 	
+			<fadetime>2000</fadetime> 	
+			<randomize>true</randomize> 	
+			<visible>!Skin.HasSetting(CustomMenuFolder)</visible> 	
+			<visible>IsEmpty(FanArt.Image)</visible> 	
+			<visible>IsEmpty(ListItem.Property(fanart_image))</visible> 	
+			<visible>Skin.HasSetting(Background)</visible> 	
+			<visible>Control.IsVisible(50)</visible> 	
+			<animation effect="fade" time="200">WindowClose</animation> 	
+		</control> 	
+		<control type="image"> 	
+			<description>Fanart BG</description> 	
+			<texture background="true"/> 	
+			<info>ListItem.Property(fanart_image)</info> 	
+			<width>1280</width> 	
+			<height>720</height> 	
+			<aspectratio>scale</aspectratio> 	
+			<fadetime>300</fadetime> 	
+			<visible>Control.IsVisible(50)</visible> 	
+			<animation effect="fade" time="200">WindowClose</animation> 	
+			<!-- Ken Burns Effect -->
+				<animation effect="zoom" start="110" end="130" center="auto" time="18000" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+				<animation effect="slide" start="-35,-25" end="35,25" time="14000" tween="cubic" pulse="true"  condition="Skin.HasSetting(animation_bg)">Conditional</animation>	
+		</control> 	
+		<control type="image"> 	
+			<description>Fanart BG</description> 	
+			<texture background="true"/> 	
+			<info>Fanart.Image</info> 	
+			<width>1280</width> 	
+			<height>720</height> 	
+			<aspectratio>scale</aspectratio> 	
+			<fadetime>300</fadetime> 	
+			<visible>Control.IsVisible(50)</visible> 	
+			<animation effect="fade" time="200">WindowClose</animation> 	
+			<!-- Ken Burns Effect -->
+				<animation effect="zoom" start="110" end="130" center="auto" time="18000" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+				<animation effect="slide" start="-35,-25" end="35,25" time="14000" tween="cubic" pulse="true"  condition="Skin.HasSetting(animation_bg)">Conditional</animation>	
+		</control> 	
+		<control type="list" id="50"> 	
+			<viewtype label="535">list</viewtype> 	
+			<animation effect="fade" time="300">WindowClose</animation> 	
+			<posx>667</posx> 	
+			<posy>112</posy> 	
+			<width>569</width> 	
+			<height>550</height> 	
+			<onleft>2</onleft> 	
+			<onright>90</onright> 	
+			<onup>50</onup> 	
+			<ondown>50</ondown> 	
+			<pagecontrol>90</pagecontrol> 	
+			<itemlayout height="50"> 	
+				<control type="image"> 	
+					<posx>9</posx> 	
+					<posy>5</posy> 	
+					<width>50</width> 	
+					<height>40</height> 	
+					<info>ListItem.Icon</info> 	
+					<aspectratio>keep</aspectratio> 	
+					<animation effect="fade" time="300">WindowClose</animation> 	
+				</control> 	
+				<control type="label"> 	
+					<posx>62</posx> 	
+					<posy>0</posy> 	
+					<width>498</width> 	
+					<height>50</height> 	
+					<font>font18</font> 	
+					<aligny>center</aligny> 	
+					<textcolor>white</textcolor> 	
+					<shadowcolor>black</shadowcolor> 	
+					<!-- selectedcolor  -->
+						<selectedcolor>d0ffffff</selectedcolor> 	
+					<scrolltime tween="sine" easing="inout">100</scrolltime> 	
+					<info>ListItem.Label</info> 	
+				</control> 	
+			</itemlayout> 	
+			<focusedlayout height="50"> 	
+				<control type="image"> 	
+					<posx>0</posx> 	
+					<posy>0</posy> 	
+					<width>569</width> 	
+					<height>50</height> 	
+					<texture>input-focus.png</texture> 	
+					<visible>Control.HasFocus(50)</visible> 	
+					<include>List Scroll</include> 	
+				</control> 	
+				<control type="image"> 	
+					<posx>9</posx> 	
+					<posy>5</posy> 	
+					<width>50</width> 	
+					<height>40</height> 	
+					<info>ListItem.Icon</info> 	
+					<aspectratio>keep</aspectratio> 	
+				</control> 	
+				<control type="label"> 	
+					<posx>62</posx> 	
+					<posy>0</posy> 	
+					<width>498</width> 	
+					<height>50</height> 	
+					<font>font18</font> 	
+					<aligny>center</aligny> 	
+					<textcolor>white</textcolor> 	
+					<shadowcolor>black</shadowcolor> 	
+					<!-- selectedcolor  -->
+						<selectedcolor>d0ffffff</selectedcolor> 	
+					<scroll>true</scroll> 	
+					<scrolltime tween="sine" easing="inout">100</scrolltime> 	
+					<info>ListItem.Label</info> 	
+				</control> 	
+			</focusedlayout> 	
+		</control> 	
+		<control type="scrollbar" id="90"> 	
+			<posx>1244</posx> 	
+			<posy>112</posy> 	
+			<width>18</width> 	
+			<height>550</height> 	
+			<animation effect="fade" start="100" end="0" time="400" condition="Control.HasFocus(50)|ControlGroup(7001).HasFocus">Conditional</animation>
+			<animation effect="fade" time="200">WindowOpen</animation> 
+			<visible>Control.IsVisible(50)</visible> 	
+			<texturesliderbackground border="0,12.50,0,12.50">scrollbar-back.png</texturesliderbackground> 	
+			<textureslidernib>scrollbar nib focus1.png</textureslidernib> 	
+			<textureslidernibfocus>scrollbar nib focus.png</textureslidernibfocus> 	
+			<onleft>50</onleft> 	
+			<onright>2</onright> 	
+			<onup>50</onup> 	
+			<ondown>50</ondown> 	
+			<showonepage>false</showonepage> 	
+			<orientation>vertical</orientation> 	
+			<animation effect="fade" time="200">WindowClose</animation> 	
+		</control> 	
+		<control type="image"> 	
+			<description>list item icon</description> 	
+			<posx>18</posx> 	
+			<posy>112</posy> 	
+			<width>640</width> 	
+			<height>550</height> 	
+			<visible>true</visible> 	
+			<colordiffuse>FFFFFFFF</colordiffuse> 	
+			<fadetime>200</fadetime> 	
+			<info>ListItem.Icon</info> 	
+			<aspectratio>keep</aspectratio> 	
+			<visible>Control.IsVisible(50)</visible> 	
+			<animation effect="fade" time="300">WindowClose</animation> 	
+		</control> 	
+	</include> 	
+</includes> 	

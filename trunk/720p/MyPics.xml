@@ -1,0 +1,1159 @@
+<window> 	
+	<id>2</id> 	
+	<defaultcontrol>50</defaultcontrol> 	
+	<animation effect="fade" time="200">WindowClose</animation> 	
+	<allowoverlay>yes</allowoverlay> 
+	<views>50,52,51,55,56</views>
+	<controls> 
+	
+  <!--(((VIEWS)))===============================================================-->
+		
+	<!--file list--> 	
+		<control type="group">
+			<visible>Control.IsVisible(50)</visible> 
+			<control type="image"> 	
+				<description>Fanart BG</description> 	
+				<width>1280</width> 	
+				<height>622</height> 	
+				<aspectratio>scale</aspectratio> 	
+				<fadetime>300</fadetime> 	
+				<visible>Control.IsVisible(50) + !Skin.HasSetting(Background)</visible> 	
+				<texture background="true">special://skin/media/backgrounds/background.jpg</texture> 	
+				<animation effect="fade" time="200">WindowClose</animation> 	
+			</control> 	
+			<control type="multiimage"> 	
+				<posx>0</posx> 	
+				<posy>0</posy> 	
+				<width>1280</width> 	
+				<height>622</height> 	
+				<aspectratio>scale</aspectratio> 	
+				<preload>2</preload> 	
+				<texture background="true"/> 	
+				<imagepath>special://skin/images/Default Wallpaper</imagepath> 	
+				<info>Skin.String(CustomMenu)</info> 	
+				<visible>!Skin.HasSetting(CustomMenu) + Skin.HasSetting(Background) + Control.IsVisible(50)</visible> 	
+				<animation effect="fade" time="200">WindowClose</animation> 	
+			</control> 	
+			<control type="multiimage" description="Fanart Image"> 	
+				<posx>0</posx> 	
+				<posy>0</posy> 	
+				<width>1280</width> 	
+				<height>622</height> 	
+				<imagepath>-</imagepath> 	
+				<aspectratio>scale</aspectratio> 	
+				<preload>2</preload> 	
+				<texture background="true"/> 	
+				<info>Skin.String(CustomMenuFolder)</info> 	
+				<timeperimage>5000</timeperimage> 	
+				<fadetime>2000</fadetime> 	
+				<randomize>true</randomize> 	
+				<visible>!Skin.HasSetting(CustomMenuFolder) + Skin.HasSetting(Background) + Control.IsVisible(50)</visible> 	
+				<animation effect="fade" time="200">WindowClose</animation> 	
+			</control> 	
+			<control type="image"> 	
+				<posx>0</posx> 	
+				<posy>621</posy> 	
+				<width>1280</width> 	
+				<height>2</height> 	
+				<texture>background2.png</texture> 
+				<visible>Control.IsVisible(50)</visible> 
+				<animation effect="fade" time="200">WindowClose</animation> 	
+			</control> 	
+			<control type="image"> 	
+				<posx>0</posx> 	
+				<posy>623</posy> 	
+				<width>1280</width> 	
+				<height>97</height> 	
+				<texture>background2.png</texture> 	
+				<visible>Control.IsVisible(50)</visible> 
+				<animation effect="fade" time="200">WindowClose</animation> 	
+				<aspectratio>stretch</aspectratio> 	
+			</control> 	
+			<control type="image"> 	
+				<posx>0</posx> 	
+				<posy>623</posy> 	
+				<width>1280</width> 	
+				<height>97</height> 	
+				<texture>panel background.png</texture>
+				<colordiffuse>22ffffff</colordiffuse> 
+				<visible>Control.IsVisible(50)</visible> 
+				<animation effect="fade" time="200">WindowClose</animation> 	
+				<aspectratio>stretch</aspectratio> 	
+			</control> 	
+			<control type="group"> 	
+				<animation effect="slide" time="600" start="-1280,0" end="0,0" acceleration="-1" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+				<animation effect="slide" time="600" start="0,0" end="-1280,0" acceleration="-1" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+				<control type="image"> 	
+					<posx>66</posx> 	
+					<posy>99</posy> 	
+					<width>731</width> 	
+					<height>595</height> 	
+					<texture>special://skin/media/backgrounds/filepanel.png</texture>
+					<visible>Control.IsVisible(50)</visible> 	
+					<animation effect="fade" time="200">WindowClose</animation> 
+					<colordiffuse>BBFFFFFF</colordiffuse>
+				</control> 	
+				<control type="image"> 	
+					<posx>66</posx> 	
+					<posy>679</posy> 	
+					<width>731</width> 	
+					<height>595</height> 	
+					<texture flipy="true" diffuse="Thumb_Mask1.png">special://skin/media/backgrounds/filepanel.png</texture> 	
+					<visible>Control.IsVisible(50)</visible> 	
+					<animation effect="fade" time="200">WindowClose</animation> 
+					<colordiffuse>BBFFFFFF</colordiffuse>
+				</control> 	
+				<control type="scrollbar" id="81"> 	
+					<animation effect="fade" start="100" end="0" time="400" condition="Control.HasFocus(50)|ControlGroup(7001).HasFocus">Conditional</animation>
+					<animation effect="fade" time="200">WindowOpen</animation> 
+					<visible>Control.IsVisible(50)</visible> 	
+					<posx>45.33</posx> 	
+					<posy>134</posy> 	
+					<width>18</width> 	
+					<height>525</height> 	
+					<texturesliderbackground border="0,12.50,0,12.50">scrollbar-back.png</texturesliderbackground> 	
+					<textureslidernib>scrollbar nib focus1.png</textureslidernib> 	
+					<textureslidernibfocus>scrollbar nib focus.png</textureslidernibfocus> 	
+					<onleft>2</onleft> 	
+					<onright>50</onright> 	
+					<onup>81</onup> 	
+					<ondown>81</ondown> 	
+					<showonepage>false</showonepage> 	
+					<orientation>vertical</orientation> 	
+					<animation effect="fade" time="200">WindowClose</animation> 	
+				</control> 	
+				<control type="list" id="50"> 	
+					<viewtype label="$LOCALIZE[561] $LOCALIZE[535]">biglist</viewtype> 	
+					<wraparound>true</wraparound> 	
+					<posx>80</posx> 	
+					<posy>115</posy> 	
+					<width>702</width> 	
+					<height>562</height> 	
+					<pagecontrol>81</pagecontrol> 	
+					<onleft>81</onleft> 	
+					<onright>2</onright> 	
+					<onup>50</onup> 	
+					<ondown>50</ondown> 	
+					<preloaditems>6</preloaditems> 	
+					<animation effect="fade" time="200">WindowClose</animation> 	
+					<itemlayout height="62"> 	
+						<control type="image"> 	
+							<posx>-18</posx> 	
+							<posy>0</posy> 	
+							<width>747</width> 	
+							<height>62</height> 	
+							<texture background="true">white.png</texture> 	
+							<bordertexture>black.png</bordertexture> 	
+							<bordersize>0,1.25,0,1.25</bordersize> 	
+							<colordiffuse>44ffffff</colordiffuse> 	
+						</control> 	
+						<control type="image"> 	
+							<description>Icon</description> 	
+							<posx>18</posx> 	
+							<posy>10</posy> 	
+							<width>89</width> 	
+							<height>45</height> 	
+							<aspectratio>keep</aspectratio> 	
+							<align>center</align> 	
+							<aligny>center</aligny> 	
+							<info>ListItem.Icon</info> 	
+						</control> 	
+						<control type="label"> 	
+							<posx>116</posx> 	
+							<posy>6</posy> 	
+							<width>391</width> 	
+							<height>50</height> 	
+							<aligny>center</aligny> 	
+							<font>font14</font> 	
+							<textcolor>white</textcolor> 	
+							<shadowcolor>black</shadowcolor> 	
+							<shadowcolor>black</shadowcolor> 	
+							<info>ListItem.Label</info> 	
+						</control> 	
+						<control type="label"> 	
+							<description>label 2 value</description> 	
+							<posx>569</posx> 	
+							<posy>6</posy> 	
+							<width>89</width> 	
+							<height>50</height> 	
+							<font>font13</font> 	
+							<textcolor>lightgrey</textcolor> 	
+							<shadowcolor>black</shadowcolor> 	
+							<align>center</align> 	
+							<aligny>center</aligny> 	
+							<info>ListItem.Label2</info> 	
+							<visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible> 	
+						</control> 	
+						<control type="image"> 	
+							<posx>644</posx> 	
+							<posy>12</posy> 	
+							<width>53</width> 	
+							<height>38</height> 	
+							<texture background="true"/> 	
+							<align>center</align> 	
+							<aligny>center</aligny> 	
+							<info>ListItem.Overlay</info> 	
+							<visible>!Skin.HasSetting(menu-overlay)</visible> 	
+						</control> 	
+					</itemlayout> 	
+					<focusedlayout height="62"> 	
+						<control type="image"> 	
+							<posx>-18</posx> 	
+							<posy>0</posy> 	
+							<width>747</width> 	
+							<height>62</height> 	
+							<texture background="true">button-focus.png</texture> 	
+							<bordertexture>black.png</bordertexture> 	
+							<bordersize>0,1.25,0,1.25</bordersize> 	
+							<colordiffuse>99ffffff</colordiffuse> 	
+							<visible>Control.HasFocus(50)</visible> 	
+						</control> 	
+						<control type="image"> 	
+							<posx>-18</posx> 	
+							<posy>0</posy> 	
+							<width>747</width> 	
+							<height>62</height> 	
+							<texture background="true">white.png</texture> 	
+							<bordertexture>black.png</bordertexture> 	
+							<bordersize>0,1.25,0,1.25</bordersize> 	
+							<colordiffuse>44ffffff</colordiffuse> 	
+							<visible>!Control.HasFocus(50)</visible> 	
+						</control> 	
+						<control type="image"> 	
+							<description>Icon</description> 	
+							<posx>18</posx> 	
+							<posy>10</posy> 	
+							<width>89</width> 	
+							<height>45</height> 	
+							<aspectratio>keep</aspectratio> 	
+							<align>center</align> 	
+							<aligny>center</aligny> 	
+							<info>ListItem.Icon</info> 	
+						</control> 	
+						<control type="label"> 	
+							<posx>116</posx> 	
+							<posy>6</posy> 	
+							<width>391</width> 	
+							<height>50</height> 	
+							<aligny>center</aligny> 	
+							<font>font14</font> 	
+							<textcolor>white</textcolor> 	
+							<shadowcolor>black</shadowcolor> 	
+							<shadowcolor>black</shadowcolor> 	
+							<info>ListItem.Label</info> 	
+						</control> 	
+						<control type="label"> 	
+							<description>label 2 value</description> 	
+							<posx>569</posx> 	
+							<posy>6</posy> 	
+							<width>89</width> 	
+							<height>50</height> 	
+							<font>font13</font> 	
+							<textcolor>lightgrey</textcolor> 	
+							<shadowcolor>black</shadowcolor> 	
+							<align>center</align> 	
+							<aligny>center</aligny> 	
+							<info>ListItem.Label2</info> 	
+							<visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible> 	
+						</control> 	
+						<control type="image"> 	
+							<posx>644</posx> 	
+							<posy>12</posy> 	
+							<width>53</width> 	
+							<height>38</height> 	
+							<texture background="true"/> 	
+							<align>center</align> 	
+							<aligny>center</aligny> 	
+							<info>ListItem.Overlay</info> 	
+							<visible>!Skin.HasSetting(menu-overlay)</visible> 	
+						</control> 	
+					</focusedlayout> 	
+				</control> 	
+			</control> 	
+			<control type="group"> 	
+				<animation effect="slide" time="600" start="1280,0" end="0,0" acceleration="-1" condition="!Skin.HasSetting(animated)">WindowOpen</animation> 	
+				<animation effect="slide" time="600" start="0,0" end="1280,0" acceleration="-1" condition="!Skin.HasSetting(animated)">WindowClose</animation> 	
+				<control type="image"> 	
+					<posx>827</posx> 	
+					<posy>85</posy> 	
+					<width>391</width> 	
+					<height>601</height> 	
+					<info>ListItem.Icon</info> 	
+					<texture background="true"/> 	
+					<bordertexture>black.png</bordertexture> 	
+					<bordersize>2.5,2.5,2.5,2.5</bordersize> 	
+					<visible>Control.IsVisible(50)</visible> 	
+					<aspectratio aligny="bottom">keep</aspectratio> 	
+					<fadetime>200</fadetime> 	
+					<animation effect="fade" time="200">WindowClose</animation> 	
+				</control> 	
+				<control type="image"> 	
+					<posx>827</posx> 	
+					<posy>686</posy> 	
+					<width>391</width> 	
+					<height>586</height> 	
+					<info>ListItem.Icon</info> 	
+					<aspectratio aligny="top">stretch</aspectratio> 	
+					<texture background="true" flipy="true" diffuse="Thumb_Mask1.png"/> 	
+					<colordiffuse>66FFFFFF</colordiffuse> 	
+					<bordertexture>black.png</bordertexture> 	
+					<bordersize>2.5,2.5,2.5,2.5</bordersize>	
+					<visible>Control.IsVisible(50)</visible> 	
+					<aspectratio aligny="top">keep</aspectratio> 	
+					<fadetime>200</fadetime> 	
+					<animation effect="fade" time="200">WindowClose</animation> 	
+				</control> 	
+			</control> 	
+		</control>
+		
+	<!-- list 2 -->
+		<control type="group">
+			<control type="image"> 	
+				<description>Fanart BG</description> 	
+				<width>1280</width> 	
+				<height>720</height> 	
+				<texture background="true">special://skin/media/backgrounds/background.jpg</texture> 	
+				<aspectratio>scale</aspectratio> 	
+				<fadetime>300</fadetime> 	
+				<visible>Control.IsVisible(52)</visible> 	
+				<visible>IsEmpty(FanArt.Image)</visible> 	
+				<visible>IsEmpty(ListItem.Property(fanart_image))</visible> 	
+				<visible>!Skin.HasSetting(Background)</visible> 	
+				<animation effect="fade" time="300">WindowClose</animation> 	
+			</control> 	
+			<control type="multiimage"> 	
+				<posx>0</posx> 	
+				<posy>0</posy> 	
+				<width>1280</width> 	
+				<height>720</height> 	
+				<aspectratio>scale</aspectratio> 	
+				<imagepath>special://skin/images/Default Wallpaper</imagepath> 	
+				<info>Skin.String(CustomMenu)</info> 	
+				<visible>!Skin.HasSetting(CustomMenu)</visible> 	
+				<visible>IsEmpty(FanArt.Image)</visible> 	
+				<visible>IsEmpty(ListItem.Property(fanart_image))</visible> 	
+				<visible>Skin.HasSetting(Background)</visible> 	
+				<visible>Control.IsVisible(52)</visible> 	
+				<animation effect="fade" time="200">WindowClose</animation> 	
+			</control> 	
+			<control type="multiimage" description="Fanart Image"> 	
+				<posx>0</posx> 	
+				<posy>0</posy> 	
+				<width>1280</width> 	
+				<height>720</height> 	
+				<imagepath>-</imagepath> 	
+				<aspectratio>scale</aspectratio> 	
+				<info>Skin.String(CustomMenuFolder)</info> 	
+				<timeperimage>5000</timeperimage> 	
+				<fadetime>2000</fadetime> 	
+				<randomize>true</randomize> 	
+				<visible>!Skin.HasSetting(CustomMenuFolder)</visible> 	
+				<visible>IsEmpty(FanArt.Image)</visible> 	
+				<visible>IsEmpty(ListItem.Property(fanart_image))</visible> 	
+				<visible>Skin.HasSetting(Background)</visible> 	
+				<visible>Control.IsVisible(52)</visible> 	
+				<animation effect="fade" time="200">WindowClose</animation> 	
+			</control> 	
+			<control type="image"> 	
+				<description>Fanart BG</description> 	
+				<texture background="true"/> 	
+				<info>ListItem.Property(fanart_image)</info> 	
+				<width>1280</width> 	
+				<height>720</height> 	
+				<aspectratio>scale</aspectratio> 	
+				<fadetime>300</fadetime> 	
+				<visible>Control.IsVisible(52)</visible> 	
+				<animation effect="fade" time="200">WindowClose</animation> 	
+				<!-- Ken Burns Effect -->
+				<animation effect="zoom" start="110" end="130" center="auto" time="18000" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+				<animation effect="slide" start="-35,-25" end="35,25" time="14000" tween="cubic" pulse="true"  condition="Skin.HasSetting(animation_bg)">Conditional</animation>	
+			</control> 	
+			<control type="image"> 	
+				<description>Fanart BG</description> 	
+				<texture background="true"/> 	
+				<info>Fanart.Image</info> 	
+				<width>1280</width> 	
+				<height>720</height> 	
+				<aspectratio>scale</aspectratio> 	
+				<fadetime>300</fadetime> 	
+				<visible>Control.IsVisible(52)</visible> 	
+				<animation effect="fade" time="200">WindowClose</animation> 	
+				<!-- Ken Burns Effect -->
+				<animation effect="zoom" start="110" end="130" center="auto" time="18000" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+				<animation effect="slide" start="-35,-25" end="35,25" time="14000" tween="cubic" pulse="true"  condition="Skin.HasSetting(animation_bg)">Conditional</animation>	
+			</control> 	
+			<control type="list" id="52"> 	
+				<viewtype label="List 2">list</viewtype> 	
+				<posx>62</posx> 	
+				<posy>94</posy> 	
+				<width>1191</width> 	
+				<height>600</height> 	
+				<pagecontrol>91</pagecontrol> 	
+				<onleft>91</onleft> 	
+				<onright>2</onright> 	
+				<onup>52</onup> 	
+				<ondown>52</ondown> 	
+				<preloaditems>6</preloaditems> 	
+				<itemlayout height="50"> 	
+					<control type="image"> 	
+						<posx>9</posx> 	
+						<posy>4</posy> 	
+						<width>57</width> 	
+						<height>40</height> 	
+						<info>ListItem.Icon</info> 	
+					</control> 	
+					<control type="label"> 	
+						<posx>80</posx> 	
+						<posy>0</posy> 	
+						<width>1081</width> 	
+						<height>50</height> 	
+						<font>font18</font> 	
+						<textcolor>white</textcolor> 	
+						<shadowcolor>black</shadowcolor> 	
+						<!-- selectedcolor  -->
+						<selectedcolor>d0ffffff</selectedcolor> 	
+						<scroll>true</scroll> 	
+						<scrolltime tween="sine" easing="inout">300</scrolltime> 	
+						<info>ListItem.Label</info> 	
+						<aligny>center</aligny> 	
+					</control> 	
+				</itemlayout> 	
+				<focusedlayout height="50"> 	
+					<control type="image"> 	
+						<posx>0</posx> 	
+						<posy>0</posy> 	
+						<width>1170</width> 	
+						<height>50</height> 	
+						<texture>input-focus.png</texture> 	
+						<visible>Control.HasFocus(52)</visible> 	
+						<include>List Scroll</include> 	
+					</control> 	
+					<control type="image"> 	
+						<posx>9</posx> 	
+						<posy>4</posy> 	
+						<width>57</width> 	
+						<height>40</height> 	
+						<info>ListItem.Icon</info> 	
+					</control> 	
+					<control type="label"> 	
+						<posx>80</posx> 	
+						<posy>0</posy> 	
+						<width>1081</width> 	
+						<height>50</height> 	
+						<font>font18</font> 	
+						<textcolor>white</textcolor> 	
+						<shadowcolor>black</shadowcolor> 	
+						<!-- selectedcolor  -->
+						<selectedcolor>d0ffffff</selectedcolor> 	
+						<scroll>true</scroll> 	
+						<scrolltime tween="sine" easing="inout">300</scrolltime> 	
+						<info>ListItem.Label</info> 	
+						<aligny>center</aligny> 	
+					</control> 	
+				</focusedlayout> 	
+			</control> 	
+			<control type="scrollbar" id="91"> 	
+				<posx>44</posx> 	
+				<posy>94</posy> 	
+				<width>18</width> 	
+				<height>600</height> 	
+				<animation effect="fade" start="100" end="0" time="400" condition="Control.HasFocus(52)|ControlGroup(7001).HasFocus">Conditional</animation>
+				<animation effect="fade" time="200">WindowOpen</animation> 
+				<visible>Control.IsVisible(52)</visible> 	
+				<texturesliderbackground border="0,12.50,0,12.50">scrollbar-back.png</texturesliderbackground> 	
+				<textureslidernib>scrollbar nib focus1.png</textureslidernib> 	
+				<textureslidernibfocus>scrollbar nib focus.png</textureslidernibfocus> 	
+				<onleft>2</onleft> 	
+				<onright>52</onright> 	
+				<onup>91</onup> 	
+				<ondown>91</ondown> 	
+				<showonepage>false</showonepage> 	
+				<orientation>vertical</orientation> 	
+				<animation effect="fade" time="200">WindowClose</animation> 	
+			</control> 	
+		</control>
+			
+	<!-- Picture Wrap -->
+		<control type="group">
+			<control type="image"> 	
+				<posx>0</posx> 	
+				<posy>0</posy> 	
+				<width>1280</width> 	
+				<height>720</height> 	
+				<texture background="true"/> 	
+				<info>ListItem.Icon</info> 	
+				<visible>Control.IsVisible(55)</visible> 	
+				<aspectratio>scale</aspectratio> 	
+			</control> 	
+			<control type="image"> 	
+				<texture background="true" diffuse="lower diffuse.png">Fanart Mask1.png</texture> 	
+				<posx>0</posx> 	
+				<posy>0</posy> 	
+				<width>1316</width> 	
+				<height>720</height> 	
+				<colordiffuse>eeffffff</colordiffuse> 	
+				<visible>Control.IsVisible(55)</visible> 	
+				<animation effect="fade" time="200">WindowClose</animation> 	
+			</control> 	
+			<control type="wraplist" id="55"> 	
+				<viewtype label="Picture Wrap">bigwrap</viewtype> 	
+				<posx>0</posx> 	
+				<posy>538</posy> 	
+				<width>1280</width> 	
+				<height>244</height> 	
+				<scrolltime tween="sine" easing="inout">200</scrolltime>
+				<focusposition>2</focusposition> 	
+				<orientation>horizontal</orientation> 	
+				<onleft>51</onleft> 	
+				<onright>51</onright> 	
+				<onup>2</onup> 	
+				<ondown>2</ondown> 	
+				<itemlayout height="180" width="256"> 	
+					<control type="image"> 	
+						<posx>14</posx> 	
+						<posy>10</posy> 	
+						<width>228</width> 	
+						<height>140</height> 	
+						<info>ListItem.icon</info> 	
+						<texture diffuse="mask.png"/> 	
+						<align>center</align> 	
+						<aspectratio scalediffuse="false">scale</aspectratio> 	
+					</control> 	
+					<control type="image"> 	
+						<posx>4</posx> 	
+						<posy>0</posy> 	
+						<width>249</width> 	
+						<height>180</height> 	
+						<texture>mask glass.png</texture> 	
+						<aspectratio>stretch</aspectratio> 	
+					</control> 	
+					<control type="label"> 	
+						<posx>128</posx> 	
+						<posy>156</posy> 	
+						<width>235</width> 	
+						<height>19</height> 	
+						<font>font18</font> 	
+						<textcolor>white</textcolor> 	
+						<shadowcolor>black</shadowcolor> 	
+						<!-- selectedcolor  -->
+						<selectedcolor>d0ffffff</selectedcolor> 	
+						<info>ListItem.Label</info> 	
+						<align>center</align> 	
+					</control> 	
+				</itemlayout> 	
+				<focusedlayout height="180" width="256"> 	
+					<control type="image"> 	
+						<posx>4</posx> 	
+						<posy>0</posy> 	
+						<width>249</width> 	
+						<height>180</height> 	
+						<texture diffuse="mask.png">folder-focus1.png</texture> 	
+						<aspectratio>stretch</aspectratio> 	
+					</control> 	
+					<control type="image"> 	
+						<posx>14</posx> 	
+						<posy>10</posy> 	
+						<width>228</width> 	
+						<height>140</height> 	
+						<info>ListItem.icon</info> 	
+						<texture diffuse="mask.png"/> 	
+						<align>center</align> 	
+						<aspectratio scalediffuse="false">scale</aspectratio> 	
+					</control> 	
+					<control type="image"> 	
+						<posx>4</posx> 	
+						<posy>0</posy> 	
+						<width>249</width> 	
+						<height>180</height> 	
+						<texture>mask glass.png</texture> 	
+						<aspectratio>stretch</aspectratio> 	
+					</control> 	
+					<control type="label"> 	
+						<posx>128</posx> 	
+						<posy>156</posy> 	
+						<width>235</width> 	
+						<height>19</height> 	
+						<font>font18</font> 	
+						<textcolor>white</textcolor> 	
+						<shadowcolor>black</shadowcolor> 	
+						<!-- selectedcolor  -->
+						<selectedcolor>d0ffffff</selectedcolor> 	
+						<scroll>true</scroll> 	
+						<scrolltime tween="sine" easing="inout">300</scrolltime> 	
+						<info>ListItem.Label</info> 	
+						<align>center</align> 	
+					</control> 	
+				</focusedlayout> 	
+			</control> 	
+		</control>
+		
+	<!-- Square Icons  -->
+		<control type="group">
+			<control type="image"> 	
+				<description>Fanart BG</description> 	
+				<width>1280</width> 	
+				<height>720</height> 	
+				<texture background="true">special://skin/media/backgrounds/background.jpg</texture> 	
+				<aspectratio>scale</aspectratio> 	
+				<fadetime>300</fadetime> 	
+				<visible>Control.IsVisible(51)</visible> 	
+				<visible>IsEmpty(FanArt.Image)</visible> 	
+				<visible>IsEmpty(ListItem.Property(fanart_image))</visible> 	
+				<visible>!Skin.HasSetting(Background)</visible> 	
+				<animation effect="fade" time="300">WindowClose</animation> 	
+			</control> 	
+			<control type="multiimage"> 	
+				<posx>0</posx> 	
+				<posy>0</posy> 	
+				<width>1280</width> 	
+				<height>720</height> 	
+				<aspectratio>scale</aspectratio> 	
+				<imagepath>special://skin/images/Default Wallpaper</imagepath> 	
+				<info>Skin.String(CustomMenu)</info> 	
+				<visible>!Skin.HasSetting(CustomMenu)</visible> 	
+				<visible>IsEmpty(FanArt.Image)</visible> 	
+				<visible>IsEmpty(ListItem.Property(fanart_image))</visible> 	
+				<visible>Skin.HasSetting(Background)</visible> 	
+				<visible>Control.IsVisible(51)</visible> 	
+				<animation effect="fade" time="200">WindowClose</animation> 	
+			</control> 	
+			<control type="multiimage" description="Fanart Image"> 	
+				<posx>0</posx> 	
+				<posy>0</posy> 	
+				<width>1280</width> 	
+				<height>720</height> 	
+				<imagepath>-</imagepath> 	
+				<aspectratio>scale</aspectratio> 	
+				<info>Skin.String(CustomMenuFolder)</info> 	
+				<timeperimage>5000</timeperimage> 	
+				<fadetime>2000</fadetime> 	
+				<randomize>true</randomize> 	
+				<visible>!Skin.HasSetting(CustomMenuFolder)</visible> 	
+				<visible>IsEmpty(FanArt.Image)</visible> 	
+				<visible>IsEmpty(ListItem.Property(fanart_image))</visible> 	
+				<visible>Skin.HasSetting(Background)</visible> 	
+				<visible>Control.IsVisible(51)</visible> 	
+				<animation effect="fade" time="200">WindowClose</animation> 	
+			</control> 	
+			<control type="image"> 	
+				<description>Fanart BG</description> 	
+				<texture background="true"/> 	
+				<info>ListItem.Property(fanart_image)</info> 	
+				<width>1280</width> 	
+				<height>720</height> 	
+				<aspectratio>scale</aspectratio> 	
+				<fadetime>300</fadetime> 	
+				<visible>Control.IsVisible(51)</visible> 	
+				<animation effect="fade" time="200">WindowClose</animation> 	
+				<!-- Ken Burns Effect -->
+				<animation effect="zoom" start="110" end="130" center="auto" time="18000" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+				<animation effect="slide" start="-35,-25" end="35,25" time="14000" tween="cubic" pulse="true"  condition="Skin.HasSetting(animation_bg)">Conditional</animation>	
+			</control> 	
+			<control type="image"> 	
+				<description>Fanart BG</description> 	
+				<texture background="true"/> 	
+				<info>Fanart.Image</info> 	
+				<width>1280</width> 	
+				<height>720</height> 	
+				<aspectratio>scale</aspectratio> 	
+				<fadetime>300</fadetime> 	
+				<visible>Control.IsVisible(51)</visible> 	
+				<animation effect="fade" time="200">WindowClose</animation> 	
+				<!-- Ken Burns Effect -->
+				<animation effect="zoom" start="110" end="130" center="auto" time="18000" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+				<animation effect="slide" start="-35,-25" end="35,25" time="14000" tween="cubic" pulse="true"  condition="Skin.HasSetting(animation_bg)">Conditional</animation>	
+			</control> 	
+			<control type="panel" id="51"> 	
+				<posx>27</posx> 	
+				<posy>76</posy> 	
+				<width>1244</width> 	
+				<height>650</height> 	
+				<onleft>2</onleft> 	
+				<onright>96</onright> 	
+				<onup>51</onup> 	
+				<ondown>51</ondown> 	
+				<scrolltime tween="sine" easing="inout">200</scrolltime>
+				<viewtype label="Icons">Icons</viewtype> 	
+				<pagecontrol>96</pagecontrol> 	
+				<itemlayout height="312.50" width="302.22">	
+					<control type="image"> 	
+						<posx>18</posx> 	
+						<posy>38</posy> 	
+						<width>267</width> 	
+						<height>238</height> 	
+						<texture diffuse="mask.png"/> 	
+						<align>center</align> 	
+						<aspectratio>stretch</aspectratio> 	
+						<info>ListItem.Icon</info> 	
+					</control> 	
+					<control type="image"> 	
+						<posx>18</posx> 	
+						<posy>38</posy> 	
+						<width>267</width> 	
+						<height>238</height> 	
+						<texture>mask glass.png</texture> 	
+						<aspectratio>stretch</aspectratio> 	
+					</control> 	
+					<control type="image"> 	
+						<posx>18</posx> 	
+						<posy>278</posy> 	
+						<width>267</width> 	
+						<height>30</height> 	
+						<texture>input-focus.png</texture> 	
+						<aspectratio>stretch</aspectratio> 	
+					</control> 	
+					<control type="label"> 	
+						<posx>153</posx> 	
+						<posy>281</posy> 	
+						<width>249</width> 	
+						<height>20</height> 	
+						<font>font15</font> 	
+						<textcolor>white</textcolor> 	
+						<shadowcolor>black</shadowcolor> 	
+						<selectedcolor>white</selectedcolor> 	
+						<align>center</align> 	
+						<scroll>false</scroll> 	
+						<info>ListItem.label</info> 	
+					</control> 	
+				</itemlayout> 	
+				<focusedlayout height="312.50" width="302.22">	
+					<control type="image"> 	
+						<width>302</width> 	
+						<height>300</height> 	
+						<posx>0</posx> 	
+						<posy>19</posy> 	
+						<texture>special://skin/media/backgrounds/List background1.png</texture> 	
+					</control> 	
+					<control type="image"> 	
+						<posx>18</posx> 	
+						<posy>38</posy> 	
+						<width>267</width> 	
+						<height>238</height> 	
+						<texture diffuse="mask.png"/> 	
+						<align>center</align> 	
+						<aspectratio>stretch</aspectratio> 	
+						<info>ListItem.Icon</info> 	
+					</control> 	
+					<control type="image"> 	
+						<posx>18</posx> 	
+						<posy>38</posy> 	
+						<width>267</width> 	
+						<height>238</height> 	
+						<texture>mask glass.png</texture> 	
+						<aspectratio>stretch</aspectratio> 	
+					</control> 	
+					<control type="image"> 	
+						<posx>18</posx> 	
+						<posy>278</posy> 	
+						<width>267</width> 	
+						<height>30</height> 	
+						<texture>input-focus.png</texture> 	
+						<aspectratio>stretch</aspectratio> 	
+					</control> 	
+					<control type="label"> 	
+						<posx>153</posx> 	
+						<posy>281</posy> 	
+						<width>249</width> 	
+						<height>20</height> 	
+						<font>font15</font> 	
+						<textcolor>white</textcolor> 	
+						<shadowcolor>black</shadowcolor> 	
+						<selectedcolor>white</selectedcolor> 	
+						<align>center</align> 	
+						<scroll>false</scroll> 	
+						<info>ListItem.label</info> 	
+					</control> 	
+				</focusedlayout> 	
+			</control> 	
+			<control type="scrollbar" id="96"> 	
+				<posx>1244</posx> 	
+				<posy>114</posy> 	
+				<width>18</width> 	
+				<height>581</height> 	
+				<animation effect="fade" start="100" end="0" time="400" condition="Control.HasFocus(51)|ControlGroup(7001).HasFocus">Conditional</animation>
+				<animation effect="fade" time="200">WindowOpen</animation> 
+				<visible>Control.IsVisible(51)</visible> 	
+				<visible>!Control.HasFocus(57)</visible> 	
+				<texturesliderbackground border="0,12.50,0,12.50">scrollbar-back.png</texturesliderbackground> 	
+				<textureslidernib>scrollbar nib focus1.png</textureslidernib> 	
+				<textureslidernibfocus>scrollbar nib focus.png</textureslidernibfocus> 	
+				<onleft>51</onleft> 	
+				<onright>2</onright> 	
+				<onup>96</onup> 	
+				<ondown>96</ondown> 	
+				<showonepage>false</showonepage> 	
+				<orientation>vertical</orientation> 	
+				<animation effect="fade" time="200">WindowClose</animation> 	
+			</control> 	
+		</control>
+		
+	<!-- Photo Wall -->
+		<control type="group">
+			<control type="image"> 	
+				<posx>0</posx> 	
+				<posy>0</posy> 	
+				<width>1298</width> 	
+				<height>732</height> 	
+				<texture>background2.png</texture> 	
+				<visible>Control.IsVisible(56)</visible> 	
+				<animation effect="fade" time="200">WindowClose</animation> 	
+			</control> 	
+			<control type="panel" id="56"> 	
+				<animation effect="fade" time="200">WindowClose</animation> 	
+				<posx>0</posx> 	
+				<posy>0</posy> 	
+				<width>1280</width> 	
+				<height>720</height> 	
+				<onleft>2</onleft> 	
+				<onright>2</onright> 	
+				<onup>56</onup> 	
+				<ondown>56</ondown> 	
+				<include/> 	
+				<viewtype label="Wall Icons">Icons</viewtype> 	
+				<scrolltime tween="sine" easing="inout">200</scrolltime>
+				<pagecontrol>90</pagecontrol> 	
+				<preloaditems>6</preloaditems> 	
+				<itemlayout height="240" width="255.98"> 	
+					<control type="image"> 	
+						<posx>.9</posx> 	
+						<posy>.6</posy> 	
+						<width>254</width> 	
+						<height>239</height> 	
+						<texture diffuse="mask.png">defaultpicturebig.png</texture> 	
+						<visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible> 	
+						<visible>IsEmpty(ListItem.Icon)</visible> 	
+						<aspectratio>stretch</aspectratio> 	
+						<colordiffuse>CCFFFFFF</colordiffuse> 	
+					</control> 	
+					<control type="image"> 	
+						<posx>.9</posx> 	
+						<posy>.6</posy> 	
+						<width>254</width> 	
+						<height>239</height> 	
+						<texture diffuse="mask.png">background2.png</texture> 	
+						<visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible> 	
+						<visible>!IsEmpty(ListItem.Icon)</visible> 	
+						<aspectratio>stretch</aspectratio> 	
+						<colordiffuse>CCFFFFFF</colordiffuse> 	
+					</control> 	
+					<control type="image"> 	
+						<posx>.9</posx> 	
+						<posy>.6</posy> 	
+						<width>254</width> 	
+						<height>239</height> 	
+						<info>ListItem.Icon</info> 	
+						<texture background="true" diffuse="mask.png"/> 	
+						<visible>!IsEmpty(ListItem.Icon)</visible> 	
+						<aspectratio>stretch</aspectratio> 	
+					</control> 	
+					<control type="image"> 	
+						<posx>.9</posx> 	
+						<posy>.6</posy> 	
+						<width>254</width> 	
+						<height>239</height> 	
+						<texture>mask glass.png</texture> 	
+						<aspectratio>stretch</aspectratio> 	
+						<colordiffuse>CCFFFFFF</colordiffuse> 	
+					</control> 	
+				</itemlayout> 	
+				<focusedlayout height="240" width="255.98"> 	
+					<control type="image"> 	
+						<posx>.9</posx> 	
+						<posy>.6</posy> 	
+						<width>254</width> 	
+						<height>239</height> 	
+						<texture>special://skin/media/backgrounds/List background1.png</texture> 	
+						<!-- Center Icons --> 	
+						<animation effect="zoom" time="0" end="-76.44,-71.25.5,408.88,383.75" reversible="false" condition="[Container(56).Row(1) + Container(56).Column(1) | Container(56).Row(1) + Container(56).Column(2) | Container(56).Row(1) + Container(56).Column(3)]">Conditional</animation>	
+						<!-- Top Left Icon --> 	
+						<animation effect="zoom" time="0" end="0,0,408.88,383.75" reversible="false" condition="Container(56).Row(0) + Container(56).Column(0)">Conditional</animation>
+						<!-- Top Row Excluding Corners --> 	
+						<animation effect="zoom" time="0" end="-76.44,0,408.88,383.75" reversible="false" condition="Container(56).Row(0) + Container(56).Column(1) | Container(56).Row(0) + Container(56).Column(2) | Container(56).Row(0) + Container(56).Column(3)">Conditional</animation>
+						<!-- Top Right Corner --> 	
+						<animation effect="zoom" time="0" end="-152.88,0,408.88,383.75" reversible="false" condition="[Container(56).Row(0) + Container(56).Column(4)]">Conditional</animation>
+						<!-- Left Column Excluding Corners --> 	
+						<animation effect="zoom" time="0" end="-0,-71.25,408.88,383.75" reversible="false" condition="[Container(56).Row(1) + Container(56).Column(0)]">Conditional</animation>
+						<!-- Bottom Left Corner --> 	
+						<animation effect="zoom" time="0" end="0,-143.75,408.88,383.75" reversible="false" condition="[Container(56).Row(2) + Container(56).Column(0)]">Conditional</animation>
+						<!-- Bottom Row Excluding Corners --> 	
+						<animation effect="zoom" time="0" end="-76.44,-143.75,408.88,383.75" reversible="false" condition="[Container(56).Row(2) + Container(56).Column(1) | Container(56).Row(2) + Container(56).Column(2) | Container(56).Row(2) + Container(56).Column(3)]">Conditional</animation>
+						<!-- Bottom Right Corner --> 	
+						<animation effect="zoom" time="0" end="-152.88,-143.75,408.88,383.75" reversible="false" condition="[Container(56).Row(2) + Container(56).Column(4)]">Conditional</animation>
+						<!-- Right Column Excluding Corners --> 	
+						<animation effect="zoom" time="0" end="-152.88,-71.25,408.88,383.75" reversible="false" condition="[Container(56).Row(1) + Container(56).Column(4)]">Conditional</animation>
+						<visible>!Control.IsVisible(899)</visible> 	
+					</control> 	
+					<control type="image"> 	
+						<posx>.9</posx> 	
+						<posy>.6</posy> 	
+						<width>254</width> 	
+						<height>239</height> 	
+						<texture diffuse="mask.png">background2.png</texture> 	
+						<visible>!IsEmpty(ListItem.Icon)</visible> 	
+						<aspectratio>stretch</aspectratio> 	
+						<!-- Center Icons --> 	
+						<animation effect="zoom" time="0" end="-45.33,-41.87,346.66,325" reversible="false" condition="[Container(56).Row(1) + Container(56).Column(1) | Container(56).Row(1) + Container(56).Column(2) | Container(56).Row(1) + Container(56).Column(3)]">Conditional</animation>
+						<!-- Top Left Icon --> 	
+						<animation effect="zoom" time="0" end="31.11,29.37,346.66,325" reversible="false" condition="Container(56).Row(0) + Container(56).Column(0)">Conditional</animation>
+						<!-- Top Row Excluding Corners --> 	
+						<animation effect="zoom" time="0" end="-45.33,29.37,346.66,325" reversible="false" condition="Container(56).Row(0) + Container(56).Column(1) | Container(56).Row(0) + Container(56).Column(2) | Container(56).Row(0) + Container(56).Column(3)">Conditional</animation>
+						<!-- Top Right Corner --> 	
+						<animation effect="zoom" time="0" end="-121.77,29.37,346.66,325" reversible="false" condition="[Container(56).Row(0) + Container(56).Column(4)]">Conditional</animation>
+						<!-- Left Column Excluding Corners --> 	
+						<animation effect="zoom" time="0" end="31.11,-41.87,346.66,325" reversible="false" condition="[Container(56).Row(1) + Container(56).Column(0)]">Conditional</animation>
+						<!-- Bottom Left Corner --> 	
+						<animation effect="zoom" time="0" end="31.11,-114.37,346.66,325" reversible="false" condition="[Container(56).Row(2) + Container(56).Column(0)]">Conditional</animation>
+						<!-- Bottom Row Excluding Corners --> 	
+						<animation effect="zoom" time="0" end="-45.33,-114.37,346.66,325" reversible="false" condition="[Container(56).Row(2) + Container(56).Column(1) | Container(56).Row(2) + Container(56).Column(2) | Container(56).Row(2) + Container(56).Column(3)]">Conditional</animation>
+						<!-- Bottom Right Corner --> 	
+						<animation effect="zoom" time="0" end="-121.77,-114.37,346.66,325" reversible="false" condition="[Container(56).Row(2) + Container(56).Column(4)]">Conditional</animation>
+						<!-- Right Column Excluding Corners --> 	
+						<animation effect="zoom" time="0" end="-121.77,-41.87,346.66,325" reversible="false" condition="[Container(56).Row(1) + Container(56).Column(4)]">Conditional</animation>
+						<visible>!Control.IsVisible(899)</visible> 	
+					</control> 	
+					<control type="image"> 	
+						<posx>.9</posx> 	
+						<posy>.6</posy> 	
+						<width>254</width> 	
+						<height>239</height> 	
+						<info>ListItem.Icon</info> 	
+						<texture diffuse="mask.png"/> 	
+						<visible>!IsEmpty(ListItem.Icon)</visible> 	
+						<aspectratio>stretch</aspectratio> 	
+						<!-- Center Icons --> 	
+						<animation effect="zoom" time="0" end="-45.33,-41.87,346.66,325" reversible="false" condition="[Container(56).Row(1) + Container(56).Column(1) | Container(56).Row(1) + Container(56).Column(2) | Container(56).Row(1) + Container(56).Column(3)]">Conditional</animation>
+						<!-- Top Left Icon --> 	
+						<animation effect="zoom" time="0" end="31.11,29.37,346.66,325" reversible="false" condition="Container(56).Row(0) + Container(56).Column(0)">Conditional</animation>
+						<!-- Top Row Excluding Corners --> 	
+						<animation effect="zoom" time="0" end="-45.33,29.37,346.66,325" reversible="false" condition="Container(56).Row(0) + Container(56).Column(1) | Container(56).Row(0) + Container(56).Column(2) | Container(56).Row(0) + Container(56).Column(3)">Conditional</animation>
+						<!-- Top Right Corner --> 	
+						<animation effect="zoom" time="0" end="-121.77,29.37,346.66,325" reversible="false" condition="[Container(56).Row(0) + Container(56).Column(4)]">Conditional</animation>
+						<!-- Left Column Excluding Corners --> 	
+						<animation effect="zoom" time="0" end="31.11,-41.87,346.66,325" reversible="false" condition="[Container(56).Row(1) + Container(56).Column(0)]">Conditional</animation>
+						<!-- Bottom Left Corner --> 	
+						<animation effect="zoom" time="0" end="31.11,-114.37,346.66,325" reversible="false" condition="[Container(56).Row(2) + Container(56).Column(0)]">Conditional</animation>
+						<!-- Bottom Row Excluding Corners --> 	
+						<animation effect="zoom" time="0" end="-45.33,-114.37,346.66,325" reversible="false" condition="[Container(56).Row(2) + Container(56).Column(1) | Container(56).Row(2) + Container(56).Column(2) | Container(56).Row(2) + Container(56).Column(3)]">Conditional</animation>
+						<!-- Bottom Right Corner --> 	
+						<animation effect="zoom" time="0" end="-121.77,-114.37,346.66,325" reversible="false" condition="[Container(56).Row(2) + Container(56).Column(4)]">Conditional</animation>
+						<!-- Right Column Excluding Corners --> 	
+						<animation effect="zoom" time="0" end="-121.77,-41.87,346.66,325" reversible="false" condition="[Container(56).Row(1) + Container(56).Column(4)]">Conditional</animation>
+						<visible>!Control.IsVisible(899)</visible> 	
+					</control> 	
+					<control type="image"> 	
+						<posx>.9</posx> 	
+						<posy>.6</posy> 	
+						<width>254</width> 	
+						<height>239</height> 	
+						<texture diffuse="mask.png">defaultpicturebig.png</texture> 	
+						<visible>IsEmpty(ListItem.Thumb)</visible> 	
+						<visible>!IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible> 	
+						<aspectratio>stretch</aspectratio> 	
+						<!-- Center Icons --> 	
+						<animation effect="zoom" time="0" end="-45.33,-41.87,346.66,325" reversible="false" condition="[Container(56).Row(1) + Container(56).Column(1) | Container(56).Row(1) + Container(56).Column(2) | Container(56).Row(1) + Container(56).Column(3)]">Conditional</animation>
+						<!-- Top Left Icon --> 	
+						<animation effect="zoom" time="0" end="31.11,29.37,346.66,325" reversible="false" condition="Container(56).Row(0) + Container(56).Column(0)">Conditional</animation>
+						<!-- Top Row Excluding Corners --> 	
+						<animation effect="zoom" time="0" end="-45.33,29.37,346.66,325" reversible="false" condition="Container(56).Row(0) + Container(56).Column(1) | Container(56).Row(0) + Container(56).Column(2) | Container(56).Row(0) + Container(56).Column(3)">Conditional</animation>
+						<!-- Top Right Corner --> 	
+						<animation effect="zoom" time="0" end="-121.77,29.37,346.66,325" reversible="false" condition="[Container(56).Row(0) + Container(56).Column(4)]">Conditional</animation>
+						<!-- Left Column Excluding Corners --> 	
+						<animation effect="zoom" time="0" end="31.11,-41.87,346.66,325" reversible="false" condition="[Container(56).Row(1) + Container(56).Column(0)]">Conditional</animation>
+						<!-- Bottom Left Corner --> 	
+						<animation effect="zoom" time="0" end="31.11,-114.37,346.66,325" reversible="false" condition="[Container(56).Row(2) + Container(56).Column(0)]">Conditional</animation>
+						<!-- Bottom Row Excluding Corners --> 	
+						<animation effect="zoom" time="0" end="-45.33,-114.37,346.66,325" reversible="false" condition="[Container(56).Row(2) + Container(56).Column(1) | Container(56).Row(2) + Container(56).Column(2) | Container(56).Row(2) + Container(56).Column(3)]">Conditional</animation>
+						<!-- Bottom Right Corner --> 	
+						<animation effect="zoom" time="0" end="-121.77,-114.37,346.66,325" reversible="false" condition="[Container(56).Row(2) + Container(56).Column(4)]">Conditional</animation>
+						<!-- Right Column Excluding Corners --> 	
+						<animation effect="zoom" time="0" end="-121.77,-41.87,346.66,325" reversible="false" condition="[Container(56).Row(1) + Container(56).Column(4)]">Conditional</animation>
+						<visible>!Control.IsVisible(899)</visible> 	
+					</control> 	
+					<control type="image"> 	
+						<posx>.9</posx> 	
+						<posy>.6</posy> 	
+						<width>254</width> 	
+						<height>239</height> 	
+						<texture>mask glass.png</texture> 	
+						<aspectratio>stretch</aspectratio> 	
+						<!-- Center Icons --> 	
+						<animation effect="zoom" time="0" end="-45.33,-41.87,346.66,325" reversible="false" condition="[Container(56).Row(1) + Container(56).Column(1) | Container(56).Row(1) + Container(56).Column(2) | Container(56).Row(1) + Container(56).Column(3)]">Conditional</animation>
+						<!-- Top Left Icon --> 	
+						<animation effect="zoom" time="0" end="31.11,29.37,346.66,325" reversible="false" condition="Container(56).Row(0) + Container(56).Column(0)">Conditional</animation>
+						<!-- Top Row Excluding Corners --> 	
+						<animation effect="zoom" time="0" end="-45.33,29.37,346.66,325" reversible="false" condition="Container(56).Row(0) + Container(56).Column(1) | Container(56).Row(0) + Container(56).Column(2) | Container(56).Row(0) + Container(56).Column(3)">Conditional</animation>
+						<!-- Top Right Corner --> 	
+						<animation effect="zoom" time="0" end="-121.77,29.37,346.66,325" reversible="false" condition="[Container(56).Row(0) + Container(56).Column(4)]">Conditional</animation>
+						<!-- Left Column Excluding Corners --> 	
+						<animation effect="zoom" time="0" end="31.11,-41.87,346.66,325" reversible="false" condition="[Container(56).Row(1) + Container(56).Column(0)]">Conditional</animation>
+						<!-- Bottom Left Corner --> 	
+						<animation effect="zoom" time="0" end="31.11,-114.37,346.66,325" reversible="false" condition="[Container(56).Row(2) + Container(56).Column(0)]">Conditional</animation>
+						<!-- Bottom Row Excluding Corners --> 	
+						<animation effect="zoom" time="0" end="-45.33,-114.37,346.66,325" reversible="false" condition="[Container(56).Row(2) + Container(56).Column(1) | Container(56).Row(2) + Container(56).Column(2) | Container(56).Row(2) + Container(56).Column(3)]">Conditional</animation>
+						<!-- Bottom Right Corner --> 	
+						<animation effect="zoom" time="0" end="-121.77,-114.37,346.66,325" reversible="false" condition="[Container(56).Row(2) + Container(56).Column(4)]">Conditional</animation>
+						<!-- Right Column Excluding Corners --> 	
+						<animation effect="zoom" time="0" end="-121.77,-41.87,346.66,325" reversible="false" condition="[Container(56).Row(1) + Container(56).Column(4)]">Conditional</animation>
+						<visible>!Control.IsVisible(899)</visible> 	
+					</control> 	
+				</focusedlayout> 	
+			</control> 
+		</control>
+		
+		
+		<control type="group">
+			<posy>720</posy>
+			<!-- View-as -->
+			<animation effect="slide" time="0" start="0,0" end="0,-720" delay="0">Visible</animation>
+			<animation effect="fade" time="200" delay="300">WindowOpen</animation>
+			<visible allowhiddenfocus="true">ControlGroup(7001).HasFocus</visible>
+		<control type="group" id="7001"> 	
+			<posx>439</posx> 	
+			<posy>179</posy> 
+			<animation effect="fade" time="200">WindowClose</animation> 
+			<visible allowhiddenfocus="true">![Window.Next(Home) | Control.HasFocus(50) | Control.HasFocus(81) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(53) | Control.HasFocus(54) | Control.HasFocus(55) | Control.HasFocus(57) | Control.HasFocus(58) | Control.HasFocus(23) | Control.HasFocus(24) | Control.HasFocus(56) | Control.HasFocus(59) | Control.HasFocus(90) | Control.HasFocus(91) | Control.HasFocus(96)] + !Skin.HasSetting(LockViews)</visible>
+			<control type="image"> 	
+				<description>Button Background</description> 	
+				<posx>-439</posx> 	
+				<posy>-179</posy> 	
+				<width>1280</width> 	
+				<height>720</height> 	
+				<texture>background2.png</texture> 	
+				<colordiffuse>66ffffff</colordiffuse> 	
+			</control>
+			<control type="image"> 	
+				<description>Button Background</description> 	
+				<posx>22</posx> 	
+				<posy>0</posy> 	
+				<width>359</width> 	
+				<height>362</height> 	
+				<texture>context.png</texture>				
+			</control> 	
+			<control type="label"> 	
+				<posx>32</posx> 	
+				<posy>25</posy> 	
+				<width>339</width> 	
+				<height>56</height> 	
+				<align>center</align> 	
+				<font>special14</font> 	
+				<textcolor>lightblue</textcolor> 	
+				<shadowcolor>black</shadowcolor> 	
+				<label>1</label> 	
+			</control> 	
+			<control type="button" id="2"> 	
+				<description>View As Icons button</description> 	
+				<posx>32</posx> 	
+				<posy>62</posy> 	
+				<width>339</width> 	
+				<height>40</height> 	
+				<font>font13</font> 	
+				<textcolor>white</textcolor> 	
+				<shadowcolor>black</shadowcolor> 	
+				<label>100</label> 	
+				<textoffsetx>18</textoffsetx> 	
+				<texturefocus>button-focus.png</texturefocus> 	
+				<texturenofocus>-</texturenofocus> 	
+				<colordiffuse>99ffffff</colordiffuse> 	
+				<onleft>50</onleft> 	
+				<onright>50</onright> 	
+				<onup>9</onup> 	
+				<ondown>3</ondown> 	
+				<visible>!Skin.HasSetting(LockViews)</visible> 	
+			</control> 	
+			<control type="button" id="3"> 	
+				<description>Sort by button</description> 	
+				<posx>32</posx> 	
+				<posy>119</posy> 	
+				<width>339</width> 	
+				<height>40</height> 	
+				<font>font13</font> 	
+				<textcolor>white</textcolor> 	
+				<shadowcolor>black</shadowcolor> 	
+				<label>103</label> 	
+				<textoffsetx>18</textoffsetx> 	
+				<texturefocus>button-focus.png</texturefocus> 	
+				<colordiffuse>99ffffff</colordiffuse> 	
+				<texturenofocus>-</texturenofocus> 	
+				<onleft>50</onleft> 	
+				<onright>4</onright> 	
+				<onup>2</onup> 	
+				<ondown>6</ondown> 	
+			</control> 	
+			<control type="togglebutton" id="4"> 	
+				<description>Sort asc</description> 	
+				<posx>335</posx> 	
+				<posy>125</posy> 	
+				<label>-</label> 	
+				<onleft>3</onleft> 	
+				<onright>50</onright> 	
+				<onup>2</onup> 	
+				<ondown>6</ondown> 	
+			</control> 	
+			<control type="button" id="6"> 	
+				<description>SlideShow button</description> 	
+				<posx>32</posx> 	
+				<posy>175</posy> 	
+				<width>339</width> 	
+				<height>40</height> 	
+				<font>font13</font> 	
+				<textcolor>white</textcolor> 	
+				<shadowcolor>black</shadowcolor> 	
+				<textoffsetx>18</textoffsetx> 	
+				<texturefocus>button-focus.png</texturefocus> 	
+				<texturenofocus>-</texturenofocus> 	
+				<colordiffuse>99ffffff</colordiffuse> 	
+				<label>108</label> 	
+				<onleft>50</onleft> 	
+				<onright>50</onright> 	
+				<onup>3</onup> 	
+				<ondown>7</ondown> 	
+			</control> 	
+			<control type="button" id="7"> 	
+				<description>recursive slideshow</description> 	
+				<posx>32</posx> 	
+				<posy>231</posy> 	
+				<width>339</width> 	
+				<height>40</height> 	
+				<textcolor>white</textcolor> 	
+				<shadowcolor>black</shadowcolor> 	
+				<font>font13</font> 	
+				<label>361</label> 	
+				<textoffsetx>18</textoffsetx> 	
+				<texturefocus>button-focus.png</texturefocus> 	
+				<texturenofocus>-</texturenofocus> 	
+				<colordiffuse>99ffffff</colordiffuse> 	
+				<onleft>50</onleft> 	
+				<onright>50</onright> 	
+				<onup>6</onup> 	
+				<ondown>9</ondown> 	
+			</control> 	
+			<control type="button" id="9"> 	
+				<description>recursive slideshow</description> 	
+				<posx>32</posx> 	
+				<posy>288</posy> 	
+				<width>339</width> 	
+				<height>40</height> 	
+				<textcolor>white</textcolor> 	
+				<shadowcolor>black</shadowcolor> 	
+				<font>font13</font> 	
+				<label>13319</label> 	
+				<textoffsetx>18</textoffsetx> 	
+				<texturefocus>button-focus.png</texturefocus> 	
+				<texturenofocus>-</texturenofocus> 	
+				<colordiffuse>99ffffff</colordiffuse> 	
+				<onleft>50</onleft> 	
+				<onright>50</onright> 	
+				<onup>7</onup> 	
+				<ondown>2</ondown> 	
+			</control> 	
+		</control> 	
+		</control>
+		<include>Music-Info</include> 	
+		<include>Alpha Scroll Label</include> 	
+		<control type="group"> 	
+			<include>Time3</include> 	
+			<visible>[!Control.IsVisible(56) | !Container(56).Row(0)]</visible> 	
+		</control> 	
+	</controls> 	
+</window> 	
+			

@@ -2,7 +2,23 @@
 	<defaultcontrol>1</defaultcontrol>
 	<controls>
 		<control type="group">
-			<include>TopRightSlideAnimations</include>
+			<!-- TopRightSlideAnimations -->
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" time="250" tween="sine" easing="out"  />
+				<effect type="slide" start="0,-35" end="0,0" time="300" tween="cubic" easing="out" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+				<effect type="slide" start="0,0" end="0,-35" time="350" tween="sine" easing="out" />
+			</animation>
+			<animation type="Visible">
+				<effect type="fade" start="0" end="100" time="250" tween="sine" easing="out"  />
+				<effect type="slide" start="0,-35" end="0,0" time="300" tween="cubic" easing="out" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+				<effect type="slide" start="0,0" end="0,-35" time="350" tween="sine" easing="out" />
+			</animation>
 			<control type="image">
 				<posx>264r</posx>
 				<posy>24</posy>
@@ -20,7 +36,7 @@
 					<posy>-30</posy>
 					<width>230</width>
 					<height>29</height>
-          <label>$LOCALIZE[13376]</label>
+					<label>$LOCALIZE[13376]</label>
 					<font>FontSize_18</font>
 					<textcolor>99white</textcolor>
 					<shadowcolor>99000000</shadowcolor>
@@ -33,13 +49,13 @@
 					<posy>-30</posy>
 					<width>230</width>
 					<height>29</height>
-          <label>$INFO[Player.Volume]</label>
+					<label>$INFO[Player.Volume]</label>
 					<font>FontSize_18</font>
 					<textcolor>99white</textcolor>
 					<shadowcolor>99000000</shadowcolor>
 					<align>right</align>
 					<aligny>center</aligny>
-          <visible>!substring(Player.Volume,-60.0)</visible>
+					<visible>!substring(Player.Volume,-60.0)</visible>
 				</control>
 				<control type="label">
 					<description>Mute Label</description>
@@ -47,13 +63,13 @@
 					<posy>-30</posy>
 					<width>230</width>
 					<height>29</height>
-          <label>$LOCALIZE[31300]</label>
+					<label>$LOCALIZE[31300]</label>
 					<font>FontSize_18</font>
 					<textcolor>red</textcolor>
 					<shadowcolor>99000000</shadowcolor>
 					<align>right</align>
 					<aligny>center</aligny>
-          <visible>substring(Player.Volume,-60.0)</visible>
+					<visible>substring(Player.Volume,-60.0)</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>

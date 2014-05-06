@@ -13,19 +13,19 @@
 	</variable>
 
 	<include name="FlagsLayout">
-			<width>65</width>
-			<height>28</height>
-			<colordiffuse>99ffffff</colordiffuse>
-			<aspectratio align="center">keep</aspectratio>
+		<width>65</width>
+		<height>28</height>
+		<colordiffuse>99ffffff</colordiffuse>
+		<aspectratio align="center">keep</aspectratio>
 	</include>
 
 	<include name="FlagsOSDLayout">
-			<width>50</width>
-			<height>22</height>
-			<colordiffuse>55ffffff</colordiffuse>
-			<aspectratio align="center">keep</aspectratio>
+		<width>50</width>
+		<height>22</height>
+		<colordiffuse>55ffffff</colordiffuse>
+		<aspectratio align="center">keep</aspectratio>
 	</include>
-	
+
 	<include name="VideoResFlagsConditions">
 		<control type="image">
 			<description>Video Resolution Image</description>
@@ -59,79 +59,79 @@
 	</include>
 
 	<include name="CameraLogosLayout">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>161</width>
-			<height>109</height>
-	    <colordiffuse>99ffffff</colordiffuse>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>161</width>
+		<height>109</height>
+		<colordiffuse>99ffffff</colordiffuse>
 	</include>
 	<include name="CameraLogosFlags">
 		<control type="image.">
-      <include>CameraLogosLayout</include>
-      <texture>views/list/info.png</texture>
+			<include>CameraLogosLayout</include>
+			<texture>views/list/info.png</texture>
 			<visible>IsEmpty(ListItem.PictureCamMake)</visible>
 		</control>
 		<control type="image">
-      <include>CameraLogosLayout</include>
-      <texture>flags/camera/Canon.png</texture>
+			<include>CameraLogosLayout</include>
+			<texture>flags/camera/Canon.png</texture>
 			<visible>SubString(ListItem.PictureCamMake,Canon) | SubString(ListItem.PictureCamModel,Canon)</visible>
 		</control>
 		<control type="image">
 			<include>CameraLogosLayout</include>
-      <texture>flags/camera/FujiFilm.png</texture>
+			<texture>flags/camera/FujiFilm.png</texture>
 			<visible>SubString(ListItem.PictureCamMake,FujiFilm) | SubString(ListItem.PictureCamModel,FujiFilm)</visible>
 		</control>
 		<control type="image">
 			<include>CameraLogosLayout</include>
-      <texture>flags/camera/Kodak.png</texture>
+			<texture>flags/camera/Kodak.png</texture>
 			<visible>SubString(ListItem.PictureCamMake,Kodak) | SubString(ListItem.PictureCamModel,Kodak)</visible>
 		</control>
 		<control type="image">
 			<include>CameraLogosLayout</include>
-      <texture>flags/camera/Leica.png</texture>
+			<texture>flags/camera/Leica.png</texture>
 			<visible>SubString(ListItem.PictureCamMake,Leica) | SubString(ListItem.PictureCamModel,Leica)</visible>
 		</control>
 		<control type="image">
 			<include>CameraLogosLayout</include>
-      <texture>flags/camera/Nikon.png</texture>
+			<texture>flags/camera/Nikon.png</texture>
 			<visible>SubString(ListItem.PictureCamMake,Nikon) | SubString(ListItem.PictureCamModel,Nikon)</visible>
 		</control>
 		<control type="image">
 			<include>CameraLogosLayout</include>
-      <texture>flags/camera/Nokia.png</texture>
+			<texture>flags/camera/Nokia.png</texture>
 			<visible>SubString(ListItem.PictureCamMake,Nokia) | SubString(ListItem.PictureCamModel,Nokia)</visible>
 		</control>
 		<control type="image">
 			<include>CameraLogosLayout</include>
-      <texture>flags/camera/Olympus.png</texture>
+			<texture>flags/camera/Olympus.png</texture>
 			<visible>SubString(ListItem.PictureCamMake,Olympus) | SubString(ListItem.PictureCamModel,Olympus)</visible>
 		</control>
 		<control type="image">
 			<include>CameraLogosLayout</include>
-      <texture>flags/camera/Panasonic.png</texture>
+			<texture>flags/camera/Panasonic.png</texture>
 			<visible>SubString(ListItem.PictureCamMake,Panasonic) | SubString(ListItem.PictureCamModel,Panasonic)</visible>
 		</control>
 		<control type="image">
 			<include>CameraLogosLayout</include>
-      <texture>flags/camera/Polaroid.png</texture>
+			<texture>flags/camera/Polaroid.png</texture>
 			<visible>SubString(ListItem.PictureCamMake,Polaroid) | SubString(ListItem.PictureCamModel,Polaroid)</visible>
 		</control>
 		<control type="image">
 			<include>CameraLogosLayout</include>
-      <texture>flags/camera/Samsung.png</texture>
+			<texture>flags/camera/Samsung.png</texture>
 			<visible>SubString(ListItem.PictureCamMake,Samsung) | SubString(ListItem.PictureCamModel,Samsung)</visible>
 		</control>
 		<control type="image">
 			<include>CameraLogosLayout</include>
-      <texture>flags/camera/Sony.png</texture>
+			<texture>flags/camera/Sony.png</texture>
 			<visible>SubString(ListItem.PictureCamMake,Sony) | SubString(ListItem.PictureCamModel,Sony)</visible>
 		</control>
 		<control type="image">
 			<include>CameraLogosLayout</include>
-      <texture>flags/camera/Toshiba.png</texture>
+			<texture>flags/camera/Toshiba.png</texture>
 			<visible>SubString(ListItem.PictureCamMake,Toshiba) | SubString(ListItem.PictureCamModel,Toshiba)</visible>
 		</control>
 	</include>
 
-	
+
 </includes>

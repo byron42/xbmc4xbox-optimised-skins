@@ -2,10 +2,26 @@
 	<defaultcontrol>61</defaultcontrol>
 	<controls>
 		<control type="group">
-		  <include>DialogAnimation</include>
+			<!-- DialogAnimation -->
+			<animation type="WindowOpen" reversible="false">
+				<effect type="fade" start="0" end="100" time="300" delay="0" tween="sine" easing="inout" />
+				<effect type="zoom" start="90" end="100" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="zoom" start="100" end="90" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+				<effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="inout" />
+			</animation>
+			<animation type="Visible" reversible="false">
+				<effect type="fade" start="0" end="100" time="300" delay="0" tween="sine" easing="inout" />
+				<effect type="zoom" start="90" end="100" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+			</animation>
+			<animation type="Hidden" reversible="false">
+				<effect type="zoom" start="100" end="90" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+				<effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="inout" />
+			</animation>
 			<control type="image">
 				<include>FullscreenDimensions</include>
-			  <texture background="true">dialogs/other/bg_textviewer.png</texture>
+				<texture background="true">dialogs/other/bg_textviewer.png</texture>
 			</control>
 			<control type="label" id="1">
 				<description>header label</description>

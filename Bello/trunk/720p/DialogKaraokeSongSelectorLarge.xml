@@ -1,58 +1,90 @@
 <window type="dialog" id="144">
-	<include>DialogAnimation</include>
+	<!-- DialogAnimation -->
+	<animation type="WindowOpen" reversible="false">
+		<effect type="fade" start="0" end="100" time="300" delay="0" tween="sine" easing="inout" />
+		<effect type="zoom" start="90" end="100" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+	</animation>
+	<animation type="WindowClose" reversible="false">
+		<effect type="zoom" start="100" end="90" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+		<effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="inout" />
+	</animation>
+	<animation type="Visible" reversible="false">
+		<effect type="fade" start="0" end="100" time="300" delay="0" tween="sine" easing="inout" />
+		<effect type="zoom" start="90" end="100" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+	</animation>
+	<animation type="Hidden" reversible="false">
+		<effect type="zoom" start="100" end="90" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+		<effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="inout" />
+	</animation>
 	<controls>
 
-   <control type="group">
-	  <include>DialogAnimation</include>
-		<control type="image">
-			<description>background image</description>
-			<include>FullscreenDimensions</include>
-			<texture background="true">dialogs/other/bg_ok.png</texture>
-		</control>
-		<control type="label" id="1">
-			<description>header label</description>
-			<posx>340</posx>
-			<posy>245</posy>
-			<width>600</width>
-			<font>FontSize_36</font>
-			<textcolor>white</textcolor>
-			<align>center</align>
-			<aligny>center</aligny>
-			<scroll>true</scroll>
-			<scrollspeed>20</scrollspeed>
-		  <label>$LOCALIZE[31017]</label>
-		</control>
-	
-	   <control type="group">
-			<posx>370</posx>
-			<posy>250</posy>
-			<control type="label" id="401">
-				<description>Song Number Label</description>
-				<posx>0</posx>
-				<posy>65</posy>
-        <width>550</width>
-				<height>45</height>
-				<textcolor>77white</textcolor>
-				<align>left</align>
-				<aligny>center</aligny>
-				<label>-</label>
-				<haspath>true</haspath>
-				<font>FontSize_22B</font>
+		<control type="group">
+			<!-- DialogAnimation -->
+			<animation type="WindowOpen" reversible="false">
+				<effect type="fade" start="0" end="100" time="300" delay="0" tween="sine" easing="inout" />
+				<effect type="zoom" start="90" end="100" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="zoom" start="100" end="90" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+				<effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="inout" />
+			</animation>
+			<animation type="Visible" reversible="false">
+				<effect type="fade" start="0" end="100" time="300" delay="0" tween="sine" easing="inout" />
+				<effect type="zoom" start="90" end="100" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+			</animation>
+			<animation type="Hidden" reversible="false">
+				<effect type="zoom" start="100" end="90" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+				<effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="inout" />
+			</animation>
+			<control type="image">
+				<description>background image</description>
+				<include>FullscreenDimensions</include>
+				<texture background="true">dialogs/other/bg_ok.png</texture>
 			</control>
-			<control type="label" id="402">
-				<description>Song Name Label</description>
-				<posx>0</posx>
-				<posy>95</posy>
-        <width>550</width>
-				<height>45</height>
-				<textcolor>77white</textcolor>
-				<align>left</align>
+			<control type="label" id="1">
+				<description>header label</description>
+				<posx>340</posx>
+				<posy>245</posy>
+				<width>600</width>
+				<font>FontSize_36</font>
+				<textcolor>white</textcolor>
+				<align>center</align>
 				<aligny>center</aligny>
-				<label>-</label>
-				<haspath>true</haspath>
-				<font>FontSize_22</font>
+				<scroll>true</scroll>
+				<scrollspeed>20</scrollspeed>
+				<label>$LOCALIZE[31017]</label>
 			</control>
-		 </control>
-	 </control>
+
+			<control type="group">
+				<posx>370</posx>
+				<posy>250</posy>
+				<control type="label" id="401">
+					<description>Song Number Label</description>
+					<posx>0</posx>
+					<posy>65</posy>
+					<width>550</width>
+					<height>45</height>
+					<textcolor>77white</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>-</label>
+					<haspath>true</haspath>
+					<font>FontSize_22B</font>
+				</control>
+				<control type="label" id="402">
+					<description>Song Name Label</description>
+					<posx>0</posx>
+					<posy>95</posy>
+					<width>550</width>
+					<height>45</height>
+					<textcolor>77white</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>-</label>
+					<haspath>true</haspath>
+					<font>FontSize_22</font>
+				</control>
+			</control>
+		</control>
 	</controls>
 </window>

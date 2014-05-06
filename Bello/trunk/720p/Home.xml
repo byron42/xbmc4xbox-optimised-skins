@@ -1,7 +1,7 @@
 <window id="0">
 	<defaultcontrol always="true">20</defaultcontrol>
-  <allowoverlay>yes</allowoverlay>
-  <backgroundcolor>0</backgroundcolor>
+	<allowoverlay>yes</allowoverlay>
+	<backgroundcolor>0</backgroundcolor>
 	<controls>
 		<include>BackgroundContent</include>
 		<!-- <include>HomeBackground</include> -->
@@ -9,9 +9,9 @@
 		<include>BackgroundVignette</include>
 		<!-- Main Home Menu Wraplist -->
 		<include>HomeMenuWraplist</include>
-	  <!-- Home Now Playing -->
+		<!-- Home Now Playing -->
 		<include>HomeNowPlaying</include>
-	  <!-- Various Home Includes -->
+		<!-- Various Home Includes -->
 		<include condition="!Skin.HasSetting(HideMoviesSubMenu)">HomeSubMenuMovies</include>
 		<include condition="!Skin.HasSetting(HideTVShowsSubMenu)">HomeSubMenuTVShows</include>
 		<include condition="!Skin.HasSetting(HideMusicSubMenu)">HomeSubMenuMusic</include>
@@ -19,7 +19,7 @@
 		<include>SkinWidgetsLists</include>
 		<include>HomeSubMenusArrows</include>
 		<include>CommonDialogsFadeOutBG</include>
-	  <!-- Home TopSection -->
+		<!-- Home TopSection -->
 		<include>TopHomeMenu</include>
 		<include>ContentSkinWidgetsInfo</include>
 

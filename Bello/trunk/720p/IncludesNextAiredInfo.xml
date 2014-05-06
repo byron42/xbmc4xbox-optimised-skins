@@ -1,6 +1,6 @@
 <includes>
 
-  <!-- TV Guide Layout -->
+	<!-- TV Guide Layout -->
 	<include name="TVGuideLayout">
 		<itemlayout width="160" height="84">
 			<control type="image">
@@ -44,7 +44,9 @@
 				<width>160</width>
 				<height>80</height>
 				<texture border="20">buttons/settings_fo.png</texture>
-	      <include>VisibleFadeEffect2</include>
+				<!-- VisibleFadeEffect2 -->
+				<animation effect="fade" time="50">Visible</animation>
+				<animation effect="fade" time="50">Hidden</animation>
 			</control>
 			<control type="image">
 				<description>Banner</description>
@@ -83,20 +85,20 @@
 	</include>
 
 
-  <!-- TV Guide Art -->
+	<!-- TV Guide Art -->
 	<variable name="TVGuidePreviewThumb">
 		<value condition="Skin.String(PreviewThumb,1)">$VAR[TVGuideLandscape]</value>
 		<value condition="Skin.String(PreviewThumb,2)">$VAR[TVGuideFanart]</value>
 		<value condition="Skin.String(PreviewThumb,3)">$VAR[TVGuideLogo]</value>
 	</variable>
 	<variable name="TVGuideFanart">
-    <value condition="ControlGroup(2000).HasFocus(200)">$INFO[Container(200).ListItem.Property(Fanart)]</value>
-    <value condition="ControlGroup(2000).HasFocus(201)">$INFO[Container(201).ListItem.Property(Fanart)]</value>
-    <value condition="ControlGroup(2000).HasFocus(202)">$INFO[Container(202).ListItem.Property(Fanart)]</value>
-    <value condition="ControlGroup(2000).HasFocus(203)">$INFO[Container(203).ListItem.Property(Fanart)]</value>
-    <value condition="ControlGroup(2000).HasFocus(204)">$INFO[Container(204).ListItem.Property(Fanart)]</value>
-    <value condition="ControlGroup(2000).HasFocus(205)">$INFO[Container(205).ListItem.Property(Fanart)]</value>
-    <value condition="ControlGroup(2000).HasFocus(206)">$INFO[Container(206).ListItem.Property(Fanart)]</value>
+		<value condition="ControlGroup(2000).HasFocus(200)">$INFO[Container(200).ListItem.Property(Fanart)]</value>
+		<value condition="ControlGroup(2000).HasFocus(201)">$INFO[Container(201).ListItem.Property(Fanart)]</value>
+		<value condition="ControlGroup(2000).HasFocus(202)">$INFO[Container(202).ListItem.Property(Fanart)]</value>
+		<value condition="ControlGroup(2000).HasFocus(203)">$INFO[Container(203).ListItem.Property(Fanart)]</value>
+		<value condition="ControlGroup(2000).HasFocus(204)">$INFO[Container(204).ListItem.Property(Fanart)]</value>
+		<value condition="ControlGroup(2000).HasFocus(205)">$INFO[Container(205).ListItem.Property(Fanart)]</value>
+		<value condition="ControlGroup(2000).HasFocus(206)">$INFO[Container(206).ListItem.Property(Fanart)]</value>
 	</variable>
 	<variable name="TVGuideLandscape">
 		<value condition="ControlGroup(2000).HasFocus(200)">$INFO[Container(200).ListItem.Property(Art(landscape))]</value>
@@ -134,17 +136,17 @@
 		<value condition="ControlGroup(2000).HasFocus(205)">$INFO[Container(205).ListItem.Property(Network),flags/studio/,.png]</value>
 		<value condition="ControlGroup(2000).HasFocus(206)">$INFO[Container(206).ListItem.Property(Network),flags/studio/,.png]</value>
 	</variable>
-	
 
-  <!-- TV Guide Labels -->	
+
+	<!-- TV Guide Labels -->	
 	<variable name="NextAiredLabel">
-    <value condition="ControlGroup(2000).HasFocus(200)">$INFO[Container(200).ListItem.Label]</value>
-    <value condition="ControlGroup(2000).HasFocus(201)">$INFO[Container(201).ListItem.Label]</value>
-    <value condition="ControlGroup(2000).HasFocus(202)">$INFO[Container(202).ListItem.Label]</value>
-    <value condition="ControlGroup(2000).HasFocus(203)">$INFO[Container(203).ListItem.Label]</value>
-    <value condition="ControlGroup(2000).HasFocus(204)">$INFO[Container(204).ListItem.Label]</value>
-    <value condition="ControlGroup(2000).HasFocus(205)">$INFO[Container(205).ListItem.Label]</value>
-    <value condition="ControlGroup(2000).HasFocus(206)">$INFO[Container(206).ListItem.Label]</value>	
+		<value condition="ControlGroup(2000).HasFocus(200)">$INFO[Container(200).ListItem.Label]</value>
+		<value condition="ControlGroup(2000).HasFocus(201)">$INFO[Container(201).ListItem.Label]</value>
+		<value condition="ControlGroup(2000).HasFocus(202)">$INFO[Container(202).ListItem.Label]</value>
+		<value condition="ControlGroup(2000).HasFocus(203)">$INFO[Container(203).ListItem.Label]</value>
+		<value condition="ControlGroup(2000).HasFocus(204)">$INFO[Container(204).ListItem.Label]</value>
+		<value condition="ControlGroup(2000).HasFocus(205)">$INFO[Container(205).ListItem.Label]</value>
+		<value condition="ControlGroup(2000).HasFocus(206)">$INFO[Container(206).ListItem.Label]</value>	
 	</variable>
 	<variable name="NextAiredGenre">
 		<value condition="ControlGroup(2000).HasFocus(200)">$INFO[Container(200).ListItem.Property(Genre)]</value>
@@ -231,6 +233,6 @@
 
 </includes>
 
-				
-				
-				
+
+
+

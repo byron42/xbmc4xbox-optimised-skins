@@ -35,7 +35,7 @@
 		<font>FontSize_18</font>
 		<textcolor>77white</textcolor>
 		<focusedcolor>white</focusedcolor>
-	  <disabledcolor>33white</disabledcolor>
+		<disabledcolor>33white</disabledcolor>
 		<texturefocus>buttons/settings_fo.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<textoffsetx>7</textoffsetx>
@@ -50,7 +50,7 @@
 		<font>FontSize_18</font>
 		<textcolor>77white</textcolor>
 		<focusedcolor>white</focusedcolor>
-	  <disabledcolor>33white</disabledcolor>
+		<disabledcolor>33white</disabledcolor>
 		<textoffsetx>0</textoffsetx>
 		<textoffsety>0</textoffsety>
 		<align>left</align>
@@ -64,7 +64,7 @@
 		<font>FontSize_18</font>
 		<textcolor>77white</textcolor>
 		<focusedcolor>white</focusedcolor>
-	  <disabledcolor>33white</disabledcolor>
+		<disabledcolor>33white</disabledcolor>
 		<texturefocus>buttons/settings_fo.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<textureradiofocus>buttons/radio_button_fo.png</textureradiofocus>
@@ -80,7 +80,7 @@
 		<font>FontSize_18</font>
 		<textcolor>77white</textcolor>
 		<focusedcolor>white</focusedcolor>
-	  <disabledcolor>33white</disabledcolor>
+		<disabledcolor>33white</disabledcolor>
 		<texturefocus>buttons/settings_fo.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<texturebg>buttons/list_fo.png</texturebg>
@@ -99,7 +99,7 @@
 		<font>FontSize_18</font>
 		<textcolor>77white</textcolor>
 		<focusedcolor>white</focusedcolor>
-	  <disabledcolor>33white</disabledcolor>
+		<disabledcolor>33white</disabledcolor>
 		<texturefocus>buttons/settings_fo.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<textureup>buttons/arrow_up_nf.png</textureup>
@@ -108,7 +108,7 @@
 		<texturedownfocus>buttons/arrow_down_fo.png</texturedownfocus>
 		<spinposx>0</spinposx>
 		<spinposy>0</spinposy>
-    <align>left</align>
+		<align>left</align>
 		<aligny>center</aligny>
 		<reverse>yes</reverse>
 		<subtype>text</subtype>
@@ -121,7 +121,7 @@
 		<font>FontSize_18</font>
 		<textcolor>77white</textcolor>
 		<focusedcolor>white</focusedcolor>
-	  <disabledcolor>33white</disabledcolor>
+		<disabledcolor>33white</disabledcolor>
 		<texturefocus>buttons/settings_fo.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<textureup>buttons/arrow_up_nf.png</textureup>
@@ -140,7 +140,7 @@
 		<font>FontSize_18</font>
 		<textcolor>77white</textcolor>
 		<focusedcolor>white</focusedcolor>
-	  <disabledcolor>33white</disabledcolor>
+		<disabledcolor>33white</disabledcolor>
 		<texturefocus>buttons/settings_fo.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<texturesliderbar>osd/osd_slider_bg.png</texturesliderbar>
@@ -148,7 +148,7 @@
 		<textureslidernibfocus>osd/osd_slider_nib_fo.png</textureslidernibfocus>
 		<sliderwidth>200</sliderwidth>
 		<sliderheight>25</sliderheight>
-    <align>left</align>
+		<align>left</align>
 		<aligny>center</aligny>
 		<pulseonselect>no</pulseonselect>
 	</default>

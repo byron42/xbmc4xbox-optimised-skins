@@ -10,19 +10,19 @@
 		<control type="group">
 			<posx>478</posx>
 			<posy>40</posy>
-	    <animation type="WindowOpen">
-	      <effect type="fade" start="0" end="100" time="250" tween="sine" easing="out"  />
-	      <effect type="slide" start="0,-35" end="0,0" time="300" tween="cubic" easing="out" />
-	    </animation>
-	    <animation type="WindowClose">
-	      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	      <effect type="slide" start="0,0" end="0,-35" time="350" tween="sine" easing="out" />
-	    </animation>
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" time="250" tween="sine" easing="out"  />
+				<effect type="slide" start="0,-35" end="0,0" time="300" tween="cubic" easing="out" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+				<effect type="slide" start="0,0" end="0,-35" time="350" tween="sine" easing="out" />
+			</animation>
 			<control type="image">
 				<width>325</width>     
 				<height>138</height> 
 				<texture border="65">osd/osd_controls_bg.png</texture>
-			  <colordiffuse>AA999999</colordiffuse>
+				<colordiffuse>AA999999</colordiffuse>
 			</control>
 			<control type="label" id="10">
 				<description>Option Name</description>

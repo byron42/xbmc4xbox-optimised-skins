@@ -1,205 +1,316 @@
 <window id="34">
 	<defaultcontrol always="true">9001</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-  <backgroundcolor>0</backgroundcolor>
+	<backgroundcolor>0</backgroundcolor>
 	<controls>
-	 <include>BackgroundItems</include>
+		<include>BackgroundItems</include>
 
-	 <control type="group">
-	    <include>Window_OpenClose_Animation</include>
-	    <include>DialogZoomInOutAnimation</include>
-		  <visible>!Window.IsActive(ContextMenu) + !Window.IsActive(ShutdownMenu)</visible>
-		
-	  <control type="group">
-	    <include>Window_OpenClose_Animation</include>			
-			<control type="image">
-			  <include>Window_OpenClose_Animation</include>
-			  <include>FullscreenDimensions</include>
-			  <texture background="true">windows/settings/bg_settings.png</texture>
-			</control>
+		<control type="group">
+			<!-- Window_OpenClose_Animation -->
+			<animation type="WindowOpen" reversible="false">
+				<effect type="fade" start="0" end="100" time="300" delay="0" tween="sine" easing="inout" />
+				<effect type="zoom" start="90" end="100" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="fade" start="100" end="0" time="300" delay="250" tween="sine" easing="inout" />
+				<effect type="zoom" start="100" end="90" time="300" delay="250" center="640,360" tween="sine" easing="inout" />
+			</animation>
+			<animation type="Visible" reversible="false">
+				<effect type="fade" start="0" end="100" time="300" delay="0" tween="sine" easing="inout" />
+				<effect type="zoom" start="90" end="100" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+			</animation>
+			<animation type="Hidden" reversible="false">
+				<effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="inout" />
+				<effect type="zoom" start="100" end="90" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+			</animation>
+			<!-- DialogZoomInOutAnimation -->
+			<animation type="Conditional" reversible="false" condition="Window.IsActive(1110) | Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRecordingInfo) 
+				| Window.IsActive(PVRTimerSetting) | Window.IsActive(PVRGuideSearch) | Window.IsActive(PVRChannelManager) | Window.IsActive(PVRGroupManager) 
+				| Window.IsActive(ShutdownMenu)| Window.IsActive(ContextMenu)| Window.IsActive(SelectDialog) | Window.IsActive(DialogSelect.xml) 
+				| Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(SongInformation) | Window.IsActive(AddonInformation) 
+				| Window.IsActive(FileBrowser) | Window.IsActive(TextViewer) | Window.IsActive(AddonSettings) | Window.IsActive(ContentSettings) 
+				| Window.IsActive(FileStackingDialog) | Window.IsActive(MediaSource) | Window.IsActive(PictureInfo) | Window.IsActive(ProfileSettings) 
+				| Window.IsActive(LockSettings) | Window.IsActive(SmartPlaylistEditor) | Window.IsActive(Peripherals) | Window.IsActive(PeripheralSettings)
+				| Window.IsActive(SmartPlaylistRule)| [Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]]
+				| Window.IsActive(script-globalsearch-infodialog.xml) | Window.IsActive(script-XBMC_Lyrics-settings.xml) 
+				| Window.IsActive(script-RSS_Editor-rssEditor.xml) | Window.IsActive(script-RSS_Editor-setEditor.xml)">
+				<effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="inout" />
+				<effect type="zoom" start="100" end="90" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+			</animation>
+			<animation type="Conditional" reversible="false" condition="!Window.IsActive(1110) + !Window.IsActive(PVRGuideInfo) + !Window.IsActive(PVRRecordingInfo) 
+				+ !Window.IsActive(PVRTimerSetting) + !Window.IsActive(PVRGuideSearch) + !Window.IsActive(PVRChannelManager) + !Window.IsActive(PVRGroupManager)
+				+ !Window.IsActive(ShutdownMenu) + !Window.IsActive(ContextMenu)  + !Window.IsActive(SelectDialog)  + !Window.IsActive(DialogSelect.xml)
+				+ !Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(SongInformation) + !Window.IsActive(AddonInformation) 
+				+ !Window.IsActive(FileBrowser) + !Window.IsActive(TextViewer) + !Window.IsActive(AddonSettings) + !Window.IsActive(ContentSettings) 
+				+ !Window.IsActive(FileStackingDialog) + !Window.IsActive(MediaSource) + !Window.IsActive(PictureInfo) + !Window.IsActive(ProfileSettings) 
+				+ !Window.IsActive(LockSettings) + !Window.IsActive(SmartPlaylistEditor) + !Window.IsActive(SmartPlaylistRule) + !Window.IsActive(Peripherals) 
+				+ !Window.IsActive(PeripheralSettings)+ ![Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]]
+				+ !Window.IsActive(script-globalsearch-infodialog.xml) + !Window.IsActive(script-XBMC_Lyrics-settings.xml) 
+				+ !Window.IsActive(script-RSS_Editor-rssEditor.xml) + !Window.IsActive(script-RSS_Editor-setEditor.xml)">
+				<effect type="zoom" start="90" end="100" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+				<effect type="fade" start="0" end="100" time="300" delay="0" tween="sine" easing="inout" />
+			</animation>
+
+			<visible>!Window.IsActive(ContextMenu) + !Window.IsActive(ShutdownMenu)</visible>
+
 			<control type="group">
+				<!-- Window_OpenClose_Animation -->
+				<animation type="WindowOpen" reversible="false">
+					<effect type="fade" start="0" end="100" time="300" delay="0" tween="sine" easing="inout" />
+					<effect type="zoom" start="90" end="100" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+				</animation>
+				<animation type="WindowClose" reversible="false">
+					<effect type="fade" start="100" end="0" time="300" delay="250" tween="sine" easing="inout" />
+					<effect type="zoom" start="100" end="90" time="300" delay="250" center="640,360" tween="sine" easing="inout" />
+				</animation>
+				<animation type="Visible" reversible="false">
+					<effect type="fade" start="0" end="100" time="300" delay="0" tween="sine" easing="inout" />
+					<effect type="zoom" start="90" end="100" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+				</animation>
+				<animation type="Hidden" reversible="false">
+					<effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="inout" />
+					<effect type="zoom" start="100" end="90" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+				</animation>			
+				<control type="image">
+					<!-- Window_OpenClose_Animation -->
+					<animation type="WindowOpen" reversible="false">
+						<effect type="fade" start="0" end="100" time="300" delay="0" tween="sine" easing="inout" />
+						<effect type="zoom" start="90" end="100" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+						<effect type="fade" start="100" end="0" time="300" delay="250" tween="sine" easing="inout" />
+						<effect type="zoom" start="100" end="90" time="300" delay="250" center="640,360" tween="sine" easing="inout" />
+					</animation>
+					<animation type="Visible" reversible="false">
+						<effect type="fade" start="0" end="100" time="300" delay="0" tween="sine" easing="inout" />
+						<effect type="zoom" start="90" end="100" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+					</animation>
+					<animation type="Hidden" reversible="false">
+						<effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="inout" />
+						<effect type="zoom" start="100" end="90" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+					</animation>
+					<include>FullscreenDimensions</include>
+					<texture background="true">windows/settings/bg_settings.png</texture>
+				</control>
+				<control type="group">
 					<posx>100</posx>
 					<posy>166</posy>
-				  <include>Window_OpenClose_Animation</include>	
-				<control type="list" id="9001">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>295</width>
-					<height>414</height>
-					<itemgap>2</itemgap>
-					<onleft>9000</onleft>
-					<onright>7010</onright>
-					<onup>9001</onup>
-					<ondown>9001</ondown>
-					<pagecontrol>-</pagecontrol>
-					<scrolltime>300</scrolltime>
-					<itemlayout height="52" width="295">
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>295</width>
-							<height>50</height>
-							<texture>buttons/catbullet_nf.png</texture>
-						</control>
-						<control type="label">
-							<posx>40</posx>
-							<posy>0</posy>
-							<width>295</width>
-							<height>50</height>
-					    <font>FontSize_20</font>
-							<textcolor>77white</textcolor>
-							<align>left</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-					</itemlayout>
-					<focusedlayout height="52" width="295">
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>295</width>
-							<height>50</height>
-							<texture>buttons/catbullet_fo.png</texture>
-						</control>
-						<control type="label">
-							<posx>40</posx>
-							<posy>0</posy>
-							<width>295</width>
-							<height>50</height>
-					    <font>FontSize_20</font>
-							<textcolor>white</textcolor>
-							<align>left</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-					</focusedlayout>
-					<content>
-						<item id="1">
-							<label>20096</label>
-							<onclick>noop</onclick>
-						</item>
-						<item id="2">
-							<label>13200</label>
-							<onclick>noop</onclick>
-						</item>
-					</content>
-				</control>
-	
-				<control type="group" id="7010">
-					<control type="radiobutton" id="4">
-						<posx>297</posx>
+					<!-- Window_OpenClose_Animation -->
+					<animation type="WindowOpen" reversible="false">
+						<effect type="fade" start="0" end="100" time="300" delay="0" tween="sine" easing="inout" />
+						<effect type="zoom" start="90" end="100" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+						<effect type="fade" start="100" end="0" time="300" delay="250" tween="sine" easing="inout" />
+						<effect type="zoom" start="100" end="90" time="300" delay="250" center="640,360" tween="sine" easing="inout" />
+					</animation>
+					<animation type="Visible" reversible="false">
+						<effect type="fade" start="0" end="100" time="300" delay="0" tween="sine" easing="inout" />
+						<effect type="zoom" start="90" end="100" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+					</animation>
+					<animation type="Hidden" reversible="false">
+						<effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="inout" />
+						<effect type="zoom" start="100" end="90" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+					</animation>	
+					<control type="list" id="9001">
+						<posx>0</posx>
 						<posy>0</posy>
-						<width>782</width>
-						<height>50</height>
-						<onleft>9001</onleft>
-						<onright>9001</onright>
-						<onup>4</onup>
-						<ondown>4</ondown>
-						<font>FontSize_20</font>
-						<textcolor>77white</textcolor>
-						<focusedcolor>white</focusedcolor>
-					  <disabledcolor>33white</disabledcolor>
-						<texturefocus>buttons/settings_fo.png</texturefocus>
-						<texturenofocus>-</texturenofocus>
-						<align>left</align>
-						<aligny>center</aligny>
-						<radioposx>720</radioposx>
-					  <textwidth>700</textwidth>
-						<textoffsetx>20</textoffsetx>
-						<pulseonselect>false</pulseonselect>
-						<label>31153</label>
-					  <visible>Container(9001).Hasfocus(1)</visible>
-					  <include>CloseAnimation</include>
-					</control>
-		
-					<control type="list" id="2">
-					  <include>CloseAnimation</include>
-						<visible>Container(9001).Hasfocus(2)</visible>
-						<posx>297</posx>
-						<posy>0</posy>
-						<width>782</width>
+						<width>295</width>
 						<height>414</height>
 						<itemgap>2</itemgap>
-						<onleft>9001</onleft>
-						<onright>9001</onright>
-						<onup>2</onup>
-						<ondown>2</ondown>
+						<onleft>9000</onleft>
+						<onright>7010</onright>
+						<onup>9001</onup>
+						<ondown>9001</ondown>
 						<pagecontrol>-</pagecontrol>
 						<scrolltime>300</scrolltime>
-						<itemlayout height="52" width="782">
-							<control type="label">
-								<posx>20</posx>
+						<itemlayout height="52" width="295">
+							<control type="image">
+								<posx>0</posx>
 								<posy>0</posy>
-								<width>782</width>
+								<width>295</width>
 								<height>50</height>
-						    <font>FontSize_20</font>
+								<texture>buttons/catbullet_nf.png</texture>
+							</control>
+							<control type="label">
+								<posx>40</posx>
+								<posy>0</posy>
+								<width>295</width>
+								<height>50</height>
+								<font>FontSize_20</font>
 								<textcolor>77white</textcolor>
 								<align>left</align>
 								<aligny>center</aligny>
 								<label>$INFO[ListItem.Label]</label>
 							</control>
 						</itemlayout>
-						<focusedlayout height="52" width="782">
+						<focusedlayout height="52" width="295">
 							<control type="image">
 								<posx>0</posx>
 								<posy>0</posy>
-								<width>782</width>
+								<width>295</width>
 								<height>50</height>
-								<texture>buttons/settings_fo.png</texture>
-								<animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(2)">Conditional</animation>
+								<texture>buttons/catbullet_fo.png</texture>
 							</control>
 							<control type="label">
-								<posx>20</posx>
+								<posx>40</posx>
 								<posy>0</posy>
-								<width>782</width>
+								<width>295</width>
 								<height>50</height>
-						    <font>FontSize_20</font>
+								<font>FontSize_20</font>
 								<textcolor>white</textcolor>
 								<align>left</align>
 								<aligny>center</aligny>
 								<label>$INFO[ListItem.Label]</label>
 							</control>
 						</focusedlayout>
+						<content>
+							<item id="1">
+								<label>20096</label>
+								<onclick>noop</onclick>
+							</item>
+							<item id="2">
+								<label>13200</label>
+								<onclick>noop</onclick>
+							</item>
+						</content>
 					</control>
-			  </control>
-			</control>
-	
-	    <!-- Description Category Labels -->
-			<control type="group">
+
+					<control type="group" id="7010">
+						<control type="radiobutton" id="4">
+							<posx>297</posx>
+							<posy>0</posy>
+							<width>782</width>
+							<height>50</height>
+							<onleft>9001</onleft>
+							<onright>9001</onright>
+							<onup>4</onup>
+							<ondown>4</ondown>
+							<font>FontSize_20</font>
+							<textcolor>77white</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<disabledcolor>33white</disabledcolor>
+							<texturefocus>buttons/settings_fo.png</texturefocus>
+							<texturenofocus>-</texturenofocus>
+							<align>left</align>
+							<aligny>center</aligny>
+							<radioposx>720</radioposx>
+							<textwidth>700</textwidth>
+							<textoffsetx>20</textoffsetx>
+							<pulseonselect>false</pulseonselect>
+							<label>31153</label>
+							<visible>Container(9001).Hasfocus(1)</visible>
+							<!-- CloseAnimation -->
+							<animation effect="fade" time="200" delay="100" reversible="false">Visible</animation>
+							<animation effect="fade" time="200" reversible="false">Hidden</animation>
+						</control>
+
+						<control type="list" id="2">
+							<!-- CloseAnimation -->
+							<animation effect="fade" time="200" delay="100" reversible="false">Visible</animation>
+							<animation effect="fade" time="200" reversible="false">Hidden</animation>
+							<visible>Container(9001).Hasfocus(2)</visible>
+							<posx>297</posx>
+							<posy>0</posy>
+							<width>782</width>
+							<height>414</height>
+							<itemgap>2</itemgap>
+							<onleft>9001</onleft>
+							<onright>9001</onright>
+							<onup>2</onup>
+							<ondown>2</ondown>
+							<pagecontrol>-</pagecontrol>
+							<scrolltime>300</scrolltime>
+							<itemlayout height="52" width="782">
+								<control type="label">
+									<posx>20</posx>
+									<posy>0</posy>
+									<width>782</width>
+									<height>50</height>
+									<font>FontSize_20</font>
+									<textcolor>77white</textcolor>
+									<align>left</align>
+									<aligny>center</aligny>
+									<label>$INFO[ListItem.Label]</label>
+								</control>
+							</itemlayout>
+							<focusedlayout height="52" width="782">
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>782</width>
+									<height>50</height>
+									<texture>buttons/settings_fo.png</texture>
+									<animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(2)">Conditional</animation>
+								</control>
+								<control type="label">
+									<posx>20</posx>
+									<posy>0</posy>
+									<width>782</width>
+									<height>50</height>
+									<font>FontSize_20</font>
+									<textcolor>white</textcolor>
+									<align>left</align>
+									<aligny>center</aligny>
+									<label>$INFO[ListItem.Label]</label>
+								</control>
+							</focusedlayout>
+						</control>
+					</control>
+				</control>
+
+				<!-- Description Category Labels -->
+				<control type="group">
 					<posx>120</posx>
 					<posy>163</posy>
 					<visible>Window.IsVisible(Profiles)</visible>
-				  <include>Window_OpenClose_Animation</include>
-				<control type="label">
-					<description>Header Category Label</description>
-					<posx>0</posx>
-					<posy>-50</posy>
-					<width>1075</width>
-					<height>50</height>
-					<font>FontSize_36</font>
-					<label>$LOCALIZE[31419]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<textcolor>white</textcolor>
-					<shadowcolor>99000000</shadowcolor>
+					<!-- Window_OpenClose_Animation -->
+					<animation type="WindowOpen" reversible="false">
+						<effect type="fade" start="0" end="100" time="300" delay="0" tween="sine" easing="inout" />
+						<effect type="zoom" start="90" end="100" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+						<effect type="fade" start="100" end="0" time="300" delay="250" tween="sine" easing="inout" />
+						<effect type="zoom" start="100" end="90" time="300" delay="250" center="640,360" tween="sine" easing="inout" />
+					</animation>
+					<animation type="Visible" reversible="false">
+						<effect type="fade" start="0" end="100" time="300" delay="0" tween="sine" easing="inout" />
+						<effect type="zoom" start="90" end="100" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+					</animation>
+					<animation type="Hidden" reversible="false">
+						<effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="inout" />
+						<effect type="zoom" start="100" end="90" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+					</animation>
+					<control type="label">
+						<description>Header Category Label</description>
+						<posx>0</posx>
+						<posy>-50</posy>
+						<width>1075</width>
+						<height>50</height>
+						<font>FontSize_36</font>
+						<label>$LOCALIZE[31419]</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<shadowcolor>99000000</shadowcolor>
+					</control>
+					<control type="textbox">
+						<description>Category Description</description>
+						<posx>0</posx>
+						<posy>425</posy>
+						<width>1045</width>
+						<height>30</height>
+						<textcolor>33white</textcolor>
+						<shadowcolor>44333333</shadowcolor>
+						<font>FontSize_20</font>
+						<align>left</align>
+						<scroll>false</scroll>
+						<label>$LOCALIZE[31410]</label>
+					</control>
 				</control>
-			  <control type="textbox">
-					<description>Category Description</description>
-					<posx>0</posx>
-					<posy>425</posy>
-					<width>1045</width>
-					<height>30</height>
-					<textcolor>33white</textcolor>
-					<shadowcolor>44333333</shadowcolor>
-					<font>FontSize_20</font>
-					<align>left</align>
-					<scroll>false</scroll>
-					<label>$LOCALIZE[31410]</label>
-			 </control>
 			</control>
-	  </control>
-	 </control>
-	  	 
+		</control>
+
 		<include>CommonNowPlaying</include>
 		<include>CommonDialogsFadeOutBG</include>
 		<include>SettingsMenu</include>

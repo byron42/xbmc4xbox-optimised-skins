@@ -7,7 +7,23 @@
 	</coordinates>
 	<controls>
 		<control type="group">
-	    <include>DialogAnimation</include>
+			<!-- DialogAnimation -->
+			<animation type="WindowOpen" reversible="false">
+				<effect type="fade" start="0" end="100" time="300" delay="0" tween="sine" easing="inout" />
+				<effect type="zoom" start="90" end="100" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="zoom" start="100" end="90" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+				<effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="inout" />
+			</animation>
+			<animation type="Visible" reversible="false">
+				<effect type="fade" start="0" end="100" time="300" delay="0" tween="sine" easing="inout" />
+				<effect type="zoom" start="90" end="100" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+			</animation>
+			<animation type="Hidden" reversible="false">
+				<effect type="zoom" start="100" end="90" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+				<effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="inout" />
+			</animation>
 			<visible>!Window.IsActive(SliderDialog) + !Window.IsVisible(FileBrowser)</visible>
 			<control type="image">
 				<description>background image</description>
@@ -20,7 +36,7 @@
 				<include>FullscreenDimensions</include>
 				<texture>osd/bg_osd_settings_lines.png</texture>
 				<!-- <colordiffuse>D9FFFFFF</colordiffuse> -->
-			  <visible>!Control.IsVisible(3)</visible>
+				<visible>!Control.IsVisible(3)</visible>
 			</control>
 			<control type="label" id="2">
 				<description>Heding Label</description>
@@ -49,7 +65,7 @@
 				<posy>209</posy>
 				<width>555</width>
 				<height>353</height>
-			  <itemgap>4</itemgap>
+				<itemgap>4</itemgap>
 				<onleft>Close</onleft>
 				<onright>Close</onright>
 				<onup>5</onup>
@@ -58,19 +74,19 @@
 		</control>
 		<control type="button" id="7">
 			<description>Default Button</description>
-	    <include>DialogsButton</include>
+			<include>DialogsButton</include>
 		</control>
 		<control type="radiobutton" id="8">
 			<description>Default RadioButton</description>
-	    <include>DialogsRadioButton</include>
+			<include>DialogsRadioButton</include>
 		</control>
 		<control type="spincontrolex" id="9">
 			<description>Default SpinControlex</description>
-	    <include>DialogsSpincontrolex</include>
+			<include>DialogsSpincontrolex</include>
 		</control>
 		<control type="sliderex" id="10">
 			<description>Default Slider</description>
-	    <include>DialogsSliderx</include>
+			<include>DialogsSliderx</include>
 		</control>
 		<control type="image" id="11">
 			<description>separator image</description>

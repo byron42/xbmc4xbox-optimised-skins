@@ -1,16 +1,16 @@
 <includes>
 	<include file="defaults.xml" />
-	<include file="IncludesAnimations.xml" />
+	<!-- <include file="IncludesAnimations.xml" /> -->
 	<include file="IncludesBackgrounds.xml" />
-  <include file="IncludesHome.xml" />
-  <include file="IncludesViews.xml" />
+	<include file="IncludesHome.xml" />
+	<include file="IncludesViews.xml" />
 	<include file="IncludesWalls.xml" />
 	<include file="IncludesFlags.xml" />
 	<include file="IncludesMenus.xml" />
 	<include file="IncludesNextAiredInfo.xml" />
 	<include file="IncludesNotifications.xml" />
 	<include file="IncludesSkinWidgets.xml" />
-  <include file="IncludesStaticContent.xml" />
+	<include file="IncludesStaticContent.xml" />
 	<include file="IncludesWeather.xml" />
 
 	<constant name="FanartCrossfadeTime">250</constant>
@@ -33,450 +33,498 @@
 	</include>
 
 	<include name="FullscreenDimensions">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<aspectratio>stretch</aspectratio>
 	</include>
 
 	<include name="CommonDialogsFadeOutBG">
 		<control type="image">
 			<include>FullscreenDimensions</include>
 			<texture background="true">windows/bg/bg_diffuse.png</texture>
-      <animation effect="fade" time="300" start="0" end="100" tween="sine" easing="out">WindowOpen</animation>
-      <animation effect="fade" time="300" start="100" end="0" tween="sine" easing="in">WindowClose</animation>
-      <animation effect="fade" time="300" start="0" end="100" tween="sine" easing="out">Visible</animation>
-      <animation effect="fade" time="300" start="100" end="0" tween="sine" easing="in">Hidden</animation>
-      <colordiffuse>ddFFFFFF</colordiffuse>
+			<animation effect="fade" time="300" start="0" end="100" tween="sine" easing="out">WindowOpen</animation>
+			<animation effect="fade" time="300" start="100" end="0" tween="sine" easing="in">WindowClose</animation>
+			<animation effect="fade" time="300" start="0" end="100" tween="sine" easing="out">Visible</animation>
+			<animation effect="fade" time="300" start="100" end="0" tween="sine" easing="in">Hidden</animation>
+			<colordiffuse>ddFFFFFF</colordiffuse>
 			<visible>Window.IsActive(busydialog) | Window.IsActive(progressdialog) | Window.IsActive(okdialog) | Window.IsActive(yesnodialog)</visible>	
 		</control>
 	</include>
 
 	<include name="TopZoomedSmallLabel">
-			<height>63</height>
-			<width min="10" max="1280">auto</width>
-			<font>FontSize_20</font>
-			<textcolor>99white</textcolor>
-			<shadowcolor>77000000</shadowcolor>
-	    <align>left</align>
-	    <aligny>center</aligny>
-			<scroll>false</scroll>
+		<height>63</height>
+		<width min="10" max="1280">auto</width>
+		<font>FontSize_20</font>
+		<textcolor>99white</textcolor>
+		<shadowcolor>77000000</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<scroll>false</scroll>
 	</include>
 	<include name="TopSmallLabel">
-			<height>65</height>
-			<width min="10" max="1280">auto</width>
-			<font>FontSize_22</font>
-			<textcolor>white</textcolor>
-			<shadowcolor>77000000</shadowcolor>
-	    <align>left</align>
-	    <aligny>center</aligny>
-			<scroll>false</scroll>
+		<height>65</height>
+		<width min="10" max="1280">auto</width>
+		<font>FontSize_22</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>77000000</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<scroll>false</scroll>
 	</include>
 	<include name="TopBigLabel">
-			<height>50</height>
-			<width min="10" max="1280">auto</width>
-			<font>FontSize_40</font>
-			<textcolor>white</textcolor>
-			<shadowcolor>77000000</shadowcolor>
-	    <align>left</align>
-	    <aligny>center</aligny>
-			<scroll>false</scroll>
+		<height>50</height>
+		<width min="10" max="1280">auto</width>
+		<font>FontSize_40</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>77000000</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<scroll>false</scroll>
 	</include>
 	<include name="TopOptionsBigLabel">
-			<posx>0</posx>
-			<posy>0</posy>
-			<height>43</height>
-			<width min="10" max="1280">auto</width>
-			<font>FontSize_36</font>
-			<textcolor>white</textcolor>
-			<shadowcolor>77000000</shadowcolor>
-			<scroll>false</scroll>
+		<posx>0</posx>
+		<posy>0</posy>
+		<height>43</height>
+		<width min="10" max="1280">auto</width>
+		<font>FontSize_36</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>77000000</shadowcolor>
+		<scroll>false</scroll>
 	</include>
 	<include name="TopButton">
-			<font>-</font>
-			<texturefocus>-</texturefocus>
-			<texturenofocus>-</texturenofocus>
-			<textureradiofocus>-</textureradiofocus>
-			<textureradionofocus>-</textureradionofocus>
-			<textureup>-</textureup>
-			<texturedown>-</texturedown>
-			<textureupfocus>-</textureupfocus>
-			<texturedownfocus>-</texturedownfocus>
+		<font>-</font>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<textureradiofocus>-</textureradiofocus>
+		<textureradionofocus>-</textureradionofocus>
+		<textureup>-</textureup>
+		<texturedown>-</texturedown>
+		<textureupfocus>-</textureupfocus>
+		<texturedownfocus>-</texturedownfocus>
 	</include>
-	
+
 	<include name="SettingsMenu">
 		<control type="group">
-		 <posx>45</posx>
-		 <posy>25</posy>
-		 <include>SettingsSlideAnimations</include>
-		 <include>SettingsWeatherAndClock</include>
-		 <visible>!Window.IsActive(ShutdownMenu) + ![Window.IsActive(ContextMenu) + !Window.IsActive(locksettings)]</visible>
-	   <animation type="Visible">
-	      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
-	      <effect type="slide" start="0,35" end="0,0" time="350" tween="cubic" easing="out" />
-	   </animation>
-	   <animation type="Hidden">
-	      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	      <effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
-	   </animation>
-	   <!-- ====================== -->
-	   <!-- == Category Buttons == -->
-	   <!-- ====================== -->
-		 <control type="grouplist" id="9000">
-      <posx>0</posx>
-      <posy>0</posy>
-      <height>2</height>
-      <width>2</width>
-      <onleft>9000</onleft>
-      <onright>9000</onright>
-      <onup>noop</onup>
-      <ondown condition="Window.IsVisible(AppearanceSettings) | Window.IsVisible(VideosSettings) | Window.IsVisible(MusicSettings) | Window.IsVisible(PicturesSettings) | Window.IsVisible(WeatherSettings) | Window.IsVisible(NetworkSettings) | Window.IsVisible(SystemSettings) | Window.IsVisible(Profiles)  | Window.IsVisible(SystemInfo) | Window.IsVisible(ProgramsSettings)">9001</ondown>
-      <ondown condition="Window.IsVisible(SkinSettings)">8000</ondown>
-      <orientation>horizontal</orientation>
-      <scrolltime>0</scrolltime>
-			<control type="button" id="101">
-				<description>Appearance</description>
-				<include>TopButton</include>
-				<label>31401</label>
-				<onclick>ReplaceWindow(AppearanceSettings)</onclick>	
+			<posx>45</posx>
+			<posy>25</posy>
+			<!-- SettingsSlideAnimations -->
+			<animation type="WindowOpen" condition="!Window.Previous(AppearanceSettings) + !Window.Previous(NetworkSettings) + !Window.Previous(VideosSettings) + !Window.Previous(PVRSettings) + !Window.Previous(SystemSettings) + !Window.Previous(MusicSettings) + !Window.Previous(WeatherSettings) + !Window.Previous(ProgramsSettings) + !Window.Previous(PicturesSettings) + !Window.Previous(Profiles) + !Window.Previous(SystemInfo) + !Window.Previous(SkinSettings)">
+				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+				<effect type="slide" start="0,-55" end="0,0" time="350" tween="cubic" easing="out" />
+			</animation>
+			<animation type="WindowClose" condition="!Window.Next(AppearanceSettings) + !Window.Next(NetworkSettings) + !Window.Next(VideosSettings) + !Window.Next(PVRSettings) + !Window.Next(SystemSettings) + !Window.Next(MusicSettings) + !Window.Next(WeatherSettings) + !Window.Next(ProgramsSettings) + !Window.Next(PicturesSettings) + !Window.Next(Profiles) + !Window.Next(SystemInfo) + !Window.Next(SkinSettings)">
+				<effect type="fade" start="100" end="0" time="300" delay="250" tween="sine" easing="out" />
+				<effect type="slide" start="0,0" end="0,-55" time="350" delay="250" tween="sine" easing="out" />
+			</animation>
+			<animation type="Visible" condition="!Window.Previous(AppearanceSettings) + !Window.Previous(NetworkSettings) + !Window.Previous(VideosSettings) + !Window.Previous(PVRSettings) + !Window.Previous(SystemSettings) + !Window.Previous(MusicSettings) + !Window.Previous(WeatherSettings) + !Window.Previous(ProgramsSettings) + !Window.Previous(PicturesSettings) + !Window.Previous(Profiles) + !Window.Previous(SystemInfo) + !Window.Previous(SkinSettings)">
+				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+				<effect type="slide" start="0,35" end="0,0" time="350" tween="cubic" easing="out" />
+			</animation>
+			<animation type="Hidden" condition="!Window.Next(AppearanceSettings) + !Window.Next(NetworkSettings) + !Window.Next(VideosSettings) + !Window.Next(PVRSettings) + !Window.Next(SystemSettings) + !Window.Next(MusicSettings) + !Window.Next(WeatherSettings) + !Window.Next(ProgramsSettings) + !Window.Next(PicturesSettings) + !Window.Next(Profiles) + !Window.Next(SystemInfo) + !Window.Next(SkinSettings)">
+				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+				<effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
+			</animation>
+			<include>SettingsWeatherAndClock</include>
+			<visible>!Window.IsActive(ShutdownMenu) + ![Window.IsActive(ContextMenu) + !Window.IsActive(locksettings)]</visible>
+			<animation type="Visible">
+				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+				<effect type="slide" start="0,35" end="0,0" time="350" tween="cubic" easing="out" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+				<effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
+			</animation>
+			<!-- ====================== -->
+			<!-- == Category Buttons == -->
+			<!-- ====================== -->
+			<control type="grouplist" id="9000">
+				<posx>0</posx>
+				<posy>0</posy>
+				<height>2</height>
+				<width>2</width>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>noop</onup>
+				<ondown condition="Window.IsVisible(AppearanceSettings) | Window.IsVisible(VideosSettings) | Window.IsVisible(MusicSettings) | Window.IsVisible(PicturesSettings) | Window.IsVisible(WeatherSettings) | Window.IsVisible(NetworkSettings) | Window.IsVisible(SystemSettings) | Window.IsVisible(Profiles)  | Window.IsVisible(SystemInfo) | Window.IsVisible(ProgramsSettings)">9001</ondown>
+				<ondown condition="Window.IsVisible(SkinSettings)">8000</ondown>
+				<orientation>horizontal</orientation>
+				<scrolltime>0</scrolltime>
+				<control type="button" id="101">
+					<description>Appearance</description>
+					<include>TopButton</include>
+					<label>31401</label>
+					<onclick>ReplaceWindow(AppearanceSettings)</onclick>	
+				</control>
+				<control type="button" id="102">
+					<description>Videos</description>
+					<include>TopButton</include>
+					<label>31402</label>
+					<onclick>ReplaceWindow(VideosSettings)</onclick>
+				</control>
+				<control type="button" id="104">	
+					<description>Music</description>
+					<include>TopButton</include>
+					<label>31404</label>
+					<onclick>ReplaceWindow(MusicSettings)</onclick>	
+				</control>
+				<control type="button" id="105">
+					<description>Pictures</description>
+					<include>TopButton</include>
+					<label>31405</label>
+					<onclick>ReplaceWindow(PicturesSettings)</onclick>	
+				</control>
+				<control type="button" id="106">
+					<description>Weather</description>
+					<include>TopButton</include>
+					<label>31406</label>
+					<onclick>ReplaceWindow(WeatherSettings)</onclick>	
+				</control>
+				<control type="button" id="107">
+					<description>Add-Ons</description>
+					<include>TopButton</include>
+					<onclick>ReplaceWindow(AddonBrowser)</onclick>	
+				</control>
+				<control type="button" id="108">
+					<description>Services</description>
+					<include>TopButton</include>
+					<label>31407</label>
+					<onclick>ReplaceWindow(NetworkSettings)</onclick>	
+				</control>
+				<control type="button" id="109">
+					<description>System</description>
+					<include>TopButton</include>
+					<label>31408</label>
+					<onclick>ReplaceWindow(SystemSettings)</onclick>	
+				</control>
+				<control type="button." id="110">
+					<description>Profiles</description>
+					<include>TopButton</include>
+					<onclick>ReplaceWindow(Profiles)</onclick>	
+				</control>
+			</control>		 
+			<!-- ==================== -->
+			<!-- == Buttons Labels == -->
+			<!-- ==================== -->
+			<control type="groupList">
+				<animation type="Conditional" condition="true">
+					<effect type="fade" start="0" end="100" tween="sine" easing="in" time="250" />
+					<effect type="zoom" start="100,0,1700,1" end="100,150,1700,60" tween="cubic" easing="out" time="300" />
+				</animation>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1700</width>
+				<height>60</height>
+				<itemgap>5</itemgap>
+				<orientation>horizontal</orientation>
+				<!-- SettingsSlideAnimations -->
+				<animation type="WindowOpen" condition="!Window.Previous(AppearanceSettings) + !Window.Previous(NetworkSettings) + !Window.Previous(VideosSettings) + !Window.Previous(PVRSettings) + !Window.Previous(SystemSettings) + !Window.Previous(MusicSettings) + !Window.Previous(WeatherSettings) + !Window.Previous(ProgramsSettings) + !Window.Previous(PicturesSettings) + !Window.Previous(Profiles) + !Window.Previous(SystemInfo) + !Window.Previous(SkinSettings)">
+					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+					<effect type="slide" start="0,-55" end="0,0" time="350" tween="cubic" easing="out" />
+				</animation>
+				<animation type="WindowClose" condition="!Window.Next(AppearanceSettings) + !Window.Next(NetworkSettings) + !Window.Next(VideosSettings) + !Window.Next(PVRSettings) + !Window.Next(SystemSettings) + !Window.Next(MusicSettings) + !Window.Next(WeatherSettings) + !Window.Next(ProgramsSettings) + !Window.Next(PicturesSettings) + !Window.Next(Profiles) + !Window.Next(SystemInfo) + !Window.Next(SkinSettings)">
+					<effect type="fade" start="100" end="0" time="300" delay="250" tween="sine" easing="out" />
+					<effect type="slide" start="0,0" end="0,-55" time="350" delay="250" tween="sine" easing="out" />
+				</animation>
+				<animation type="Visible" condition="!Window.Previous(AppearanceSettings) + !Window.Previous(NetworkSettings) + !Window.Previous(VideosSettings) + !Window.Previous(PVRSettings) + !Window.Previous(SystemSettings) + !Window.Previous(MusicSettings) + !Window.Previous(WeatherSettings) + !Window.Previous(ProgramsSettings) + !Window.Previous(PicturesSettings) + !Window.Previous(Profiles) + !Window.Previous(SystemInfo) + !Window.Previous(SkinSettings)">
+					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+					<effect type="slide" start="0,35" end="0,0" time="350" tween="cubic" easing="out" />
+				</animation>
+				<animation type="Hidden" condition="!Window.Next(AppearanceSettings) + !Window.Next(NetworkSettings) + !Window.Next(VideosSettings) + !Window.Next(PVRSettings) + !Window.Next(SystemSettings) + !Window.Next(MusicSettings) + !Window.Next(WeatherSettings) + !Window.Next(ProgramsSettings) + !Window.Next(PicturesSettings) + !Window.Next(Profiles) + !Window.Next(SystemInfo) + !Window.Next(SkinSettings)">
+					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+					<effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
+				</animation>
+				<control type="label">
+					<include>TopBigLabel</include>
+					<label>$LOCALIZE[5]</label>
+				</control>
+				<control type="label">
+					<description>Appearance</description>
+					<include>TopSmallLabel</include>
+					<label>$LOCALIZE[480]</label>
+					<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!Control.HasFocus(101)" reversible="true">Conditional</animation>
+					<animation effect="zoom" start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!Control.HasFocus(101)" reversible="true">Conditional</animation>
+				</control>
+				<control type="label">
+					<description>Videos</description>
+					<include>TopSmallLabel</include>
+					<label>$LOCALIZE[157]</label>
+					<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!Control.HasFocus(102)" reversible="true">Conditional</animation>
+					<animation effect="zoom" start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!Control.HasFocus(102)" reversible="true">Conditional</animation>
+				</control>
+				<control type="label">
+					<description>Live TV</description>
+					<include>TopSmallLabel</include>
+					<label>$LOCALIZE[31000]</label>
+					<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!Control.HasFocus(103)" reversible="true">Conditional</animation>
+					<animation effect="zoom" start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!Control.HasFocus(103)" reversible="true">Conditional</animation>
+				</control>
+				<control type="label">
+					<description>Music</description>
+					<include>TopSmallLabel</include>
+					<label>$LOCALIZE[2]</label>
+					<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!Control.HasFocus(104)" reversible="true">Conditional</animation>
+					<animation effect="zoom" start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!Control.HasFocus(104)" reversible="true">Conditional</animation>
+				</control>
+				<control type="label">
+					<description>Pictures</description>
+					<include>TopSmallLabel</include>
+					<label>$LOCALIZE[1]</label>
+					<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!Control.HasFocus(105)" reversible="true">Conditional</animation>
+					<animation effect="zoom" start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!Control.HasFocus(105)" reversible="true">Conditional</animation>
+				</control>
+				<control type="label">
+					<description>Weather</description>
+					<include>TopSmallLabel</include>
+					<label>$LOCALIZE[8]</label>
+					<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!Control.HasFocus(106)" reversible="true">Conditional</animation>
+					<animation effect="zoom" start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!Control.HasFocus(106)" reversible="true">Conditional</animation>
+				</control>
+				<control type="label">
+					<description>Add-Ons</description>
+					<include>TopSmallLabel</include>
+					<label>$LOCALIZE[24001]</label>
+					<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!Control.HasFocus(107)" reversible="true">Conditional</animation>
+					<animation effect="zoom" start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!Control.HasFocus(107)" reversible="true">Conditional</animation>
+				</control>
+				<control type="label">
+					<description>Services</description>
+					<include>TopSmallLabel</include>
+					<label>$LOCALIZE[14036]</label>
+					<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!Control.HasFocus(108)" reversible="true">Conditional</animation>
+					<animation effect="zoom" start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!Control.HasFocus(108)" reversible="true">Conditional</animation>
+				</control>
+				<control type="label">
+					<description>System</description>
+					<include>TopSmallLabel</include>
+					<label>$LOCALIZE[13000]</label>
+					<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!Control.HasFocus(109)" reversible="true">Conditional</animation>
+					<animation effect="zoom" start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!Control.HasFocus(109)" reversible="true">Conditional</animation>
+				</control>
+				<control type="label">
+					<description>Profiles</description>
+					<include>TopSmallLabel</include>
+					<label>$LOCALIZE[13200]</label>
+					<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!Control.HasFocus(110)" reversible="true">Conditional</animation>
+					<animation effect="zoom" start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!Control.HasFocus(110)" reversible="true">Conditional</animation>
+				</control>
 			</control>
-			<control type="button" id="102">
-				<description>Videos</description>
-				<include>TopButton</include>
-				<label>31402</label>
-				<onclick>ReplaceWindow(VideosSettings)</onclick>
-			</control>
-			<control type="button" id="104">	
-				<description>Music</description>
-				<include>TopButton</include>
-				<label>31404</label>
-				<onclick>ReplaceWindow(MusicSettings)</onclick>	
-			</control>
-			<control type="button" id="105">
-				<description>Pictures</description>
-				<include>TopButton</include>
-				<label>31405</label>
-				<onclick>ReplaceWindow(PicturesSettings)</onclick>	
-			</control>
-			<control type="button" id="106">
-				<description>Weather</description>
-				<include>TopButton</include>
-				<label>31406</label>
-				<onclick>ReplaceWindow(WeatherSettings)</onclick>	
-			</control>
-			<control type="button" id="107">
-				<description>Add-Ons</description>
-				<include>TopButton</include>
-				<onclick>ReplaceWindow(AddonBrowser)</onclick>	
-			</control>
-			<control type="button" id="108">
-				<description>Services</description>
-				<include>TopButton</include>
-				<label>31407</label>
-				<onclick>ReplaceWindow(NetworkSettings)</onclick>	
-			</control>
-			<control type="button" id="109">
-				<description>System</description>
-				<include>TopButton</include>
-				<label>31408</label>
-				<onclick>ReplaceWindow(SystemSettings)</onclick>	
-			</control>
-			<control type="button." id="110">
-				<description>Profiles</description>
-				<include>TopButton</include>
-				<onclick>ReplaceWindow(Profiles)</onclick>	
-			</control>
-		 </control>		 
-	   <!-- ==================== -->
-	   <!-- == Buttons Labels == -->
-	   <!-- ==================== -->
-		 <control type="groupList">
-        <animation type="Conditional" condition="true">
-          <effect type="fade" start="0" end="100" tween="sine" easing="in" time="250" />
-          <effect type="zoom" start="100,0,1700,1" end="100,150,1700,60" tween="cubic" easing="out" time="300" />
-        </animation>
-        <posx>0</posx>
-        <posy>0</posy>
-        <width>1700</width>
-        <height>60</height>
-        <itemgap>5</itemgap>
-        <orientation>horizontal</orientation>
-		    <include>SettingsSlideAnimations</include>
-			<control type="label">
-        <include>TopBigLabel</include>
-				<label>$LOCALIZE[5]</label>
-			</control>
-			<control type="label">
-				<description>Appearance</description>
-        <include>TopSmallLabel</include>
-				<label>$LOCALIZE[480]</label>
-				<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!Control.HasFocus(101)" reversible="true">Conditional</animation>
-        <animation effect="zoom" start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!Control.HasFocus(101)" reversible="true">Conditional</animation>
-			</control>
-			<control type="label">
-				<description>Videos</description>
-        <include>TopSmallLabel</include>
-				<label>$LOCALIZE[157]</label>
-				<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!Control.HasFocus(102)" reversible="true">Conditional</animation>
-        <animation effect="zoom" start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!Control.HasFocus(102)" reversible="true">Conditional</animation>
-			</control>
-			<control type="label">
-				<description>Live TV</description>
-        <include>TopSmallLabel</include>
-				<label>$LOCALIZE[31000]</label>
-				<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!Control.HasFocus(103)" reversible="true">Conditional</animation>
-        <animation effect="zoom" start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!Control.HasFocus(103)" reversible="true">Conditional</animation>
-			</control>
-			<control type="label">
-				<description>Music</description>
-        <include>TopSmallLabel</include>
-				<label>$LOCALIZE[2]</label>
-				<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!Control.HasFocus(104)" reversible="true">Conditional</animation>
-        <animation effect="zoom" start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!Control.HasFocus(104)" reversible="true">Conditional</animation>
-			</control>
-			<control type="label">
-				<description>Pictures</description>
-        <include>TopSmallLabel</include>
-				<label>$LOCALIZE[1]</label>
-				<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!Control.HasFocus(105)" reversible="true">Conditional</animation>
-        <animation effect="zoom" start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!Control.HasFocus(105)" reversible="true">Conditional</animation>
-			</control>
-			<control type="label">
-				<description>Weather</description>
-        <include>TopSmallLabel</include>
-				<label>$LOCALIZE[8]</label>
-				<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!Control.HasFocus(106)" reversible="true">Conditional</animation>
-        <animation effect="zoom" start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!Control.HasFocus(106)" reversible="true">Conditional</animation>
-			</control>
-			<control type="label">
-				<description>Add-Ons</description>
-        <include>TopSmallLabel</include>
-				<label>$LOCALIZE[24001]</label>
-				<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!Control.HasFocus(107)" reversible="true">Conditional</animation>
-        <animation effect="zoom" start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!Control.HasFocus(107)" reversible="true">Conditional</animation>
-			</control>
-			<control type="label">
-				<description>Services</description>
-        <include>TopSmallLabel</include>
-				<label>$LOCALIZE[14036]</label>
-				<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!Control.HasFocus(108)" reversible="true">Conditional</animation>
-        <animation effect="zoom" start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!Control.HasFocus(108)" reversible="true">Conditional</animation>
-			</control>
-			<control type="label">
-				<description>System</description>
-        <include>TopSmallLabel</include>
-				<label>$LOCALIZE[13000]</label>
-				<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!Control.HasFocus(109)" reversible="true">Conditional</animation>
-        <animation effect="zoom" start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!Control.HasFocus(109)" reversible="true">Conditional</animation>
-			</control>
-			<control type="label.">
-				<description>Profiles</description>
-        <include>TopSmallLabel</include>
-				<label>$LOCALIZE[13200]</label>
-				<animation effect="fade" start="100" end="70" time="200" tween="cubic" easing="inout" condition="!Control.HasFocus(110)" reversible="true">Conditional</animation>
-        <animation effect="zoom" start="100" end="90" time="200" tween="cubic" easing="inout" center="auto" condition="!Control.HasFocus(110)" reversible="true">Conditional</animation>
-			</control>
-		 </control>
 		</control>
 	</include>
 
 	<include name="SettingsButton">
-			<description>Default Button</description>
-			<width>782</width>
-			<height>50</height>
-			<font>FontSize_20</font>
-			<textcolor>77white</textcolor>
-			<focusedcolor>white</focusedcolor>
-		  <disabledcolor>33white</disabledcolor>
-			<shadowcolor>99000000</shadowcolor>
-			<texturefocus>buttons/settings_fo.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
-			<align>left</align>
-			<aligny>top</aligny>
-			<textoffsetx>15</textoffsetx>
-			<textoffsety>12</textoffsety>
-			<pulseonselect>false</pulseonselect>
+		<description>Default Button</description>
+		<width>782</width>
+		<height>50</height>
+		<font>FontSize_20</font>
+		<textcolor>77white</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>33white</disabledcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<texturefocus>buttons/settings_fo.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<align>left</align>
+		<aligny>top</aligny>
+		<textoffsetx>15</textoffsetx>
+		<textoffsety>12</textoffsety>
+		<pulseonselect>false</pulseonselect>
 	</include>
 	<include name="SettingsRadioButton">
-			<description>Default RadioButton</description>
-			<width>782</width>
-			<height>50</height>
-			<radiowidth>57</radiowidth>
-			<radioheight>41</radioheight>
-			<font>FontSize_20</font>
-			<textcolor>77white</textcolor>
-			<focusedcolor>white</focusedcolor>
-		  <disabledcolor>33white</disabledcolor>
-			<shadowcolor>99000000</shadowcolor>
-			<texturefocus>buttons/settings_fo.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
-			<textureradiofocus>buttons/radio_button_fo.png</textureradiofocus>
-			<textureradionofocus>buttons/radio_button_nf.png</textureradionofocus>
-			<align>left</align>
-			<aligny>top</aligny>
-			<radioposx>715</radioposx>
-			<textoffsetx>15</textoffsetx>
-			<textoffsety>12</textoffsety>
-			<pulseonselect>false</pulseonselect>
+		<description>Default RadioButton</description>
+		<width>782</width>
+		<height>50</height>
+		<radiowidth>57</radiowidth>
+		<radioheight>41</radioheight>
+		<font>FontSize_20</font>
+		<textcolor>77white</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>33white</disabledcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<texturefocus>buttons/settings_fo.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<textureradiofocus>buttons/radio_button_fo.png</textureradiofocus>
+		<textureradionofocus>buttons/radio_button_nf.png</textureradionofocus>
+		<align>left</align>
+		<aligny>top</aligny>
+		<radioposx>715</radioposx>
+		<textoffsetx>15</textoffsetx>
+		<textoffsety>12</textoffsety>
+		<pulseonselect>false</pulseonselect>
 	</include>
 	<include name="SettingsSpincontrolex">
-			<description>Default SpinControlex</description>
-			<width>782</width>
-			<height>50</height>
-			<font>FontSize_20</font>
-			<textcolor>77white</textcolor>
-			<focusedcolor>white</focusedcolor>
-		  <disabledcolor>33white</disabledcolor>
-			<shadowcolor>99000000</shadowcolor>
-			<texturefocus>buttons/settings_fo.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
-			<textureup>buttons/arrow_up_nf.png</textureup>
-			<texturedown>buttons/arrow_down_nf.png</texturedown>
-			<textureupfocus>buttons/arrow_up_fo.png</textureupfocus>
-			<texturedownfocus>buttons/arrow_down_fo.png</texturedownfocus>
-			<align>left</align>
-			<aligny>top</aligny>
-			<spinwidth>30</spinwidth>
-			<spinheight>44</spinheight>
-			<spinposx>10</spinposx>
-			<textoffsetx>15</textoffsetx>
-			<textoffsety>12</textoffsety>
-			<pulseonselect>false</pulseonselect>
-			<reverse>yes</reverse>
+		<description>Default SpinControlex</description>
+		<width>782</width>
+		<height>50</height>
+		<font>FontSize_20</font>
+		<textcolor>77white</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>33white</disabledcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<texturefocus>buttons/settings_fo.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<textureup>buttons/arrow_up_nf.png</textureup>
+		<texturedown>buttons/arrow_down_nf.png</texturedown>
+		<textureupfocus>buttons/arrow_up_fo.png</textureupfocus>
+		<texturedownfocus>buttons/arrow_down_fo.png</texturedownfocus>
+		<align>left</align>
+		<aligny>top</aligny>
+		<spinwidth>30</spinwidth>
+		<spinheight>44</spinheight>
+		<spinposx>10</spinposx>
+		<textoffsetx>15</textoffsetx>
+		<textoffsety>12</textoffsety>
+		<pulseonselect>false</pulseonselect>
+		<reverse>yes</reverse>
 	</include>
 	<include name="SettingsSliderex">
-			<description>Default Slider</description>
-		  <height>50</height>
-		  <font>FontSize_20</font>
-			<textcolor>77white</textcolor>
-			<focusedcolor>white</focusedcolor>
-		  <disabledcolor>33white</disabledcolor>
-			<shadowcolor>99000000</shadowcolor>
-			<texturefocus>buttons/settings_fo.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
-			<texturesliderbar>osd/osd_slider_bg.png</texturesliderbar>
-			<textureslidernib>osd/osd_slider_nib_nf.png</textureslidernib>
-			<textureslidernibfocus>osd/osd_slider_nib_fo.png</textureslidernibfocus>
-			<sliderwidth>200</sliderwidth>
-			<sliderheight>25</sliderheight>
-	    <align>left</align>
-			<aligny>center</aligny>
-			<pulseonselect>no</pulseonselect>
-		  <textoffsetx>15</textoffsetx>
-		  <textoffsety>0</textoffsety>
-	    <align>left</align>
-		  <aligny>top</aligny>
+		<description>Default Slider</description>
+		<height>50</height>
+		<font>FontSize_20</font>
+		<textcolor>77white</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>33white</disabledcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<texturefocus>buttons/settings_fo.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<texturesliderbar>osd/osd_slider_bg.png</texturesliderbar>
+		<textureslidernib>osd/osd_slider_nib_nf.png</textureslidernib>
+		<textureslidernibfocus>osd/osd_slider_nib_fo.png</textureslidernibfocus>
+		<sliderwidth>200</sliderwidth>
+		<sliderheight>25</sliderheight>
+		<align>left</align>
+		<aligny>center</aligny>
+		<pulseonselect>no</pulseonselect>
+		<textoffsetx>15</textoffsetx>
+		<textoffsety>0</textoffsety>
+		<align>left</align>
+		<aligny>top</aligny>
 	</include>
 
 
 	<include name="DialogsButton">
-			<description>Default Button</description>
-			<height>47</height>
-			<font>FontSize_20</font>
-			<textcolor>77white</textcolor>
-			<focusedcolor>white</focusedcolor>
-		  <disabledcolor>33white</disabledcolor>
-			<shadowcolor>99000000</shadowcolor>
-			<texturefocus>buttons/settings_fo.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
-			<align>left</align>
-			<aligny>top</aligny>
-			<textoffsetx>10</textoffsetx>
-			<textoffsety>10</textoffsety>
-			<pulseonselect>true</pulseonselect>
+		<description>Default Button</description>
+		<height>47</height>
+		<font>FontSize_20</font>
+		<textcolor>77white</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>33white</disabledcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<texturefocus>buttons/settings_fo.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<align>left</align>
+		<aligny>top</aligny>
+		<textoffsetx>10</textoffsetx>
+		<textoffsety>10</textoffsety>
+		<pulseonselect>true</pulseonselect>
 	</include>
 	<include name="DialogsRadioButton">
-			<description>Default RadioButton</description>
-			<height>47</height>
-			<radiowidth>57</radiowidth>
-			<radioheight>41</radioheight>
-			<font>FontSize_20</font>
-			<textcolor>77white</textcolor>
-			<focusedcolor>white</focusedcolor>
-		  <disabledcolor>33white</disabledcolor>
-			<shadowcolor>99000000</shadowcolor>
-			<texturefocus>buttons/settings_fo.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
-			<textureradiofocus>buttons/radio_button_fo.png</textureradiofocus>
-			<textureradionofocus>buttons/radio_button_nf.png</textureradionofocus>
-			<align>left</align>
-			<aligny>top</aligny>
-			<radioposx>490</radioposx>
-			<textoffsetx>10</textoffsetx>
-			<textoffsety>10</textoffsety>
-			<pulseonselect>true</pulseonselect>
+		<description>Default RadioButton</description>
+		<height>47</height>
+		<radiowidth>57</radiowidth>
+		<radioheight>41</radioheight>
+		<font>FontSize_20</font>
+		<textcolor>77white</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>33white</disabledcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<texturefocus>buttons/settings_fo.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<textureradiofocus>buttons/radio_button_fo.png</textureradiofocus>
+		<textureradionofocus>buttons/radio_button_nf.png</textureradionofocus>
+		<align>left</align>
+		<aligny>top</aligny>
+		<radioposx>490</radioposx>
+		<textoffsetx>10</textoffsetx>
+		<textoffsety>10</textoffsety>
+		<pulseonselect>true</pulseonselect>
 	</include>
 	<include name="DialogsSpincontrolex">
-			<description>Default SpinControlex</description>
-			<height>47</height>
-			<font>FontSize_20</font>
-			<textcolor>77white</textcolor>
-			<focusedcolor>white</focusedcolor>
-		  <disabledcolor>33white</disabledcolor>
-			<shadowcolor>99000000</shadowcolor>
-			<texturefocus>buttons/settings_fo.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
-			<textureup>buttons/arrow_up_nf.png</textureup>
-			<texturedown>buttons/arrow_down_nf.png</texturedown>
-			<textureupfocus>buttons/arrow_up_fo.png</textureupfocus>
-			<texturedownfocus>buttons/arrow_down_fo.png</texturedownfocus>
-			<align>left</align>
-			<aligny>top</aligny>
-			<spinwidth>30</spinwidth>
-			<spinheight>44</spinheight>
-			<spinposx>7</spinposx>
-			<textoffsetx>10</textoffsetx>
-			<textoffsety>8</textoffsety>
-			<reverse>yes</reverse>
-			<pulseonselect>true</pulseonselect>
+		<description>Default SpinControlex</description>
+		<height>47</height>
+		<font>FontSize_20</font>
+		<textcolor>77white</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>33white</disabledcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<texturefocus>buttons/settings_fo.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<textureup>buttons/arrow_up_nf.png</textureup>
+		<texturedown>buttons/arrow_down_nf.png</texturedown>
+		<textureupfocus>buttons/arrow_up_fo.png</textureupfocus>
+		<texturedownfocus>buttons/arrow_down_fo.png</texturedownfocus>
+		<align>left</align>
+		<aligny>top</aligny>
+		<spinwidth>30</spinwidth>
+		<spinheight>44</spinheight>
+		<spinposx>7</spinposx>
+		<textoffsetx>10</textoffsetx>
+		<textoffsety>8</textoffsety>
+		<reverse>yes</reverse>
+		<pulseonselect>true</pulseonselect>
 	</include>
 	<include name="DialogsSliderx">
-			<description>Default Slider</description>
-			<height>47</height>
-		  <font>FontSize_20</font>
-			<textcolor>77white</textcolor>
-			<focusedcolor>white</focusedcolor>
-		  <disabledcolor>33white</disabledcolor>
-			<shadowcolor>99000000</shadowcolor>
-			<texturefocus>buttons/settings_fo.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
-			<texturesliderbar>osd/osd_slider_bg.png</texturesliderbar>
-			<textureslidernib>osd/osd_slider_nib_nf.png</textureslidernib>
-			<textureslidernibfocus>osd/osd_slider_nib_fo.png</textureslidernibfocus>
-	    <align>left</align>
-		  <aligny>top</aligny>
-			<sliderwidth>200</sliderwidth>
-			<sliderheight>25</sliderheight>
-		  <textoffsetx>10</textoffsetx>
-		  <textoffsety>10</textoffsety>
-			<pulseonselect>true</pulseonselect>
+		<description>Default Slider</description>
+		<height>47</height>
+		<font>FontSize_20</font>
+		<textcolor>77white</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>33white</disabledcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<texturefocus>buttons/settings_fo.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<texturesliderbar>osd/osd_slider_bg.png</texturesliderbar>
+		<textureslidernib>osd/osd_slider_nib_nf.png</textureslidernib>
+		<textureslidernibfocus>osd/osd_slider_nib_fo.png</textureslidernibfocus>
+		<align>left</align>
+		<aligny>top</aligny>
+		<sliderwidth>200</sliderwidth>
+		<sliderheight>25</sliderheight>
+		<textoffsetx>10</textoffsetx>
+		<textoffsety>10</textoffsety>
+		<pulseonselect>true</pulseonselect>
 	</include>
 	<include name="DialogsButtonLabelNoFocus">
-			<height>62</height>
-			<width min="10" max="552">auto</width>
-			<font>FontSize_20</font>
-			<textcolor>white</textcolor>
-			<shadowcolor>99000000</shadowcolor>
-	    <align>left</align>
-	    <aligny>center</aligny>
-			<scroll>false</scroll>
+		<height>62</height>
+		<width min="10" max="552">auto</width>
+		<font>FontSize_20</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>99000000</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<scroll>false</scroll>
 	</include>
 
-  <!-- ================== -->
-  <!-- Common Now Playing -->
-  <!-- ================== --> 
+	<!-- ================== -->
+	<!-- Common Now Playing -->
+	<!-- ================== --> 
 	<include name="CommonNowPlaying">
 		<control type="group">
 			<posx>45</posx>
 			<posy>80r</posy>
 			<control type="grouplist">
-				<include>NowPlaying</include>
-			  <visible>Player.HasMedia + !SubString(Window(Videos).Property(TvTunesIsAlive),True)</visible>
+				<!-- NowPlaying -->
+				<animation type="WindowOpen" reversible="false">
+					<effect type="fade" start="0" end="100" time="400" tween="sine" easing="in"  />
+					<effect type="slide" start="0,55" end="0,0" time="450" tween="cubic" easing="out" />
+				</animation>
+				<animation type="WindowClose" reversible="false">
+					<effect type="fade" start="100" end="0" time="300" delay="250" tween="sine" easing="out" />
+					<effect type="slide" start="0,0" end="0,55" time="350" delay="250" tween="sine" easing="out" />
+				</animation>
+				<animation type="Visible" reversible="false">
+					<effect type="fade" start="0" end="100" time="400" tween="sine" easing="in"  />
+					<effect type="slide" start="0,55" end="0,0" time="450" tween="cubic" easing="out" />
+				</animation>
+				<animation type="Hidden" reversible="false">
+					<effect type="fade" start="100" end="0" time="400" tween="sine" easing="out" />
+					<effect type="slide" start="0,0" end="0,55" time="450" tween="sine" easing="out" />
+				</animation>
+				<visible>Player.HasMedia + !SubString(Window(Videos).Property(TvTunesIsAlive),True)</visible>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>1000</width>
-			  <height>55</height>
+				<height>55</height>
 				<align>left</align>
 				<itemgap>5</itemgap>
 				<orientation>horizontal</orientation>
@@ -492,10 +540,26 @@
 					<textcolor>white</textcolor>
 					<shadowcolor>77000000</shadowcolor>
 				</control>
-	      <!-- Music -->
+				<!-- Music -->
 				<control type="group">
-		      <include>KaiToastSlideAnimations</include>
-		      <include>ScanSlideAnimations</include>
+					<!-- KaiToastSlideAnimations -->
+					<animation type="Conditional" reversible="false" condition="!Window.IsActive(InfoDialog)">
+						<effect type="fade" start="0" end="100" time="400" delay="250" tween="sine" easing="in"  />
+						<effect type="slide" start="0,-35" end="0,0" time="450" delay="250" tween="cubic" easing="out" />
+					</animation>
+					<animation type="Conditional" reversible="false" condition="Window.IsActive(InfoDialog)">
+						<effect type="fade" start="100" end="0" time="400" tween="sine" easing="out" />
+						<effect type="slide" start="0,0" end="0,-35" time="450" tween="sine" easing="out" />
+					</animation>
+					<!-- ScanSlideAnimations -->
+					<animation type="Conditional" reversible="false" condition="!Window.IsActive(extendedprogressdialog)">
+						<effect type="fade" start="0" end="100" time="400" delay="250" tween="sine" easing="in"  />
+						<effect type="slide" start="0,-35" end="0,0" time="450" delay="250" tween="cubic" easing="out" />
+					</animation>
+					<animation type="Conditional" reversible="false" condition="Window.IsActive(extendedprogressdialog)">
+						<effect type="fade" start="100" end="0" time="400" tween="sine" easing="out" />
+						<effect type="slide" start="0,0" end="0,-35" time="450" tween="sine" easing="out" />
+					</animation>
 					<visible>Player.HasAudio</visible>
 					<control type="group">
 						<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
@@ -529,7 +593,7 @@
 						</control>
 					</control>
 					<control type="group">
-					  <visible>MusicPlayer.HasNext</visible>
+						<visible>MusicPlayer.HasNext</visible>
 						<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 							<effect type="fade" start="0" end="100" time="500" delay="10500" />
 							<effect type="fade" start="100" end="0" time="500" delay="20000" />
@@ -560,10 +624,26 @@
 						</control>
 					</control>
 				</control>
-	      <!-- Movies -->
+				<!-- Movies -->
 				<control type="group">
-		      <include>KaiToastSlideAnimations</include>
-		      <include>ScanSlideAnimations</include>
+					<!-- KaiToastSlideAnimations -->
+					<animation type="Conditional" reversible="false" condition="!Window.IsActive(InfoDialog)">
+						<effect type="fade" start="0" end="100" time="400" delay="250" tween="sine" easing="in"  />
+						<effect type="slide" start="0,-35" end="0,0" time="450" delay="250" tween="cubic" easing="out" />
+					</animation>
+					<animation type="Conditional" reversible="false" condition="Window.IsActive(InfoDialog)">
+						<effect type="fade" start="100" end="0" time="400" tween="sine" easing="out" />
+						<effect type="slide" start="0,0" end="0,-35" time="450" tween="sine" easing="out" />
+					</animation>
+					<!-- ScanSlideAnimations -->
+					<animation type="Conditional" reversible="false" condition="!Window.IsActive(extendedprogressdialog)">
+						<effect type="fade" start="0" end="100" time="400" delay="250" tween="sine" easing="in"  />
+						<effect type="slide" start="0,-35" end="0,0" time="450" delay="250" tween="cubic" easing="out" />
+					</animation>
+					<animation type="Conditional" reversible="false" condition="Window.IsActive(extendedprogressdialog)">
+						<effect type="fade" start="100" end="0" time="400" tween="sine" easing="out" />
+						<effect type="slide" start="0,0" end="0,-35" time="450" tween="sine" easing="out" />
+					</animation>
 					<visible>Player.HasVideo + VideoPlayer.Content(Movies)</visible>
 					<control type="label">
 						<posx>0</posx>
@@ -582,7 +662,7 @@
 						<posy>20</posy>
 						<width>740</width>
 						<height>35</height>
-				    <label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, (,) ]</label>
+						<label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, (,) ]</label>
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>NotificationsFont</font>
@@ -590,10 +670,26 @@
 						<shadowcolor>77000000</shadowcolor>
 					</control>
 				</control>
-	      <!-- Episodes -->
+				<!-- Episodes -->
 				<control type="group">
-		      <include>KaiToastSlideAnimations</include>
-		      <include>ScanSlideAnimations</include>
+					<!-- KaiToastSlideAnimations -->
+					<animation type="Conditional" reversible="false" condition="!Window.IsActive(InfoDialog)">
+						<effect type="fade" start="0" end="100" time="400" delay="250" tween="sine" easing="in"  />
+						<effect type="slide" start="0,-35" end="0,0" time="450" delay="250" tween="cubic" easing="out" />
+					</animation>
+					<animation type="Conditional" reversible="false" condition="Window.IsActive(InfoDialog)">
+						<effect type="fade" start="100" end="0" time="400" tween="sine" easing="out" />
+						<effect type="slide" start="0,0" end="0,-35" time="450" tween="sine" easing="out" />
+					</animation>
+					<!-- ScanSlideAnimations -->
+					<animation type="Conditional" reversible="false" condition="!Window.IsActive(extendedprogressdialog)">
+						<effect type="fade" start="0" end="100" time="400" delay="250" tween="sine" easing="in"  />
+						<effect type="slide" start="0,-35" end="0,0" time="450" delay="250" tween="cubic" easing="out" />
+					</animation>
+					<animation type="Conditional" reversible="false" condition="Window.IsActive(extendedprogressdialog)">
+						<effect type="fade" start="100" end="0" time="400" tween="sine" easing="out" />
+						<effect type="slide" start="0,0" end="0,-35" time="450" tween="sine" easing="out" />
+					</animation>
 					<visible>Player.HasVideo + VideoPlayer.Content(Episodes)</visible>
 					<control type="label">
 						<posx>0</posx>
@@ -620,10 +716,26 @@
 						<shadowcolor>77000000</shadowcolor>
 					</control>
 				</control>
-	      <!-- Videos -->
+				<!-- Videos -->
 				<control type="group">
-		      <include>KaiToastSlideAnimations</include>
-		      <include>ScanSlideAnimations</include>
+					<!-- KaiToastSlideAnimations -->
+					<animation type="Conditional" reversible="false" condition="!Window.IsActive(InfoDialog)">
+						<effect type="fade" start="0" end="100" time="400" delay="250" tween="sine" easing="in"  />
+						<effect type="slide" start="0,-35" end="0,0" time="450" delay="250" tween="cubic" easing="out" />
+					</animation>
+					<animation type="Conditional" reversible="false" condition="Window.IsActive(InfoDialog)">
+						<effect type="fade" start="100" end="0" time="400" tween="sine" easing="out" />
+						<effect type="slide" start="0,0" end="0,-35" time="450" tween="sine" easing="out" />
+					</animation>
+					<!-- ScanSlideAnimations -->
+					<animation type="Conditional" reversible="false" condition="!Window.IsActive(extendedprogressdialog)">
+						<effect type="fade" start="0" end="100" time="400" delay="250" tween="sine" easing="in"  />
+						<effect type="slide" start="0,-35" end="0,0" time="450" delay="250" tween="cubic" easing="out" />
+					</animation>
+					<animation type="Conditional" reversible="false" condition="Window.IsActive(extendedprogressdialog)">
+						<effect type="fade" start="100" end="0" time="400" tween="sine" easing="out" />
+						<effect type="slide" start="0,0" end="0,-35" time="450" tween="sine" easing="out" />
+					</animation>
 					<visible>Player.HasVideo + ![VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes)]</visible>
 					<control type="label">
 						<posx>0</posx>
@@ -642,7 +754,7 @@
 						<posy>20</posy>
 						<width>740</width>
 						<height>35</height>
-				    <label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Genre, (,) ]</label>
+						<label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Genre, (,) ]</label>
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>NotificationsFont</font>
@@ -650,10 +762,26 @@
 						<shadowcolor>77000000</shadowcolor>
 					</control>
 				</control>
-	      <!-- LiveTV -->
+				<!-- LiveTV -->
 				<control type="group">
-		      <include>KaiToastSlideAnimations</include>
-		      <include>ScanSlideAnimations</include>
+					<!-- KaiToastSlideAnimations -->
+					<animation type="Conditional" reversible="false" condition="!Window.IsActive(InfoDialog)">
+						<effect type="fade" start="0" end="100" time="400" delay="250" tween="sine" easing="in"  />
+						<effect type="slide" start="0,-35" end="0,0" time="450" delay="250" tween="cubic" easing="out" />
+					</animation>
+					<animation type="Conditional" reversible="false" condition="Window.IsActive(InfoDialog)">
+						<effect type="fade" start="100" end="0" time="400" tween="sine" easing="out" />
+						<effect type="slide" start="0,0" end="0,-35" time="450" tween="sine" easing="out" />
+					</animation>
+					<!-- ScanSlideAnimations -->
+					<animation type="Conditional" reversible="false" condition="!Window.IsActive(extendedprogressdialog)">
+						<effect type="fade" start="0" end="100" time="400" delay="250" tween="sine" easing="in"  />
+						<effect type="slide" start="0,-35" end="0,0" time="450" delay="250" tween="cubic" easing="out" />
+					</animation>
+					<animation type="Conditional" reversible="false" condition="Window.IsActive(extendedprogressdialog)">
+						<effect type="fade" start="100" end="0" time="400" tween="sine" easing="out" />
+						<effect type="slide" start="0,0" end="0,-35" time="450" tween="sine" easing="out" />
+					</animation>
 					<visible>Player.HasVideo + VideoPlayer.Content(LiveTV)</visible>
 					<control type="group">
 						<animation type="Conditional" reversible="false" condition="Pvr.IsPlayingTv" loop="true">
@@ -687,7 +815,7 @@
 						</control>
 					</control>
 					<control type="group">
-					  <visible>Pvr.IsPlayingTv</visible>
+						<visible>Pvr.IsPlayingTv</visible>
 						<animation type="Conditional" reversible="false" condition="Pvr.IsPlayingTv" loop="true">
 							<effect type="fade" start="0" end="100" time="500" delay="10500" />
 							<effect type="fade" start="100" end="0" time="500" delay="20000" />
@@ -719,12 +847,28 @@
 					</control>
 				</control>
 			</control>
- 	  </control>
+		</control>
 	</include>
 
 	<include name="CommonPageCount">
 		<control type="group">
-			<include>CommonSlideAnimations</include>
+			<!-- CommonSlideAnimations -->
+			<animation type="WindowOpen" reversible="false">
+				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+				<effect type="slide" start="0,-55" end="0,0" time="350" tween="cubic" easing="out" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="fade" start="100" end="0" time="300" delay="250" tween="sine" easing="out" />
+				<effect type="slide" start="0,0" end="0,-55" time="350" delay="250" tween="sine" easing="out" />
+			</animation>
+			<animation type="Visible" reversible="false">
+				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+				<effect type="slide" start="0,35" end="0,0" time="350" tween="cubic" easing="out" />
+			</animation>
+			<animation type="Hidden" reversible="false">
+				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+				<effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
+			</animation>
 			<control type="label">
 				<description>Page Count Label</description>
 				<posx>45</posx>
@@ -737,8 +881,24 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>$INFO[Container.NumItems,, $LOCALIZE[31025]]</label>
-				<include>CommonSlideAnimations</include>
-				<visible>!ControlGroup(9000).HasFocus + !Window.IsActive(ContextMenu) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(filestackingdialog) + !Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(SongInformation) + !Window.IsActive(AddonInformation) + !Window.IsActive(musicplaylisteditor) + !Window.IsActive(script-globalsearch-main.xml)</visible>
+				<!-- CommonSlideAnimations -->
+				<animation type="WindowOpen" reversible="false">
+					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+					<effect type="slide" start="0,-55" end="0,0" time="350" tween="cubic" easing="out" />
+				</animation>
+				<animation type="WindowClose" reversible="false">
+					<effect type="fade" start="100" end="0" time="300" delay="250" tween="sine" easing="out" />
+					<effect type="slide" start="0,0" end="0,-55" time="350" delay="250" tween="sine" easing="out" />
+				</animation>
+				<animation type="Visible" reversible="false">
+					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+					<effect type="slide" start="0,35" end="0,0" time="350" tween="cubic" easing="out" />
+				</animation>
+				<animation type="Hidden" reversible="false">
+					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+					<effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
+				</animation>
+				<visible>!ControlGroup(9000).HasFocus + !Window.IsActive(ContextMenu) + !Window.IsActive(ShutdownMenu) + !Window.IsActive(filestackingdialog) + !Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(SongInformation) + !Window.IsActive(PluginInformation) + !Window.IsActive(musicplaylisteditor) + !Window.IsActive(script-globalsearch-main.xml)</visible>
 			</control>
 		</control>
 	</include>	
@@ -747,8 +907,24 @@
 		<control type="group">
 			<posx>405r</posx>
 			<posy>25</posy>
-      <visible>Container.Scrolling</visible>
-			<include>TopRightSlideAnimations</include>
+			<visible>Container.Scrolling</visible>
+			<!-- TopRightSlideAnimations -->
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" time="250" tween="sine" easing="out"  />
+				<effect type="slide" start="0,-35" end="0,0" time="300" tween="cubic" easing="out" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+				<effect type="slide" start="0,0" end="0,-35" time="350" tween="sine" easing="out" />
+			</animation>
+			<animation type="Visible">
+				<effect type="fade" start="0" end="100" time="250" tween="sine" easing="out"  />
+				<effect type="slide" start="0,-35" end="0,0" time="300" tween="cubic" easing="out" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+				<effect type="slide" start="0,0" end="0,-35" time="350" tween="sine" easing="out" />
+			</animation>
 			<control type="grouplist">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -759,20 +935,36 @@
 				<itemgap>12</itemgap>
 				<orientation>horizontal</orientation>
 				<control type="label">
-				  <include>TopZoomedSmallLabel</include>
-		      <label>31026</label>
+					<include>TopZoomedSmallLabel</include>
+					<label>31026</label>
 				</control>
 				<control type="label">
-				  <include>TopBigLabel</include>
-				  <label>$INFO[Container.ListItem.SortLetter]</label>
+					<include>TopBigLabel</include>
+					<label>$INFO[Container.ListItem.SortLetter]</label>
 				</control>
 			</control>
 		</control>
 		<control type="group">
 			<posx>405r</posx>
 			<posy>25</posy>
-      <visible>Window.IsVisible(FileManager) + [Container(20).Scrolling | Container(21).Scrolling]</visible>
-			<include>TopRightSlideAnimations</include>
+			<visible>Window.IsVisible(FileManager) + [Container(20).Scrolling | Container(21).Scrolling]</visible>
+			<!-- TopRightSlideAnimations -->
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" time="250" tween="sine" easing="out"  />
+				<effect type="slide" start="0,-35" end="0,0" time="300" tween="cubic" easing="out" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+				<effect type="slide" start="0,0" end="0,-35" time="350" tween="sine" easing="out" />
+			</animation>
+			<animation type="Visible">
+				<effect type="fade" start="0" end="100" time="250" tween="sine" easing="out"  />
+				<effect type="slide" start="0,-35" end="0,0" time="300" tween="cubic" easing="out" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+				<effect type="slide" start="0,0" end="0,-35" time="350" tween="sine" easing="out" />
+			</animation>
 			<control type="grouplist">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -783,70 +975,118 @@
 				<itemgap>12</itemgap>
 				<orientation>horizontal</orientation>
 				<control type="label">
-				  <include>TopZoomedSmallLabel</include>
-		      <label>31026</label>
+					<include>TopZoomedSmallLabel</include>
+					<label>31026</label>
 				</control>
 				<control type="label">
-				  <include>TopBigLabel</include>
-				  <label>$INFO[Container(20).ListItem.SortLetter]</label>
-				  <visible>Control.HasFocus(20)</visible>
+					<include>TopBigLabel</include>
+					<label>$INFO[Container(20).ListItem.SortLetter]</label>
+					<visible>Control.HasFocus(20)</visible>
 				</control>
 				<control type="label">
-				  <include>TopBigLabel</include>
-				  <label>$INFO[Container(21).ListItem.SortLetter]</label>
-				  <visible>Control.HasFocus(21)</visible>
+					<include>TopBigLabel</include>
+					<label>$INFO[Container(21).ListItem.SortLetter]</label>
+					<visible>Control.HasFocus(21)</visible>
 				</control>
 			</control>
 		</control>		
 	</include>
 
 	<include name="CommonWeatherAndClock">
-		 <control type="group">
-				<posx>-20</posx>
-				<posy>17</posy>
-				<visible>!Container.Scrolling + ![Window.IsVisible(FileManager) + [Container(20).Scrolling | Container(21).Scrolling]] + ![Window.IsVisible(musicplaylisteditor) + [Container(50).Scrolling | Container(100).Scrolling]]</visible>
-				<include>CommonSlideAnimations</include>
-        <include>WeatherAndClock</include>
-		 </control>
+		<control type="group">
+			<posx>-20</posx>
+			<posy>17</posy>
+			<visible>!Container.Scrolling + ![Window.IsVisible(FileManager) + [Container(20).Scrolling | Container(21).Scrolling]] + ![Window.IsVisible(musicplaylisteditor) + [Container(50).Scrolling | Container(100).Scrolling]]</visible>
+			<!-- CommonSlideAnimations -->
+			<animation type="WindowOpen" reversible="false">
+				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+				<effect type="slide" start="0,-55" end="0,0" time="350" tween="cubic" easing="out" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="fade" start="100" end="0" time="300" delay="250" tween="sine" easing="out" />
+				<effect type="slide" start="0,0" end="0,-55" time="350" delay="250" tween="sine" easing="out" />
+			</animation>
+			<animation type="Visible" reversible="false">
+				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+				<effect type="slide" start="0,35" end="0,0" time="350" tween="cubic" easing="out" />
+			</animation>
+			<animation type="Hidden" reversible="false">
+				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+				<effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
+			</animation>
+			<include>WeatherAndClock</include>
+		</control>
 	</include>	
 
 	<include name="HomeWeatherAndClock">
-		 <control type="group">
-				<posx>-20</posx>
-				<posy>17</posy>
-				<visible>Window.IsActive(Home)</visible>
-				<include>HomeSlideAnimations</include>
-        <include>WeatherAndClock</include>
-		 </control>
+		<control type="group">
+			<posx>-20</posx>
+			<posy>17</posy>
+			<visible>Window.IsActive(Home)</visible>
+			<!-- HomeSlideAnimations -->
+			<animation type="WindowOpen" reversible="true">
+				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+				<effect type="slide" start="0,-55" end="0,0" time="350" tween="cubic" easing="out" />
+			</animation>
+			<animation type="WindowClose" reversible="true">
+				<effect type="fade" start="100" end="0" time="300" delay="250" tween="sine" easing="inout" />
+				<effect type="slide" start="0,0" end="0,-55" time="350" delay="250" tween="sine" easing="inout" />
+			</animation>
+			<animation type="Visible" reversible="true">
+				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+				<effect type="slide" start="0,55" end="0,0" time="350" tween="cubic" easing="out" />
+			</animation>
+			<animation type="Hidden" reversible="true">
+				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
+				<effect type="slide" start="0,0" end="0,55" time="350" tween="sine" easing="inout" />
+			</animation>
+			<include>WeatherAndClock</include>
+		</control>
 	</include>	
 
 	<include name="SettingsWeatherAndClock">
-		 <control type="group">
-				<posx>-20</posx>
-				<posy>17</posy>
-				<include>SettingsSlideAnimations</include>
-        <include>WeatherAndClock</include>
-		 </control>
+		<control type="group">
+			<posx>-20</posx>
+			<posy>17</posy>
+			<!-- SettingsSlideAnimations -->
+			<animation type="WindowOpen" condition="!Window.Previous(AppearanceSettings) + !Window.Previous(NetworkSettings) + !Window.Previous(VideosSettings) + !Window.Previous(PVRSettings) + !Window.Previous(SystemSettings) + !Window.Previous(MusicSettings) + !Window.Previous(WeatherSettings) + !Window.Previous(ProgramsSettings) + !Window.Previous(PicturesSettings) + !Window.Previous(Profiles) + !Window.Previous(SystemInfo) + !Window.Previous(SkinSettings)">
+				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+				<effect type="slide" start="0,-55" end="0,0" time="350" tween="cubic" easing="out" />
+			</animation>
+			<animation type="WindowClose" condition="!Window.Next(AppearanceSettings) + !Window.Next(NetworkSettings) + !Window.Next(VideosSettings) + !Window.Next(PVRSettings) + !Window.Next(SystemSettings) + !Window.Next(MusicSettings) + !Window.Next(WeatherSettings) + !Window.Next(ProgramsSettings) + !Window.Next(PicturesSettings) + !Window.Next(Profiles) + !Window.Next(SystemInfo) + !Window.Next(SkinSettings)">
+				<effect type="fade" start="100" end="0" time="300" delay="250" tween="sine" easing="out" />
+				<effect type="slide" start="0,0" end="0,-55" time="350" delay="250" tween="sine" easing="out" />
+			</animation>
+			<animation type="Visible" condition="!Window.Previous(AppearanceSettings) + !Window.Previous(NetworkSettings) + !Window.Previous(VideosSettings) + !Window.Previous(PVRSettings) + !Window.Previous(SystemSettings) + !Window.Previous(MusicSettings) + !Window.Previous(WeatherSettings) + !Window.Previous(ProgramsSettings) + !Window.Previous(PicturesSettings) + !Window.Previous(Profiles) + !Window.Previous(SystemInfo) + !Window.Previous(SkinSettings)">
+				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+				<effect type="slide" start="0,35" end="0,0" time="350" tween="cubic" easing="out" />
+			</animation>
+			<animation type="Hidden" condition="!Window.Next(AppearanceSettings) + !Window.Next(NetworkSettings) + !Window.Next(VideosSettings) + !Window.Next(PVRSettings) + !Window.Next(SystemSettings) + !Window.Next(MusicSettings) + !Window.Next(WeatherSettings) + !Window.Next(ProgramsSettings) + !Window.Next(PicturesSettings) + !Window.Next(Profiles) + !Window.Next(SystemInfo) + !Window.Next(SkinSettings)">
+				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+				<effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
+			</animation>
+			<include>WeatherAndClock</include>
+		</control>
 	</include>	
 
 	<include name="WeatherAndClock">
 		<control type="grouplist" id="1">
-		  <animation type="Conditional" reversible="false" condition="!Window.IsActive(VolumeBar)">
-	      <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
-	      <effect type="slide" start="0,35" end="0,0" time="350" tween="cubic" easing="out" />
-		  </animation>
-		  <animation type="Conditional" reversible="false" condition="Window.IsActive(VolumeBar)">
-	      <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-	      <effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
-		  </animation>
+			<animation type="Conditional" reversible="false" condition="!Window.IsActive(VolumeBar)">
+				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+				<effect type="slide" start="0,35" end="0,0" time="350" tween="cubic" easing="out" />
+			</animation>
+			<animation type="Conditional" reversible="false" condition="Window.IsActive(VolumeBar)">
+				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+				<effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
+			</animation>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1210</width>
 			<itemgap>0</itemgap>
 			<align>right</align>
 			<orientation>horizontal</orientation>
-		  <!-- Weather -->
-	    <control type="group"  id="1">
+			<!-- Weather -->
+			<control type="group"  id="1">
 				<posx>-45</posx>
 				<posy>0</posy>
 				<control type="image" id="1">
@@ -854,35 +1094,35 @@
 					<posy>0</posy>
 					<height>30</height>
 					<width>30</width>
-			    <align>right</align>
+					<align>right</align>
 					<aligny>center</aligny>
-				  <texture>$INFO[Window(Weather).Property(Current.FanartCode),weather/,.png]</texture>
+					<texture>$INFO[Window(Weather).Property(Current.FanartCode),weather/,.png]</texture>
 					<visible>Weather.IsFetched</visible>		
 				</control>
 				<control type="label" id="1">
 					<posx>-2</posx>
 					<posy>0</posy>
-			    <width>200</width>
-			    <height>29</height>
-			    <font>FontSize_20</font>
+					<width>200</width>
+					<height>29</height>
+					<font>FontSize_20</font>
 					<textcolor>white</textcolor>
-				  <shadowcolor>99000000</shadowcolor>
-			    <align>right</align>
-			    <aligny>center</aligny>
+					<shadowcolor>99000000</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>
 					<scroll>false</scroll>
 					<label>$INFO[Window(Weather).Property(Current.Temperature)]°</label>
 					<visible>Weather.IsFetched</visible>
 				</control>
-		  </control>
-		  <!-- Time -->
+			</control>
+			<!-- Time -->
 			<control type="label" id="1">
-		    <width min="10" max="200">auto</width>
-		    <height>29</height>
-		    <font>FontSize_20</font>
+				<width min="10" max="200">auto</width>
+				<height>29</height>
+				<font>FontSize_20</font>
 				<textcolor>blue</textcolor>
 				<shadowcolor>99000000</shadowcolor>
-		    <align>left</align>
-		    <aligny>center</aligny>
+				<align>left</align>
+				<aligny>center</aligny>
 				<scroll>false</scroll>
 				<label>$INFO[System.Time(hh:mm)]</label>
 			</control>
@@ -896,10 +1136,10 @@
 					<posy>0</posy>
 					<width>20</width>
 					<height>22</height>
-		      <font>ClockFont</font>
+					<font>ClockFont</font>
 					<textcolor>blue</textcolor>
 					<shadowcolor>99000000</shadowcolor>
-				  <label>31030</label>
+					<label>31030</label>
 					<colordiffuse>grey</colordiffuse>
 				</control>
 				<control type="label" id="1">
@@ -910,20 +1150,20 @@
 					<height>22</height>
 					<textcolor>blue</textcolor>
 					<shadowcolor>99000000</shadowcolor>
-		      <font>ClockFont</font>
-				  <label>31031</label>
+					<font>ClockFont</font>
+					<label>31031</label>
 					<colordiffuse>grey</colordiffuse>
 				</control>
 			</control>
-		  <!-- NowPlaying Finish Time -->
+			<!-- NowPlaying Finish Time -->
 			<control type="label" id="1">
-		    <width min="10" max="200">auto</width>
-		    <height>29</height>
-		    <font>FontSize_20</font>
+				<width min="10" max="200">auto</width>
+				<height>29</height>
+				<font>FontSize_20</font>
 				<textcolor>blue</textcolor>
 				<shadowcolor>99000000</shadowcolor>
-		    <align>left</align>
-		    <aligny>center</aligny>
+				<align>left</align>
+				<aligny>center</aligny>
 				<scroll>false</scroll>
 				<label>$INFO[Player.FinishTime(hh:mm), / ]</label>
 				<visible>Player.HasVideo</visible>
@@ -939,10 +1179,10 @@
 					<posy>0</posy>
 					<width>20</width>
 					<height>22</height>
-		      <font>ClockFont</font>
+					<font>ClockFont</font>
 					<textcolor>blue</textcolor>
 					<shadowcolor>99000000</shadowcolor>
-				  <label>31030</label>
+					<label>31030</label>
 					<colordiffuse>grey</colordiffuse>
 				</control>
 				<control type="label" id="1">
@@ -953,29 +1193,29 @@
 					<height>22</height>
 					<textcolor>blue</textcolor>
 					<shadowcolor>99000000</shadowcolor>
-		      <font>ClockFont</font>
-				  <label>31031</label>
+					<font>ClockFont</font>
+					<label>31031</label>
 					<colordiffuse>grey</colordiffuse>
 				</control>
 			</control>
-	  </control>
+		</control>
 	</include>	
-	
+
 	<variable name="CustomDialogOKHeadLabel">
 		<value>$LOCALIZE[31430]</value>
 	</variable>
-	
+
 	<variable name="CustomDialogOKMessage">
 		<value condition="Window.IsVisible(favourites)">$LOCALIZE[31431]</value>
 		<value condition="Window.IsVisible(Startup)">$LOCALIZE[31432]</value>
 	</variable>
 
-  <variable name="AddonStatus">
-    <value condition="stringcompare(ListItem.Label2,$LOCALIZE[24098])">overlays/addons_status/status_broken.png</value>
-    <value condition="stringcompare(ListItem.Label2,$LOCALIZE[305])">overlays/addons_status/status_enabled.png</value>
-    <value condition="stringcompare(ListItem.Label2,$LOCALIZE[24068])">overlays/addons_status/status_update.png</value>
-  </variable>
-	
+	<variable name="AddonStatus">
+		<value condition="stringcompare(ListItem.Label2,$LOCALIZE[24098])">overlays/addons_status/status_broken.png</value>
+		<value condition="stringcompare(ListItem.Label2,$LOCALIZE[305])">overlays/addons_status/status_enabled.png</value>
+		<value condition="stringcompare(ListItem.Label2,$LOCALIZE[24068])">overlays/addons_status/status_update.png</value>
+	</variable>
+
 	<variable name="HomeAddonsButtonAddonsName">
 		<value condition="stringcompare(Skin.String(AddonsName),addonbrowser)">$LOCALIZE[10040]</value>
 		<value condition="stringcompare(Skin.String(AddonsName),videosaddons)">$LOCALIZE[1037]</value>
@@ -1032,8 +1272,8 @@
 	<variable name="GlobalInfo">
 		<value condition="Substring(ListItem.Path,videodb://1/7,left) + ListItem.IsFolder + !IsEmpty(ListItem.Title)">$LOCALIZE[342] $LOCALIZE[20141]</value>
 		<value condition="Container.Content(Movies) + !IsEmpty(ListItem.Property(ReleaseDate))">$INFO[ListItem.Property(ReleaseDate),$LOCALIZE[31004]: ]</value>
-    <value condition="Control.IsVisible(50) + [Container.Content(TVShows) | Container.Content(Seasons)] + IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)">$INFO[ListItem.MPAA,$LOCALIZE[20074]: ]</value>
-    <value condition="Control.IsVisible(50) + [Container.Content(TVShows) | Container.Content(Seasons)] + !IsEmpty(ListItem.Property(UnWatchedEpisodes))">$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[16101] $LOCALIZE[20360]]</value>
+		<value condition="Control.IsVisible(50) + [Container.Content(TVShows) | Container.Content(Seasons)] + IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)">$INFO[ListItem.MPAA,$LOCALIZE[20074]: ]</value>
+		<value condition="Control.IsVisible(50) + [Container.Content(TVShows) | Container.Content(Seasons)] + !IsEmpty(ListItem.Property(UnWatchedEpisodes))">$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[16101] $LOCALIZE[20360]]</value>
 		<value condition="Container.Content(Episodes) + ![IsEmpty(ListItem.Season) + IsEmpty(ListItem.Episode)]">$INFO[ListItem.Season,$LOCALIZE[20373] ,  •  ]$INFO[ListItem.Episode,$LOCALIZE[20359] ,  •  ]$INFO[ListItem.Premiered,$LOCALIZE[31003] ]</value>
 		<value condition="Container.Content(Episodes) + [IsEmpty(ListItem.Season) + IsEmpty(ListItem.Episode)]">$INFO[ListItem.Premiered]</value>
 		<value condition="[Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons)]">$INFO[ListItem.Genre]</value>
@@ -1055,7 +1295,7 @@
 		<value condition="Container.Content(TVShows) | Container.Content(Seasons)">$INFO[ListItem.Year,, • ,]$INFO[ListItem.Rating,, • ,]$INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[16101]</value>
 		<value condition="Container.Content(Episodes)">$INFO[ListItem.Premiered,$LOCALIZE[31003] ]$INFO[ListItem.Rating, • ,]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</value>
 	</variable>
-	
+
 	<variable name="DialogsInfo">
 		<value condition="Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Artists)">$INFO[ListItem.Genre]</value>
 		<value condition="Container.Content(Episodes) + ![IsEmpty(ListItem.Season) + IsEmpty(ListItem.Episode)]">$INFO[ListItem.TVShowTitle] $INFO[ListItem.Season,,x]$INFO[ListItem.Episode,,  •  ]$INFO[ListItem.Premiered,$LOCALIZE[31003] ]</value>
@@ -1072,18 +1312,18 @@
 		<value condition="IsEmpty(ListItem.Art(poster)) | IsEmpty(ListItem.Art(season.poster)) | IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(thumb)]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
-	
+
 	<variable name="VideoWallIcon">
 		<value condition="!IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
 		<value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 	</variable>
 
-  <variable name="VideoInfoThumbs">
-    <value condition="Container.Content(Episodes) + !IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
+	<variable name="VideoInfoThumbs">
+		<value condition="Container.Content(Episodes) + !IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
 		<value condition="IsEmpty(ListItem.Art(season.poster)) + !IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
 		<value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value>$INFO[ListItem.Icon]</value>
-  </variable>
+	</variable>
 
 	<variable name="PlayerThumbs">
 		<value condition="!IsEmpty(Player.Art(poster))">$INFO[Player.Art(poster)]</value>
@@ -1114,7 +1354,7 @@
 		<value condition="[Container.Content(TVShows)] | [Container.Content(Movies) | Container.Content(Sets)]">$INFO[ListItem.Art(clearlogo)]</value>
 		<value condition="Container.Content(Seasons)">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
 	</variable>
-	
+
 	<variable name="FanartThumbs">
 		<value condition="Control.IsVisible(50) + [Container.Content(TVShows) | Container.Content(Seasons)] + Stringcompare(Skin.String(ListViewWideThumbTVShows),2)">$VAR[LandscapeVars]</value>
 		<value condition="Control.IsVisible(50) + [Container.Content(TVShows) | Container.Content(Seasons)] + Stringcompare(Skin.String(ListViewWideThumbTVShows),3)">$VAR[ClearlogoVars]</value>
@@ -1126,16 +1366,16 @@
 		<value>$INFO[ListItem.Property(Fanart_Image)]</value>
 	</variable>
 
-  <variable name="VideoInfoStarRating">
-    <value condition="!IsEmpty(ListItem.Rating) | !Substring(Container(100).ListItem.Property(Rating),0.0)">rating/star_big_full.png</value>
-    <value condition="IsEmpty(ListItem.Rating) | Substring(Container(100).ListItem.Property(Rating),0.0)">rating/star_big_empty.png</value>
-  </variable>
+	<variable name="VideoInfoStarRating">
+		<value condition="!IsEmpty(ListItem.Rating) | !Substring(Container(100).ListItem.Property(Rating),0.0)">rating/star_big_full.png</value>
+		<value condition="IsEmpty(ListItem.Rating) | Substring(Container(100).ListItem.Property(Rating),0.0)">rating/star_big_empty.png</value>
+	</variable>
 
 	<variable name="MusicLabel">
 		<value condition="Container.Content(Songs)">$INFO[ListItem.Title]$INFO[ListItem.Artist, - ]</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>	
-	
+
 	<variable name="MusicLabel2">
 		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
 		<value condition="Container.Content(Songs)">$INFO[ListItem.Duration]</value>
@@ -1146,7 +1386,7 @@
 		<value condition="Container.Content(Songs)">$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title]</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
-	
+
 	<variable name="BannersListMusicUnderLabel">
 		<value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
 		<value condition="Container.Content(Songs)">$INFO[ListItem.Album]$INFO[ListItem.Artist, - ]</value>
@@ -1228,12 +1468,12 @@
 		<onload condition="Window.IsActive(textviewer)">Dialog.Close(textviewer)</onload>
 		<onload condition="Window.IsActive(mediafilter)">Dialog.Close(mediafilter)</onload>
 		<onload condition="Window.IsActive(1112)">Dialog.Close(1112)</onload>
-	  <onload condition="Window.IsActive(1110)">Dialog.Close(1110)</onload>
+		<onload condition="Window.IsActive(1110)">Dialog.Close(1110)</onload>
 		<onload>Dialog.Close(DialogSelect.xml)</onload>
 	</include>
 
 	<include name="OnClickDialogsClose">
-    <onclick condition="Window.IsActive(playercontrols)">Dialog.Close(playercontrols)</onclick>
+		<onclick condition="Window.IsActive(playercontrols)">Dialog.Close(playercontrols)</onclick>
 		<onclick condition="Window.IsActive(yesnodialog)">Dialog.Close(yesnodialog)</onclick>
 		<onclick condition="Window.IsActive(okdialog)">Dialog.Close(okdialog)</onclick>
 		<onclick condition="Window.IsActive(progressdialog)">Dialog.Close(progressdialog)</onclick>
@@ -1276,107 +1516,113 @@
 		<onclick condition="Window.IsActive(peripheralsettings)">Dialog.Close(peripheralsettings)</onclick>
 		<onclick condition="Window.IsActive(peripherals)">Dialog.Close(peripherals)</onclick>
 		<onclick condition="Window.IsActive(mediafilter)">Dialog.Close(mediafilter)</onclick>
-	  <onclick condition="Window.IsActive(1110)">Dialog.Close(1110)</onclick>
-    <onclick condition="Window.IsActive(3000)">Dialog.Close(3000)</onclick>
-    <onclick condition="Window.IsActive(3001)">Dialog.Close(3001)</onclick>
-    <onclick condition="Window.IsActive(3002)">Dialog.Close(3002)</onclick>
-    <onclick condition="Window.IsActive(3003)">Dialog.Close(3003)</onclick>
-    <onclick condition="Window.IsActive(3004)">Dialog.Close(3004)</onclick>
-    <onclick condition="Window.IsActive(3005)">Dialog.Close(3005)</onclick>
-    <onclick condition="Window.IsActive(3006)">Dialog.Close(3006)</onclick>
-    <onclick condition="Window.IsActive(3007)">Dialog.Close(3007)</onclick>
-    <onclick condition="Window.IsActive(3008)">Dialog.Close(3008)</onclick>
-    <onclick condition="Window.IsActive(3009)">Dialog.Close(3009)</onclick>
-    <onclick condition="Window.IsActive(3010)">Dialog.Close(3010)</onclick>
-    <onclick condition="Window.IsActive(3011)">Dialog.Close(3011)</onclick>
-    <onclick condition="Window.IsActive(3012)">Dialog.Close(3012)</onclick>
-    <onclick condition="Window.IsActive(3013)">Dialog.Close(3013)</onclick>
-    <onclick condition="Window.IsActive(3014)">Dialog.Close(3014)</onclick>
-    <onclick condition="Window.IsActive(3015)">Dialog.Close(3015)</onclick>
-    <onclick condition="Window.IsActive(3016)">Dialog.Close(3016)</onclick>
-    <onclick condition="Window.IsActive(3017)">Dialog.Close(3017)</onclick>
-    <onclick condition="Window.IsActive(3018)">Dialog.Close(3018)</onclick>
-    <onclick condition="Window.IsActive(3019)">Dialog.Close(3019)</onclick>
-    <onclick condition="Window.IsActive(3020)">Dialog.Close(3020)</onclick>
-    <onclick condition="Window.IsActive(3021)">Dialog.Close(3021)</onclick>
-    <onclick condition="Window.IsActive(3022)">Dialog.Close(3022)</onclick>
-    <onclick condition="Window.IsActive(3023)">Dialog.Close(3023)</onclick>
-    <onclick condition="Window.IsActive(3024)">Dialog.Close(3024)</onclick>
-    <onclick condition="Window.IsActive(3025)">Dialog.Close(3025)</onclick>
-    <onclick condition="Window.IsActive(3026)">Dialog.Close(3026)</onclick>
-    <onclick condition="Window.IsActive(3027)">Dialog.Close(3027)</onclick>
-    <onclick condition="Window.IsActive(3028)">Dialog.Close(3028)</onclick>
-    <onclick condition="Window.IsActive(3029)">Dialog.Close(3029)</onclick>
-    <onclick condition="Window.IsActive(3030)">Dialog.Close(3030)</onclick>
-    <onclick condition="Window.IsActive(3031)">Dialog.Close(3031)</onclick>
-    <onclick condition="Window.IsActive(3032)">Dialog.Close(3032)</onclick>
-    <onclick condition="Window.IsActive(3033)">Dialog.Close(3033)</onclick>
-    <onclick condition="Window.IsActive(3034)">Dialog.Close(3034)</onclick>
-    <onclick condition="Window.IsActive(3035)">Dialog.Close(3035)</onclick>
-    <onclick condition="Window.IsActive(3036)">Dialog.Close(3036)</onclick>
-    <onclick condition="Window.IsActive(3037)">Dialog.Close(3037)</onclick>
-    <onclick condition="Window.IsActive(3038)">Dialog.Close(3038)</onclick>
-    <onclick condition="Window.IsActive(3039)">Dialog.Close(3039)</onclick>
-    <onclick condition="Window.IsActive(3040)">Dialog.Close(3040)</onclick>
-    <onclick condition="Window.IsActive(3041)">Dialog.Close(3041)</onclick>
-    <onclick condition="Window.IsActive(3042)">Dialog.Close(3042)</onclick>
-    <onclick condition="Window.IsActive(3043)">Dialog.Close(3043)</onclick>
-    <onclick condition="Window.IsActive(3044)">Dialog.Close(3044)</onclick>
-    <onclick condition="Window.IsActive(3045)">Dialog.Close(3045)</onclick>
-    <onclick condition="Window.IsActive(3046)">Dialog.Close(3046)</onclick>
-    <onclick condition="Window.IsActive(3047)">Dialog.Close(3047)</onclick>
-    <onclick condition="Window.IsActive(3048)">Dialog.Close(3048)</onclick>
-    <onclick condition="Window.IsActive(3049)">Dialog.Close(3049)</onclick>
-    <onclick condition="Window.IsActive(3050)">Dialog.Close(3050)</onclick>
-    <onclick condition="Window.IsActive(3051)">Dialog.Close(3051)</onclick>
-    <onclick condition="Window.IsActive(3052)">Dialog.Close(3052)</onclick>
-    <onclick condition="Window.IsActive(3053)">Dialog.Close(3053)</onclick>
-    <onclick condition="Window.IsActive(3054)">Dialog.Close(3054)</onclick>
-    <onclick condition="Window.IsActive(3055)">Dialog.Close(3055)</onclick>
-    <onclick condition="Window.IsActive(3056)">Dialog.Close(3056)</onclick>
-    <onclick condition="Window.IsActive(3057)">Dialog.Close(3057)</onclick>
-    <onclick condition="Window.IsActive(3058)">Dialog.Close(3058)</onclick>
-    <onclick condition="Window.IsActive(3059)">Dialog.Close(3059)</onclick>
-    <onclick condition="Window.IsActive(3060)">Dialog.Close(3060)</onclick>
-    <onclick condition="Window.IsActive(3061)">Dialog.Close(3061)</onclick>
-    <onclick condition="Window.IsActive(3062)">Dialog.Close(3062)</onclick>
-    <onclick condition="Window.IsActive(3063)">Dialog.Close(3063)</onclick>
-    <onclick condition="Window.IsActive(3064)">Dialog.Close(3064)</onclick>
-    <onclick condition="Window.IsActive(3065)">Dialog.Close(3065)</onclick>
-    <onclick condition="Window.IsActive(3066)">Dialog.Close(3066)</onclick>
-    <onclick condition="Window.IsActive(3067)">Dialog.Close(3067)</onclick>
-    <onclick condition="Window.IsActive(3068)">Dialog.Close(3068)</onclick>
-    <onclick condition="Window.IsActive(3069)">Dialog.Close(3069)</onclick>
-    <onclick condition="Window.IsActive(3070)">Dialog.Close(3070)</onclick>
-    <onclick condition="Window.IsActive(3071)">Dialog.Close(3071)</onclick>
-    <onclick condition="Window.IsActive(3072)">Dialog.Close(3072)</onclick>
-    <onclick condition="Window.IsActive(3073)">Dialog.Close(3073)</onclick>
-    <onclick condition="Window.IsActive(3074)">Dialog.Close(3074)</onclick>
-    <onclick condition="Window.IsActive(3075)">Dialog.Close(3075)</onclick>
-    <onclick condition="Window.IsActive(3076)">Dialog.Close(3076)</onclick>
-    <onclick condition="Window.IsActive(3077)">Dialog.Close(3077)</onclick>
-    <onclick condition="Window.IsActive(3078)">Dialog.Close(3078)</onclick>
-    <onclick condition="Window.IsActive(3079)">Dialog.Close(3079)</onclick>
-    <onclick condition="Window.IsActive(3080)">Dialog.Close(3080)</onclick>
-    <onclick condition="Window.IsActive(3081)">Dialog.Close(3081)</onclick>
-    <onclick condition="Window.IsActive(3082)">Dialog.Close(3082)</onclick>
-    <onclick condition="Window.IsActive(3083)">Dialog.Close(3083)</onclick>
-    <onclick condition="Window.IsActive(3084)">Dialog.Close(3084)</onclick>
-    <onclick condition="Window.IsActive(3085)">Dialog.Close(3085)</onclick>
-    <onclick condition="Window.IsActive(3086)">Dialog.Close(3086)</onclick>
-    <onclick condition="Window.IsActive(3087)">Dialog.Close(3087)</onclick>
-    <onclick condition="Window.IsActive(3088)">Dialog.Close(3088)</onclick>
-    <onclick condition="Window.IsActive(3089)">Dialog.Close(3089)</onclick>
-    <onclick condition="Window.IsActive(3090)">Dialog.Close(3090)</onclick>
-    <onclick condition="Window.IsActive(3091)">Dialog.Close(3091)</onclick>
-    <onclick condition="Window.IsActive(3092)">Dialog.Close(3092)</onclick>
-    <onclick condition="Window.IsActive(3093)">Dialog.Close(3093)</onclick>
-    <onclick condition="Window.IsActive(3094)">Dialog.Close(3094)</onclick>
-    <onclick condition="Window.IsActive(3095)">Dialog.Close(3095)</onclick>
-    <onclick condition="Window.IsActive(3096)">Dialog.Close(3096)</onclick>
-    <onclick condition="Window.IsActive(3097)">Dialog.Close(3097)</onclick>
-    <onclick condition="Window.IsActive(3098)">Dialog.Close(3098)</onclick>
-    <onclick condition="Window.IsActive(3099)">Dialog.Close(3099)</onclick>		
+		<onclick condition="Window.IsActive(1110)">Dialog.Close(1110)</onclick>
+		<onclick condition="Window.IsActive(3000)">Dialog.Close(3000)</onclick>
+		<onclick condition="Window.IsActive(3001)">Dialog.Close(3001)</onclick>
+		<onclick condition="Window.IsActive(3002)">Dialog.Close(3002)</onclick>
+		<onclick condition="Window.IsActive(3003)">Dialog.Close(3003)</onclick>
+		<onclick condition="Window.IsActive(3004)">Dialog.Close(3004)</onclick>
+		<onclick condition="Window.IsActive(3005)">Dialog.Close(3005)</onclick>
+		<onclick condition="Window.IsActive(3006)">Dialog.Close(3006)</onclick>
+		<onclick condition="Window.IsActive(3007)">Dialog.Close(3007)</onclick>
+		<onclick condition="Window.IsActive(3008)">Dialog.Close(3008)</onclick>
+		<onclick condition="Window.IsActive(3009)">Dialog.Close(3009)</onclick>
+		<onclick condition="Window.IsActive(3010)">Dialog.Close(3010)</onclick>
+		<onclick condition="Window.IsActive(3011)">Dialog.Close(3011)</onclick>
+		<onclick condition="Window.IsActive(3012)">Dialog.Close(3012)</onclick>
+		<onclick condition="Window.IsActive(3013)">Dialog.Close(3013)</onclick>
+		<onclick condition="Window.IsActive(3014)">Dialog.Close(3014)</onclick>
+		<onclick condition="Window.IsActive(3015)">Dialog.Close(3015)</onclick>
+		<onclick condition="Window.IsActive(3016)">Dialog.Close(3016)</onclick>
+		<onclick condition="Window.IsActive(3017)">Dialog.Close(3017)</onclick>
+		<onclick condition="Window.IsActive(3018)">Dialog.Close(3018)</onclick>
+		<onclick condition="Window.IsActive(3019)">Dialog.Close(3019)</onclick>
+		<onclick condition="Window.IsActive(3020)">Dialog.Close(3020)</onclick>
+		<onclick condition="Window.IsActive(3021)">Dialog.Close(3021)</onclick>
+		<onclick condition="Window.IsActive(3022)">Dialog.Close(3022)</onclick>
+		<onclick condition="Window.IsActive(3023)">Dialog.Close(3023)</onclick>
+		<onclick condition="Window.IsActive(3024)">Dialog.Close(3024)</onclick>
+		<onclick condition="Window.IsActive(3025)">Dialog.Close(3025)</onclick>
+		<onclick condition="Window.IsActive(3026)">Dialog.Close(3026)</onclick>
+		<onclick condition="Window.IsActive(3027)">Dialog.Close(3027)</onclick>
+		<onclick condition="Window.IsActive(3028)">Dialog.Close(3028)</onclick>
+		<onclick condition="Window.IsActive(3029)">Dialog.Close(3029)</onclick>
+		<onclick condition="Window.IsActive(3030)">Dialog.Close(3030)</onclick>
+		<onclick condition="Window.IsActive(3031)">Dialog.Close(3031)</onclick>
+		<onclick condition="Window.IsActive(3032)">Dialog.Close(3032)</onclick>
+		<onclick condition="Window.IsActive(3033)">Dialog.Close(3033)</onclick>
+		<onclick condition="Window.IsActive(3034)">Dialog.Close(3034)</onclick>
+		<onclick condition="Window.IsActive(3035)">Dialog.Close(3035)</onclick>
+		<onclick condition="Window.IsActive(3036)">Dialog.Close(3036)</onclick>
+		<onclick condition="Window.IsActive(3037)">Dialog.Close(3037)</onclick>
+		<onclick condition="Window.IsActive(3038)">Dialog.Close(3038)</onclick>
+		<onclick condition="Window.IsActive(3039)">Dialog.Close(3039)</onclick>
+		<onclick condition="Window.IsActive(3040)">Dialog.Close(3040)</onclick>
+		<onclick condition="Window.IsActive(3041)">Dialog.Close(3041)</onclick>
+		<onclick condition="Window.IsActive(3042)">Dialog.Close(3042)</onclick>
+		<onclick condition="Window.IsActive(3043)">Dialog.Close(3043)</onclick>
+		<onclick condition="Window.IsActive(3044)">Dialog.Close(3044)</onclick>
+		<onclick condition="Window.IsActive(3045)">Dialog.Close(3045)</onclick>
+		<onclick condition="Window.IsActive(3046)">Dialog.Close(3046)</onclick>
+		<onclick condition="Window.IsActive(3047)">Dialog.Close(3047)</onclick>
+		<onclick condition="Window.IsActive(3048)">Dialog.Close(3048)</onclick>
+		<onclick condition="Window.IsActive(3049)">Dialog.Close(3049)</onclick>
+		<onclick condition="Window.IsActive(3050)">Dialog.Close(3050)</onclick>
+		<onclick condition="Window.IsActive(3051)">Dialog.Close(3051)</onclick>
+		<onclick condition="Window.IsActive(3052)">Dialog.Close(3052)</onclick>
+		<onclick condition="Window.IsActive(3053)">Dialog.Close(3053)</onclick>
+		<onclick condition="Window.IsActive(3054)">Dialog.Close(3054)</onclick>
+		<onclick condition="Window.IsActive(3055)">Dialog.Close(3055)</onclick>
+		<onclick condition="Window.IsActive(3056)">Dialog.Close(3056)</onclick>
+		<onclick condition="Window.IsActive(3057)">Dialog.Close(3057)</onclick>
+		<onclick condition="Window.IsActive(3058)">Dialog.Close(3058)</onclick>
+		<onclick condition="Window.IsActive(3059)">Dialog.Close(3059)</onclick>
+		<onclick condition="Window.IsActive(3060)">Dialog.Close(3060)</onclick>
+		<onclick condition="Window.IsActive(3061)">Dialog.Close(3061)</onclick>
+		<onclick condition="Window.IsActive(3062)">Dialog.Close(3062)</onclick>
+		<onclick condition="Window.IsActive(3063)">Dialog.Close(3063)</onclick>
+		<onclick condition="Window.IsActive(3064)">Dialog.Close(3064)</onclick>
+		<onclick condition="Window.IsActive(3065)">Dialog.Close(3065)</onclick>
+		<onclick condition="Window.IsActive(3066)">Dialog.Close(3066)</onclick>
+		<onclick condition="Window.IsActive(3067)">Dialog.Close(3067)</onclick>
+		<onclick condition="Window.IsActive(3068)">Dialog.Close(3068)</onclick>
+		<onclick condition="Window.IsActive(3069)">Dialog.Close(3069)</onclick>
+		<onclick condition="Window.IsActive(3070)">Dialog.Close(3070)</onclick>
+		<onclick condition="Window.IsActive(3071)">Dialog.Close(3071)</onclick>
+		<onclick condition="Window.IsActive(3072)">Dialog.Close(3072)</onclick>
+		<onclick condition="Window.IsActive(3073)">Dialog.Close(3073)</onclick>
+		<onclick condition="Window.IsActive(3074)">Dialog.Close(3074)</onclick>
+		<onclick condition="Window.IsActive(3075)">Dialog.Close(3075)</onclick>
+		<onclick condition="Window.IsActive(3076)">Dialog.Close(3076)</onclick>
+		<onclick condition="Window.IsActive(3077)">Dialog.Close(3077)</onclick>
+		<onclick condition="Window.IsActive(3078)">Dialog.Close(3078)</onclick>
+		<onclick condition="Window.IsActive(3079)">Dialog.Close(3079)</onclick>
+		<onclick condition="Window.IsActive(3080)">Dialog.Close(3080)</onclick>
+		<onclick condition="Window.IsActive(3081)">Dialog.Close(3081)</onclick>
+		<onclick condition="Window.IsActive(3082)">Dialog.Close(3082)</onclick>
+		<onclick condition="Window.IsActive(3083)">Dialog.Close(3083)</onclick>
+		<onclick condition="Window.IsActive(3084)">Dialog.Close(3084)</onclick>
+		<onclick condition="Window.IsActive(3085)">Dialog.Close(3085)</onclick>
+		<onclick condition="Window.IsActive(3086)">Dialog.Close(3086)</onclick>
+		<onclick condition="Window.IsActive(3087)">Dialog.Close(3087)</onclick>
+		<onclick condition="Window.IsActive(3088)">Dialog.Close(3088)</onclick>
+		<onclick condition="Window.IsActive(3089)">Dialog.Close(3089)</onclick>
+		<onclick condition="Window.IsActive(3090)">Dialog.Close(3090)</onclick>
+		<onclick condition="Window.IsActive(3091)">Dialog.Close(3091)</onclick>
+		<onclick condition="Window.IsActive(3092)">Dialog.Close(3092)</onclick>
+		<onclick condition="Window.IsActive(3093)">Dialog.Close(3093)</onclick>
+		<onclick condition="Window.IsActive(3094)">Dialog.Close(3094)</onclick>
+		<onclick condition="Window.IsActive(3095)">Dialog.Close(3095)</onclick>
+		<onclick condition="Window.IsActive(3096)">Dialog.Close(3096)</onclick>
+		<onclick condition="Window.IsActive(3097)">Dialog.Close(3097)</onclick>
+		<onclick condition="Window.IsActive(3098)">Dialog.Close(3098)</onclick>
+		<onclick condition="Window.IsActive(3099)">Dialog.Close(3099)</onclick>		
+	</include>
+
+	<!-- from includes_animation.xml -->
+	<include name="VizBackAnimation">
+		<animation effect="zoom" start="110" end="130" center="auto" time="14000" pulse="true" condition="true">Conditional</animation>
+		<animation effect="slide" start="-20,-20" end="40,40" time="15000" pulse="true" condition="true">Conditional</animation>
 	</include>
 
 </includes>

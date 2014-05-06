@@ -3,7 +3,23 @@
 	<controls>
 
 		<control type="group">
-			<include>DialogAnimation</include>
+			<!-- DialogAnimation -->
+			<animation type="WindowOpen" reversible="false">
+				<effect type="fade" start="0" end="100" time="300" delay="0" tween="sine" easing="inout" />
+				<effect type="zoom" start="90" end="100" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="zoom" start="100" end="90" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+				<effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="inout" />
+			</animation>
+			<animation type="Visible" reversible="false">
+				<effect type="fade" start="0" end="100" time="300" delay="0" tween="sine" easing="inout" />
+				<effect type="zoom" start="90" end="100" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+			</animation>
+			<animation type="Hidden" reversible="false">
+				<effect type="zoom" start="100" end="90" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+				<effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="inout" />
+			</animation>
 			<visible>!Window.IsVisible(NumericInput)</visible>
 			<control type="image">
 				<description>background image</description>
@@ -22,7 +38,7 @@
 				<scroll>true</scroll>
 				<scrollspeed>20</scrollspeed>
 			</control>
-			
+
 			<control type="label" id="310">
 				<animation effect="fade" start="100" end="0" time="300" condition="Window.IsActive(NumericInput)">Conditional</animation>
 				<description>Edit Text</description>
@@ -64,7 +80,7 @@
 					<focusedcolor>white</focusedcolor>
 					<onclick>Dialog.Close(103)</onclick>
 				</control>
-				
+
 				<control type="button" id="49">
 					<description>'1' button</description>
 					<posx>76</posx>
@@ -85,7 +101,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="50">
 					<description>'2' button</description>
 					<posx>131</posx>
@@ -106,7 +122,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="51">
 					<description>'3' button</description>
 					<posx>186</posx>
@@ -127,7 +143,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="52">
 					<description>'4' button</description>
 					<posx>241</posx>
@@ -148,7 +164,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="53">
 					<description>'5' button</description>
 					<posx>296</posx>
@@ -169,7 +185,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="54">
 					<description>'6' button</description>
 					<posx>351</posx>
@@ -190,7 +206,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="55">
 					<description>'7' button</description>
 					<posx>406</posx>
@@ -211,7 +227,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="56">
 					<description>'8' button</description>
 					<posx>461</posx>
@@ -232,7 +248,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="57">
 					<description>'9' button</description>
 					<posx>516</posx>
@@ -253,7 +269,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="48">
 					<description>'0' button</description>
 					<posx>571</posx>
@@ -274,7 +290,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="8">
 					<description>'Backspace' button</description>
 					<posx>626</posx>
@@ -296,7 +312,7 @@
 					<focusedcolor>white</focusedcolor>
 					<label>20181</label>
 				</control>
-				
+
 				<!-- Row 2 -->
 				<control type="radiobutton" id="302">
 					<description>'Shift' button</description>
@@ -325,7 +341,7 @@
 					<focusedcolor>white</focusedcolor>
 					<label>20178</label>
 				</control>
-				
+
 				<control type="button" id="81">
 					<description>'Q' button</description>
 					<posx>94</posx>
@@ -346,7 +362,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="87">
 					<description>'W' button</description>
 					<posx>149</posx>
@@ -367,7 +383,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="69">
 					<description>'E' button</description>
 					<posx>204</posx>
@@ -388,7 +404,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="82">
 					<description>'R' button</description>
 					<posx>259</posx>
@@ -409,7 +425,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="84">
 					<description>'T' button</description>
 					<posx>314</posx>
@@ -430,7 +446,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="89">
 					<description>'Y' button</description>
 					<posx>369</posx>
@@ -451,7 +467,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="85">
 					<description>'U' button</description>
 					<posx>424</posx>
@@ -472,7 +488,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="73">
 					<description>'I' button</description>
 					<posx>479</posx>
@@ -493,7 +509,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="79">
 					<description>'O' button</description>
 					<posx>534</posx>
@@ -514,7 +530,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="80">
 					<description>'P' button</description>
 					<posx>589</posx>
@@ -535,7 +551,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="radiobutton" id="304">
 					<description>'Symbols' button</description>
 					<posx>644</posx>
@@ -563,7 +579,7 @@
 					<focusedcolor>white</focusedcolor>
 					<label>20180</label>
 				</control>
-				
+
 				<!-- Row 3 -->
 				<control type="radiobutton" id="303">
 					<description>'Caps Lock' button</description>
@@ -592,7 +608,7 @@
 					<focusedcolor>white</focusedcolor>
 					<label>20179</label>
 				</control>
-				
+
 				<control type="button" id="65">
 					<description>'A' button</description>
 					<posx>119</posx>
@@ -613,7 +629,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="83">
 					<description>'S' button</description>
 					<posx>174</posx>
@@ -634,7 +650,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="68">
 					<description>'D' button</description>
 					<posx>229</posx>
@@ -655,7 +671,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="70">
 					<description>'F' button</description>
 					<posx>284</posx>
@@ -676,7 +692,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="71">
 					<description>'G' button</description>
 					<posx>339</posx>
@@ -697,7 +713,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="72">
 					<description>'H' button</description>
 					<posx>394</posx>
@@ -718,7 +734,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="74">
 					<description>'J' button</description>
 					<posx>449</posx>
@@ -739,7 +755,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="75">
 					<description>'K' button</description>
 					<posx>504</posx>
@@ -760,7 +776,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="76">
 					<description>'L' button</description>
 					<posx>559</posx>
@@ -781,7 +797,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="305">
 					<description>'Previous' button</description>
 					<posx>614</posx>
@@ -795,7 +811,7 @@
 					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_left_nf.png</texturenofocus>
 					<texturefocus border="6,8,6,8">dialogs/keyboard/button_left_fo.png</texturefocus>
 				</control>
-				
+
 				<control type="button" id="306">
 					<description>'Next' button</description>
 					<posx>669</posx>
@@ -809,7 +825,7 @@
 					<texturenofocus border="6,8,6,8">dialogs/keyboard/button_right_nf.png</texturenofocus>
 					<texturefocus border="6,8,6,8">dialogs/keyboard/button_right_fo.png</texturefocus>
 				</control>
-				
+
 				<!-- Row 4 -->
 				<control type="button" id="307">
 					<description>'IP Address' button</description>
@@ -832,7 +848,7 @@
 					<focusedcolor>white</focusedcolor>
 					<label>31039</label>
 				</control>
-				
+
 				<control type="button" id="90">
 					<description>'Z' button</description>
 					<posx>130</posx>
@@ -853,7 +869,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="88">
 					<description>'X' button</description>
 					<posx>185</posx>
@@ -874,7 +890,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="67">
 					<description>'C' button</description>
 					<posx>240</posx>
@@ -895,7 +911,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="86">
 					<description>'V' button</description>
 					<posx>295</posx>
@@ -916,7 +932,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="66">
 					<description>'B' button</description>
 					<posx>350</posx>
@@ -937,7 +953,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="78">
 					<description>'N' button</description>
 					<posx>405</posx>
@@ -958,7 +974,7 @@
 					<textcolor>99grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 				</control>
-				
+
 				<control type="button" id="77">
 					<description>'M' button</description>
 					<posx>460</posx>
@@ -1001,7 +1017,7 @@
 					<focusedcolor>white</focusedcolor>		
 					<label>20182</label>
 				</control>
-				
+
 				<control type="button" id="300">
 					<description>'Done' button</description>
 					<posx>644</posx>

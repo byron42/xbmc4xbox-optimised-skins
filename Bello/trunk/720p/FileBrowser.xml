@@ -1,68 +1,84 @@
 <window id="126">
 	<defaultcontrol always="true">450</defaultcontrol>
-	  <zorder>3</zorder>
-	  <onload condition="Window.IsActive(networksetup)">SetProperty(ShowDialog,1,home)</onload>
-	  <onload condition="Window.IsActive(networksetup)">SetProperty(ShowDialog,1)</onload>
-	  <onunload>ClearProperty(ShowDialog,home)</onunload>
+	<zorder>3</zorder>
+	<onload condition="Window.IsActive(networksetup)">SetProperty(ShowDialog,1,home)</onload>
+	<onload condition="Window.IsActive(networksetup)">SetProperty(ShowDialog,1)</onload>
+	<onunload>ClearProperty(ShowDialog,home)</onunload>
 	<controls>
-		
-		<control type="group">
-	    <include>DialogAnimation</include>
-			<visible>!Window.IsActive(virtualkeyboard) + !Window.IsVisible(busydialog) + !Window.IsActive(locksettings) + ![Window.IsActive(networksetup) + IsEmpty(Window.Property(ShowDialog))]</visible>
-		    <control type="image">
-			    <description>background image</description>
-			    <include>FullscreenDimensions</include>
-					<texture>dialogs/other/bg_filebrowser.png</texture>
-					<visible>!Window.IsActive(musicosd) + !Window.IsActive(videoosd)</visible>
-			  </control>
-			  <control type="image">
-			    <description>background image</description>
-			    <include>FullscreenDimensions</include>
-					<texture>dialogs/other/bg_filebrowser.png</texture>
-					<colordiffuse>FAFFFFFF</colordiffuse>
-					<visible>Window.IsActive(musicosd) | Window.IsActive(videoosd)</visible>
-			  </control>
-				<control type="label" id="411">
-					<description>header label</description>
-					<posx>305</posx>
-					<posy>180</posy>
-					<width>670</width>
-					<height>50</height>
-					<font>FontSize_36</font>
-					<align>center</align>
-					<aligny>center</aligny>
-					<textcolor>white</textcolor>
-					<shadowcolor>99000000</shadowcolor>
-					<scroll>true</scroll>
-					<scrollspeed>20</scrollspeed>
-				</control>
-				<control type="label" id="412">
-					<description>Path</description>
-					<posx>330</posx>
-					<posy>228</posy>
-					<width>620</width>
-					<height>30</height>
-					<font>FontSize_16B</font>
-					<align>left</align>
-					<aligny>center</aligny>
-					<textcolor>44white</textcolor>
-					<shadowcolor>99000000</shadowcolor>
-					<scroll>true</scroll>
-					<scrollspeed>20</scrollspeed>
-				</control>
 
-				<control type="image">
-					<description>Large Icon Image</description>
-					<posx>780</posx>
-					<posy>263</posy>
-					<width>171</width>
-					<height>249</height>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture background="true">$INFO[Listitem.Icon]</texture>
-					<bordertexture border="20">dialogs/other/iconborder_black.png</bordertexture>
-					<bordersize>6</bordersize>
-				</control>
-					
+		<control type="group">
+			<!-- DialogAnimation -->
+			<animation type="WindowOpen" reversible="false">
+				<effect type="fade" start="0" end="100" time="300" delay="0" tween="sine" easing="inout" />
+				<effect type="zoom" start="90" end="100" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="zoom" start="100" end="90" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+				<effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="inout" />
+			</animation>
+			<animation type="Visible" reversible="false">
+				<effect type="fade" start="0" end="100" time="300" delay="0" tween="sine" easing="inout" />
+				<effect type="zoom" start="90" end="100" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+			</animation>
+			<animation type="Hidden" reversible="false">
+				<effect type="zoom" start="100" end="90" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+				<effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="inout" />
+			</animation>
+			<visible>!Window.IsActive(virtualkeyboard) + !Window.IsVisible(busydialog) + !Window.IsActive(locksettings) + ![Window.IsActive(networksetup) + IsEmpty(Window.Property(ShowDialog))]</visible>
+			<control type="image">
+				<description>background image</description>
+				<include>FullscreenDimensions</include>
+				<texture>dialogs/other/bg_filebrowser.png</texture>
+				<visible>!Window.IsActive(musicosd) + !Window.IsActive(videoosd)</visible>
+			</control>
+			<control type="image">
+				<description>background image</description>
+				<include>FullscreenDimensions</include>
+				<texture>dialogs/other/bg_filebrowser.png</texture>
+				<colordiffuse>FAFFFFFF</colordiffuse>
+				<visible>Window.IsActive(musicosd) | Window.IsActive(videoosd)</visible>
+			</control>
+			<control type="label" id="411">
+				<description>header label</description>
+				<posx>305</posx>
+				<posy>180</posy>
+				<width>670</width>
+				<height>50</height>
+				<font>FontSize_36</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<shadowcolor>99000000</shadowcolor>
+				<scroll>true</scroll>
+				<scrollspeed>20</scrollspeed>
+			</control>
+			<control type="label" id="412">
+				<description>Path</description>
+				<posx>330</posx>
+				<posy>228</posy>
+				<width>620</width>
+				<height>30</height>
+				<font>FontSize_16B</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>44white</textcolor>
+				<shadowcolor>99000000</shadowcolor>
+				<scroll>true</scroll>
+				<scrollspeed>20</scrollspeed>
+			</control>
+
+			<control type="image">
+				<description>Large Icon Image</description>
+				<posx>780</posx>
+				<posy>263</posy>
+				<width>171</width>
+				<height>249</height>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture background="true">$INFO[Listitem.Icon]</texture>
+				<bordertexture border="20">dialogs/other/iconborder_black.png</bordertexture>
+				<bordersize>6</bordersize>
+			</control>
+
 			<!-- List -->
 			<control type="list" id="450">
 				<posx>328</posx>
@@ -73,7 +89,7 @@
 				<onleft>10000</onleft>
 				<onright>10000</onright>
 				<ondown>450</ondown>
-			  <scrolltime tween="quadratic" easing="out">250</scrolltime>
+				<scrolltime tween="quadratic" easing="out">250</scrolltime>
 				<itemlayout height="51" width="447">
 					<control type="label">
 						<posx>10</posx>
@@ -97,10 +113,10 @@
 						<height>47</height>
 						<align>left</align>
 						<aligny>center</aligny>
-					  <texture>buttons/settings_fo.png</texture>
-			      <animation effect="slide" start="0,25" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(450).OnPrevious">focus</animation>
-			      <animation effect="slide" start="0,-25" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(450).OnNext">focus</animation>
-            <visible>Control.HasFocus(450)</visible>
+						<texture>buttons/settings_fo.png</texture>
+						<animation effect="slide" start="0,25" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(450).OnPrevious">focus</animation>
+						<animation effect="slide" start="0,-25" end="0,0" time="200" reversible="false" tween="back" easing="out" condition="Container(450).OnNext">focus</animation>
+						<visible>Control.HasFocus(450)</visible>
 					</control>
 					<control type="label">
 						<posx>10</posx>
@@ -135,10 +151,10 @@
 				</focusedlayout>
 			</control>
 
-		  <control type="group" id="10000">
+			<control type="group" id="10000">
 				<posx>330</posx>
 				<posy>505</posy>
-	      <!-- Buttons -->
+				<!-- Buttons -->
 				<control type="grouplist" id="10001">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -153,21 +169,21 @@
 					<ondown>450</ondown>
 					<control type="button" id="413">
 						<description>Save</description>
-					  <label>190</label>
-					  <include>TopButton</include>
+						<label>190</label>
+						<include>TopButton</include>
 					</control>
 					<control type="button" id="414">
 						<description>Cancel</description>
-					  <label>222</label>
-					  <include>TopButton</include>
+						<label>222</label>
+						<include>TopButton</include>
 					</control>
 					<control type="button" id="415">
 						<description>Cancel</description>
-					  <label>119</label>
-					  <include>TopButton</include>
+						<label>119</label>
+						<include>TopButton</include>
 					</control>
 				</control>
-	      <!-- Buttons Labels -->
+				<!-- Buttons Labels -->
 				<control type="grouplist">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -183,12 +199,12 @@
 						<font>FontSize_20</font>
 						<textcolor>white</textcolor>
 						<shadowcolor>99000000</shadowcolor>
-				    <align>left</align>
-				    <aligny>center</aligny>
+						<align>left</align>
+						<aligny>center</aligny>
 						<scroll>false</scroll>
-            <label>$INFO[Control.GetLabel(413),․  ]</label>
+						<label>$INFO[Control.GetLabel(413),․  ]</label>
 						<animation effect="fade" start="100" end="30" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(413)" reversible="true">Conditional</animation>
-	          <animation effect="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="15,0" condition="!Control.HasFocus(413)" reversible="true">Conditional</animation>
+						<animation effect="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="15,0" condition="!Control.HasFocus(413)" reversible="true">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>Cancel Label</description>
@@ -197,12 +213,12 @@
 						<font>FontSize_20</font>
 						<textcolor>white</textcolor>
 						<shadowcolor>99000000</shadowcolor>
-				    <align>left</align>
-				    <aligny>center</aligny>
+						<align>left</align>
+						<aligny>center</aligny>
 						<scroll>false</scroll>
-            <label>$INFO[Control.GetLabel(414),․  ]</label>
+						<label>$INFO[Control.GetLabel(414),․  ]</label>
 						<animation effect="fade" start="100" end="30" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(414)" reversible="true">Conditional</animation>
-	          <animation effect="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="15,0" condition="!Control.HasFocus(414)" reversible="true">Conditional</animation>
+						<animation effect="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="15,0" condition="!Control.HasFocus(414)" reversible="true">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>Cancel Label</description>
@@ -211,12 +227,12 @@
 						<font>FontSize_20</font>
 						<textcolor>white</textcolor>
 						<shadowcolor>99000000</shadowcolor>
-				    <align>left</align>
-				    <aligny>center</aligny>
+						<align>left</align>
+						<aligny>center</aligny>
 						<scroll>false</scroll>
-            <label>$INFO[Control.GetLabel(415),․  ]</label>
+						<label>$INFO[Control.GetLabel(415),․  ]</label>
 						<animation effect="fade" start="100" end="30" time="200" tween="sine" easing="inout" condition="!Control.HasFocus(415)" reversible="true">Conditional</animation>
-	          <animation effect="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="15,0" condition="!Control.HasFocus(415)" reversible="true">Conditional</animation>
+						<animation effect="zoom" start="100" end="95" time="200" tween="sine" easing="inout" center="15,0" condition="!Control.HasFocus(415)" reversible="true">Conditional</animation>
 					</control>
 				</control>
 				<control type="group">
@@ -234,13 +250,13 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[Container(450).NumItems,, $LOCALIZE[31025]]</label>
-					  <visible>IntegerGreaterThan(Container(450).NumItems,0)</visible>
+						<visible>IntegerGreaterThan(Container(450).NumItems,0)</visible>
 					</control>
 				</control>
-		  </control>
-			
+			</control>
+
 		</control>
 
-		
+
 	</controls>
 </window>

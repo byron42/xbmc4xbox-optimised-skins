@@ -1,5 +1,5 @@
 <includes>
-  <!-- OnNext -->
+	<!-- OnNext -->
 	<include name="Includes_OnNext_3DWall">
 		<control type="image">
 			<posx>0</posx>
@@ -387,7 +387,7 @@
 		</control>
 	</include>
 
-  <!-- OnPrevious -->
+	<!-- OnPrevious -->
 	<include name="Includes_OnPrevious_3DWall">
 		<control type="image">
 			<posx>-164</posx>
@@ -775,7 +775,7 @@
 		</control>
 	</include>
 
-  <!-- Static -->
+	<!-- Static -->
 	<include name="Includes_Static_3DWall">
 		<control type="image">
 			<posx>0</posx>
@@ -865,7 +865,7 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-3).Icon]</texture>
 		</control>
-		
+
 		<control type="image">
 			<posx>0</posx>
 			<posy>240</posy>
@@ -1137,7 +1137,7 @@
 
 
 
-  <!-- OnNext -->
+	<!-- OnNext -->
 	<include name="Includes_OnNext_Wall">
 		<control type="image">
 			<posx>0</posx>
@@ -1359,7 +1359,7 @@
 		</control>
 	</include>
 
-  <!-- OnPrevious -->
+	<!-- OnPrevious -->
 	<include name="Includes_OnPrevious_Wall">
 		<control type="image">
 			<posx>-164</posx>
@@ -1458,7 +1458,7 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(0).Icon]</texture>
 		</control>
-		
+
 		<control type="image">
 			<posx>328</posx>
 			<posy>240</posy>
@@ -1581,7 +1581,7 @@
 		</control>
 	</include>
 
-  <!-- Static -->
+	<!-- Static -->
 	<include name="Includes_Static_Wall">
 		<control type="image">
 			<posx>0</posx>
@@ -1647,7 +1647,7 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-3).Icon]</texture>
 		</control>
-		
+
 		<control type="image">
 			<posx>0</posx>
 			<posy>240</posy>
@@ -1783,7 +1783,7 @@
 
 
 
-  <!-- OnNext -->
+	<!-- OnNext -->
 	<include name="Includes_OnNext_ListWall">
 		<control type="image">
 			<posx>0</posx>
@@ -1817,7 +1817,7 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-11).Icon]</texture>
 		</control>
-		
+
 		<control type="image">
 			<posx>160</posx>
 			<posy>0</posy>
@@ -1850,7 +1850,7 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-8).Icon]</texture>
 		</control>
-		
+
 		<control type="image">
 			<posx>320</posx>
 			<posy>0</posy>
@@ -1883,7 +1883,7 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-5).Icon]</texture>
 		</control>
-		
+
 		<control type="image">
 			<posx>480</posx>
 			<posy>0</posy>
@@ -1916,7 +1916,7 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-2).Icon]</texture>
 		</control>
-	
+
 		<control type="image">
 			<posx>640</posx>
 			<posy>0</posy>
@@ -1949,7 +1949,7 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(1).Icon]</texture>
 		</control>
-	
+
 		<control type="image">
 			<posx>800</posx>
 			<posy>0</posy>
@@ -1982,7 +1982,7 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(4).Icon]</texture>
 		</control>		
-	
+
 		<control type="image">
 			<posx>960</posx>
 			<posy>0</posy>
@@ -2015,7 +2015,7 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(7).Icon]</texture>
 		</control>		
-	
+
 		<control type="image">
 			<posx>1120</posx>
 			<posy>0</posy>
@@ -2050,7 +2050,7 @@
 		</control>		
 	</include>
 
-  <!-- OnPrevious -->
+	<!-- OnPrevious -->
 	<include name="Includes_OnPrevious_ListWall">
 		<control type="image">
 			<posx>0</posx>
@@ -2084,7 +2084,7 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-10).Icon]</texture>
 		</control>
-		
+
 		<control type="image">
 			<posx>160</posx>
 			<posy>-240</posy>
@@ -2117,7 +2117,7 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-7).Icon]</texture>
 		</control>
-		
+
 		<control type="image">
 			<posx>320</posx>
 			<posy>-240</posy>
@@ -2317,7 +2317,7 @@
 		</control>
 	</include>
 
-  <!-- Static -->
+	<!-- Static -->
 	<include name="Includes_Static_ListWall">
 		<control type="image">
 			<posx>0</posx>
@@ -2343,7 +2343,7 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-11).Icon]</texture>
 		</control>
-		
+
 		<control type="image">
 			<posx>160</posx>
 			<posy>0</posy>
@@ -2368,7 +2368,7 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-8).Icon]</texture>
 		</control>
-		
+
 		<control type="image">
 			<posx>320</posx>
 			<posy>0</posy>
@@ -2393,7 +2393,7 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-5).Icon]</texture>
 		</control>
-		
+
 		<control type="image">
 			<posx>480</posx>
 			<posy>0</posy>
@@ -2418,7 +2418,7 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(-2).Icon]</texture>
 		</control>
-		
+
 		<control type="image">
 			<posx>640</posx>
 			<posy>0</posy>
@@ -2443,7 +2443,7 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(1).Icon]</texture>
 		</control>
-	
+
 		<control type="image">
 			<posx>800</posx>
 			<posy>0</posy>
@@ -2468,7 +2468,7 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(4).Icon]</texture>
 		</control>
-	
+
 		<control type="image">
 			<posx>960</posx>
 			<posy>0</posy>
@@ -2493,7 +2493,7 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/poster3d_diffuse.png" background="true">$INFO[ListItem(7).Icon]</texture>
 		</control>
-	
+
 		<control type="image">
 			<posx>1120</posx>
 			<posy>0</posy>
@@ -2524,7 +2524,7 @@
 
 
 
-  <!-- OnNext -->
+	<!-- OnNext -->
 	<include name="Includes_OnNext_MusicWall">
 		<control type="image">
 			<posx>-256</posx>
@@ -2550,7 +2550,8 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-13).Icon]</texture>
 		</control>
-		<control type="image"> <!-- row 1-->
+		<control type="image">
+			<!-- row 1-->
 			<posx>-256</posx>
 			<posy>465</posy>
 			<width>256</width>
@@ -2558,7 +2559,8 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-12).Icon]</texture>
 		</control>
-		<control type="image"> <!-- row -1-->
+		<control type="image">
+			<!-- row -1-->
 			<posx>-256</posx>
 			<posy>720</posy>
 			<width>256</width>
@@ -2591,7 +2593,8 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-9).Icon]</texture>
 		</control>
-		<control type="image"> <!-- row 1-->
+		<control type="image">
+			<!-- row 1-->
 			<posx>0</posx>
 			<posy>465</posy>
 			<width>256</width>
@@ -2599,7 +2602,8 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-8).Icon]</texture>
 		</control>
-		<control type="image"> <!-- row -1-->
+		<control type="image">
+			<!-- row -1-->
 			<posx>0</posx>
 			<posy>720</posy>
 			<width>256</width>
@@ -2632,7 +2636,8 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-5).Icon]</texture>
 		</control>
-		<control type="image"> <!-- row 1-->
+		<control type="image">
+			<!-- row 1-->
 			<posx>256</posx>
 			<posy>465</posy>
 			<width>256</width>
@@ -2640,7 +2645,8 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-4).Icon]</texture>
 		</control>
-		<control type="image"> <!-- row -1-->
+		<control type="image">
+			<!-- row -1-->
 			<posx>256</posx>
 			<posy>720</posy>
 			<width>256</width>
@@ -2673,7 +2679,8 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-1).Icon]</texture>
 		</control>
-		<control type="image"> <!-- row 1-->
+		<control type="image">
+			<!-- row 1-->
 			<posx>512</posx>
 			<posy>465</posy>
 			<width>256</width>
@@ -2681,7 +2688,8 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(0).Icon]</texture>
 		</control>
-		<control type="image"> <!-- row -1-->
+		<control type="image">
+			<!-- row -1-->
 			<posx>512</posx>
 			<posy>720</posy>
 			<width>256</width>
@@ -2714,7 +2722,8 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(3).Icon]</texture>
 		</control>
-		<control type="image"> <!-- row 1-->
+		<control type="image">
+			<!-- row 1-->
 			<posx>768</posx>
 			<posy>465</posy>
 			<width>256</width>
@@ -2722,7 +2731,8 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(4).Icon]</texture>
 		</control>
-		<control type="image"> <!-- row -1-->
+		<control type="image">
+			<!-- row -1-->
 			<posx>768</posx>
 			<posy>720</posy>
 			<width>256</width>
@@ -2755,7 +2765,8 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(7).Icon]</texture>
 		</control>
-		<control type="image"> <!-- row 1-->
+		<control type="image">
+			<!-- row 1-->
 			<posx>1024</posx>
 			<posy>465</posy>
 			<width>256</width>
@@ -2763,7 +2774,8 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(8).Icon]</texture>
 		</control>
-		<control type="image"> <!-- row -1-->
+		<control type="image">
+			<!-- row -1-->
 			<posx>1024</posx>
 			<posy>720</posy>
 			<width>256</width>
@@ -2796,7 +2808,8 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(11).Icon]</texture>
 		</control>
-		<control type="image"> <!-- row 1-->
+		<control type="image">
+			<!-- row 1-->
 			<posx>1280</posx>
 			<posy>465</posy>
 			<width>256</width>
@@ -2804,7 +2817,8 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(12).Icon]</texture>
 		</control>
-		<control type="image"> <!-- row -1-->
+		<control type="image">
+			<!-- row -1-->
 			<posx>1280</posx>
 			<posy>720</posy>
 			<width>256</width>
@@ -2859,10 +2873,11 @@
 			<texture background="true">views/wall/shadow.png</texture>
 		</control>
 	</include>
-	
-  <!-- OnPrevious -->
+
+	<!-- OnPrevious -->
 	<include name="Includes_OnPrevious_MusicWall">
-		<control type="image"> <!-- row 6-->
+		<control type="image">
+			<!-- row 6-->
 			<posx>-256</posx>
 			<posy>-555</posy>
 			<width>256</width>
@@ -2894,7 +2909,8 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-11).Icon]</texture>
 		</control>
-		<control type="image"> <!-- row 1-->
+		<control type="image">
+			<!-- row 1-->
 			<posx>-256</posx>
 			<posy>465</posy>
 			<width>256</width>
@@ -2902,8 +2918,9 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-10).Icon]</texture>
 		</control>
-		
-		<control type="image"> <!-- row 6-->
+
+		<control type="image">
+			<!-- row 6-->
 			<posx>0</posx>
 			<posy>-555</posy>
 			<width>256</width>
@@ -2935,7 +2952,8 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-7).Icon]</texture>
 		</control>
-		<control type="image"> <!-- row 1-->
+		<control type="image">
+			<!-- row 1-->
 			<posx>0</posx>
 			<posy>465</posy>
 			<width>256</width>
@@ -2944,7 +2962,8 @@
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-6).Icon]</texture>
 		</control>
 
-		<control type="image"> <!-- row 6-->
+		<control type="image">
+			<!-- row 6-->
 			<posx>256</posx>
 			<posy>-555</posy>
 			<width>256</width>
@@ -2976,7 +2995,8 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-3).Icon]</texture>
 		</control>
-		<control type="image"> <!-- row 1-->
+		<control type="image">
+			<!-- row 1-->
 			<posx>256</posx>
 			<posy>465</posy>
 			<width>256</width>
@@ -2985,7 +3005,8 @@
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-2).Icon]</texture>
 		</control>
 
-		<control type="image"> <!-- row 6-->
+		<control type="image">
+			<!-- row 6-->
 			<posx>512</posx>
 			<posy>-555</posy>
 			<width>256</width>
@@ -3017,7 +3038,8 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(1).Icon]</texture>
 		</control>
-		<control type="image"> <!-- row 1-->
+		<control type="image">
+			<!-- row 1-->
 			<posx>512</posx>
 			<posy>465</posy>
 			<width>256</width>
@@ -3026,7 +3048,8 @@
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(2).Icon]</texture>
 		</control>
 
-		<control type="image"> <!-- row 6-->
+		<control type="image">
+			<!-- row 6-->
 			<posx>768</posx>
 			<posy>-555</posy>
 			<width>256</width>
@@ -3058,7 +3081,8 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(5).Icon]</texture>
 		</control>
-		<control type="image"> <!-- row 1-->
+		<control type="image">
+			<!-- row 1-->
 			<posx>768</posx>
 			<posy>465</posy>
 			<width>256</width>
@@ -3067,7 +3091,8 @@
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(6).Icon]</texture>
 		</control>
 
-		<control type="image"> <!-- row 6-->
+		<control type="image">
+			<!-- row 6-->
 			<posx>1024</posx>
 			<posy>-555</posy>
 			<width>256</width>
@@ -3099,7 +3124,8 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(9).Icon]</texture>
 		</control>
-		<control type="image"> <!-- row 1-->
+		<control type="image">
+			<!-- row 1-->
 			<posx>1024</posx>
 			<posy>465</posy>
 			<width>256</width>
@@ -3108,7 +3134,8 @@
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(10).Icon]</texture>
 		</control>
 
-		<control type="image"> <!-- row 6-->
+		<control type="image">
+			<!-- row 6-->
 			<posx>1280</posx>
 			<posy>-555</posy>
 			<width>256</width>
@@ -3140,7 +3167,8 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(13).Icon]</texture>
 		</control>
-		<control type="image"> <!-- row 1-->
+		<control type="image">
+			<!-- row 1-->
 			<posx>1280</posx>
 			<posy>465</posy>
 			<width>256</width>
@@ -3178,7 +3206,7 @@
 		</control>
 	</include>
 
-  <!-- Static -->
+	<!-- Static -->
 	<include name="Includes_Static_MusicWall">
 		<control type="image">
 			<posx>-256</posx>
@@ -3204,7 +3232,8 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-12).Icon]</texture>
 		</control>
-		<control type="image"> <!-- row 1-->
+		<control type="image">
+			<!-- row 1-->
 			<posx>-256</posx>
 			<posy>465</posy>
 			<width>256</width>
@@ -3237,7 +3266,8 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-8).Icon]</texture>
 		</control>
-		<control type="image"> <!-- row 1-->
+		<control type="image">
+			<!-- row 1-->
 			<posx>0</posx>
 			<posy>465</posy>
 			<width>256</width>
@@ -3270,7 +3300,8 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(-4).Icon]</texture>
 		</control>
-		<control type="image"> <!-- row 1-->
+		<control type="image">
+			<!-- row 1-->
 			<posx>256</posx>
 			<posy>465</posy>
 			<width>256</width>
@@ -3303,7 +3334,8 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(0).Icon]</texture>
 		</control>
-		<control type="image"> <!-- row 1-->
+		<control type="image">
+			<!-- row 1-->
 			<posx>512</posx>
 			<posy>465</posy>
 			<width>256</width>
@@ -3336,7 +3368,8 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(4).Icon]</texture>
 		</control>
-		<control type="image"> <!-- row 1-->
+		<control type="image">
+			<!-- row 1-->
 			<posx>768</posx>
 			<posy>465</posy>
 			<width>256</width>
@@ -3369,7 +3402,8 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(8).Icon]</texture>
 		</control>
-		<control type="image"> <!-- row 1-->
+		<control type="image">
+			<!-- row 1-->
 			<posx>1024</posx>
 			<posy>465</posy>
 			<width>256</width>
@@ -3402,7 +3436,8 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<texture diffuse="views/wall/square3d_diffuse.png" background="true">$INFO[ListItem(12).Icon]</texture>
 		</control>
-		<control type="image"> <!-- row 1-->
+		<control type="image">
+			<!-- row 1-->
 			<posx>1280</posx>
 			<posy>465</posy>
 			<width>256</width>

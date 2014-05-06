@@ -1,7 +1,7 @@
 <includes>
 	<include file="defaults.xml" />
 	<!-- <include file="IncludesAnimations.xml" /> -->
-	<include file="IncludesBackgrounds.xml" />
+	<!-- <include file="IncludesBackgrounds.xml" /> -->
 	<include file="IncludesHome.xml" />
 	<include file="IncludesViews.xml" />
 	<include file="IncludesWalls.xml" />
@@ -20,9 +20,194 @@
 
 
 	<include name="BackgroundItems">
-		<include>BackgroundContent</include>
-		<include>GlobalFanart</include>
-		<include>BackgroundVignette</include>
+	<!-- BackgroundContent -->
+		<control type="image">
+			<posx>-10</posx>
+			<posy>-10</posy>
+			<width>1300</width>
+			<height>740</height>
+			<aspectratio>stretch</aspectratio>
+			<texture background="true">windows/bg/black.jpg</texture>
+		</control>
+		<control type="group">
+			<!-- BackgroundFade -->
+			<animation effect="fade" time="300" tween="sine" easing="out" reversible="false">Visible</animation>
+			<animation effect="fade" time="300" tween="sine" easing="in" reversible="false">Hidden</animation>
+			<visible>![Player.HasVideo + !Skin.HasSetting(HideBGVideo)]</visible>
+			<visible>![Player.HasAudio + [[Skin.HasSetting(Vis-Fanart) + !IsEmpty(Player.Art(fanart))] | Skin.HasSetting(Vis-CustomSlideshow) | Skin.HasSetting(Vis-ArtistSlideshow)]]</visible>
+			<control type="image">
+				<description>Default Background Image</description>
+				<include>FullscreenDimensions</include>
+				<texture background="true">special://skin/extras/backgrounds/SKINDEFAULT.jpg</texture>
+				<visible>![Skin.HasSetting(CustomBackground) + !IsEmpty(Skin.String(CustomImageBackgroundPath))]</visible>
+				<visible>![Skin.HasSetting(CustomBackground) + ![IsEmpty(Skin.String(CustomFolderBackgroundPath)) | Skin.HasSetting(ShowCustomBackgroundOnHomeOnly)]]</visible>
+				<fadetime>FanartCrossfadeTime</fadetime>
+			</control>
+			<control type="group">
+				<animation type="WindowOpen" reversible="false">
+					<effect type="fade" start="0" end="100" time="10350" />
+				</animation>
+				<animation type="WindowClose" reversible="false">
+					<effect type="fade" start="100" end="0" time="350" />
+				</animation>
+				<visible>Skin.HasSetting(HomeMenuAnimation)</visible>
+				<visible>Window.IsVisible(Home) + ![Skin.HasSetting(CustomBackground) + !IsEmpty(Skin.String(CustomImageBackgroundPath))]</visible>
+				<visible>Window.IsVisible(Home) + ![Skin.HasSetting(CustomBackground) + ![IsEmpty(Skin.String(CustomFolderBackgroundPath)) | Skin.HasSetting(ShowCustomBackgroundOnHomeOnly)]]</visible>
+				<control type="image">
+					<include>FullscreenDimensions</include>
+					<texture>windows/bg/bokeh1.png</texture>
+					<animation type="Conditional" condition="true" pulse="true" reversible="false">
+						<effect type="fade" start="0" end="70" time="10350" />
+					</animation>
+				</control>
+				<control type="image">
+					<include>FullscreenDimensions</include>
+					<texture>windows/bg/bokeh2.png</texture>
+					<animation type="Conditional" condition="true" pulse="true" reversible="false">
+						<effect type="fade" start="0" end="70" time="10350" delay="10350"/>
+					</animation>
+				</control>
+				<control type="image">
+					<include>FullscreenDimensions</include>
+					<texture>windows/bg/bokeh3.png</texture>
+					<animation type="Conditional" condition="true" pulse="true" reversible="false">
+						<effect type="fade" start="0" end="70" time="10350" delay="20700"/>
+					</animation>
+				</control>
+			</control>
+			<control type="image">
+				<description>Custom Background Image</description>
+				<include>FullscreenDimensions</include>
+				<texture background="true">$INFO[Skin.String(CustomImageBackgroundPath)]</texture>
+				<fadetime>500</fadetime>
+				<visible>Skin.HasSetting(CustomBackground) + !IsEmpty(Skin.String(CustomImageBackgroundPath))</visible>
+				<visible>![![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))] + Window.IsVisible(weather) + Container(20).HasFocus(8)]</visible>
+			</control>
+			<control type="multiimage">
+				<description>Custom Background Folder</description>
+				<include>FullscreenDimensions</include>
+				<imagepath background="true">$INFO[Skin.String(CustomFolderBackgroundPath)]</imagepath>
+				<timeperimage>30000</timeperimage>
+				<randomize>true</randomize>
+				<loop>yes</loop>
+				<fadetime>500</fadetime>
+				<visible>Skin.HasSetting(CustomBackground) + !IsEmpty(Skin.String(CustomFolderBackgroundPath)) + !Skin.HasSetting(ShowCustomBackgroundOnHomeOnly)</visible>
+				<visible>![![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))] + Window.IsVisible(weather) + Container(20).HasFocus(8)]</visible>
+			</control>
+		</control>
+		<control type="videowindow">
+			<description>Video</description>
+			<include>FullscreenDimensions</include>
+			<visible>Player.HasVideo + !Skin.HasSetting(HideBGVideo)</visible>
+		</control>
+		<control type="visualisation">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<visible>!Skin.HasSetting(Vis-Visualization) + !SubString(Window(Videos).Property(TvTunesIsAlive),True)</visible>
+		</control>
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<fadetime>1000</fadetime>
+			<texture background="true">$INFO[Player.Art(fanart)]</texture>
+			<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="1000">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="1000">Hidden</animation>
+			<include condition="Skin.HasSetting(Vis-Animation)">VizBackAnimation</include>
+			<visible>Player.HasAudio + Skin.HasSetting(Vis-Fanart)</visible>
+		</control>
+		<control type="multiimage">
+			<include>FullscreenDimensions</include>
+			<timeperimage>10000</timeperimage>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<fadetime>1000</fadetime>
+			<imagepath background="true">$INFO[Skin.String(Vis-CustomSlideshowDir)]</imagepath>
+			<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="1000">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="1000">Hidden</animation>
+			<include condition="Skin.HasSetting(Vis-Animation)">VizBackAnimation</include>
+			<visible>Player.HasAudio + Skin.HasSetting(Vis-CustomSlideshow)</visible>
+		</control>
+		<control type="multiimage">
+			<aspectratio>keep</aspectratio>
+			<include>FullscreenDimensions</include>
+			<timeperimage>10000</timeperimage>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<fadetime>1000</fadetime>
+			<imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
+			<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="1000">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="1000">Hidden</animation>
+			<include condition="Skin.HasSetting(Vis-Animation)">VizBackAnimation</include>
+			<visible>Player.HasAudio + Skin.HasSetting(Vis-ArtistSlideshow) + IsEmpty(Window(Visualisation).Property(ArtistSlideshowRefresh))</visible>
+		</control>
+		
+		<!-- GlobalFanart -->
+		<control type="image">
+			<description>Global Fanart</description>
+			<include>FullscreenDimensions</include>
+			<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+			<!-- FanartFade -->
+			<animation effect="fade" time="450" tween="sine" easing="out" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="450" tween="sine" easing="in" reversible="false">WindowClose</animation>
+			<animation effect="fade" time="300" tween="sine" easing="out" reversible="false">Visible</animation>
+			<animation effect="fade" time="300" tween="sine" easing="in" reversible="false">Hidden</animation>
+			<fadetime>FanartCrossfadeTime</fadetime>
+			<visible>!Skin.HasSetting(HideBGFanart)</visible>
+			<visible>![Control.IsVisible(55) + !Window.IsActive(movieinformation)] + !Control.IsVisible(580)</visible>
+		</control>
+		<control type="image">
+			<description>Pictures Fanart</description>
+			<aspectratio align="center" aligny="top">scale</aspectratio>
+			<include>FullscreenDimensions</include>
+			<texture background="true">$INFO[ListItem.FileNameAndPath]</texture>
+			<!-- FanartFade -->
+			<animation effect="fade" time="450" tween="sine" easing="out" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="450" tween="sine" easing="in" reversible="false">WindowClose</animation>
+			<animation effect="fade" time="300" tween="sine" easing="out" reversible="false">Visible</animation>
+			<animation effect="fade" time="300" tween="sine" easing="in" reversible="false">Hidden</animation>
+			<fadetime>FanartCrossfadeTime</fadetime>
+			<visible>Window.IsVisible(Pictures) + Container.HasFiles</visible>
+			<visible>!Skin.HasSetting(HideBGFanart)</visible>
+		</control>
+		<control type="image">
+			<description>TVGuide Fanart</description>
+			<include>FullscreenDimensions</include>
+			<!-- FanartFade -->
+			<animation effect="fade" time="450" tween="sine" easing="out" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="450" tween="sine" easing="in" reversible="false">WindowClose</animation>
+			<animation effect="fade" time="300" tween="sine" easing="out" reversible="false">Visible</animation>
+			<animation effect="fade" time="300" tween="sine" easing="in" reversible="false">Hidden</animation>
+			<fadetime>FanartCrossfadeTime</fadetime>
+			<texture background="true">$VAR[TVGuideFanart]</texture>
+			<visible>!Skin.HasSetting(HideTVGuideFanart)</visible>
+		</control>
+		
+		<!-- BackgroundVignette -->
+		<control type="image">
+			<description>Vignette</description>
+			<include>FullscreenDimensions</include>
+			<texture background="true">windows/bg/bg_vignette.png</texture>
+			<!-- BackgroundFade -->
+			<animation effect="fade" time="300" tween="sine" easing="out" reversible="false">Visible</animation>
+			<animation effect="fade" time="300" tween="sine" easing="in" reversible="false">Hidden</animation>
+			<!--	<colordiffuse>FFCDCDCD</colordiffuse>
+      <colordiffuse>D5FFFFFF</colordiffuse> -->
+		</control>
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture background="true">windows/bg/bg_diffuse.png</texture>
+			<!-- FanartFade -->
+			<animation effect="fade" time="450" tween="sine" easing="out" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="450" tween="sine" easing="in" reversible="false">WindowClose</animation>
+			<animation effect="fade" time="300" tween="sine" easing="out" reversible="false">Visible</animation>
+			<animation effect="fade" time="300" tween="sine" easing="in" reversible="false">Hidden</animation>
+			<colordiffuse>ddFFFFFF</colordiffuse>
+			<visible>[Control.IsVisible(50) + !Window.IsActive(musicplaylisteditor)] | Control.IsVisible(56) | Control.IsVisible(560) | Control.IsVisible(561) | Control.IsVisible(57) | [Window.IsActive(contextmenu) + ![Window.IsActive(home) | Window.IsActive(favourites) | Window.IsActive(locksettings) | Window.IsActive(profiles) | Window.IsActive(musicplaylisteditor) | Window.IsActive(filemanager)]] | Window.IsActive(PlayerControls) | Window.IsActive(shutdownmenu) | Window.IsActive(movieinformation) | Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(addoninformation)</visible>
+		</control>
 	</include>
 
 	<include name="CommonItems">
@@ -1623,6 +1808,24 @@
 	<include name="VizBackAnimation">
 		<animation effect="zoom" start="110" end="130" center="auto" time="14000" pulse="true" condition="true">Conditional</animation>
 		<animation effect="slide" start="-20,-20" end="40,40" time="15000" pulse="true" condition="true">Conditional</animation>
+	</include>
+	
+	<!-- from includes_backgrounds.xml -->
+	<include name="BackgroundWeather">
+		<control type="multiimage">
+			<include>FullscreenDimensions</include>
+			<!-- FanartFade -->
+			<animation effect="fade" time="450" tween="sine" easing="out" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="450" tween="sine" easing="in" reversible="false">WindowClose</animation>
+			<animation effect="fade" time="300" tween="sine" easing="out" reversible="false">Visible</animation>
+			<animation effect="fade" time="300" tween="sine" easing="in" reversible="false">Hidden</animation>
+			<imagepath background="true">$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</imagepath>
+			<timeperimage>30000</timeperimage>
+			<fadetime>500</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<visible>[Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))] + Window.IsVisible(weather) | Container(20).HasFocus(8)</visible>
+		</control>
 	</include>
 
 </includes>

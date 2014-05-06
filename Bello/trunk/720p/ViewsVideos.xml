@@ -4201,7 +4201,29 @@
 		</control>
 
 		<control type="group">
-			<include>BackgroundVignette</include>
+			<!-- BackgroundVignette -->
+			<control type="image">
+				<description>Vignette</description>
+				<include>FullscreenDimensions</include>
+				<texture background="true">windows/bg/bg_vignette.png</texture>
+				<!-- BackgroundFade -->
+				<animation effect="fade" time="300" tween="sine" easing="out" reversible="false">Visible</animation>
+				<animation effect="fade" time="300" tween="sine" easing="in" reversible="false">Hidden</animation>
+				<!--	<colordiffuse>FFCDCDCD</colordiffuse>
+		  <colordiffuse>D5FFFFFF</colordiffuse> -->
+			</control>
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<texture background="true">windows/bg/bg_diffuse.png</texture>
+				<!-- FanartFade -->
+				<animation effect="fade" time="450" tween="sine" easing="out" reversible="false">WindowOpen</animation>
+				<animation effect="fade" time="450" tween="sine" easing="in" reversible="false">WindowClose</animation>
+				<animation effect="fade" time="300" tween="sine" easing="out" reversible="false">Visible</animation>
+				<animation effect="fade" time="300" tween="sine" easing="in" reversible="false">Hidden</animation>
+				<colordiffuse>ddFFFFFF</colordiffuse>
+				<visible>[Control.IsVisible(50) + !Window.IsActive(musicplaylisteditor)] | Control.IsVisible(56) | Control.IsVisible(560) | Control.IsVisible(561) | Control.IsVisible(57) | [Window.IsActive(contextmenu) + ![Window.IsActive(home) | Window.IsActive(favourites) | Window.IsActive(locksettings) | Window.IsActive(profiles) | Window.IsActive(musicplaylisteditor) | Window.IsActive(filemanager)]] | Window.IsActive(PlayerControls) | Window.IsActive(shutdownmenu) | Window.IsActive(movieinformation) | Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(addoninformation)</visible>
+			</control>
+			
 			<!-- VideoWallAnimations -->
 			<animation type="WindowOpen" reversible="false">
 				<effect type="zoom" time="350" center="640,360" start="130" end="100" tween="sine" easing="out" />

@@ -12,7 +12,7 @@
 				| Window.IsActive(PVRTimerSetting) | Window.IsActive(PVRGuideSearch) | Window.IsActive(PVRChannelManager) | Window.IsActive(PVRGroupManager) 
 				| Window.IsActive(ShutdownMenu)| Window.IsActive(ContextMenu)| Window.IsActive(SelectDialog) | Window.IsActive(DialogSelect.xml) 
 				| Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(SongInformation) | Window.IsActive(AddonInformation) 
-				| Window.IsActive(FileBrowser) | Window.IsActive(TextViewer) | Window.IsActive(AddonSettings) | Window.IsActive(ContentSettings) 
+				| Window.IsActive(FileBrowser) | Window.IsActive(TextViewer) | Window.IsActive(pluginsettings) | Window.IsActive(ContentSettings) 
 				| Window.IsActive(FileStackingDialog) | Window.IsActive(MediaSource) | Window.IsActive(PictureInfo) | Window.IsActive(ProfileSettings) 
 				| Window.IsActive(LockSettings) | Window.IsActive(SmartPlaylistEditor) | Window.IsActive(Peripherals) | Window.IsActive(PeripheralSettings)
 				| Window.IsActive(SmartPlaylistRule)| [Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]]
@@ -25,7 +25,7 @@
 				+ !Window.IsActive(PVRTimerSetting) + !Window.IsActive(PVRGuideSearch) + !Window.IsActive(PVRChannelManager) + !Window.IsActive(PVRGroupManager)
 				+ !Window.IsActive(ShutdownMenu) + !Window.IsActive(ContextMenu)  + !Window.IsActive(SelectDialog)  + !Window.IsActive(DialogSelect.xml)
 				+ !Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(SongInformation) + !Window.IsActive(AddonInformation) 
-				+ !Window.IsActive(FileBrowser) + !Window.IsActive(TextViewer) + !Window.IsActive(AddonSettings) + !Window.IsActive(ContentSettings) 
+				+ !Window.IsActive(FileBrowser) + !Window.IsActive(TextViewer) + !Window.IsActive(pluginsettings) + !Window.IsActive(ContentSettings) 
 				+ !Window.IsActive(FileStackingDialog) + !Window.IsActive(MediaSource) + !Window.IsActive(PictureInfo) + !Window.IsActive(ProfileSettings) 
 				+ !Window.IsActive(LockSettings) + !Window.IsActive(SmartPlaylistEditor) + !Window.IsActive(SmartPlaylistRule) + !Window.IsActive(Peripherals) 
 				+ !Window.IsActive(PeripheralSettings)+ ![Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]]
@@ -754,7 +754,7 @@
 				| Window.IsActive(PVRTimerSetting) | Window.IsActive(PVRGuideSearch) | Window.IsActive(PVRChannelManager) | Window.IsActive(PVRGroupManager) 
 				| Window.IsActive(ShutdownMenu)| Window.IsActive(ContextMenu)| Window.IsActive(SelectDialog) | Window.IsActive(DialogSelect.xml) 
 				| Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(SongInformation) | Window.IsActive(AddonInformation) 
-				| Window.IsActive(FileBrowser) | Window.IsActive(TextViewer) | Window.IsActive(AddonSettings) | Window.IsActive(ContentSettings) 
+				| Window.IsActive(FileBrowser) | Window.IsActive(TextViewer) | Window.IsActive(pluginsettings) | Window.IsActive(ContentSettings) 
 				| Window.IsActive(FileStackingDialog) | Window.IsActive(MediaSource) | Window.IsActive(PictureInfo) | Window.IsActive(ProfileSettings) 
 				| Window.IsActive(LockSettings) | Window.IsActive(SmartPlaylistEditor) | Window.IsActive(Peripherals) | Window.IsActive(PeripheralSettings)
 				| Window.IsActive(SmartPlaylistRule)| [Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]]
@@ -767,7 +767,7 @@
 				+ !Window.IsActive(PVRTimerSetting) + !Window.IsActive(PVRGuideSearch) + !Window.IsActive(PVRChannelManager) + !Window.IsActive(PVRGroupManager)
 				+ !Window.IsActive(ShutdownMenu) + !Window.IsActive(ContextMenu)  + !Window.IsActive(SelectDialog)  + !Window.IsActive(DialogSelect.xml)
 				+ !Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(SongInformation) + !Window.IsActive(AddonInformation) 
-				+ !Window.IsActive(FileBrowser) + !Window.IsActive(TextViewer) + !Window.IsActive(AddonSettings) + !Window.IsActive(ContentSettings) 
+				+ !Window.IsActive(FileBrowser) + !Window.IsActive(TextViewer) + !Window.IsActive(pluginsettings) + !Window.IsActive(ContentSettings) 
 				+ !Window.IsActive(FileStackingDialog) + !Window.IsActive(MediaSource) + !Window.IsActive(PictureInfo) + !Window.IsActive(ProfileSettings) 
 				+ !Window.IsActive(LockSettings) + !Window.IsActive(SmartPlaylistEditor) + !Window.IsActive(SmartPlaylistRule) + !Window.IsActive(Peripherals) 
 				+ !Window.IsActive(PeripheralSettings)+ ![Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]]
@@ -998,7 +998,7 @@
 				| Window.IsActive(PVRTimerSetting) | Window.IsActive(PVRGuideSearch) | Window.IsActive(PVRChannelManager) | Window.IsActive(PVRGroupManager) 
 				| Window.IsActive(ShutdownMenu)| Window.IsActive(ContextMenu)| Window.IsActive(SelectDialog) | Window.IsActive(DialogSelect.xml) 
 				| Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(SongInformation) | Window.IsActive(AddonInformation) 
-				| Window.IsActive(FileBrowser) | Window.IsActive(TextViewer) | Window.IsActive(AddonSettings) | Window.IsActive(ContentSettings) 
+				| Window.IsActive(FileBrowser) | Window.IsActive(TextViewer) | Window.IsActive(pluginsettings) | Window.IsActive(ContentSettings) 
 				| Window.IsActive(FileStackingDialog) | Window.IsActive(MediaSource) | Window.IsActive(PictureInfo) | Window.IsActive(ProfileSettings) 
 				| Window.IsActive(LockSettings) | Window.IsActive(SmartPlaylistEditor) | Window.IsActive(Peripherals) | Window.IsActive(PeripheralSettings)
 				| Window.IsActive(SmartPlaylistRule)| [Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]]
@@ -1011,7 +1011,7 @@
 				+ !Window.IsActive(PVRTimerSetting) + !Window.IsActive(PVRGuideSearch) + !Window.IsActive(PVRChannelManager) + !Window.IsActive(PVRGroupManager)
 				+ !Window.IsActive(ShutdownMenu) + !Window.IsActive(ContextMenu)  + !Window.IsActive(SelectDialog)  + !Window.IsActive(DialogSelect.xml)
 				+ !Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(SongInformation) + !Window.IsActive(AddonInformation) 
-				+ !Window.IsActive(FileBrowser) + !Window.IsActive(TextViewer) + !Window.IsActive(AddonSettings) + !Window.IsActive(ContentSettings) 
+				+ !Window.IsActive(FileBrowser) + !Window.IsActive(TextViewer) + !Window.IsActive(pluginsettings) + !Window.IsActive(ContentSettings) 
 				+ !Window.IsActive(FileStackingDialog) + !Window.IsActive(MediaSource) + !Window.IsActive(PictureInfo) + !Window.IsActive(ProfileSettings) 
 				+ !Window.IsActive(LockSettings) + !Window.IsActive(SmartPlaylistEditor) + !Window.IsActive(SmartPlaylistRule) + !Window.IsActive(Peripherals) 
 				+ !Window.IsActive(PeripheralSettings)+ ![Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]]
@@ -1244,7 +1244,7 @@
 				| Window.IsActive(PVRTimerSetting) | Window.IsActive(PVRGuideSearch) | Window.IsActive(PVRChannelManager) | Window.IsActive(PVRGroupManager) 
 				| Window.IsActive(ShutdownMenu)| Window.IsActive(ContextMenu)| Window.IsActive(SelectDialog) | Window.IsActive(DialogSelect.xml) 
 				| Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(SongInformation) | Window.IsActive(AddonInformation) 
-				| Window.IsActive(FileBrowser) | Window.IsActive(TextViewer) | Window.IsActive(AddonSettings) | Window.IsActive(ContentSettings) 
+				| Window.IsActive(FileBrowser) | Window.IsActive(TextViewer) | Window.IsActive(pluginsettings) | Window.IsActive(ContentSettings) 
 				| Window.IsActive(FileStackingDialog) | Window.IsActive(MediaSource) | Window.IsActive(PictureInfo) | Window.IsActive(ProfileSettings) 
 				| Window.IsActive(LockSettings) | Window.IsActive(SmartPlaylistEditor) | Window.IsActive(Peripherals) | Window.IsActive(PeripheralSettings)
 				| Window.IsActive(SmartPlaylistRule)| [Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]]
@@ -1257,7 +1257,7 @@
 				+ !Window.IsActive(PVRTimerSetting) + !Window.IsActive(PVRGuideSearch) + !Window.IsActive(PVRChannelManager) + !Window.IsActive(PVRGroupManager)
 				+ !Window.IsActive(ShutdownMenu) + !Window.IsActive(ContextMenu)  + !Window.IsActive(SelectDialog)  + !Window.IsActive(DialogSelect.xml)
 				+ !Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(SongInformation) + !Window.IsActive(AddonInformation) 
-				+ !Window.IsActive(FileBrowser) + !Window.IsActive(TextViewer) + !Window.IsActive(AddonSettings) + !Window.IsActive(ContentSettings) 
+				+ !Window.IsActive(FileBrowser) + !Window.IsActive(TextViewer) + !Window.IsActive(pluginsettings) + !Window.IsActive(ContentSettings) 
 				+ !Window.IsActive(FileStackingDialog) + !Window.IsActive(MediaSource) + !Window.IsActive(PictureInfo) + !Window.IsActive(ProfileSettings) 
 				+ !Window.IsActive(LockSettings) + !Window.IsActive(SmartPlaylistEditor) + !Window.IsActive(SmartPlaylistRule) + !Window.IsActive(Peripherals) 
 				+ !Window.IsActive(PeripheralSettings)+ ![Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]]
@@ -1442,7 +1442,7 @@
 				| Window.IsActive(PVRTimerSetting) | Window.IsActive(PVRGuideSearch) | Window.IsActive(PVRChannelManager) | Window.IsActive(PVRGroupManager) 
 				| Window.IsActive(ShutdownMenu)| Window.IsActive(ContextMenu)| Window.IsActive(SelectDialog) | Window.IsActive(DialogSelect.xml) 
 				| Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(SongInformation) | Window.IsActive(AddonInformation) 
-				| Window.IsActive(FileBrowser) | Window.IsActive(TextViewer) | Window.IsActive(AddonSettings) | Window.IsActive(ContentSettings) 
+				| Window.IsActive(FileBrowser) | Window.IsActive(TextViewer) | Window.IsActive(pluginsettings) | Window.IsActive(ContentSettings) 
 				| Window.IsActive(FileStackingDialog) | Window.IsActive(MediaSource) | Window.IsActive(PictureInfo) | Window.IsActive(ProfileSettings) 
 				| Window.IsActive(LockSettings) | Window.IsActive(SmartPlaylistEditor) | Window.IsActive(Peripherals) | Window.IsActive(PeripheralSettings)
 				| Window.IsActive(SmartPlaylistRule)| [Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]]
@@ -1455,7 +1455,7 @@
 				+ !Window.IsActive(PVRTimerSetting) + !Window.IsActive(PVRGuideSearch) + !Window.IsActive(PVRChannelManager) + !Window.IsActive(PVRGroupManager)
 				+ !Window.IsActive(ShutdownMenu) + !Window.IsActive(ContextMenu)  + !Window.IsActive(SelectDialog)  + !Window.IsActive(DialogSelect.xml)
 				+ !Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(SongInformation) + !Window.IsActive(AddonInformation) 
-				+ !Window.IsActive(FileBrowser) + !Window.IsActive(TextViewer) + !Window.IsActive(AddonSettings) + !Window.IsActive(ContentSettings) 
+				+ !Window.IsActive(FileBrowser) + !Window.IsActive(TextViewer) + !Window.IsActive(pluginsettings) + !Window.IsActive(ContentSettings) 
 				+ !Window.IsActive(FileStackingDialog) + !Window.IsActive(MediaSource) + !Window.IsActive(PictureInfo) + !Window.IsActive(ProfileSettings) 
 				+ !Window.IsActive(LockSettings) + !Window.IsActive(SmartPlaylistEditor) + !Window.IsActive(SmartPlaylistRule) + !Window.IsActive(Peripherals) 
 				+ !Window.IsActive(PeripheralSettings)+ ![Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]]
@@ -1505,7 +1505,7 @@
 						| Window.IsActive(AddonInformation) 
 						| Window.IsActive(FileBrowser) 
 						| Window.IsActive(TextViewer) 
-						| Window.IsActive(AddonSettings) 
+						| Window.IsActive(pluginsettings) 
 						| Window.IsActive(ContentSettings) 
 						| Window.IsActive(DialogSelect.xml) 
 						| Window.IsActive(SelectDialog) 
@@ -1536,7 +1536,7 @@
 						+ !Window.IsActive(AddonInformation) 
 						+ !Window.IsActive(FileBrowser) 
 						+ !Window.IsActive(TextViewer) 
-						+ !Window.IsActive(AddonSettings) 
+						+ !Window.IsActive(pluginsettings) 
 						+ !Window.IsActive(ContentSettings) 
 						+ !Window.IsActive(DialogSelect.xml) 
 						+ !Window.IsActive(SelectDialog) 
@@ -1579,7 +1579,7 @@
 				| Window.IsActive(PVRTimerSetting) | Window.IsActive(PVRGuideSearch) | Window.IsActive(PVRChannelManager) | Window.IsActive(PVRGroupManager) 
 				| Window.IsActive(ShutdownMenu)| Window.IsActive(ContextMenu)| Window.IsActive(SelectDialog) | Window.IsActive(DialogSelect.xml) 
 				| Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(SongInformation) | Window.IsActive(AddonInformation) 
-				| Window.IsActive(FileBrowser) | Window.IsActive(TextViewer) | Window.IsActive(AddonSettings) | Window.IsActive(ContentSettings) 
+				| Window.IsActive(FileBrowser) | Window.IsActive(TextViewer) | Window.IsActive(pluginsettings) | Window.IsActive(ContentSettings) 
 				| Window.IsActive(FileStackingDialog) | Window.IsActive(MediaSource) | Window.IsActive(PictureInfo) | Window.IsActive(ProfileSettings) 
 				| Window.IsActive(LockSettings) | Window.IsActive(SmartPlaylistEditor) | Window.IsActive(Peripherals) | Window.IsActive(PeripheralSettings)
 				| Window.IsActive(SmartPlaylistRule)| [Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]]
@@ -1592,7 +1592,7 @@
 				+ !Window.IsActive(PVRTimerSetting) + !Window.IsActive(PVRGuideSearch) + !Window.IsActive(PVRChannelManager) + !Window.IsActive(PVRGroupManager)
 				+ !Window.IsActive(ShutdownMenu) + !Window.IsActive(ContextMenu)  + !Window.IsActive(SelectDialog)  + !Window.IsActive(DialogSelect.xml)
 				+ !Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(SongInformation) + !Window.IsActive(AddonInformation) 
-				+ !Window.IsActive(FileBrowser) + !Window.IsActive(TextViewer) + !Window.IsActive(AddonSettings) + !Window.IsActive(ContentSettings) 
+				+ !Window.IsActive(FileBrowser) + !Window.IsActive(TextViewer) + !Window.IsActive(pluginsettings) + !Window.IsActive(ContentSettings) 
 				+ !Window.IsActive(FileStackingDialog) + !Window.IsActive(MediaSource) + !Window.IsActive(PictureInfo) + !Window.IsActive(ProfileSettings) 
 				+ !Window.IsActive(LockSettings) + !Window.IsActive(SmartPlaylistEditor) + !Window.IsActive(SmartPlaylistRule) + !Window.IsActive(Peripherals) 
 				+ !Window.IsActive(PeripheralSettings)+ ![Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]]

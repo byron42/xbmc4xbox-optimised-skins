@@ -26,7 +26,7 @@
 				<effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="inout" />
 				<effect type="zoom" start="100" end="90" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
 			</animation>
-			<visible>![Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]] + !Window.IsActive(ShutdownMenu) + !Window.IsActive(addonsettings) + !Window.IsActive(filebrowser) + !Window.IsActive(yesnodialog) + !Window.IsActive(selectdialog) + !Window.IsActive(DialogSelect.xml)</visible>
+			<visible>![Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]] + !Window.IsActive(ShutdownMenu) + !Window.IsActive(pluginsettings) + !Window.IsActive(filebrowser) + !Window.IsActive(yesnodialog) + !Window.IsActive(selectdialog) + !Window.IsActive(DialogSelect.xml)</visible>
 
 			<control type="group">
 				<!-- Window_OpenClose_Animation -->

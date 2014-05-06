@@ -7,7 +7,7 @@
 			<animation effect="fade" start="0" end="100" time="0" delay="50">Focus</animation>
 		</control>
 		<control type="group">
-			<visible>!Window.IsVisible(selectdialog) + !Window.IsVisible(addonsettings) + !Window.IsVisible(visualisationpresetlist) + !Window.IsVisible(FileBrowser)</visible>
+			<visible>!Window.IsVisible(selectdialog) + !Window.IsVisible(pluginsettings) + !Window.IsVisible(visualisationpresetlist) + !Window.IsVisible(FileBrowser)</visible>
 			<!-- DialogAnimation -->
 			<animation type="WindowOpen" reversible="false">
 				<effect type="fade" start="0" end="100" time="300" delay="0" tween="sine" easing="inout" />

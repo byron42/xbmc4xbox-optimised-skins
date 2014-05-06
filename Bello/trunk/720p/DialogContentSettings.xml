@@ -20,7 +20,7 @@
 				<effect type="zoom" start="100" end="90" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
 				<effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="inout" />
 			</animation>
-			<visible>!Window.IsActive(AddonSettings)</visible>
+			<visible>!Window.IsActive(pluginsettings)</visible>
 			<control type="image">
 				<description>background image</description>
 				<include>FullscreenDimensions</include>

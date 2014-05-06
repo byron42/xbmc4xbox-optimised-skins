@@ -219,7 +219,7 @@
 		</control>
 		<control type="image">
 			<visible>[Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(MusicOSD)]</visible>
-			<visible>!Window.IsVisible(AddonSettings) + !Window.IsVisible(SelectDialog) + !Window.IsVisible(VisualisationPresetList) + !Window.IsVisible(1112) + !Window.IsActive(ShutdownMenu)</visible>
+			<visible>!Window.IsVisible(pluginsettings) + !Window.IsVisible(SelectDialog) + !Window.IsVisible(VisualisationPresetList) + !Window.IsVisible(1112) + !Window.IsActive(ShutdownMenu)</visible>
 			<description>Music bar</description>
 			<posx>0</posx>
 			<posy>410</posy>
@@ -255,7 +255,7 @@
 				<effect type="fade" start="100" end="0" time="400" delay="0" tween="sine" easing="out" />
 			</animation>
 			<visible>[Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(MusicOSD)]</visible>
-			<visible>!Window.IsVisible(AddonSettings) + !Window.IsVisible(SelectDialog) + !Window.IsVisible(VisualisationPresetList) + !Window.IsVisible(1112) + !Window.IsActive(ShutdownMenu)</visible>
+			<visible>!Window.IsVisible(pluginsettings) + !Window.IsVisible(SelectDialog) + !Window.IsVisible(VisualisationPresetList) + !Window.IsVisible(1112) + !Window.IsActive(ShutdownMenu)</visible>
 			<control type="image">
 				<posx>3</posx>
 				<posy>-50</posy>

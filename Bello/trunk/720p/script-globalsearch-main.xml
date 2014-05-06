@@ -37,7 +37,7 @@
 			</control>
 
 			<control type="group">
-				<visible>IsEmpty(Control.GetLabel(190)) + !Window.IsVisible(AddonSettings)</visible>
+				<visible>IsEmpty(Control.GetLabel(190)) + !Window.IsVisible(pluginsettings)</visible>
 				<!-- ShutdownMenuAnimation -->
 				<animation type="Conditional" reversible="false" condition="![Window.IsActive(ShutdownMenu) | Window.IsActive(contextmenu)]">
 					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
@@ -53,7 +53,7 @@
 				| Window.IsActive(PVRTimerSetting) | Window.IsActive(PVRGuideSearch) | Window.IsActive(PVRChannelManager) | Window.IsActive(PVRGroupManager) 
 				| Window.IsActive(ShutdownMenu)| Window.IsActive(ContextMenu)| Window.IsActive(SelectDialog) | Window.IsActive(DialogSelect.xml) 
 				| Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(SongInformation) | Window.IsActive(AddonInformation) 
-				| Window.IsActive(FileBrowser) | Window.IsActive(TextViewer) | Window.IsActive(AddonSettings) | Window.IsActive(ContentSettings) 
+				| Window.IsActive(FileBrowser) | Window.IsActive(TextViewer) | Window.IsActive(pluginsettings) | Window.IsActive(ContentSettings) 
 				| Window.IsActive(FileStackingDialog) | Window.IsActive(MediaSource) | Window.IsActive(PictureInfo) | Window.IsActive(ProfileSettings) 
 				| Window.IsActive(LockSettings) | Window.IsActive(SmartPlaylistEditor) | Window.IsActive(Peripherals) | Window.IsActive(PeripheralSettings)
 				| Window.IsActive(SmartPlaylistRule)| [Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]]
@@ -66,7 +66,7 @@
 				+ !Window.IsActive(PVRTimerSetting) + !Window.IsActive(PVRGuideSearch) + !Window.IsActive(PVRChannelManager) + !Window.IsActive(PVRGroupManager)
 				+ !Window.IsActive(ShutdownMenu) + !Window.IsActive(ContextMenu)  + !Window.IsActive(SelectDialog)  + !Window.IsActive(DialogSelect.xml)
 				+ !Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(SongInformation) + !Window.IsActive(AddonInformation) 
-				+ !Window.IsActive(FileBrowser) + !Window.IsActive(TextViewer) + !Window.IsActive(AddonSettings) + !Window.IsActive(ContentSettings) 
+				+ !Window.IsActive(FileBrowser) + !Window.IsActive(TextViewer) + !Window.IsActive(pluginsettings) + !Window.IsActive(ContentSettings) 
 				+ !Window.IsActive(FileStackingDialog) + !Window.IsActive(MediaSource) + !Window.IsActive(PictureInfo) + !Window.IsActive(ProfileSettings) 
 				+ !Window.IsActive(LockSettings) + !Window.IsActive(SmartPlaylistEditor) + !Window.IsActive(SmartPlaylistRule) + !Window.IsActive(Peripherals) 
 				+ !Window.IsActive(PeripheralSettings)+ ![Window.IsActive(PlayerControls) + ![Skin.HasSetting(DisableQuickNav) + !Player.HasMedia]]
@@ -1335,7 +1335,7 @@
 				<effect type="slide" start="0,0" end="0,35" time="350" tween="sine" easing="out" />
 			</animation>
 
-			<animation effect="slide" start="0" end="-300" time="250" tween="cubic" easing="in" condition="!Control.HasFocus(9000) + !Control.IsVisible(199) + Control.IsVisible(198) | Window.IsActive(AddonSettings)">Conditional</animation>
+			<animation effect="slide" start="0" end="-300" time="250" tween="cubic" easing="in" condition="!Control.HasFocus(9000) + !Control.IsVisible(199) + Control.IsVisible(198) | Window.IsActive(pluginsettings)">Conditional</animation>
 			<control type="list" id="9000">
 				<posx>0</posx>
 				<posy>0</posy>

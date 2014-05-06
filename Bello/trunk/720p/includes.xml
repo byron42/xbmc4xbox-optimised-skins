@@ -1455,7 +1455,7 @@
 		<onload condition="Window.IsActive(smartplaylistrule)">Dialog.Close(smartplaylistrule)</onload>
 		<onload condition="Window.IsActive(busydialog)">Dialog.Close(busydialog)</onload>
 		<onload condition="Window.IsActive(pictureinfo)">Dialog.Close(pictureinfo)</onload>
-		<onload condition="Window.IsActive(addonsettings)">Dialog.Close(addonsettings)</onload>
+		<onload condition="Window.IsActive(pluginsettings)">Dialog.Close(pluginsettings)</onload>
 		<onload condition="Window.IsActive(accesspoints)">Dialog.Close(accesspoints)</onload>
 		<onload condition="Window.IsActive(fullscreeninfo)">Dialog.Close(fullscreeninfo)</onload>
 		<onload condition="Window.IsActive(karaokeselector)">Dialog.Close(karaokeselector)</onload>
@@ -1501,7 +1501,7 @@
 		<onclick condition="Window.IsActive(smartplaylistrule)">Dialog.Close(smartplaylistrule)</onclick>
 		<onclick condition="Window.IsActive(busydialog)">Dialog.Close(busydialog)</onclick>
 		<onclick condition="Window.IsActive(pictureinfo)">Dialog.Close(pictureinfo)</onclick>
-		<onclick condition="Window.IsActive(addonsettings)">Dialog.Close(addonsettings)</onclick>
+		<onclick condition="Window.IsActive(pluginsettings)">Dialog.Close(pluginsettings)</onclick>
 		<onclick condition="Window.IsActive(accesspoints)">Dialog.Close(accesspoints)</onclick>
 		<onclick condition="Window.IsActive(fullscreeninfo)">Dialog.Close(fullscreeninfo)</onclick>
 		<onclick condition="Window.IsActive(karaokeselector)">Dialog.Close(karaokeselector)</onclick>

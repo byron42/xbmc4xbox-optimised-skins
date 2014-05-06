@@ -9,7 +9,7 @@
 
 		<control type="group">
 			<visible>Player.HasAudio</visible>
-			<visible>!Window.IsVisible(AddonSettings) + !Window.IsVisible(SelectDialog) + !Window.IsVisible(VisualisationPresetList) + !Window.IsVisible(script-XBMC_Lyrics-main.xml) + !Window.IsVisible(1112) + !Window.IsActive(ShutdownMenu)</visible>
+			<visible>!Window.IsVisible(pluginsettings) + !Window.IsVisible(SelectDialog) + !Window.IsVisible(VisualisationPresetList) + !Window.IsVisible(script-XBMC_Lyrics-main.xml) + !Window.IsVisible(1112) + !Window.IsActive(ShutdownMenu)</visible>
 			<animation type="WindowOpen" reversible="false">
 				<effect type="slide" start="150,0" end="0,0" time="450" delay="0" tween="sine" easing="out" />
 				<effect type="fade" start="0" end="100" time="450" delay="0" tween="sine" easing="out" />

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--$Revision$-->
+<strings>
+  <string id="31000">ทีวี สด</string>
+  <string id="31001">ทีวีไกด์</string>
+  <string id="31002">รายการทีวี</string>
+  <string id="31003">ออกอากาศ</string>
+  <string id="31005">หมายเลข แทรค</string>
+  <string id="31006">เรียง: น้อยไปมาก</string>
+  <string id="31007">เรียง: มากไปน้อย</string>
+  <string id="31009">เมนูเนื้อหา</string>
+  <string id="31017">ตัวเลือกเพลงคาราโอเกะ</string>
+  <string id="31018">หนังตัวอย่าง</string>
+  <string id="31020">ค้นพบ</string>
+  <string id="31021">คลังข้อมูล วิดีโอ</string>
+  <string id="31022">แฟ้ม เพลง</string>
+  <string id="31023">ข้อมูล</string>
+  <string id="31024">หน้า</string>
+  <string id="31025">รายการ</string>
+  <string id="31027">หน่วยความจำที่ใช้</string>
+  <string id="31030">AM</string>
+  <string id="31031">PM</string>
+  <string id="31033">กลุ่มช่องสัญญาณ</string>
+  <string id="31034">เทเลเท็กซ์</string>
+  <string id="31036">ปิด</string>
+  <string id="31080">เลื่อน</string>
+  <string id="31083">ผนัง</string>
+  <string id="31084">โปสเตอร์</string>
+  <string id="31098">เมนูหลัก</string>
+  <string id="31127">แนวนอน</string>
+  <string id="31128">อาร์ตพื้นใส</string>
+  <string id="31134">แก้ไขพื้นหลังสำหรับประเภทสื่อ</string>
+  <string id="31135">ภาพเดี่ยว</string>
+  <string id="31136">หลายภาพ</string>
+  <string id="31203">ค้นหาใหม่</string>
+  <string id="31218">แนวนอน</string>
+  <string id="31219">โลโก้</string>
+  <string id="31223">พยากรณ์ ใน 36 ชั่วโมง</string>
+  <string id="31224">พยากรณ์รายชั่วโมง</string>
+  <string id="31225">พยากรณ์สุดสัปดาห์</string>
+  <string id="31228">ที่</string>
+  <string id="31229">ปรับปรุงล่าสุด</string>
+  <string id="31233">โอกาสเกิดฝน</string>
+  <string id="31236">พยากรณ์</string>
+  <string id="31237">มุมมอง</string>
+  <string id="31247">ภาพยนตร์ แบบสุ่ม</string>
+  <string id="31285">ตัวเลือกของรายการเล่น</string>
+  <string id="31301">กำลังเล่น</string>
+  <string id="31302">หยุดชั่วขณะ</string>
+  <string id="31309">ชุดรูปแบบ การแสดงแสงสี</string>
+  <string id="31350">กลุ่ม ที่มีอยู่</string>
+  <string id="31351">เพิ่มกลุ่ม</string>
+  <string id="31352">เปลี่ยนชื่อกลุ่ม</string>
+  <string id="31353">ลบกลุ่ม</string>
+</strings>

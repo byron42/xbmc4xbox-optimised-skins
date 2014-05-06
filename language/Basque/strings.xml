@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--$Revision$-->
+<strings>
+  <string id="31000">TB</string>
+  <string id="31005">Pista zenbakia</string>
+  <string id="31006">Ordenatu:Goraka</string>
+  <string id="31007">Ordenatu:Beheraka</string>
+  <string id="31017">Karaoke kanta antzemalea</string>
+  <string id="31020">Aurkitua</string>
+  <string id="31023">Argb</string>
+  <string id="31024">Orrialdea</string>
+  <string id="31025">Elementuak</string>
+  <string id="31027">Erabilitako memoria:</string>
+  <string id="31030">AM</string>
+  <string id="31031">PM</string>
+  <string id="31033">Kate taldea</string>
+  <string id="31223">36 orduko iragarpena</string>
+  <string id="31224">Orduroko iragarpena</string>
+  <string id="31225">Astebukaerako iragarpena</string>
+  <string id="31229">Azken eguneraketa</string>
+  <string id="31233">Euri aukera</string>
+  <string id="31236">Iragarpena</string>
+  <string id="31285">Erreprodukzio-zerrenda aukerak</string>
+  <string id="31301">Erreproduzitzen</string>
+  <string id="31302">Pausatuta</string>
+  <string id="31309">Ikuste aurrezpenak</string>
+  <string id="31351">Gehitu taldea</string>
+  <string id="31352">Berrizendatu taldea</string>
+  <string id="31353">Ezabatu taldea</string>
+  <string id="31370">Eguneratu bideo liburutegia</string>
+  <string id="31371">Eguneratu musika liburutegia</string>
+  <string id="31372">Garbitu bideo liburutegia</string>
+  <string id="31373">Garbitu musika liburutegia</string>
+</strings>

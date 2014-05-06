@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--$Revision$-->
+<strings>
+  <string id="31000">ライブTV</string>
+  <string id="31003">放映日</string>
+  <string id="31005">トラック番号</string>
+  <string id="31006">ソート: 昇順</string>
+  <string id="31007">ソート: 降順</string>
+  <string id="31009">コンテキストメニュー</string>
+  <string id="31017">カラオケソングセレクター</string>
+  <string id="31018">予告編</string>
+  <string id="31020">見つかりました</string>
+  <string id="31021">ミュージックライブラリ</string>
+  <string id="31022">ミュージックファイル</string>
+  <string id="31023">情報</string>
+  <string id="31024">ページ</string>
+  <string id="31025">アイテム</string>
+  <string id="31027">メモリ使用量:</string>
+  <string id="31030">午前中</string>
+  <string id="31031">午後から</string>
+  <string id="31033">チャンネルグループ</string>
+  <string id="31036">閉じる</string>
+  <string id="31039">ipアドレス</string>
+  <string id="31080">スライド</string>
+  <string id="31134">編集するメディアタイプを選択</string>
+  <string id="31135">単一イメージ</string>
+  <string id="31136">複数イメージ</string>
+  <string id="31223">36時間予報</string>
+  <string id="31224">1時間ごとの予報</string>
+  <string id="31225">週末の予報</string>
+  <string id="31228">:</string>
+  <string id="31229">最終更新時刻</string>
+  <string id="31233">降水確率</string>
+  <string id="31236">予報</string>
+  <string id="31237">ビュー</string>
+  <string id="31285">プレイリストオプション</string>
+  <string id="31301">再生中</string>
+  <string id="31302">一時停止</string>
+  <string id="31309">ビジュアライザーのプリセット</string>
+  <string id="31351">グループの追加</string>
+  <string id="31352">グループの名称変更</string>
+  <string id="31353">グループの削除</string>
+</strings>

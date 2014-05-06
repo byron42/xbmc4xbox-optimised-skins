@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--$Revision$-->
+<strings>
+  <string id="31000">Live TV</string>
+  <string id="31001">Telekava</string>
+  <string id="31002">Seriaalid</string>
+  <string id="31003">Eetris</string>
+  <string id="31005">Loo number</string>
+  <string id="31006">Järjesta: Kasvav</string>
+  <string id="31007">Järjesta: Kahanev</string>
+  <string id="31009">Menüü</string>
+  <string id="31017">Karaoke lauluvalija</string>
+  <string id="31018">Treilerid</string>
+  <string id="31020">Leitud</string>
+  <string id="31022">Muusika failid</string>
+  <string id="31023">Info</string>
+  <string id="31024">Leht</string>
+  <string id="31025">Nimetused</string>
+  <string id="31027">Mälukasutus:</string>
+  <string id="31030">e.l.</string>
+  <string id="31031">p.l.</string>
+  <string id="31033">Kanali grupp</string>
+  <string id="31036">Sulge</string>
+  <string id="31039">IP aadress</string>
+  <string id="31080">Slaid</string>
+  <string id="31083">Sein</string>
+  <string id="31084">Postrid</string>
+  <string id="31127">Horisontaalpaigutus</string>
+  <string id="31134">Muuda meediumi tüübile vastavat tausta</string>
+  <string id="31135">Üksik pilt</string>
+  <string id="31136">Mitu pilti</string>
+  <string id="31218">Horisontaalpaigutus</string>
+  <string id="31219">Logo</string>
+  <string id="31223">36 tunni prognoos</string>
+  <string id="31224">Igatunnine prognoos</string>
+  <string id="31225">Nädalalõpu prognoos</string>
+  <string id="31228"> </string>
+  <string id="31229">Viimati uuendatud</string>
+  <string id="31233">Võimalus sademeteks</string>
+  <string id="31236">Ilmateade</string>
+  <string id="31237">Vaata</string>
+  <string id="31285">Esitusloendi valikud</string>
+  <string id="31301">Mängib</string>
+  <string id="31302">Pausis</string>
+  <string id="31309">Visuaalide häälestused</string>
+  <string id="31351">Lisa grupp</string>
+  <string id="31352">Nimeta grupp ümber</string>
+  <string id="31353">Kustuta grupp</string>
+</strings>

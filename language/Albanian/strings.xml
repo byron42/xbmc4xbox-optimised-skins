@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--$Revision$-->
+<strings>
+  <string id="31000">Live TV</string>
+  <string id="31003">Në Transmetim</string>
+  <string id="31005">Numëri Këngës</string>
+  <string id="31006">Rendit: Me Ngjitje</string>
+  <string id="31007">Rendit: Me Zbritje</string>
+  <string id="31009">Menu Konteksti</string>
+  <string id="31017">Përzgjedhës i Këngëve Karaoke</string>
+  <string id="31020">Gjetur</string>
+  <string id="31023">Info</string>
+  <string id="31024">Faqe</string>
+  <string id="31025">Artikuj</string>
+  <string id="31027">Memorje Përdorur</string>
+  <string id="31030">AM</string>
+  <string id="31031">PM</string>
+  <string id="31033">Grup i kanalëve</string>
+  <string id="31036">Mbyll</string>
+  <string id="31080">Slide</string>
+  <string id="31223">Parashikimi 36 Orësh</string>
+  <string id="31224">Parashikimi Orë për Orë</string>
+  <string id="31225">Parashikimi Fundjavë</string>
+  <string id="31228">tek</string>
+  <string id="31229">Azhornuar së Fundmi</string>
+  <string id="31233">Mundësija e Reshjes</string>
+  <string id="31236">Parashikimi</string>
+  <string id="31237">Pamje</string>
+  <string id="31285">Opcionet së Listës Degjimi</string>
+  <string id="31301">Duke Luajtur</string>
+  <string id="31302">I pauzuar</string>
+  <string id="31309">Paracilësime të Vizualizimit</string>
+  <string id="31351">Shto Grup</string>
+  <string id="31352">Riemro Grupet</string>
+  <string id="31353">Fshij Grupet</string>
+</strings>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--$Revision$-->
+<strings>
+  <string id="31000">Live TV</string>
+  <string id="31003">Емитирано</string>
+  <string id="31005">Број на нумера</string>
+  <string id="31006">Подреди: Растечки</string>
+  <string id="31007">Подреди: Опаѓачки</string>
+  <string id="31009">Мени за содржина</string>
+  <string id="31017">Бирач на караоке песни</string>
+  <string id="31018">Трејлер</string>
+  <string id="31020">Најдено</string>
+  <string id="31023">Информации</string>
+  <string id="31024">Страна</string>
+  <string id="31025">Ставки</string>
+  <string id="31027">Искористеност на меморија</string>
+  <string id="31030">наутро</string>
+  <string id="31031">попладне</string>
+  <string id="31033">Група канали</string>
+  <string id="31036">Затвори</string>
+  <string id="31080">Слајд</string>
+  <string id="31084">Постер</string>
+  <string id="31223">36 Часовна Прогноза</string>
+  <string id="31224">Часовна Прогноза</string>
+  <string id="31225">Викенд Прогноза</string>
+  <string id="31229">Последно ажурирање</string>
+  <string id="31233">Можност за врнежи</string>
+  <string id="31236">Прогноза</string>
+  <string id="31237">Поглед</string>
+  <string id="31285">Опција на список за репродукција</string>
+  <string id="31301">Репродукција</string>
+  <string id="31302">Паузирано</string>
+  <string id="31309">Постојни визуелизации</string>
+  <string id="31351">Додади група</string>
+  <string id="31352">Преимени група</string>
+  <string id="31353">Избриши група</string>
+</strings>

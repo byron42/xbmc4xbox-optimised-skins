@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--$Revision$-->
+<strings>
+  <string id="31000">Canlı TV</string>
+  <string id="31003">Gösterim</string>
+  <string id="31005">Parça Numarası</string>
+  <string id="31006">Sırala: Artan</string>
+  <string id="31007">Sırala: Azalan</string>
+  <string id="31009">Kabuk Menü</string>
+  <string id="31010">Sırala</string>
+  <string id="31016">Dosya Yöneticisi</string>
+  <string id="31017">Karaoke Şarkı Seçici</string>
+  <string id="31018">Fragmanlar</string>
+  <string id="31020">Bulundu</string>
+  <string id="31021">Müzik Kütüphanesi</string>
+  <string id="31022">Müzik Dosyalar</string>
+  <string id="31023">Bilgi</string>
+  <string id="31024">Sayfa</string>
+  <string id="31025">Öğe</string>
+  <string id="31027">Kullanılan Bellek:</string>
+  <string id="31030">Sabah</string>
+  <string id="31031">Akşam</string>
+  <string id="31033">Kanal Grubu</string>
+  <string id="31036">Kapat</string>
+  <string id="31039">IP adresi</string>
+  <string id="31080">Kaydır</string>
+  <string id="31083">Duvar</string>
+  <string id="31127">Yatay</string>
+  <string id="31134">Medya Türü için Arka planı değiştir</string>
+  <string id="31135">Tek Resim</string>
+  <string id="31136">Çoklu Resim</string>
+  <string id="31158">Görünümler</string>
+  <string id="31215">Sıradaki Canlı Yayın</string>
+  <string id="31218">Yatay</string>
+  <string id="31219">Logo</string>
+  <string id="31223">36 Saatlik Hava Tahmini</string>
+  <string id="31224">Saatlik Hava Tahmini</string>
+  <string id="31225">Hafta Sonu Hava Tahmini</string>
+  <string id="31228">​</string>
+  <string id="31229">Son Güncelleme</string>
+  <string id="31230">Veri Sağlayıcı</string>
+  <string id="31233">Yağış Olasılığı</string>
+  <string id="31236">Hava Tahmini</string>
+  <string id="31237">Görünüm</string>
+  <string id="31241">Son Eklenen Filmler</string>
+  <string id="31285">Çalma Listesi Seçenekleri</string>
+  <string id="31301">Oynatılıyor</string>
+  <string id="31302">Duraklatıldı</string>
+  <string id="31309">Görsel Öğe Önayarları</string>
+  <string id="31310">Görsel Öğe Ayarları</string>
+  <string id="31350">Mevcut Gruplar</string>
+  <string id="31351">Grup Ekle</string>
+  <string id="31352">Grubu Yeniden Adlandır</string>
+  <string id="31353">Grubu Sil</string>
+</strings>

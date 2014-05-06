@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--$Revision$-->
+<strings>
+  <string id="31000">ቲቪ በቀጥታ </string>
+  <string id="31001">የቲቪ - መመሪያ</string>
+  <string id="31005">ተራ ቁጥር</string>
+  <string id="31006">መለያ እየጨመረ በሚሄድ</string>
+  <string id="31007">መለያ እየቀነሰ በሚሄድ</string>
+  <string id="31009">የ አገባብ ዝርዝር</string>
+  <string id="31017">ካሪዮኪ ዘፈን መራጭ</string>
+  <string id="31020">ተገኝቷል</string>
+  <string id="31023">መረጃ</string>
+  <string id="31024">ገጽ</string>
+  <string id="31025">እቃዎች</string>
+  <string id="31027">የተጠቀሙት Memory:</string>
+  <string id="31030">ጠዋት </string>
+  <string id="31031">ከሰአት</string>
+  <string id="31033">የ ጣቢያ ቡድን</string>
+  <string id="31036">መዝጊያ</string>
+  <string id="31080">ተንሸራታች</string>
+  <string id="31136">ተንሸራታች</string>
+  <string id="31223">የ 36 ሰአት ግምት </string>
+  <string id="31224">የሰአት ግምት </string>
+  <string id="31225">የሳምንቱ መጨረሻ ግምት </string>
+  <string id="31229">መጨረሻ የተሻሻለው</string>
+  <string id="31236">ግምት </string>
+  <string id="31237">መመልከቻ</string>
+  <string id="31285">የሚያጫውቱት ምርጫዎች </string>
+  <string id="31301">በማጫወት ላይ</string>
+  <string id="31302">ማቆሚያ</string>
+  <string id="31351">ቡድን መጨመሪያ</string>
+  <string id="31352">ቡድን እንደገና መሰየሚያ</string>
+  <string id="31353">ቡድን ማጥፊያ</string>
+</strings>

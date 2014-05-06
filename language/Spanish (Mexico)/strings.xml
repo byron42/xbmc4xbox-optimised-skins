@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--$Revision$-->
+<strings>
+  <string id="31000">TV en Vivo</string>
+  <string id="31001">Guía de TV</string>
+  <string id="31002">Series de TV</string>
+  <string id="31003">Transmitido</string>
+  <string id="31005">Número de Pista</string>
+  <string id="31006">Ordenar: Ascendente</string>
+  <string id="31007">Ordenar: Descendente</string>
+  <string id="31009">Menú Contextual</string>
+  <string id="31017">Seleccionador de Canción Karaoke</string>
+  <string id="31018">Trailers</string>
+  <string id="31020">Encontrado</string>
+  <string id="31021">Biblioteca Música</string>
+  <string id="31022">Archivos Música</string>
+  <string id="31023">Info</string>
+  <string id="31024">Página</string>
+  <string id="31025">Elementos</string>
+  <string id="31027">Memoria Usada:</string>
+  <string id="31030">AM</string>
+  <string id="31031">PM</string>
+  <string id="31033">Grupo de Canales</string>
+  <string id="31034">Teletexto</string>
+  <string id="31036">Cerrar</string>
+  <string id="31083">Pared</string>
+  <string id="31084">Pósters</string>
+  <string id="31127">Apaisado</string>
+  <string id="31134">Editar Fondo para Tipo de Medio</string>
+  <string id="31135">Una Imagen</string>
+  <string id="31136">Múltiples Imágenes</string>
+  <string id="31218">Apaisado</string>
+  <string id="31219">Logotipo</string>
+  <string id="31223">Pronóstico de 36 Horas</string>
+  <string id="31224">Pronóstico por Hora</string>
+  <string id="31225">Pronóstico del Fin de Semana</string>
+  <string id="31228">en</string>
+  <string id="31229">Última Actualización</string>
+  <string id="31233">Cambio de Precipitación</string>
+  <string id="31236">Pronóstico</string>
+  <string id="31237">Ver</string>
+  <string id="31285">Opciones de Lista de Reproducción</string>
+  <string id="31301">Reproduciendo</string>
+  <string id="31302">Pausado</string>
+  <string id="31309">Preajustes de Visualización</string>
+  <string id="31350">Grupos disponibles</string>
+  <string id="31351">Agregar Grupo</string>
+  <string id="31352">Renombrar Grupo</string>
+  <string id="31353">Borrar Grupo</string>
+  <string id="31370">Actualizar Biblioteca de Video</string>
+  <string id="31371">Actualizar Biblioteca de Música</string>
+  <string id="31372">Limpiar Biblioteca de Video</string>
+  <string id="31373">Limpiar Biblioteca de Música</string>
+</strings>

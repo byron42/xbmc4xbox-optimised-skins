@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--$Revision$-->
+<strings>
+  <string id="31000">TV-lähetys</string>
+  <string id="31001">TV-Opas</string>
+  <string id="31002">TV-Sarjat</string>
+  <string id="31003">Esitetty</string>
+  <string id="31005">Kappalenumero</string>
+  <string id="31006">Järjestä: Nousevasti</string>
+  <string id="31007">Järjestä: Laskevasti</string>
+  <string id="31009">Pikavalikko</string>
+  <string id="31017">Karaoke kappaleen valinta</string>
+  <string id="31018">Esittelyt</string>
+  <string id="31020">Löytyi</string>
+  <string id="31021">Musiikkikirjasto</string>
+  <string id="31022">Musiikkitiedostot</string>
+  <string id="31023">Tiedot</string>
+  <string id="31024">Sivu</string>
+  <string id="31025">Kohdetta</string>
+  <string id="31027">Käytetty muisti:</string>
+  <string id="31030">aamupäivällä</string>
+  <string id="31031">iltapäivällä</string>
+  <string id="31033">Kanavaryhmä</string>
+  <string id="31034">Teksti-tv</string>
+  <string id="31036">Sulje</string>
+  <string id="31039">IP -osoite</string>
+  <string id="31080">Diakuva</string>
+  <string id="31083">Seinä</string>
+  <string id="31084">Juliste</string>
+  <string id="31086">Vaaka-ikoni</string>
+  <string id="31127">Vaakakuva</string>
+  <string id="31134">Muokkaa taustakuvaa päävalikon painikkeelle</string>
+  <string id="31135">Yksittäinen kuva</string>
+  <string id="31136">Vaihtuva kuva</string>
+  <string id="31218">Vaakakuva</string>
+  <string id="31219">Logo</string>
+  <string id="31223">36 tunnin ennuste</string>
+  <string id="31224">Tunneittainen ennuste</string>
+  <string id="31225">Viikonlopun ennuste</string>
+  <string id="31228">klo</string>
+  <string id="31229">Viimeksi päivitetty</string>
+  <string id="31230">Tietojen tarjoaja</string>
+  <string id="31233">Sateen mahdollisuus</string>
+  <string id="31236">Ennuste</string>
+  <string id="31237">Näkymä</string>
+  <string id="31285">Toistolistan asetukset</string>
+  <string id="31301">Toistaa</string>
+  <string id="31302">Tauko</string>
+  <string id="31309">Visualisoinnin esiasetukset</string>
+  <string id="31350">Mahdolliset ryhmät</string>
+  <string id="31351">Lisää ryhmä</string>
+  <string id="31352">Muuta ryhmän nimeä</string>
+  <string id="31353">Poista ryhmä</string>
+</strings>

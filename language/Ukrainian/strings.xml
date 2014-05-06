@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--$Revision$-->
+<strings>
+  <string id="31000">ТБ</string>
+  <string id="31003">Прем'єра</string>
+  <string id="31005">Номер треку</string>
+  <string id="31006">Висхідний</string>
+  <string id="31007">Низхідний</string>
+  <string id="31009">Контекстне меню</string>
+  <string id="31017">Вибір пісень для караоке</string>
+  <string id="31018">Трейлери</string>
+  <string id="31020">Знайдено</string>
+  <string id="31021">Бібліотека музики</string>
+  <string id="31022">Музичні файли</string>
+  <string id="31023">Інформація</string>
+  <string id="31024">сторінка</string>
+  <string id="31025">у списку</string>
+  <string id="31027">Використано пам'яті</string>
+  <string id="31030">Уранці</string>
+  <string id="31031">Удень</string>
+  <string id="31033">Група каналів</string>
+  <string id="31036">Закрити</string>
+  <string id="31080">Слайд</string>
+  <string id="31083">Стіна</string>
+  <string id="31134">Вибрати тло розділу</string>
+  <string id="31135">Одна картинка</string>
+  <string id="31136">Набір картинок</string>
+  <string id="31223">Прогноз на 36 г.</string>
+  <string id="31224">Щогодинний прогноз</string>
+  <string id="31225">Прогноз на вихідні</string>
+  <string id="31228">о</string>
+  <string id="31229">Останнє оновлення</string>
+  <string id="31233">Можливі опади</string>
+  <string id="31236">Прогноз</string>
+  <string id="31237">Перегляд</string>
+  <string id="31285">Параметри списку відтворення</string>
+  <string id="31301">Відтворення</string>
+  <string id="31302">Пауза</string>
+  <string id="31309">Налаштування візуалізації</string>
+  <string id="31351">Додати групу</string>
+  <string id="31352">Перейменувати групу</string>
+  <string id="31353">Видалити групу</string>
+</strings>

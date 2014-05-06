@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--$Revision$-->
+<strings>
+  <string id="31000">Телевизија уживо</string>
+  <string id="31003">Emitovano</string>
+  <string id="31005">Broj numere</string>
+  <string id="31017">Birač karaoke pesme</string>
+  <string id="31023">Informacije</string>
+  <string id="31024">Strana</string>
+  <string id="31025">Stavki</string>
+  <string id="31027">Iskorišćenost memorije:</string>
+  <string id="31030">ujutro</string>
+  <string id="31031">popodne</string>
+  <string id="31134">Uredite pozadinu tastera za početni ekran</string>
+  <string id="31135">Jedna slika</string>
+  <string id="31136">Više slika</string>
+  <string id="31229">Poslednje ažuriranje</string>
+  <string id="31230">Добављач података</string>
+  <string id="31285">Opcije spiska za reprodukciju</string>
+  <string id="31301">Reprodukcija</string>
+  <string id="31302">Pauzirano</string>
+  <string id="31309">Postojeće vizualizacije</string>
+  <string id="31352">Преименуј групу</string>
+  <string id="31353">Обриши групу</string>
+</strings>

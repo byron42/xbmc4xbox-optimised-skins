@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--$Revision$-->
+<strings>
+  <string id="31000">電視</string>
+  <string id="31001">電視節目指南</string>
+  <string id="31002">電視劇</string>
+  <string id="31003">首播</string>
+  <string id="31005">音軌編號</string>
+  <string id="31006">排序：遞增</string>
+  <string id="31007">排序：遞減</string>
+  <string id="31009">內容功能表</string>
+  <string id="31017">卡拉OK歌曲選擇器</string>
+  <string id="31018">預告片</string>
+  <string id="31020">已找到</string>
+  <string id="31021">音樂資料庫</string>
+  <string id="31022">音樂 檔案</string>
+  <string id="31023">資訊</string>
+  <string id="31024">頁</string>
+  <string id="31025">個項目</string>
+  <string id="31027">已使用記憶體：</string>
+  <string id="31030">上午</string>
+  <string id="31031">下午</string>
+  <string id="31033">頻道群組</string>
+  <string id="31034">廣播視訊</string>
+  <string id="31036">關閉</string>
+  <string id="31080">幻燈片</string>
+  <string id="31083">牆</string>
+  <string id="31084">海報</string>
+  <string id="31127">橫向</string>
+  <string id="31134">編輯媒體類型的背景</string>
+  <string id="31135">單一圖片</string>
+  <string id="31136">多張圖片</string>
+  <string id="31203">新的搜尋</string>
+  <string id="31218">橫向</string>
+  <string id="31219">標誌</string>
+  <string id="31223">36小時預報</string>
+  <string id="31224">每小時預報</string>
+  <string id="31225">一週預報</string>
+  <string id="31228">在</string>
+  <string id="31229">最後更新</string>
+  <string id="31233">降雨機率</string>
+  <string id="31236">預報</string>
+  <string id="31237">檢視</string>
+  <string id="31247">隨機電影</string>
+  <string id="31285">播放清單選項</string>
+  <string id="31301">正在播放</string>
+  <string id="31302">已暫停</string>
+  <string id="31309">視覺效果設定</string>
+  <string id="31351">新增群組</string>
+  <string id="31352">重新命名群組</string>
+  <string id="31353">刪除群組</string>
+</strings>

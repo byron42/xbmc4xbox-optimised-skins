@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--$Revision$-->
+<strings>
+  <string id="31000">TV v živo</string>
+  <string id="31003">Predvajano</string>
+  <string id="31005">Številka pesmi</string>
+  <string id="31006">Razvrsti: Naraščajoče</string>
+  <string id="31007">Razvrsti: Padajoče</string>
+  <string id="31009">Meni</string>
+  <string id="31017">Izbirnik pesmi za karaoke</string>
+  <string id="31018">Napovedniki</string>
+  <string id="31020">Najdenih</string>
+  <string id="31023">Informacije</string>
+  <string id="31024">Stran</string>
+  <string id="31025">Predmetov</string>
+  <string id="31027">Uporabljen pomnilnik:</string>
+  <string id="31030">AM</string>
+  <string id="31031">PM</string>
+  <string id="31033">Skupina programa</string>
+  <string id="31036">Zapri</string>
+  <string id="31080">Drsenje</string>
+  <string id="31084">Plakat</string>
+  <string id="31134">Uredi ozadje za tip medija</string>
+  <string id="31135">Ena slika</string>
+  <string id="31136">Več slik</string>
+  <string id="31223">36-urna napoved</string>
+  <string id="31224">Urna napoved</string>
+  <string id="31225">Tedenska napoved</string>
+  <string id="31228">ob</string>
+  <string id="31229">Zadnja posodobitev</string>
+  <string id="31233">Možnost padavin</string>
+  <string id="31236">Napoved</string>
+  <string id="31237">Pogled</string>
+  <string id="31285">Možnosti seznama predvajanja</string>
+  <string id="31301">Predvajam</string>
+  <string id="31302">Prekinitev</string>
+  <string id="31309">Prednastavitve vizualizacije</string>
+  <string id="31351">Dodaj skupino</string>
+  <string id="31352">Preimenuj skupino</string>
+  <string id="31353">Izbriši skupino</string>
+</strings>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--$Revision$-->
+<strings>
+  <string id="31000">TV Live</string>
+  <string id="31001">Ghid TV</string>
+  <string id="31003">Difuzat pe</string>
+  <string id="31005">Număr pistă</string>
+  <string id="31006">Sort.: Ascendent</string>
+  <string id="31007">Sort.: Descendent</string>
+  <string id="31009">Meniu Contextual</string>
+  <string id="31017">Selector cântec karaoke</string>
+  <string id="31018">Trailere</string>
+  <string id="31020">Găsite</string>
+  <string id="31023">Informații</string>
+  <string id="31024">Pagina</string>
+  <string id="31025">Elemente</string>
+  <string id="31027">Utilizare memorie:</string>
+  <string id="31030">AM</string>
+  <string id="31031">PM</string>
+  <string id="31033">Canalul Grupului</string>
+  <string id="31036">Închide</string>
+  <string id="31080">Glisează</string>
+  <string id="31084">Poster</string>
+  <string id="31134">Modificare fundal pentru</string>
+  <string id="31135">O singură imagine</string>
+  <string id="31136">Imagini multiple</string>
+  <string id="31223">Previziune pe 36 de ore</string>
+  <string id="31224">Previziune la o oră</string>
+  <string id="31225">Previziune weekend</string>
+  <string id="31228">la</string>
+  <string id="31229">Ultima actualizare</string>
+  <string id="31233">Șansă de precipitații</string>
+  <string id="31236">Previziune</string>
+  <string id="31237">Vizualizează</string>
+  <string id="31285">Opțiuni listă de redare</string>
+  <string id="31301">Redare</string>
+  <string id="31302">Pauză</string>
+  <string id="31309">Vizualizări predefinite</string>
+  <string id="31351">Adaugă Grup</string>
+  <string id="31352">Redenumește Grup</string>
+  <string id="31353">Șterge Grup</string>
+</strings>

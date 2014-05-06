@@ -1,0 +1,13 @@
+<skin>
+	<defaultresolution>720p</defaultresolution>
+	<defaultresolutionwide>720p</defaultresolutionwide>
+	<defaultthemename>textures.xpr</defaultthemename>
+	<version>2.11</version>
+	<!-- legacy skin mode - to allow old skin behaviour such as button overflow without scrolling -->
+	<legacy>true</legacy>
+	<credits>
+		<skinname>Bello</skinname>
+		<name>By Nessus</name>
+		
+	</credits>
+</skin>

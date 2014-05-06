@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--$Revision$-->
+<strings>
+  <string id="31000">TV trực tuyến</string>
+  <string id="31003">Đã phát sóng</string>
+  <string id="31005">Số track</string>
+  <string id="31006">Sắp xếp: Tăng dần</string>
+  <string id="31007">Sắp xếp: Giảm dần</string>
+  <string id="31009">Menu khi click chuột phải</string>
+  <string id="31017">Chọn bài hát karaoke</string>
+  <string id="31020">Đã tìm thấy</string>
+  <string id="31023">Thông tin</string>
+  <string id="31024">Trang</string>
+  <string id="31025">Đối tượng</string>
+  <string id="31027">Bộ nhớ sử dụng:</string>
+  <string id="31033">Kênh của nhóm</string>
+  <string id="31036">Đóng lại</string>
+  <string id="31219">Lôgô</string>
+  <string id="31223">Dự báo 36 giờ</string>
+  <string id="31224">Dự báo hàng giờ</string>
+  <string id="31225">Dự báo cuối tuần</string>
+  <string id="31229">Lần cập nhật cuối cùng</string>
+  <string id="31233">Thay đổi lượng mưa</string>
+  <string id="31236">Dự báo</string>
+  <string id="31237">Xem</string>
+  <string id="31251">Tất cả TV Show</string>
+  <string id="31285">Tùy chọn danh sách</string>
+  <string id="31301">Đang phát</string>
+  <string id="31302">Dừng lại</string>
+  <string id="31307">Bật hiệu ứng</string>
+  <string id="31309">Hiệu chỉnh hiệu ứng</string>
+  <string id="31350">Các nhóm sẵn có</string>
+  <string id="31351">Thêm nhóm</string>
+  <string id="31352">Đổi tên nhóm</string>
+  <string id="31353">Xóa nhóm</string>
+</strings>

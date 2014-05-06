@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--$Revision$-->
+<strings>
+  <string id="31000">TV trực tuyến</string>
+  <string id="31003">Đã phát</string>
+  <string id="31005">Bài số</string>
+  <string id="31006">Sắp xếp: Tăng dần</string>
+  <string id="31007">Sắp xếp: Giảm dần</string>
+  <string id="31009">Menu ngữ cảnh</string>
+  <string id="31017">Trình chọn bài hát karaoke</string>
+  <string id="31018">Phim giới thiệu</string>
+  <string id="31020">Tìm Rồi</string>
+  <string id="31023">Thông Tin</string>
+  <string id="31024">Trang</string>
+  <string id="31025">Các mục</string>
+  <string id="31027">Bộ nhớ chiếm:</string>
+  <string id="31030">Sáng</string>
+  <string id="31031">Chiều</string>
+  <string id="31033">Nhóm kênh</string>
+  <string id="31036">Đóng</string>
+  <string id="31080">Ảnh</string>
+  <string id="31135">Một ảnh</string>
+  <string id="31136">Nhiều ảnh</string>
+  <string id="31223">Dự báo 36 tiếng tới</string>
+  <string id="31224">Dự báo theo giờ</string>
+  <string id="31225">Dự báo cuối tuần</string>
+  <string id="31229">Cập nhật cuối cùng</string>
+  <string id="31233">Khả năng mưa</string>
+  <string id="31236">Dự báo</string>
+  <string id="31237">View</string>
+  <string id="31246">Âm nhạc mới</string>
+  <string id="31247">Các phim ngẫu nhiên</string>
+  <string id="31249">Các bản nhạc ngẫu nhiên</string>
+  <string id="31285">Lựa chọn playlist</string>
+  <string id="31301">Đang chơi</string>
+  <string id="31302">Tạm dừng</string>
+  <string id="31309">Bộ preset trình diễn</string>
+  <string id="31351">Thêm nhóm</string>
+  <string id="31352">Đổi tên nhóm</string>
+  <string id="31353">Xoá nhóm</string>
+</strings>

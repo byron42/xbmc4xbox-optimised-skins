@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--$Revision$-->
+<strings>
+  <string id="31000">TV en directo</string>
+  <string id="31002">Series de TV</string>
+  <string id="31003">Estrenado</string>
+  <string id="31005">Número de pista</string>
+  <string id="31006">Ordenar: Ascendente</string>
+  <string id="31007">Ordenar: Descendente</string>
+  <string id="31009">Menú Contextual</string>
+  <string id="31017">Selector de canción de karaoke</string>
+  <string id="31018">Trailers</string>
+  <string id="31020">Encontrados</string>
+  <string id="31021">Colección de Música</string>
+  <string id="31022">Archivos de música</string>
+  <string id="31023">Info</string>
+  <string id="31024">Página</string>
+  <string id="31025">Elementos</string>
+  <string id="31027">Memoria usada:</string>
+  <string id="31030">AM</string>
+  <string id="31031">PM</string>
+  <string id="31033">Grupo de canales</string>
+  <string id="31036">Cerrar</string>
+  <string id="31080">Diapositiva</string>
+  <string id="31083">Mosaico</string>
+  <string id="31084">Póster</string>
+  <string id="31128">ClearArt</string>
+  <string id="31135">Imagen única</string>
+  <string id="31136">Multi-imagen</string>
+  <string id="31158">Vistas</string>
+  <string id="31219">Logo</string>
+  <string id="31223">Pronóstico de 36 hs</string>
+  <string id="31224">Pronóstico por hora</string>
+  <string id="31225">Pronóstico semanal</string>
+  <string id="31228">a</string>
+  <string id="31229">Última actualización</string>
+  <string id="31233">Probabilidad de precipitación</string>
+  <string id="31236">Pronóstico</string>
+  <string id="31237">Vista</string>
+  <string id="31285">Opciones de lista de reproducción</string>
+  <string id="31301">Reproduciendo</string>
+  <string id="31302">Pausado</string>
+  <string id="31309">Visualizaciones preestablecidas</string>
+  <string id="31351">Añdadir Grupo</string>
+  <string id="31352">Renombrar Grupo</string>
+  <string id="31353">Borrar Grupo</string>
+</strings>

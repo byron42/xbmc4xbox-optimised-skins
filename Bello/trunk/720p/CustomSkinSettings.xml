@@ -1,8 +1,8 @@
-<window>
+<window id="3099">
 	<defaultcontrol always="true">8000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<backgroundcolor>0</backgroundcolor>
-	<onload condition="IsEmpty(Skin.String(AddonsName))">Skin.SetString(AddonsName,addonbrowser)</onload>
+	<!-- <onload condition="IsEmpty(Skin.String(AddonsName))">Skin.SetString(AddonsName,addonbrowser)</onload> -->
 	<onload condition="IsEmpty(Skin.String(MusicName))">Skin.SetString(MusicName,library)</onload>
 	<onload condition="IsEmpty(Skin.String(MusicPath))">Skin.SetString(MusicPath,root)</onload>
 	<controls>

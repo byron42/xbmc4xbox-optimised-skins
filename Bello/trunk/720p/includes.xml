@@ -9,8 +9,8 @@
 	<!-- <include file="IncludesMenus.xml" /> -->
 	<include file="IncludesNextAiredInfo.xml" />
 	<include file="IncludesNotifications.xml" />
-	<include file="IncludesSkinWidgets.xml" />
-	<include file="IncludesStaticContent.xml" />
+	<!-- <include file="IncludesSkinWidgets.xml" /> -->
+	<!-- <include file="IncludesStaticContent.xml" /> -->
 	<include file="IncludesWeather.xml" />
 
 	<constant name="FanartCrossfadeTime">250</constant>
@@ -1911,5 +1911,1002 @@
 		</animation>
 	</include>
 
+<!--(((RECNTLY ADDED)))===================(from IncludesSkinWidgets.xml)=======================-->
+	<include name="RecentlyAddedMovies">
+		<control type="wraplist" id="81">
+			<visible allowhiddenfocus="true">Control.HasFocus(81) + ![Container(20).OnScrollNext | Container(20).OnScrollPrevious | Container(20).Scrolling]</visible>
+			<!-- VisibleFadeEffectRecent -->
+			<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout">Hidden</animation>
+			<animation effect="fade" start="0" end="100" time="300" tween="sine" easing="inout">Visible</animation>
+			<animation effect="slide" start="0,-55" end="0,0" time="350" tween="sine" easing="inout" condition="Control.HasFocus(81) + IsEmpty(Window.Property(Movement))" reversible="false">Conditional</animation>
+			<animation effect="slide" start="0,55" end="0,0" time="350" tween="sine" easing="inout" condition="Control.HasFocus(81) + !IsEmpty(Window.Property(Movement))" reversible="false">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-55" time="350" tween="sine" easing="inout" condition="!Control.HasFocus(81) + !IsEmpty(Window.Property(Movement))" reversible="false">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,55" time="350" tween="sine" easing="inout" condition="!Control.HasFocus(81) + IsEmpty(Window.Property(Movement))" reversible="false">Conditional</animation>
+			<posx>-155</posx>
+			<posy>210</posy>
+			<width>1900</width>
+			<height>800</height>
+			<onleft>81</onleft>
+			<onright>81</onright>
+			<onup>SetProperty(Movement,1)</onup>
+			<onup>83</onup>
+			<ondown>ClearProperty(Movement)</ondown>
+			<ondown>82</ondown>
+			<onback>ClearProperty(Movement)</onback>
+			<onback>20</onback>
+			<viewtype label="535">List</viewtype>
+			<scrolltime tween="Quadratic" easing="out">300</scrolltime>
+			<orientation>horizontal</orientation>
+			<preloaditems>2</preloaditems>
+			<focusposition>1</focusposition>
+			<itemlayout condition="Container(20).HasFocus(2)" width="200" height="280">
+				<control type="image">
+					<width>200</width>
+					<height>280</height>
+					<colordiffuse>FFbbbbbb</colordiffuse>
+					<aspectratio aligny="center" align="center">stretch</aspectratio>
+					<texture background="true" diffuse="overlays/skin_widgets/poster_diffuse_nf.png" fallback="thumbs/fallback_poster.png">$INFO[ListItem.Icon]</texture>
+				</control>
+				<control type="group">
+					<visible>![IsEmpty(ListItem.Property(LatestMovie1)) | IsEmpty(ListItem.Property(LatestMovie2)) | IsEmpty(ListItem.Property(LatestMovie3)) | IsEmpty(ListItem.Property(LatestMovie4))]</visible>
+					<control type="image">
+						<width>100</width>
+						<height>140</height>
+						<colordiffuse>FFbbbbbb</colordiffuse>
+						<aspectratio aligny="center" align="center">stretch</aspectratio>
+						<texture background="true" diffuse="overlays/skin_widgets/poster_diffuse_nf.png">$INFO[ListItem.Property(LatestMovie1)]</texture>
+					</control>
+					<control type="image">
+						<posy>140</posy>
+						<width>100</width>
+						<height>140</height>
+						<colordiffuse>FFbbbbbb</colordiffuse>
+						<aspectratio aligny="center" align="center">stretch</aspectratio>
+						<texture background="true" diffuse="overlays/skin_widgets/poster_diffuse_nf.png">$INFO[ListItem.Property(LatestMovie3)]</texture>
+					</control>
+					<control type="image">
+						<posx>100</posx>
+						<width>100</width>
+						<height>140</height>
+						<colordiffuse>FFbbbbbb</colordiffuse>
+						<aspectratio aligny="center" align="center">stretch</aspectratio>
+						<texture background="true" diffuse="overlays/skin_widgets/poster_diffuse_nf.png">$INFO[ListItem.Property(LatestMovie2)]</texture>
+					</control>
+					<control type="image">
+						<posx>100</posx>
+						<posy>140</posy>
+						<width>100</width>
+						<height>140</height>
+						<colordiffuse>FFbbbbbb</colordiffuse>
+						<aspectratio aligny="center" align="center">stretch</aspectratio>
+						<texture background="true" diffuse="overlays/skin_widgets/poster_diffuse_nf.png">$INFO[ListItem.Property(LatestMovie4)]</texture>
+					</control>
+				</control>
+				
+			</itemlayout>
+			<focusedlayout condition="Container(20).HasFocus(2)" width="200" height="280">
+				<control type="group">
+					<animation type="Focus" reversible="false" condition="Container(81).OnNext">
+						<effect type="fade" start="20" end="100" time="300" delay="100" tween="sine" easing="out" />
+					</animation>
+					<animation type="Focus" reversible="false" condition="Container(81).OnPrevious">
+						<effect type="fade" start="20" end="100" time="300" delay="100" tween="sine" easing="out" />
+					</animation>
+					<control type="image">
+						<width>200</width>
+						<height>280</height>
+						<aspectratio aligny="center" align="center">stretch</aspectratio>
+						<texture background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="group">
+						<visible>![IsEmpty(ListItem.Property(LatestMovie1)) | IsEmpty(ListItem.Property(LatestMovie2)) | IsEmpty(ListItem.Property(LatestMovie3)) | IsEmpty(ListItem.Property(LatestMovie4))]</visible>
+						<control type="image">
+							<width>100</width>
+							<height>140</height>
+							<aspectratio aligny="center" align="center">stretch</aspectratio>
+							<texture background="true">$INFO[ListItem.Property(LatestMovie1)]</texture>
+						</control>
+						<control type="image">
+							<posy>140</posy>
+							<width>100</width>
+							<height>140</height>
+							<aspectratio aligny="center" align="center">stretch</aspectratio>
+							<texture background="true">$INFO[ListItem.Property(LatestMovie3)]</texture>
+						</control>
+						<control type="image">
+							<posx>100</posx>
+							<width>100</width>
+							<height>140</height>
+							<aspectratio aligny="center" align="center">stretch</aspectratio>
+							<texture background="true">$INFO[ListItem.Property(LatestMovie2)]</texture>
+						</control>
+						<control type="image">
+							<posx>100</posx>
+							<posy>140</posy>
+							<width>100</width>
+							<height>140</height>
+							<aspectratio aligny="center" align="center">stretch</aspectratio>
+							<texture background="true">$INFO[ListItem.Property(LatestMovie4)]</texture>
+						</control>
+					</control>
+				</control>
+				<control type="group">
+					<posx>200</posx>
+					<control type="image.">
+						<width>1350</width>
+						<height>280</height>
+						<aspectratio align="center">stretch</aspectratio>
+						<texture background="true">overlays/skin_widgets/title_shadow.png</texture>
+					</control>
+					<control type="image.">
+						<posx>-650</posx>
+						<width>450</width>
+						<height>280</height>
+						<aspectratio align="center">stretch</aspectratio>
+						<texture background="true" flipx="true">overlays/skin_widgets/title_shadow.png</texture>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>200</posy>
+						<height>30</height>
+						<width>800</width>
+						<textcolor>white</textcolor>
+						<shadowcolor>99000000</shadowcolor>
+						<font>FontSize_38</font>
+						<scrollout>false</scrollout>
+						<pauseatend>200</pauseatend>
+						<scrollspeed>30</scrollspeed>
+						<align>left</align>
+						<label>$INFO[ListItem.label]</label>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>230</posy>
+						<height>30</height>
+						<width>800</width>
+						<textcolor>77white</textcolor>
+						<shadowcolor>99000000</shadowcolor>
+						<font>FontSize_22</font>
+						<scrollout>false</scrollout>
+						<pauseatend>200</pauseatend>
+						<scrollspeed>30</scrollspeed>
+						<align>left</align>
+						<label>$INFO[ListItem.label2]</label>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>230</posy>
+						<height>30</height>
+						<width>800</width>
+						<textcolor>77white</textcolor>
+						<shadowcolor>99000000</shadowcolor>
+						<font>FontSize_22</font>
+						<scrollout>false</scrollout>
+						<pauseatend>200</pauseatend>
+						<scrollspeed>30</scrollspeed>
+						<align>left</align>
+						<label>$INFO[ListItem.Property(Label3)]</label>
+					</control>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="0">
+					<label>[COLOR=blue]$LOCALIZE[31244][/COLOR]</label>
+					<property name="Label3">$LOCALIZE[31205]</property>
+					<onclick>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</onclick>
+					<property name="LatestMovie1">$INFO[Window.Property(LatestMovie.1.Thumb)]</property>
+					<property name="LatestMovie2">$INFO[Window.Property(LatestMovie.2.Thumb)]</property>
+					<property name="LatestMovie3">$INFO[Window.Property(LatestMovie.3.Thumb)]</property>
+					<property name="LatestMovie4">$INFO[Window.Property(LatestMovie.4.Thumb)]</property>
+					<visible>Container(20).HasFocus(2)</visible>
+				</item>
+				<item id="1">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.1.Path)])</onclick>
+					<icon>$INFO[window.property(LatestMovie.1.Thumb)]</icon>
+					<label>$INFO[Window.Property(LatestMovie.1.Title)]</label>
+					<label2>$INFO[Window.Property(LatestMovie.1.Year)]$INFO[Window.Property(LatestMovie.1.RunningTime), • , $LOCALIZE[12391]]</label2>
+					<property name="Plot">$INFO[window.property(LatestMovie.1.Plot)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestMovie.1.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestMovie.1.Title))</visible>
+					<visible>Container(20).HasFocus(2)</visible>
+				</item>
+				<item id="2">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.2.Path)])</onclick>
+					<icon>$INFO[window.property(LatestMovie.2.Thumb)]</icon>
+					<label>$INFO[Window.Property(LatestMovie.2.Title)]</label>
+					<label2>$INFO[Window.Property(LatestMovie.2.Year)]$INFO[Window.Property(LatestMovie.2.RunningTime), • , $LOCALIZE[12391]]</label2>
+					<property name="Plot">$INFO[window.property(LatestMovie.2.Plot)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestMovie.2.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestMovie.2.Title))</visible>
+					<visible>Container(20).HasFocus(2)</visible>
+				</item>
+				<item id="3">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.3.Path)])</onclick>
+					<icon>$INFO[window.property(LatestMovie.3.Thumb)]</icon>
+					<label>$INFO[Window.Property(LatestMovie.3.Title)]</label>
+					<label2>$INFO[Window.Property(LatestMovie.3.Year)]$INFO[Window.Property(LatestMovie.3.RunningTime), • , $LOCALIZE[12391]]</label2>
+					<property name="Plot">$INFO[window.property(LatestMovie.3.Plot)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestMovie.3.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestMovie.3.Title))</visible>
+					<visible>Container(20).HasFocus(2)</visible>
+				</item>
+				<item id="4">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.4.Path)])</onclick>
+					<icon>$INFO[window.property(LatestMovie.4.Thumb)]</icon>
+					<label>$INFO[Window.Property(LatestMovie.4.Title)]</label>
+					<label2>$INFO[Window.Property(LatestMovie.4.Year)]$INFO[Window.Property(LatestMovie.4.RunningTime), • , $LOCALIZE[12391]]</label2>
+					<property name="Plot">$INFO[window.property(LatestMovie.4.Plot)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestMovie.4.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestMovie.4.Title))</visible>
+					<visible>Container(20).HasFocus(2)</visible>
+				</item>
+				<item id="5">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.5.Path)])</onclick>
+					<icon>$INFO[window.property(LatestMovie.5.Thumb)]</icon>
+					<label>$INFO[Window.Property(LatestMovie.5.Title)]</label>
+					<label2>$INFO[Window.Property(LatestMovie.5.Year)]$INFO[Window.Property(LatestMovie.5.RunningTime), • , $LOCALIZE[12391]]</label2>
+					<property name="Plot">$INFO[window.property(LatestMovie.5.Plot)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestMovie.5.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestMovie.5.Title))</visible>
+					<visible>Container(20).HasFocus(2)</visible>
+				</item>
+				<item id="6">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.6.Path)])</onclick>
+					<icon>$INFO[window.property(LatestMovie.6.Thumb)]</icon>
+					<label>$INFO[Window.Property(LatestMovie.6.Title)]</label>
+					<label2>$INFO[Window.Property(LatestMovie.6.Year)]$INFO[Window.Property(LatestMovie.6.RunningTime), • , $LOCALIZE[12391]]</label2>
+					<property name="Plot">$INFO[window.property(LatestMovie.6.Plot)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestMovie.6.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestMovie.6.Title))</visible>
+					<visible>Container(20).HasFocus(2)</visible>
+				</item>
+				<item id="7">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.7.Path)])</onclick>
+					<icon>$INFO[window.property(LatestMovie.7.Thumb)]</icon>
+					<label>$INFO[Window.Property(LatestMovie.7.Title)]</label>
+					<label2>$INFO[Window.Property(LatestMovie.7.Year)]$INFO[Window.Property(LatestMovie.7.RunningTime), • , $LOCALIZE[12391]]</label2>
+					<property name="Plot">$INFO[window.property(LatestMovie.7.Plot)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestMovie.7.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestMovie.7.Title))</visible>
+					<visible>Container(20).HasFocus(2)</visible>
+				</item>
+				<item id="8">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.8.Path)])</onclick>
+					<icon>$INFO[window.property(LatestMovie.8.Thumb)]</icon>
+					<label>$INFO[Window.Property(LatestMovie.8.Title)]</label>
+					<label2>$INFO[Window.Property(LatestMovie.8.Year)]$INFO[Window.Property(LatestMovie.8.RunningTime), • , $LOCALIZE[12391]]</label2>
+					<property name="Plot">$INFO[window.property(LatestMovie.8.Plot)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestMovie.8.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestMovie.8.Title))</visible>
+					<visible>Container(20).HasFocus(2)</visible>
+				</item>
+				<item id="9">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.9.Path)])</onclick>
+					<icon>$INFO[window.property(LatestMovie.9.Thumb)]</icon>
+					<label>$INFO[Window.Property(LatestMovie.9.Title)]</label>
+					<label2>$INFO[Window.Property(LatestMovie.9.Year)]$INFO[Window.Property(LatestMovie.9.RunningTime), • , $LOCALIZE[12391]]</label2>
+					<property name="Plot">$INFO[window.property(LatestMovie.9.Plot)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestMovie.9.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestMovie.9.Title))</visible>
+					<visible>Container(20).HasFocus(2)</visible>
+				</item>
+				<item id="10">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.10.Path)])</onclick>
+					<icon>$INFO[window.property(LatestMovie.10.Thumb)]</icon>
+					<label>$INFO[Window.Property(LatestMovie.10.Title)]</label>
+					<label2>$INFO[Window.Property(LatestMovie.10.Year)]$INFO[Window.Property(LatestMovie.10.RunningTime), • , $LOCALIZE[12391]]</label2>
+					<property name="Plot">$INFO[window.property(LatestMovie.10.Plot)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestMovie.10.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestMovie.10.Title))</visible>
+					<visible>Container(20).HasFocus(2)</visible>
+				</item>
+			</content>
+		</control>
+	</include>
+	
+	<include name="RecentlyAddedEpisodes">
+		<control type="wraplist" id="81">
+			<visible allowhiddenfocus="true">Control.HasFocus(81) + ![Container(20).OnScrollNext | Container(20).OnScrollPrevious | Container(20).Scrolling]</visible>
+			<!-- VisibleFadeEffectRecent -->
+			<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout">Hidden</animation>
+			<animation effect="fade" start="0" end="100" time="300" tween="sine" easing="inout">Visible</animation>
+			<animation effect="slide" start="0,-55" end="0,0" time="350" tween="sine" easing="inout" condition="Control.HasFocus(81) + IsEmpty(Window.Property(Movement))" reversible="false">Conditional</animation>
+			<animation effect="slide" start="0,55" end="0,0" time="350" tween="sine" easing="inout" condition="Control.HasFocus(81) + !IsEmpty(Window.Property(Movement))" reversible="false">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-55" time="350" tween="sine" easing="inout" condition="!Control.HasFocus(81) + !IsEmpty(Window.Property(Movement))" reversible="false">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,55" time="350" tween="sine" easing="inout" condition="!Control.HasFocus(81) + IsEmpty(Window.Property(Movement))" reversible="false">Conditional</animation>
+			<posx>-155</posx>
+			<posy>210</posy>
+			<width>1900</width>
+			<height>800</height>
+			<onleft>81</onleft>
+			<onright>81</onright>
+			<onup>SetProperty(Movement,1)</onup>
+			<onup>83</onup>
+			<ondown>ClearProperty(Movement)</ondown>
+			<ondown>82</ondown>
+			<onback>ClearProperty(Movement)</onback>
+			<onback>20</onback>
+			<viewtype label="535">List</viewtype>
+			<scrolltime tween="Quadratic" easing="out">300</scrolltime>
+			<orientation>horizontal</orientation>
+			<preloaditems>2</preloaditems>
+			<focusposition>1</focusposition>
+			<itemlayout condition="Container(20).HasFocus(1)" width="200" height="280">
+				<control type="image">
+					<width>200</width>
+					<height>280</height>
+					<colordiffuse>FFbbbbbb</colordiffuse>
+					<aspectratio aligny="center" align="center">stretch</aspectratio>
+					<texture background="true" diffuse="overlays/skin_widgets/poster_diffuse_nf.png" fallback="thumbs/fallback_poster.png">$INFO[ListItem.Icon]</texture>
+				</control>
+				<control type="group">
+					<visible>![IsEmpty(ListItem.Property(LatestEpisode1)) | IsEmpty(ListItem.Property(LatestEpisode2)) | IsEmpty(ListItem.Property(LatestEpisode3)) | IsEmpty(ListItem.Property(LatestEpisode4))]</visible>
+					<control type="image">
+						<width>100</width>
+						<height>140</height>
+						<colordiffuse>FFbbbbbb</colordiffuse>
+						<aspectratio aligny="center" align="center">stretch</aspectratio>
+						<texture background="true" diffuse="overlays/skin_widgets/poster_diffuse_nf.png">$INFO[ListItem.Property(LatestEpisode1)]</texture>
+					</control>
+					<control type="image">
+						<posy>140</posy>
+						<width>100</width>
+						<height>140</height>
+						<colordiffuse>FFbbbbbb</colordiffuse>
+						<aspectratio aligny="center" align="center">stretch</aspectratio>
+						<texture background="true" diffuse="overlays/skin_widgets/poster_diffuse_nf.png">$INFO[ListItem.Property(LatestEpisode3)]</texture>
+					</control>
+					<control type="image">
+						<posx>100</posx>
+						<width>100</width>
+						<height>140</height>
+						<colordiffuse>FFbbbbbb</colordiffuse>
+						<aspectratio aligny="center" align="center">stretch</aspectratio>
+						<texture background="true" diffuse="overlays/skin_widgets/poster_diffuse_nf.png">$INFO[ListItem.Property(LatestEpisode2)]</texture>
+					</control>
+					<control type="image">
+						<posx>100</posx>
+						<posy>140</posy>
+						<width>100</width>
+						<height>140</height>
+						<colordiffuse>FFbbbbbb</colordiffuse>
+						<aspectratio aligny="center" align="center">stretch</aspectratio>
+						<texture background="true" diffuse="overlays/skin_widgets/poster_diffuse_nf.png">$INFO[ListItem.Property(LatestEpisode4)]</texture>
+					</control>
+				</control>
+			</itemlayout>
+			<focusedlayout condition="Container(20).HasFocus(1)" width="200" height="280">
+				<control type="group">
+					<animation type="Focus" reversible="false" condition="Container(81).OnNext">
+						<effect type="fade" start="20" end="100" time="300" delay="100" tween="sine" easing="out" />
+					</animation>
+					<animation type="Focus" reversible="false" condition="Container(81).OnPrevious">
+						<effect type="fade" start="20" end="100" time="300" delay="100" tween="sine" easing="out" />
+					</animation>
+					<control type="image">
+						<width>200</width>
+						<height>280</height>
+						<aspectratio aligny="center" align="center">stretch</aspectratio>
+						<texture background="true" fallback="thumbs/fallback_poster.png">$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="group">
+						<visible>![IsEmpty(ListItem.Property(LatestEpisode1)) | IsEmpty(ListItem.Property(LatestEpisode2)) | IsEmpty(ListItem.Property(LatestEpisode3)) | IsEmpty(ListItem.Property(LatestEpisode4))]</visible>
+						<control type="image">
+							<width>100</width>
+							<height>140</height>
+							<aspectratio aligny="center" align="center">stretch</aspectratio>
+							<texture background="true">$INFO[ListItem.Property(LatestEpisode1)]</texture>
+						</control>
+						<control type="image">
+							<posy>140</posy>
+							<width>100</width>
+							<height>140</height>
+							<aspectratio aligny="center" align="center">stretch</aspectratio>
+							<texture background="true">$INFO[ListItem.Property(LatestEpisode3)]</texture>
+						</control>
+						<control type="image">
+							<posx>100</posx>
+							<width>100</width>
+							<height>140</height>
+							<aspectratio aligny="center" align="center">stretch</aspectratio>
+							<texture background="true">$INFO[ListItem.Property(LatestEpisode2)]</texture>
+						</control>
+						<control type="image">
+							<posx>100</posx>
+							<posy>140</posy>
+							<width>100</width>
+							<height>140</height>
+							<aspectratio aligny="center" align="center">stretch</aspectratio>
+							<texture background="true">$INFO[ListItem.Property(LatestEpisode4)]</texture>
+						</control>
+					</control>
+				</control>
+				<control type="group">
+					<posx>200</posx>
+					<control type="image.">
+						<width>1350</width>
+						<height>280</height>
+						<aspectratio align="center">stretch</aspectratio>
+						<texture background="true">overlays/skin_widgets/title_shadow.png</texture>
+					</control>
+					<control type="image.">
+						<posx>-650</posx>
+						<width>450</width>
+						<height>280</height>
+						<aspectratio align="center">stretch</aspectratio>
+						<texture background="true" flipx="true">overlays/skin_widgets/title_shadow.png</texture>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>200</posy>
+						<height>30</height>
+						<width>800</width>
+						<textcolor>white</textcolor>
+						<shadowcolor>99000000</shadowcolor>
+						<font>FontSize_38</font>
+						<scrollout>false</scrollout>
+						<pauseatend>200</pauseatend>
+						<scrollspeed>30</scrollspeed>
+						<align>left</align>
+						<label>$INFO[ListItem.label]</label>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>230</posy>
+						<height>30</height>
+						<width>800</width>
+						<textcolor>77white</textcolor>
+						<shadowcolor>99000000</shadowcolor>
+						<font>FontSize_22</font>
+						<scrollout>false</scrollout>
+						<pauseatend>200</pauseatend>
+						<scrollspeed>30</scrollspeed>
+						<align>left</align>
+						<label>$INFO[ListItem.label2]</label>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>230</posy>
+						<height>30</height>
+						<width>800</width>
+						<textcolor>77white</textcolor>
+						<shadowcolor>99000000</shadowcolor>
+						<font>FontSize_22</font>
+						<scrollout>false</scrollout>
+						<pauseatend>200</pauseatend>
+						<scrollspeed>30</scrollspeed>
+						<align>left</align>
+						<label>$INFO[ListItem.Property(Label3)]</label>
+					</control>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="0">
+					<label>[COLOR=blue]$LOCALIZE[31245][/COLOR]</label>
+					<property name="Label3">$LOCALIZE[31206]</property>
+					<onclick>ActivateWindow(VideoLibrary,RecentlyAddedEpisodes,return)</onclick>
+					<property name="LatestEpisode1">$INFO[Window.Property(LatestEpisode.1.ShowThumb)]</property>
+					<property name="LatestEpisode2">$INFO[Window.Property(LatestEpisode.2.ShowThumb)]</property>
+					<property name="LatestEpisode3">$INFO[Window.Property(LatestEpisode.3.ShowThumb)]</property>
+					<property name="LatestEpisode4">$INFO[Window.Property(LatestEpisode.4.ShowThumb)]</property>
+					<visible>Container(20).HasFocus(1)</visible>
+				</item>
+				<item id="1">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.1.Path)])</onclick>
+					<icon>$INFO[window.property(LatestEpisode.1.ShowThumb)]</icon>
+					<label>$INFO[Window.Property(LatestEpisode.1.ShowTitle)]</label>
+					<label2>$INFO[Window.Property(LatestEpisode.1.EpisodeSeason),]$INFO[Window.Property(LatestEpisode.1.EpisodeNumber),x,. ]$INFO[Window.Property(LatestEpisode.1.EpisodeTitle)]</label2>
+					<property name="Plot">$INFO[window.property(LatestEpisode.1.Plot)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestEpisode.1.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestEpisode.1.ShowTitle))</visible>
+					<visible>Container(20).HasFocus(1)</visible>
+				</item>
+				<item id="2">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.2.Path)])</onclick>
+					<icon>$INFO[window.property(LatestEpisode.2.ShowThumb)]</icon>
+					<label>$INFO[Window.Property(LatestEpisode.2.ShowTitle)]</label>
+					<label2>$INFO[Window.Property(LatestEpisode.2.EpisodeSeason),]$INFO[Window.Property(LatestEpisode.2.EpisodeNumber),x,. ]$INFO[Window.Property(LatestEpisode.2.EpisodeTitle)]</label2>
+					<property name="Plot">$INFO[window.property(LatestEpisode.2.Plot)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestEpisode.2.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestEpisode.2.ShowTitle))</visible>
+					<visible>Container(20).HasFocus(1)</visible>
+				</item>
+				<item id="3">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.3.Path)])</onclick>
+					<icon>$INFO[window.property(LatestEpisode.3.ShowThumb)]</icon>
+					<label>$INFO[Window.Property(LatestEpisode.3.ShowTitle)]</label>
+					<label2>$INFO[Window.Property(LatestEpisode.3.EpisodeSeason),]$INFO[Window.Property(LatestEpisode.3.EpisodeNumber),x,. ]$INFO[Window.Property(LatestEpisode.3.EpisodeTitle)]</label2>
+					<property name="Plot">$INFO[window.property(LatestEpisode.3.Plot)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestEpisode.3.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestEpisode.3.ShowTitle))</visible>
+					<visible>Container(20).HasFocus(1)</visible>
+				</item>
+				<item id="4">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.4.Path)])</onclick>
+					<icon>$INFO[window.property(LatestEpisode.4.ShowThumb)]</icon>
+					<label>$INFO[Window.Property(LatestEpisode.4.ShowTitle)]</label>
+					<label2>$INFO[Window.Property(LatestEpisode.4.EpisodeSeason),]$INFO[Window.Property(LatestEpisode.4.EpisodeNumber),x,. ] $INFO[Window.Property(LatestEpisode.4.EpisodeTitle)]</label2>
+					<property name="Plot">$INFO[window.property(LatestEpisode.4.Plot)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestEpisode.4.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestEpisode.4.ShowTitle))</visible>
+					<visible>Container(20).HasFocus(1)</visible>
+				</item>
+				<item id="5">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.5.Path)])</onclick>
+					<icon>$INFO[window.property(LatestEpisode.5.ShowThumb)]</icon>
+					<label>$INFO[Window.Property(LatestEpisode.5.ShowTitle)]</label>
+					<label2>$INFO[Window.Property(LatestEpisode.5.EpisodeSeason),]$INFO[Window.Property(LatestEpisode.5.EpisodeNumber),x,. ] $INFO[Window.Property(LatestEpisode.5.EpisodeTitle)]</label2>
+					<property name="Plot">$INFO[window.property(LatestEpisode.5.Plot)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestEpisode.5.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestEpisode.5.ShowTitle))</visible>
+					<visible>Container(20).HasFocus(1)</visible>
+				</item>
+				<item id="6">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.6.Path)])</onclick>
+					<icon>$INFO[window.property(LatestEpisode.6.ShowThumb)]</icon>
+					<label>$INFO[Window.Property(LatestEpisode.6.ShowTitle)]</label>
+					<label2>$INFO[Window.Property(LatestEpisode.6.EpisodeSeason),]$INFO[Window.Property(LatestEpisode.6.EpisodeNumber),x,. ] $INFO[Window.Property(LatestEpisode.6.EpisodeTitle)]</label2>
+					<property name="Plot">$INFO[window.property(LatestEpisode.6.Plot)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestEpisode.6.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestEpisode.6.ShowTitle))</visible>
+					<visible>Container(20).HasFocus(1)</visible>
+				</item>
+				<item id="7">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.7.Path)])</onclick>
+					<icon>$INFO[window.property(LatestEpisode.7.ShowThumb)]</icon>
+					<label>$INFO[Window.Property(LatestEpisode.7.ShowTitle)]</label>
+					<label2>$INFO[Window.Property(LatestEpisode.7.EpisodeSeason),]$INFO[Window.Property(LatestEpisode.7.EpisodeNumber),x,. ] $INFO[Window.Property(LatestEpisode.7.EpisodeTitle)]</label2>
+					<property name="Plot">$INFO[window.property(LatestEpisode.7.Plot)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestEpisode.7.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestEpisode.7.ShowTitle))</visible>
+					<visible>Container(20).HasFocus(1)</visible>
+				</item>
+				<item id="8">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.8.Path)])</onclick>
+					<icon>$INFO[window.property(LatestEpisode.8.ShowThumb)]</icon>
+					<label>$INFO[Window.Property(LatestEpisode.8.ShowTitle)]</label>
+					<label2>$INFO[Window.Property(LatestEpisode.8.EpisodeSeason),]$INFO[Window.Property(LatestEpisode.8.EpisodeNumber),x,. ] $INFO[Window.Property(LatestEpisode.8.EpisodeTitle)]</label2>
+					<property name="Plot">$INFO[window.property(LatestEpisode.8.Plot)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestEpisode.8.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestEpisode.8.ShowTitle))</visible>
+					<visible>Container(20).HasFocus(1)</visible>
+				</item>
+				<item id="9">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.9.Path)])</onclick>
+					<icon>$INFO[window.property(LatestEpisode.9.ShowThumb)]</icon>
+					<label>$INFO[Window.Property(LatestEpisode.9.ShowTitle)]</label>
+					<label2>$INFO[Window.Property(LatestEpisode.9.EpisodeSeason),]$INFO[Window.Property(LatestEpisode.9.EpisodeNumber),x,. ] $INFO[Window.Property(LatestEpisode.9.EpisodeTitle)]</label2>
+					<property name="Plot">$INFO[window.property(LatestEpisode.9.Plot)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestEpisode.9.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestEpisode.9.ShowTitle))</visible>
+					<visible>Container(20).HasFocus(1)</visible>
+				</item>
+				<item id="10">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.10.Path)])</onclick>
+					<icon>$INFO[window.property(LatestEpisode.10.ShowThumb)]</icon>
+					<label>$INFO[Window.Property(LatestEpisode.10.ShowTitle)]</label>
+					<label2>$INFO[Window.Property(LatestEpisode.10.EpisodeSeason),]$INFO[Window.Property(LatestEpisode.10.EpisodeNumber),x,. ] $INFO[Window.Property(LatestEpisode.10.EpisodeTitle)]</label2>
+					<property name="Plot">$INFO[window.property(LatestEpisode.10.Plot)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestEpisode.10.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestEpisode.10.ShowTitle))</visible>
+					<visible>Container(20).HasFocus(1)</visible>
+				</item>
 
+			</content>
+		</control>
+
+	</include>
+	
+	<include name="RecentlyAddedMusic">
+		<control type="wraplist" id="81">
+			<visible allowhiddenfocus="true">Control.HasFocus(81) + ![Container(20).OnScrollNext | Container(20).OnScrollPrevious | Container(20).Scrolling]</visible>
+			<!-- VisibleFadeEffectRecent -->
+			<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout">Hidden</animation>
+			<animation effect="fade" start="0" end="100" time="300" tween="sine" easing="inout">Visible</animation>
+			<animation effect="slide" start="0,-55" end="0,0" time="350" tween="sine" easing="inout" condition="Control.HasFocus(81) + IsEmpty(Window.Property(Movement))" reversible="false">Conditional</animation>
+			<animation effect="slide" start="0,55" end="0,0" time="350" tween="sine" easing="inout" condition="Control.HasFocus(81) + !IsEmpty(Window.Property(Movement))" reversible="false">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-55" time="350" tween="sine" easing="inout" condition="!Control.HasFocus(81) + !IsEmpty(Window.Property(Movement))" reversible="false">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,55" time="350" tween="sine" easing="inout" condition="!Control.HasFocus(81) + IsEmpty(Window.Property(Movement))" reversible="false">Conditional</animation>
+			<posx>-155</posx>
+			<posy>210</posy>
+			<width>1900</width>
+			<height>800</height>
+			<onleft>81</onleft>
+			<onright>81</onright>
+			<onup>SetProperty(Movement,1)</onup>
+			<onup>83</onup>
+			<ondown>ClearProperty(Movement)</ondown>
+			<ondown>82</ondown>
+			<onback>ClearProperty(Movement)</onback>
+			<onback>20</onback>
+			<viewtype label="535">List</viewtype>
+			<scrolltime tween="Quadratic" easing="out">300</scrolltime>
+			<orientation>horizontal</orientation>
+			<preloaditems>2</preloaditems>
+			<focusposition>1</focusposition>
+			<!-- Recent List Music -->
+			<itemlayout condition="Container(20).HasFocus(3)" width="240" height="240">
+				<control type="group">
+					<posx>-40</posx>
+					<posy>50</posy>
+					<control type="image">
+						<width>240</width>
+						<height>240</height>
+						<colordiffuse>FFbbbbbb</colordiffuse>
+						<aspectratio aligny="center" align="center">stretch</aspectratio>
+						<texture background="true" diffuse="overlays/skin_widgets/poster_diffuse_nf.png" fallback="thumbs/fallback_square.png">$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="group">
+						<visible>![IsEmpty(ListItem.Property(LatestAlbum1)) | IsEmpty(ListItem.Property(LatestAlbum2)) | IsEmpty(ListItem.Property(LatestAlbum3)) | IsEmpty(ListItem.Property(LatestAlbum4))]</visible>
+						<control type="image">
+							<width>120</width>
+							<height>120</height>
+							<colordiffuse>FFbbbbbb</colordiffuse>
+							<aspectratio aligny="center" align="center">stretch</aspectratio>
+							<texture background="true" diffuse="overlays/skin_widgets/poster_diffuse_nf.png">$INFO[ListItem.Property(LatestAlbum1)]</texture>
+						</control>
+						<control type="image">
+							<posy>120</posy>
+							<width>120</width>
+							<height>120</height>
+							<colordiffuse>FFbbbbbb</colordiffuse>
+							<aspectratio aligny="center" align="center">stretch</aspectratio>
+							<texture background="true" diffuse="overlays/skin_widgets/poster_diffuse_nf.png">$INFO[ListItem.Property(LatestAlbum3)]</texture>
+						</control>
+						<control type="image">
+							<posx>120</posx>
+							<width>120</width>
+							<height>120</height>
+							<colordiffuse>FFbbbbbb</colordiffuse>
+							<aspectratio aligny="center" align="center">stretch</aspectratio>
+							<texture background="true" diffuse="overlays/skin_widgets/poster_diffuse_nf.png">$INFO[ListItem.Property(LatestAlbum2)]</texture>
+						</control>
+						<control type="image">
+							<posx>120</posx>
+							<posy>120</posy>
+							<width>120</width>
+							<height>120</height>
+							<colordiffuse>FFbbbbbb</colordiffuse>
+							<aspectratio aligny="center" align="center">stretch</aspectratio>
+							<texture background="true" diffuse="overlays/skin_widgets/poster_diffuse_nf.png">$INFO[ListItem.Property(LatestAlbum4)]</texture>
+						</control>
+					</control>
+				</control>
+			</itemlayout>
+			<focusedlayout condition="Container(20).HasFocus(3)" width="240" height="240">
+				<control type="group">
+					<posx>-40</posx>
+					<posy>50</posy>
+					<animation type="Focus" reversible="false" condition="Container(81).OnNext">
+						<effect type="fade" start="20" end="100" time="300" delay="100" tween="sine" easing="out" />
+					</animation>
+					<animation type="Focus" reversible="false" condition="Container(81).OnPrevious">
+						<effect type="fade" start="20" end="100" time="300" delay="100" tween="sine" easing="out" />
+					</animation>
+					<control type="image">
+						<width>240</width>
+						<height>240</height>
+						<aspectratio aligny="center" align="center">stretch</aspectratio>
+						<texture background="true" fallback="thumbs/fallback_square.png">$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="group">
+						<visible>![IsEmpty(ListItem.Property(LatestAlbum1)) | IsEmpty(ListItem.Property(LatestAlbum2)) | IsEmpty(ListItem.Property(LatestAlbum3)) | IsEmpty(ListItem.Property(LatestAlbum4))]</visible>
+						<control type="image">
+							<width>120</width>
+							<height>120</height>
+							<aspectratio aligny="center" align="center">stretch</aspectratio>
+							<texture background="true">$INFO[ListItem.Property(LatestAlbum1)]</texture>
+						</control>
+						<control type="image">
+							<posy>120</posy>
+							<width>120</width>
+							<height>120</height>
+							<aspectratio aligny="center" align="center">stretch</aspectratio>
+							<texture background="true">$INFO[ListItem.Property(LatestAlbum3)]</texture>
+						</control>
+						<control type="image">
+							<posx>120</posx>
+							<width>120</width>
+							<height>120</height>
+							<aspectratio aligny="center" align="center">stretch</aspectratio>
+							<texture background="true">$INFO[ListItem.Property(LatestAlbum2)]</texture>
+						</control>
+						<control type="image">
+							<posx>120</posx>
+							<posy>120</posy>
+							<width>120</width>
+							<height>120</height>
+							<aspectratio aligny="center" align="center">stretch</aspectratio>
+							<texture background="true">$INFO[ListItem.Property(LatestAlbum4)]</texture>
+						</control>
+					</control>
+				</control>
+				<control type="group">
+					<posx>200</posx>
+					<posy>50</posy>
+					<control type="image.">
+						<width>1350</width>
+						<height>240</height>
+						<aspectratio align="center">stretch</aspectratio>
+						<texture background="true">overlays/skin_widgets/title_shadow.png</texture>
+					</control>
+					<control type="image.">
+						<posx>-690</posx>
+						<width>450</width>
+						<height>240</height>
+						<aspectratio align="center">stretch</aspectratio>
+						<texture background="true" flipx="true">overlays/skin_widgets/title_shadow.png</texture>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>160</posy>
+						<height>30</height>
+						<width>800</width>
+						<textcolor>white</textcolor>
+						<font>FontSize_38</font>
+						<scrollout>false</scrollout>
+						<pauseatend>200</pauseatend>
+						<scrollspeed>30</scrollspeed>
+						<align>left</align>
+						<label>$INFO[ListItem.label]</label>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>190</posy>
+						<height>30</height>
+						<width>800</width>
+						<textcolor>77white</textcolor>
+						<shadowcolor>99000000</shadowcolor>
+						<font>FontSize_22</font>
+						<scrollout>false</scrollout>
+						<pauseatend>200</pauseatend>
+						<scrollspeed>30</scrollspeed>
+						<align>left</align>
+						<label>$INFO[ListItem.label2]</label>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>190</posy>
+						<height>30</height>
+						<width>800</width>
+						<textcolor>77white</textcolor>
+						<shadowcolor>99000000</shadowcolor>
+						<font>FontSize_22</font>
+						<scrollout>false</scrollout>
+						<pauseatend>200</pauseatend>
+						<scrollspeed>30</scrollspeed>
+						<align>left</align>
+						<label>$INFO[ListItem.Property(Label3)]</label>
+					</control>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="0">
+					<label>[COLOR=blue]$LOCALIZE[31246][/COLOR]</label>
+					<property name="Label3">$LOCALIZE[31207]</property>
+					<onclick>ActivateWindow(MusicLibrary,RecentlyAddedAlbums,return)</onclick>
+					<property name="LatestAlbum1">$INFO[Window.Property(LatestAlbum.1.Thumb)]</property>
+					<property name="LatestAlbum2">$INFO[Window.Property(LatestAlbum.2.Thumb)]</property>
+					<property name="LatestAlbum3">$INFO[Window.Property(LatestAlbum.3.Thumb)]</property>
+					<property name="LatestAlbum4">$INFO[Window.Property(LatestAlbum.4.Thumb)]</property>
+					<visible>Container(20).HasFocus(3)</visible>
+				</item>
+				<item id="1">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia(&quot;$INFO[Window.Property(LatestAlbum.1.Path)]&quot;)</onclick>
+					<icon>$INFO[window.property(LatestAlbum.1.Thumb)]</icon>
+					<label>$INFO[Window.Property(LatestAlbum.1.Artist)]</label>
+					<label2>$INFO[Window.Property(LatestAlbum.1.Title)]</label2>
+					<property name="Year">$INFO[window.property(LatestAlbum.1.Year)]</property>
+					<property name="Rating">$INFO[window.property(LatestAlbum.1.Rating)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestAlbum.1.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestAlbum.1.Title))</visible>
+					<visible>Container(20).HasFocus(3)</visible>
+				</item>
+				<item id="2">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia(&quot;$INFO[Window.Property(LatestAlbum.2.Path)]&quot;)</onclick>
+					<icon>$INFO[window.property(LatestAlbum.2.Thumb)]</icon>
+					<label>$INFO[Window.Property(LatestAlbum.2.Artist)]</label>
+					<label2>$INFO[Window.Property(LatestAlbum.2.Title)]</label2>
+					<property name="Year">$INFO[window.property(LatestAlbum.2.Year)]</property>
+					<property name="Rating">$INFO[window.property(LatestAlbum.2.Rating)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestAlbum.2.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestAlbum.2.Title))</visible>
+					<visible>Container(20).HasFocus(3)</visible>
+				</item>
+				<item id="34">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia(&quot;$INFO[Window.Property(LatestAlbum.3.Path)]&quot;)</onclick>
+					<icon>$INFO[window.property(LatestAlbum.3.Thumb)]</icon>
+					<label>$INFO[Window.Property(LatestAlbum.3.Artist)]</label>
+					<label2>$INFO[Window.Property(LatestAlbum.3.Title)]</label2>
+					<property name="Year">$INFO[window.property(LatestAlbum.3.Year)]</property>
+					<property name="Rating">$INFO[window.property(LatestAlbum.3.Rating)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestAlbum.3.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestAlbum.3.Title))</visible>
+					<visible>Container(20).HasFocus(3)</visible>
+				</item>
+				<item id="4">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia(&quot;$INFO[Window.Property(LatestAlbum.4.Path)]&quot;)</onclick>
+					<icon>$INFO[window.property(LatestAlbum.4.Thumb)]</icon>
+					<label>$INFO[Window.Property(LatestAlbum.4.Artist)]</label>
+					<label2>$INFO[Window.Property(LatestAlbum.4.Title)]</label2>
+					<property name="Year">$INFO[window.property(LatestAlbum.4.Year)]</property>
+					<property name="Rating">$INFO[window.property(LatestAlbum.4.Rating)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestAlbum.4.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestAlbum.4.Title))</visible>
+					<visible>Container(20).HasFocus(3)</visible>
+				</item>
+				<item id="5">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia(&quot;$INFO[Window.Property(LatestAlbum.5.Path)]&quot;)</onclick>
+					<icon>$INFO[window.property(LatestAlbum.5.Thumb)]</icon>
+					<label>$INFO[Window.Property(LatestAlbum.5.Artist)]</label>
+					<label2>$INFO[Window.Property(LatestAlbum.5.Title)]</label2>
+					<property name="Year">$INFO[window.property(LatestAlbum.5.Year)]</property>
+					<property name="Rating">$INFO[window.property(LatestAlbum.5.Rating)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestAlbum.5.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestAlbum.5.Title))</visible>
+					<visible>Container(20).HasFocus(3)</visible>
+				</item>	
+				<item id="6">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia(&quot;$INFO[Window.Property(LatestAlbum.6.Path)]&quot;)</onclick>
+					<icon>$INFO[window.property(LatestAlbum.6.Thumb)]</icon>
+					<label>$INFO[Window.Property(LatestAlbum.6.Artist)]</label>
+					<label2>$INFO[Window.Property(LatestAlbum.6.Title)]</label2>
+					<property name="Year">$INFO[window.property(LatestAlbum.6.Year)]</property>
+					<property name="Rating">$INFO[window.property(LatestAlbum.6.Rating)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestAlbum.6.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestAlbum.6.Title))</visible>
+					<visible>Container(20).HasFocus(3)</visible>
+				</item>
+				<item id="7">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia(&quot;$INFO[Window.Property(LatestAlbum.7.Path)]&quot;)</onclick>
+					<icon>$INFO[window.property(LatestAlbum.7.Thumb)]</icon>
+					<label>$INFO[Window.Property(LatestAlbum.7.Artist)]</label>
+					<label2>$INFO[Window.Property(LatestAlbum.7.Title)]</label2>
+					<property name="Year">$INFO[window.property(LatestAlbum.7.Year)]</property>
+					<property name="Rating">$INFO[window.property(LatestAlbum.7.Rating)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestAlbum.7.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestAlbum.7.Title))</visible>
+					<visible>Container(20).HasFocus(3)</visible>
+				</item>
+				<item id="8">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia(&quot;$INFO[Window.Property(LatestAlbum.8.Path)]&quot;)</onclick>
+					<icon>$INFO[window.property(LatestAlbum.8.Thumb)]</icon>
+					<label>$INFO[Window.Property(LatestAlbum.8.Artist)]</label>
+					<label2>$INFO[Window.Property(LatestAlbum.8.Title)]</label2>
+					<property name="Year">$INFO[window.property(LatestAlbum.8.Year)]</property>
+					<property name="Rating">$INFO[window.property(LatestAlbum.8.Rating)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestAlbum.8.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestAlbum.8.Title))</visible>
+					<visible>Container(20).HasFocus(3)</visible>
+				</item>
+				<item id="9">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia(&quot;$INFO[Window.Property(LatestAlbum.9.Path)]&quot;)</onclick>
+					<icon>$INFO[window.property(LatestAlbum.9.Thumb)]</icon>
+					<label>$INFO[Window.Property(LatestAlbum.9.Artist)]</label>
+					<label2>$INFO[Window.Property(LatestAlbum.9.Title)]</label2>
+					<property name="Year">$INFO[window.property(LatestAlbum.9.Year)]</property>
+					<property name="Rating">$INFO[window.property(LatestAlbum.9.Rating)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestAlbum.9.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestAlbum.9.Title))</visible>
+					<visible>Container(20).HasFocus(3)</visible>
+				</item>
+				<item id="10">
+					<onclick>SetFocus(20)</onclick>
+					<onclick>PlayMedia(&quot;$INFO[Window.Property(LatestAlbum.10.Path)]&quot;)</onclick>
+					<icon>$INFO[window.property(LatestAlbum.10.Thumb)]</icon>
+					<label>$INFO[Window.Property(LatestAlbum.10.Artist)]</label>
+					<label2>$INFO[Window.Property(LatestAlbum.10.Title)]</label2>
+					<property name="Year">$INFO[window.property(LatestAlbum.10.Year)]</property>
+					<property name="Rating">$INFO[window.property(LatestAlbum.10.Rating)]</property>
+					<property name="FanartImage">$INFO[Window.Property(LatestAlbum.10.Fanart)]</property>
+					<visible>!IsEmpty(Window.Property(LatestAlbum.10.Title))</visible>
+					<visible>Container(20).HasFocus(3)</visible>
+				</item>
+			</content>
+		</control>
+	</include>
+	
+	<include name="RecentlyAddedInfo">
+		<control type="group">
+			<posx>45</posx>
+			<posy>25</posy>
+			<animation type="WindowClose" reversible="true">
+				<effect type="fade" start="100" end="0" time="250" delay="250" tween="sine" easing="out" />
+				<effect type="slide" start="0,0" end="0,-55" time="300" delay="250" tween="sine" easing="out" />
+			</animation>
+			<animation type="Conditional" reversible="false" condition="![Window.IsActive(ShutdownMenu) | Window.IsActive(ContextMenu)]">
+				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
+				<effect type="slide" start="0,55" end="0,0" time="350" tween="cubic" easing="out" />
+			</animation>
+			<animation type="Conditional" reversible="false" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(ContextMenu)">
+				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+				<effect type="slide" start="0,0" end="0,55" time="350" tween="sine" easing="out" />
+			</animation>
+			<control type="grouplist">
+				<visible>Control.HasFocus(81)</visible>
+				<!-- VisibleFadeEffectRecent -->
+				<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout">Hidden</animation>
+				<animation effect="fade" start="0" end="100" time="300" tween="sine" easing="inout">Visible</animation>
+				<animation effect="slide" start="0,-55" end="0,0" time="350" tween="sine" easing="inout" condition="Control.HasFocus(81) + IsEmpty(Window.Property(Movement))" reversible="false">Conditional</animation>
+				<animation effect="slide" start="0,55" end="0,0" time="350" tween="sine" easing="inout" condition="Control.HasFocus(81) + !IsEmpty(Window.Property(Movement))" reversible="false">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,-55" time="350" tween="sine" easing="inout" condition="!Control.HasFocus(81) + !IsEmpty(Window.Property(Movement))" reversible="false">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,55" time="350" tween="sine" easing="inout" condition="!Control.HasFocus(81) + IsEmpty(Window.Property(Movement))" reversible="false">Conditional</animation>
+				<posx>0</posx>
+				<posy>0</posy>
+				<height>70</height>
+				<width>1000</width>
+				<align>left</align>
+				<itemgap>20</itemgap>
+				<orientation>horizontal</orientation>
+				<control type="label">
+					<include>TopBigLabel</include>
+					<label>$LOCALIZE[31241]</label>
+					<visible>Container(20).HasFocus(2)</visible>
+				</control>
+				<control type="label">
+					<include>TopBigLabel</include>
+					<label>$LOCALIZE[31242]</label>
+					<visible>Container(20).HasFocus(1)</visible>
+				</control>
+				<control type="label">
+					<include>TopBigLabel</include>
+					<label>$LOCALIZE[31243]</label>
+					<visible>Container(20).HasFocus(3)</visible>
+				</control>
+			</control>
+			<control type="group">
+				<visible>Control.HasFocus(81)</visible>
+				<!-- VisibleFadeEffectRecent -->
+				<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout">Hidden</animation>
+				<animation effect="fade" start="0" end="100" time="300" tween="sine" easing="inout">Visible</animation>
+				<animation effect="slide" start="0,-55" end="0,0" time="350" tween="sine" easing="inout" condition="Control.HasFocus(81) + IsEmpty(Window.Property(Movement))" reversible="false">Conditional</animation>
+				<animation effect="slide" start="0,55" end="0,0" time="350" tween="sine" easing="inout" condition="Control.HasFocus(81) + !IsEmpty(Window.Property(Movement))" reversible="false">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,-55" time="350" tween="sine" easing="inout" condition="!Control.HasFocus(81) + !IsEmpty(Window.Property(Movement))" reversible="false">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,55" time="350" tween="sine" easing="inout" condition="!Control.HasFocus(81) + IsEmpty(Window.Property(Movement))" reversible="false">Conditional</animation>
+				<control type="label">
+					<description>Page Count Label</description>
+					<posx>0</posx>
+					<posy>48</posy>
+					<width>300</width>
+					<height>20</height>
+					<font>FontSize_18</font>
+					<textcolor>blue</textcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[Container(81).NumItems,, $LOCALIZE[31025]]</label>
+				</control>
+			</control>
+		</control>
+	</include>
+	
 </includes>

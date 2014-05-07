@@ -1,6 +1,6 @@
 <includes>
 
-	<include name="HomeMainMenuContent">
+	<!-- <include name="HomeMainMenuContent">
 		<item id="0">
 			<label>$LOCALIZE[3]</label>
 			<onclick>ActivateWindow(Videos,files,return)</onclick>
@@ -56,11 +56,11 @@
 			<onclick>SetFocus(3)</onclick>
 			<visible>!Skin.HasSetting(HideHomeMenuSettingsButton)</visible>
 		</item>
-		<!-- <item id="11">
+		<item id="11">
 			<label>$LOCALIZE[31000]</label>
 			<onclick>ActivateWindowAndFocus(PVR, 32,0, 11,0)</onclick>
 			<visible>System.GetBool(pvrmanager.enabled)</visible>
-		</item> -->
+		</item>
 		<item id="12">
 			<label>$LOCALIZE[137]</label>
 			<onclick>XBMC.RunScript(script.globalsearch)</onclick>
@@ -77,9 +77,9 @@
 			<onclick>PlayDVD</onclick>
 			<visible>System.HasMediaDVD</visible>
 		</item>
-
+ -->
 		<!-- Custom Panels -->
-		<item id="15">
+		<!-- <item id="15">
 			<label>$INFO[Skin.String(CustomFavourite1.Label)]</label>
 			<onclick>$INFO[Skin.String(CustomFavourite1.Path)]</onclick>
 			<visible>!IsEmpty(Skin.String(CustomFavourite1.Path))</visible>
@@ -129,7 +129,7 @@
 			<onclick>$INFO[Skin.String(CustomFavourite10.Path)]</onclick>
 			<visible>!IsEmpty(Skin.String(CustomFavourite10.Path))</visible>
 		</item>
-	</include>
+	</include> -->
 
 	<include name="MyRecentlyAddedMediaContent">
 		<!-- Movies -->

@@ -167,11 +167,11 @@
 						<content>
 							<item id="1">
 								<label>20096</label>
-								<onclick>noop</onclick>
+								<onclick></onclick>
 							</item>
 							<item id="2">
 								<label>13200</label>
-								<onclick>noop</onclick>
+								<onclick></onclick>
 							</item>
 						</content>
 					</control>

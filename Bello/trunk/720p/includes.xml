@@ -345,7 +345,7 @@
 				<width>2</width>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
-				<onup>noop</onup>
+				<onup></onup>
 				<ondown condition="Window.IsVisible(AppearanceSettings) | Window.IsVisible(VideosSettings) | Window.IsVisible(MusicSettings) | Window.IsVisible(PicturesSettings) | Window.IsVisible(WeatherSettings) | Window.IsVisible(NetworkSettings) | Window.IsVisible(SystemSettings) | Window.IsVisible(Profiles)  | Window.IsVisible(SystemInfo) | Window.IsVisible(ProgramsSettings)">9001</ondown>
 				<ondown condition="Window.IsVisible(SkinSettings)">8000</ondown>
 				<orientation>horizontal</orientation>

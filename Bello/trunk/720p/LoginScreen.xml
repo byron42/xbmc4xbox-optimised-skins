@@ -88,8 +88,8 @@
 				<height>450</height>
 				<focusposition>1</focusposition>
 				<orientation>horizontal</orientation>
-				<onleft>noop</onleft>
-				<onright>noop</onright>
+				<onleft></onleft>
+				<onright></onright>
 				<onup>52</onup>
 				<ondown>52</ondown>
 				<itemlayout width="135">

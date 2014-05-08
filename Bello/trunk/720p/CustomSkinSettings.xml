@@ -131,37 +131,37 @@
 						<!-- General -->
 						<item id="1">
 							<label>128</label>
-							<onclick>noop</onclick>
+							<onclick></onclick>
 						</item>
 						<!-- Home Window -->
 						<item id="2">
 							<label>513</label>
-							<onclick>noop</onclick>
+							<onclick></onclick>
 						</item>
 						<!-- Home Menu -->
 						<item id="3">
 							<label>31098</label>
-							<onclick>noop</onclick>
+							<onclick></onclick>
 						</item>
 						<!-- Backgrounds -->
 						<item id="4">
 							<label>33069</label>
-							<onclick>noop</onclick>
+							<onclick></onclick>
 						</item>
 						<!-- Views -->
 						<item id="5">
 							<label>31158</label>
-							<onclick>noop</onclick>
+							<onclick></onclick>
 						</item>
 						<!-- Addons -->
 						<item id="6">
 							<label>24001</label>
-							<onclick>noop</onclick>
+							<onclick></onclick>
 						</item>
 						<!-- Quick Nav -->
 						<item id="7">
 							<label>31374</label>
-							<onclick>noop</onclick>
+							<onclick></onclick>
 						</item>
 					</content>
 				</control>

@@ -401,11 +401,11 @@
 		</control>
 		<control type="button" id="200">
 			<include>TopButton</include>
-			<onleft>noop</onleft>
-			<onright>noop</onright>
+			<onleft></onleft>
+			<onright></onright>
 			<onup>ClearProperty(ShowPlot,VideoOSD)</onup>
 			<onup>100</onup>
-			<ondown>noop</ondown>
+			<ondown></ondown>
 			<visible>!IsEmpty(VideoPlayer.Plot)</visible>
 		</control>
 

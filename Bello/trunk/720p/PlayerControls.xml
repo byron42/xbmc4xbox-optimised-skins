@@ -1741,8 +1741,8 @@
 						<texturefocus>-</texturefocus>
 						<texturenofocus>osd/miniplayer/nodvd.png</texturenofocus>
 						<enable>!VideoPlayer.HasMenu</enable>
-						<onleft>noop</onleft>
-						<onright>noop</onright>
+						<onleft></onleft>
+						<onright></onright>
 						<onup>150</onup>
 						<ondown>150</ondown>
 						<visible>!VideoPlayer.HasMenu</visible>

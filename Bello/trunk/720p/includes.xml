@@ -261,6 +261,17 @@
 		<aligny>center</aligny>
 		<scroll>false</scroll>
 	</include>
+<!-- ADDING FOR SETTINGS -->
+	<include name="TopSmallLabelSettings">
+		<height>65</height>
+		<width min="10" max="150">auto</width>
+		<font>FontSize_22</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>77000000</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<scroll>false</scroll>
+	</include>
 	<include name="TopBigLabel">
 		<height>50</height>
 		<width min="10" max="1280">auto</width>
@@ -499,6 +510,7 @@
 				</control>
 			</control>
 		</control>
+	
 	</include>
 
 	<include name="SettingsButton">

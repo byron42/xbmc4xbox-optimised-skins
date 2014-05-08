@@ -134,9 +134,9 @@
 		<!-- <include>HomeBackground</include> *******(not sure why this is not active right now)*******-->
 		
 		
-		<!-- RecentAndSkinWidgetsFanart -->
-		<!-- Recent list fanart -->
+<!--(((RecentAndSkinWidgetsFanart)))===========================================-->
 		
+		<!-- Recent list fanart -->
 		<control type="image">
 			<include>FullscreenDimensions</include>
 			<texture background="true">$INFO[Container(81).ListItem.Property(FanartImage)]</texture>
@@ -329,7 +329,7 @@
 						<!-- HomeMainMenuContent -->
 						<item id="0">
 							<label>$LOCALIZE[3]</label>
-							<onclick>ActivateWindow(VideoFiles,return)</onclick>
+							<onclick>ActivateWindow(VideoFiles)</onclick>
 							<visible>!Skin.HasSetting(ShowHomeMenuVideosButton)</visible>
 						</item>
 						<item id="1">
@@ -393,7 +393,7 @@
 						<item id="13">
 							<label>$LOCALIZE[31018]</label>
 							<onclick condition="IsEmpty(Skin.String(TrailersAddon_Path))">Skin.SetAddon(TrailersAddon_Path,xbmc.addon.video)</onclick>
-							<onclick condition="!IsEmpty(Skin.String(TrailersAddon_Path))">ActivateWindow(videos,plugin://$INFO[Skin.String(TrailersAddon_Path)])</onclick>
+							<onclick condition="!IsEmpty(Skin.String(TrailersAddon_Path))">ActivateWindow(videolibrary,plugin://$INFO[Skin.String(TrailersAddon_Path)])</onclick>
 							<!-- <visible>!Skin.HasSetting(HideHomeMenuTrailersButton)</visible> -->
 							<visible>false</visible>
 						</item>
@@ -1306,52 +1306,52 @@
 					</item>
 					<item id="2">
 						<label>$LOCALIZE[135]</label>
-						<onclick>ActivateWindow(videos,moviegenres,return)</onclick>
+						<onclick>ActivateWindow(videolibrary,moviegenres,return)</onclick>
 						<visible>Library.HasContent(Movies)</visible>
 					</item>
 					<item id="3">			
 						<label>$LOCALIZE[652]</label>
-						<onclick>ActivateWindow(videos,movieyears,return)</onclick>
+						<onclick>ActivateWindow(videolibrary,movieyears,return)</onclick>
 						<visible>Library.HasContent(Movies)</visible>
 					</item>
 					<item id="4">
 						<label>$LOCALIZE[344]</label>
-						<onclick>ActivateWindow(videos,movieactors,return)</onclick>
+						<onclick>ActivateWindow(videolibrary,movieactors,return)</onclick>
 						<visible>Library.HasContent(Movies)</visible>
 					</item>
 					<item id="5">
 						<label>$LOCALIZE[20348]</label>
-						<onclick>ActivateWindow(videos,moviedirectors,return)</onclick>
+						<onclick>ActivateWindow(videolibrary,moviedirectors,return)</onclick>
 						<visible>Library.HasContent(Movies)</visible>
 					</item>
 					<item id="6">
 						<label>$LOCALIZE[20388]</label>
-						<onclick>ActivateWindow(videos,moviestudios,return)</onclick>
+						<onclick>ActivateWindow(videolibrary,moviestudios,return)</onclick>
 						<visible>Library.HasContent(Movies)</visible>
 					</item>
 					<item id="7">
 						<label>$LOCALIZE[136]</label>
-						<onclick>ActivateWindow(videos,playlists,return)</onclick>
+						<onclick>ActivateWindow(videolibrary,playlists,return)</onclick>
 						<visible>Library.HasContent(Movies)</visible>
 					</item>
 					<item id="8">
 						<label>$LOCALIZE[20434]</label>
-						<onclick>ActivateWindow(Videos,MovieSets,return)</onclick>
+						<onclick>ActivateWindow(videolibrary,MovieSets,return)</onclick>
 						<visible>Library.HasContent(MovieSets)</visible>				
 					</item>
 					<item id="9">
 						<label>$LOCALIZE[14022]</label>
-						<onclick>ActivateWindow(videos,root)</onclick>
+						<onclick>ActivateWindow(videolibrary,root)</onclick>
 						<visible>Library.HasContent(Movies)</visible>
 					</item>
 					<item id="10">
 						<label>$LOCALIZE[744]</label>
-						<onclick>ActivateWindow(videos,files,return)</onclick>
+						<onclick>ActivateWindow(videofiles)</onclick>
 						<visible>Library.HasContent(Movies)</visible>
 					</item>
 					<item id="11">
 						<label>$LOCALIZE[1037]</label>
-						<onclick>ActivateWindow(videos,addons,return)</onclick>
+						<onclick>ActivateWindow(videolibrary,addons,return)</onclick>
 						<visible>Library.HasContent(Movies)</visible>
 					</item>
 				</content>
@@ -1388,44 +1388,44 @@
 				</item>
 				<item id="2">			
 					<label>$LOCALIZE[20388]</label>
-					<onclick>ActivateWindow(videos,tvshowstudios,return)</onclick>
+					<onclick>ActivateWindow(videolibrary,tvshowstudios,return)</onclick>
 					<visible>Library.HasContent(TVShows)</visible>
 				</item>
 				<item id="3">				
 					<label>$LOCALIZE[135]</label>
-					<onclick>ActivateWindow(videos,tvshowgenres,return)</onclick>
+					<onclick>ActivateWindow(videolibrary,tvshowgenres,return)</onclick>
 					<visible>Library.HasContent(TVShows)</visible>
 				</item>	
 				<item id="4">
 					<label>$LOCALIZE[344]</label>
-					<onclick>ActivateWindow(videos,tvshowactors,return)</onclick>		
+					<onclick>ActivateWindow(videolibrary,tvshowactors,return)</onclick>		
 					<visible>Library.HasContent(TVShows)</visible>		
 				</item>
 				<item id="5">
 					<label>$LOCALIZE[652]</label>
-					<onclick>ActivateWindow(videos,tvshowyears,return)</onclick>		
+					<onclick>ActivateWindow(videolibrary,tvshowyears,return)</onclick>		
 					<visible>Library.HasContent(TVShows)</visible>		
 				</item>
 				<item id="6">
 					<label>$LOCALIZE[136]</label>
-					<onclick>ActivateWindow(videos,playlists,return)</onclick>
+					<onclick>ActivateWindow(videolibrary,playlists,return)</onclick>
 					<visible>Library.HasContent(TVShows)</visible>
 				</item>
 				<item id="7">
 					<label>$LOCALIZE[14022]</label>
-					<onclick>ActivateWindow(videos,root)</onclick>
+					<onclick>ActivateWindow(videolibrary,root)</onclick>
 					<visible>Library.HasContent(TVShows)</visible>
 				</item>
 				<item id="8">
 					<label>$LOCALIZE[744]</label>
-					<onclick>ActivateWindow(videos,files,return)</onclick>
+					<onclick>ActivateWindow(videofiles,return)</onclick>
 					<visible>Library.HasContent(TVShows)</visible>
 				</item>
-				<item id="9">
+				<!-- <item id="9">
 					<label>$LOCALIZE[1037]</label>
 					<onclick>ActivateWindow(videos,addons,return)</onclick>
 					<visible>Library.HasContent(TVShows)</visible>
-				</item>	
+				</item>	 -->
 			</content>
 		</control>
 		
@@ -1891,19 +1891,19 @@
 					<label>10000</label>
 				</control>
 				<control type="label">
-					<include>TopSmallLabel</include>
+					<include>TopSmallLabelSettings</include>
 					<label>$LOCALIZE[1036]</label>
 					<animation effect="fade" start="100" end="70" time="200" tween="sine" easing="in" condition="!Control.HasFocus(210)" reversible="true">Conditional</animation>
 					<animation effect="zoom"  start="100" end="94" time="200" tween="sine" easing="in" center="auto" condition="!Control.HasFocus(210)" reversible="true">Conditional</animation>
 				</control>
 				<control type="label">
-					<include>TopSmallLabel</include>
+					<include>TopSmallLabelSettings</include>
 					<label>$LOCALIZE[137]</label>
 					<animation effect="fade" start="100" end="70" time="200" tween="sine" easing="in" condition="!Control.HasFocus(211)" reversible="true">Conditional</animation>
 					<animation effect="zoom"  start="100" end="94" time="200" tween="sine" easing="in" center="auto" condition="!Control.HasFocus(211)" reversible="true">Conditional</animation>
 				</control>
 				<control type="label">
-					<include>TopSmallLabel</include>
+					<include>TopSmallLabelSettings</include>
 					<label>$LOCALIZE[33060]</label>
 					<animation effect="fade" start="100" end="70" time="200" tween="sine" easing="in" condition="!Control.HasFocus(212)" reversible="true">Conditional</animation>
 					<animation effect="zoom"  start="100" end="94" time="200" tween="sine" easing="in" center="auto" condition="!Control.HasFocus(212)" reversible="true">Conditional</animation>

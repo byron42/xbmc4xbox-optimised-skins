@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Titan-->
+<window id="3">
+    <defaultcontrol always="true">20</defaultcontrol>
+    <allowoverlay>yes</allowoverlay>
+    <controls>
+        <!--Globalbackground-->
+        <include>GlobalBackground</include>
+        <!--Time & Weather-->
+        <include>TimeWeather</include>
+        <!--Header-->
+        <include>Header</include>
+        <!--Panel-->
+        <control type="image">
+            <posx>0</posx>
+            <posy>120</posy>
+            <width>1269</width>
+            <height>527</height>
+            <colordiffuse>aaFFFFFF</colordiffuse>
+            <texture>views/filemanager_panel.png</texture>
+            <include>animation_list</include>
+        </control>
+        <control type="image">
+            <posx>0</posx>
+            <posy>167</posy>
+            <width>1262</width>
+            <height>431</height>
+            <colordiffuse>99FFFFFF</colordiffuse>
+            <texture diffuse="views/filemanager_matte.png">special://skin/backgrounds/filemanager.png</texture>
+            <aspectratio scalediffuse="false" align="center">scale</aspectratio>
+            <include>animation_list</include>
+        </control>
+        <control type="image">
+            <posx>0</posx>
+            <posy>167</posy>
+            <width>1262</width>
+            <height>431</height>
+            <texture>views/filemanager_overlay.png</texture>
+            <include>animation_list</include>
+        </control>
+        <control type="group">
+            <!--Start Left Panel-->
+            <description>Left panel</description>
+            <posx>0</posx>
+            <posy>200</posy>
+            <include>animation_list</include>
+            <control type="label" id="101">
+                <!--Header-->
+                <description>Header Label</description>
+                <posx>100</posx>
+                <width>467</width>
+                <align>left</align>
+                <label>-</label>
+                <textcolor>midgrey</textcolor>
+                <font>Bold38</font>
+            </control>
+            <control type="list" id="20">
+                <!--List 20-->
+                <description>Left File List</description>
+                <posx>0</posx>
+                <posy>67</posy>
+                <width>633</width>
+                <height>280</height>
+                <onleft>21</onleft>
+                <onright>21</onright>
+                <onup>20</onup>
+                <ondown>20</ondown>
+                <itemlayout height="46" width="600">
+                    <control type="image">
+                        <posx>87</posx>
+                        <posy>5</posy>
+                        <width>43</width>
+                        <height>35</height>
+                        <texture>common/folder.png</texture>
+                        <colordiffuse>FFffffff</colordiffuse>
+                    </control>
+                    <control type="label">
+                        <posx>140</posx>
+                        <width>320</width>
+                        <align>left</align>
+                        <font>Reg30</font>
+                        <info>ListItem.Label</info>
+                        <textcolor>midgrey</textcolor>
+                    </control>
+                    <control type="label">
+                        <posx>593</posx>
+                        <width>133</width>
+                        <align>right</align>
+                        <font>Reg30</font>
+                        <info>ListItem.Label2</info>
+                        <textcolor>midgrey</textcolor>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="46" width="600">
+                    <control type="image">
+                        <visible>Control.HasFocus(20)</visible>
+                        <posx>67</posx>
+                        <posy>5</posy>
+                        <width>567</width>
+                        <height>33</height>
+                        <texture>common/slider.png</texture>
+                        <colordiffuse>DDffffff</colordiffuse>
+                    </control>
+                    <control type="image">
+                        <posx>87</posx>
+                        <posy>5</posy>
+                        <width>43</width>
+                        <height>35</height>
+                        <texture>common/folder.png</texture>
+                        <colordiffuse>FFffffff</colordiffuse>
+                    </control>
+                    <control type="label">
+                        <posx>140</posx>
+                        <width>320</width>
+                        <align>left</align>
+                        <font>Reg30</font>
+                        <info>ListItem.Label</info>
+                        <scrollspeed>30</scrollspeed>
+                        <textcolor>mainblue</textcolor>
+                    </control>
+                    <control type="label">
+                        <posx>593</posx>
+                        <width>133</width>
+                        <align>right</align>
+                        <font>Reg30</font>
+                        <info>ListItem.Label2</info>
+                        <scrollspeed>30</scrollspeed>
+                        <textcolor>mainblue</textcolor>
+                    </control>
+                </focusedlayout>
+            </control>
+            <control type="label" id="12">
+                <!--Object Info RSS-->
+                <description>Header Label</description>
+                <posx>100</posx>
+                <posy>410</posy>
+                <width>320</width>
+                <align>left</align>
+                <label></label>
+                <font>Bold30Big</font>
+                <textcolor>black</textcolor>
+            </control>
+            <control type="label">
+                <!--Page Info RSS-->
+                <posx>580</posx>
+                <posy>410</posy>
+                <width>167</width>
+                <align>right</align>
+                <font>Bold30Big</font>
+                <textcolor>black</textcolor>
+                <label>$INFO[Container(20).CurrentPage]/$INFO[Container(20).NumPages]</label>
+            </control>
+        </control>
+        <control type="group">
+            <!--Start Right Panel-->
+            <description>Right panel</description>
+            <posx>581</posx>
+            <posy>200</posy>
+            <include>animation_list</include>
+            <control type="label" id="102">
+                <!--Header-->
+                <description>Header Label</description>
+                <posx>100</posx>
+                <width>467</width>
+                <align>left</align>
+                <label>-</label>
+                <textcolor>midgrey</textcolor>
+                <font>Bold38</font>
+            </control>
+            <control type="list" id="21">
+                <!--List 21-->
+                <description>Right File List</description>
+                <posx>0</posx>
+                <posy>67</posy>
+                <width>633</width>
+                <height>280</height>
+                <onleft>20</onleft>
+                <onright>20</onright>
+                <onup>21</onup>
+                <ondown>21</ondown>
+                <itemlayout height="46" width="600">
+                    <control type="image">
+                        <posx>87</posx>
+                        <posy>5</posy>
+                        <width>43</width>
+                        <height>35</height>
+                        <texture>common/folder.png</texture>
+                        <colordiffuse>FFffffff</colordiffuse>
+                    </control>
+                    <control type="label">
+                        <posx>140</posx>
+                        <width>320</width>
+                        <align>left</align>
+                        <font>Reg30</font>
+                        <info>ListItem.Label</info>
+                        <textcolor>midgrey</textcolor>
+                    </control>
+                    <control type="label">
+                        <posx>593</posx>
+                        <width>133</width>
+                        <align>right</align>
+                        <font>Reg30</font>
+                        <info>ListItem.Label2</info>
+                        <textcolor>midgrey</textcolor>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="46" width="600">
+                    <control type="image">
+                        <visible>Control.HasFocus(21)</visible>
+                        <posx>67</posx>
+                        <posy>5</posy>
+                        <width>567</width>
+                        <height>33</height>
+                        <texture>common/slider.png</texture>
+                        <colordiffuse>DDffffff</colordiffuse>
+                    </control>
+                    <control type="image">
+                        <posx>87</posx>
+                        <posy>5</posy>
+                        <width>43</width>
+                        <height>35</height>
+                        <texture>common/folder.png</texture>
+                        <colordiffuse>FFffffff</colordiffuse>
+                    </control>
+                    <control type="label">
+                        <posx>140</posx>
+                        <width>320</width>
+                        <align>left</align>
+                        <font>Reg30</font>
+                        <info>ListItem.Label</info>
+                        <scrollspeed>30</scrollspeed>
+                        <textcolor>mainblue</textcolor>
+                    </control>
+                    <control type="label">
+                        <posx>593</posx>
+                        <width>133</width>
+                        <align>right</align>
+                        <font>Reg30</font>
+                        <info>ListItem.Label2</info>
+                        <scrollspeed>30</scrollspeed>
+                        <textcolor>mainblue</textcolor>
+                    </control>
+                </focusedlayout>
+            </control>
+            <control type="label" id="13">
+                <!--Object Info RSS-->
+                <description>Header Label</description>
+                <posx>100</posx>
+                <posy>410</posy>
+                <width>320</width>
+                <align>left</align>
+                <label>-</label>
+                <font>Bold30Big</font>
+                <textcolor>black</textcolor>
+            </control>
+            <control type="label">
+                <!--Page Info RSS-->
+                <posx>580</posx>
+                <posy>410</posy>
+                <width>167</width>
+                <align>right</align>
+                <font>Bold30Big</font>
+                <textcolor>black</textcolor>
+                <label>$INFO[Container(21).CurrentPage]/$INFO[Container(21).NumPages]</label>
+            </control>
+        </control>
+    </controls>
+</window>

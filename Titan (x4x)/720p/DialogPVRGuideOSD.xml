@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Titan-->
+<window id="610">
+    <defaultcontrol always="true">11</defaultcontrol>
+    <zorder>3</zorder>
+    <controls>
+        <control type="group">
+            <include>DimensionsFullscreen</include>
+            <animation effect="slide" end="0,28" time="0" condition="!Window.IsActive(videoosd)">Conditional</animation>
+            <!--Panel-->
+            <control type="image">
+                <posx>-213</posx>
+                <posy>-114</posy>
+                <width>1080</width>
+                <height>893</height>
+                <texture border="610,340,610,340">pvr/pvr_osd_guide.png</texture>
+                <aspectratio>stretch</aspectratio>
+            </control>
+            <!--Dialog PVR Guide OSD-->
+            <control type="group">
+                <visible>!Window.IsActive(DialogPVRGuideInfo.xml)</visible>
+                <!--Header-->
+                <control type="label">
+                    <posx>67</posx>
+                    <posy>49</posy>
+                    <width>520</width>
+                    <height>27</height>
+                    <align>center</align>
+                    <textoffsetx>20</textoffsetx>
+                    <label>$LOCALIZE[19222]$INFO[VideoPlayer.ChannelName, • ,]$INFO[Container(11).ListItem.StartDate, • ,]</label>
+                    <font>Bold38</font>
+                    <textcolor>mainblue</textcolor>
+                </control>
+                <!--List ID=11-->
+                <control type="list" id="11">
+                    <posx>67</posx>
+                    <posy>83</posy>
+                    <width>520</width>
+                    <height>507</height>
+                    <onleft>-</onleft>
+                    <onright>-</onright>
+                    <onup>11</onup>
+                    <ondown>11</ondown>
+                    <pagecontrol>-</pagecontrol>
+                    <scrolltime>0</scrolltime>
+                    <itemlayout width="520" height="51">
+                        <control type="image">
+                            <!--Separator-->
+                            <posx>0</posx>
+                            <posy>40</posy>
+                            <width>520</width>
+                            <height>13</height>
+                            <texture>common/separator.png</texture>
+                        </control>
+                        <control type="label">
+                            <!--Start Time-->
+                            <description>Label</description>
+                            <posx>27</posx>
+                            <posy>0</posy>
+                            <width>107</width>
+                            <height>51</height>
+                            <font>Reg32</font>
+                            <align>left</align>
+                            <label>$INFO[ListItem.StartTime]</label>
+                            <textcolor>99FFFFFF</textcolor>
+                            <selectedcolor>99FFFFFF</selectedcolor>
+                            <scroll>false</scroll>
+                        </control>
+                        <control type="label">
+                            <!--Label-->
+                            <posx>107</posx>
+                            <posy>0</posy>
+                            <width>333</width>
+                            <height>51</height>
+                            <font>Reg32</font>
+                            <align>left</align>
+                            <label>$INFO[ListItem.Label]</label>
+                            <textcolor>99FFFFFF</textcolor>
+                            <selectedcolor>99FFFFFF</selectedcolor>
+                            <scroll>false</scroll>
+                        </control>
+                        <control type="image">
+                            <!--Rec-->
+                            <visible>ListItem.IsRecording</visible>
+                            <posx>465</posx>
+                            <posy>0</posy>
+                            <width>44</width>
+                            <height>44</height>
+                            <texture>pvr/icons/pvr_record.png</texture>
+                        </control>
+                        <control type="image">
+                            <!--Timer-->
+                            <posx>465</posx>
+                            <posy>0</posy>
+                            <width>44</width>
+                            <height>44</height>
+                            <texture>pvr/icons/pvr_timer.png</texture>
+                            <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout width="520" height="152">
+                        <control type="image">
+                            <!--Separator-->
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>520</width>
+                            <height>13</height>
+                            <texture>common/separatorxxx.png</texture>
+                        </control>
+                        <control type="image">
+                            <!--Separator-->
+                            <posx>0</posx>
+                            <posy>147</posy>
+                            <width>520</width>
+                            <height>13</height>
+                            <texture>common/separator.png</texture>
+                        </control>
+                        <control type="label">
+                            <!--Start Time-->
+                            <posx>27</posx>
+                            <posy>0</posy>
+                            <width>87</width>
+                            <height>51</height>
+                            <font>Reg32</font>
+                            <align>left</align>
+                            <label>$INFO[ListItem.StartTime]</label>
+                            <textcolor>mainblue</textcolor>
+                            <selectedcolor>mainblue</selectedcolor>
+                            <scroll>false</scroll>
+                        </control>
+                        <control type="label">
+                            <!--Label-->
+                            <posx>107</posx>
+                            <posy>0</posy>
+                            <width>333</width>
+                            <height>51</height>
+                            <font>Reg32</font>
+                            <align>left</align>
+                            <label>$INFO[ListItem.Label]</label>
+                            <textcolor>mainblue</textcolor>
+                            <selectedcolor>mainblue</selectedcolor>
+                            <scroll>false</scroll>
+                        </control>
+                        <control type="textbox">
+                            <!--Info Plot-->
+                            <posx>27</posx>
+                            <posy>58</posy>
+                            <width>480</width>
+                            <height>73</height>
+                            <font>Reg30</font>
+                            <align>left</align>
+                            <label>$INFO[ListItem.Plot]</label>
+                            <textcolor>99FFFFFF</textcolor>
+                            <autoscroll>99FFFFFF</autoscroll>
+                        </control>
+                        <control type="image">
+                            <!--Rec-->
+                            <visible>ListItem.IsRecording</visible>
+                            <posx>465</posx>
+                            <posy></posy>
+                            <width>44</width>
+                            <height>44</height>
+                            <texture>pvr/icons/pvr_record.png</texture>
+                        </control>
+                        <control type="image">
+                            <!--Timer-->
+                            <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+                            <posx>465</posx>
+                            <posy></posy>
+                            <width>44</width>
+                            <height>44</height>
+                            <texture>pvr/icons/pvr_timer.png</texture>
+                        </control>
+                    </focusedlayout>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

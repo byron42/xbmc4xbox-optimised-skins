@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="skin.titan.xbox" version="3.5.0" name="Titan (x4x)" provider-name="byron">
+	<requires>
+		<import version="4.0.0" addon="xbmc.gui"/>		
+		<import addon="script.artwork.downloader" version="12.0.15" />
+	</requires>
+	<extension point="xbmc.gui.skin" defaultthemename="textures.xpr" debugging="false" effectslowdown="0.75">		
+		<res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>xbox</platform>
+		<summary>Titan (x4x) is an xbox port by byron (( based off of Titan by reazorFX ))</summary>
+		<description>Titan is a port from Mediaportal to XBMC all thanks goes to: joostzilla, ncoH, Dlarge500, elliotmc and Team Mediaportal for this great Skin!</description>
+	</extension>
+</addon>

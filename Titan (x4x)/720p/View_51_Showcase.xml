@@ -1,0 +1,1059 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Titan-->
+<includes>
+    <!--Default-->
+    <include name="View_51_Showcase">
+        <control type="group">
+            <!-- Warplist ID="51"-->
+            <visible>Control.IsVisible(51)</visible>
+            <visible>!Window.IsActive(DialogVideoInfo.xml)</visible>
+            <include>animation_list</include>
+            <control type="wraplist" id="51">
+                <!--Wraplist ID 51-->
+                <posx>-35</posx>
+                <posy>347</posy>
+                <width>1307</width>
+                <height>533</height>
+                <onleft>51</onleft>
+                <onright>51</onright>
+                <onup>9000</onup>
+                <ondown>-</ondown>
+                <viewtype label="Showcase">list</viewtype>
+                <pagecontrol>60</pagecontrol>
+                <orientation>horizontal</orientation>
+                <scrolltime tween="cubic" easing="inout">450</scrolltime>
+                <!--scrolltime>250</scrolltime-->
+                <focusposition>3</focusposition>
+                <itemlayout width="180" height="533">
+                    <control type="group">
+                        <visible>Skin.HasSetting(flattenshowcase)</visible>
+                        <animation effect="fade" start="0" end="100" time="10" delay="800" reversible="false">visible</animation>
+                        <animation effect="fade" start="0" end="100" time="10" delay="0" reversible="false">hidden</animation>
+                        <control type="image">
+                            <include>MovieShowcaseThumbMain</include>
+                            <info>ListItem.Icon</info>
+                        </control>
+                        <control type="image">
+                            <include>MovieShowcaseThumbReflection</include>
+                            <info>ListItem.Icon</info>
+                        </control>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="180" height="533">
+                    <control type="group">
+                        <visible>Skin.HasSetting(flattenshowcase)</visible>
+                        <animation effect="fade" start="0" end="100" time="10" delay="800" reversible="false">visible</animation>
+                        <animation effect="fade" start="0" end="100" time="10" delay="0" reversible="flase">hidden</animation>
+                        <control type="image">
+                            <include>MovieShowcaseThumbMain</include>
+                            <info>ListItem.Icon</info>
+                        </control>
+                        <control type="image">
+                            <include>MovieShowcaseThumbReflectionMain</include>
+                            <info>ListItem.Icon</info>
+                        </control>
+                    </control>
+                </focusedlayout>
+            </control>
+            <include>ShowcaseMovies</include>
+            <!--Showcase-->
+        </control>
+        <control type="group">
+            <!-- RSS-->
+            <visible>Control.IsVisible(51)</visible>
+            <visible>!Window.IsActive(DialogVideoInfo.xml)</visible>
+            <include>animation_view_change</include>
+            <include>animation_list</include>
+            <control type="image">
+                <!--RSS Background-->
+                <posx>33</posx>
+                <posy>640</posy>
+                <width>1213</width>
+                <height>56</height>
+                <texture>home/home_rss.png</texture>
+            </control>
+        </control>
+        <control type="group">
+            <!-- Rating -->
+            <visible>Control.IsVisible(51)</visible>
+            <visible>!Window.IsActive(DialogVideoInfo.xml)</visible>
+            <include>animation_view_change</include>
+            <include>animation_list</include>
+            <posy>660</posy>
+            <control type="image">
+                <posx>87</posx>
+                <posy>9</posy>
+                <width>180</width>
+                <height>17</height>
+                <texture fallback="rating/stars/NA.png">$INFO[ListItem.Rating,rating/10stars_black/,.png]</texture>
+            </control>
+            <control type="label">
+                <posx>280</posx>
+                <posy>0</posy>
+                <width>67</width>
+                <font>Bold30Big</font>
+                <textcolor>black</textcolor>
+                <label>$INFO[ListItem.Rating]</label>
+            </control>
+        </control>
+        <control type="group">
+            <!-- Title -->
+            <visible>Control.IsVisible(51)</visible>
+            <visible>!Window.IsActive(DialogVideoInfo.xml)</visible>
+            <include>animation_view_change</include>
+            <include>animation_list</include>
+            <posy>660</posy>
+            <control type="label">
+                <posx>373</posx>
+                <posy>0</posy>
+                <width>533</width>
+                <align>center</align>
+                <font>Bold34Big</font>
+                <textcolor>black</textcolor>
+                <label>$INFO[ListItem.Label]</label>
+            </control>
+        </control>
+        <control type="group">
+            <!-- Page Control -->
+            <visible>Control.IsVisible(51)</visible>
+            <visible>!Window.IsActive(DialogVideoInfo.xml)</visible>
+            <include>animation_view_change</include>
+            <include>animation_list</include>
+            <posy>660</posy>
+            <control type="label">
+                <posx>1187</posx>
+                <posy>0</posy>
+                <width>267</width>
+                <align>right</align>
+                <font>Bold30Big</font>
+                <textcolor>black</textcolor>
+                <label>$INFO[Container.CurrentPage]/$INFO[Container.NumPages]</label>
+            </control>
+        </control>
+    </include>
+    <!--Includes-->
+    <!-- Movie Showcase Variables: Main thumbs -->
+    <include name="MovieShowcaseThumb">
+        <posx>49</posx>
+        <posy>8</posy>
+        <width>173</width>
+        <height>254</height>
+        <align>center</align>
+        <texture background="true" diffuse="poster_matte.png">poster_default.png</texture>
+        <aspectratio scalediffuse="false">stretch</aspectratio>
+    </include>
+    <include name="MovieShowcaseWatched">
+        <posx>49</posx>
+        <posy>8</posy>
+        <width>0</width>
+        <height>0</height>
+        <align>center</align>
+        <aspectratio scalediffuse="false">stretch</aspectratio>
+    </include>
+    <include name="MovieShowcaseThumbMain">
+        <posx>49</posx>
+        <posy>8</posy>
+        <width>173</width>
+        <height>254</height>
+        <align>center</align>
+        <texture background="true" diffuse="poster_matte.png">poster_default.png</texture>
+        <aspectratio scalediffuse="false">stretch</aspectratio>
+    </include>
+    <include name="MovieShowcaseThumbReflectionMain">
+        <posx>49</posx>
+        <posy>262</posy>
+        <width>173</width>
+        <height>254</height>
+        <colordiffuse>52FFFFFF</colordiffuse>
+        <texture background="true" flipy="true" diffuse="poster_matte_reflect.png">poster_default.png</texture>
+        <aspectratio scalediffuse="false">stretch</aspectratio>
+    </include>
+    <include name="MovieShowcaseThumbReflection">
+        <posx>49</posx>
+        <posy>262</posy>
+        <width>173</width>
+        <height>254</height>
+        <colordiffuse>52FFFFFF</colordiffuse>
+        <texture background="true" flipy="true" diffuse="poster_matte_reflect.png">poster_default.png</texture>
+        <aspectratio scalediffuse="false">stretch</aspectratio>
+    </include>
+    <!--ShowcaseMovies-->
+    <include name="ShowcaseMovies">
+        <!-- On Next -->
+        <control type="group" id="6001">
+            <posy>367</posy>
+            <camera x="640" y="500" />
+            <visible>Control.IsVisible(51) + Container.OnNext + !Skin.HasSetting(flattenshowcase)</visible>
+            <animation effect="slide" end="-90,0" time="250" reversible="false">Hidden</animation>
+            <control type="group">
+                <!-- -7 Fade Out-->
+                <posx>10</posx>
+                <visible>Container.OnNext</visible>
+                <animation effect="fade" start="100" end="0" time="250" tween="cubic" easing="out" reversible="false">Hidden</animation>
+                <animation effect="rotatey" center="-90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(-7).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(-7).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(-7).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <posx>100</posx>
+                <animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(-6).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(-6).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(-6).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <posx>190</posx>
+                <animation effect="rotatey" center="90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(-5).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(-5).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(-5).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <posx>280</posx>
+                <animation effect="rotatey" center="180" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(-4).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(-4).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(-4).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <posx>370</posx>
+                <animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(-3).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(-3).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(-3).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <posx>460</posx>
+                <animation effect="rotatey" center="360" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(-2).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(-2).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(-2).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <!-- +6 Fade In-->
+                <posx>1090</posx>
+                <visible>!Container.OnNext</visible>
+                <animation effect="fade" start="0" end="100" delay="0" time="250" tween="cubic" easing="in" reversible="false">Visible</animation>
+                <animation effect="rotatey" center="1470" start="55" end="55" time="0" condition="true">Conditional</animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(6).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(6).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(6).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <posx>1000</posx>
+                <animation effect="rotatey" center="1380" start="55" end="55" time="0" condition="true">Conditional</animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(5).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(5).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(5).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <posx>910</posx>
+                <animation effect="rotatey" center="1290" start="55" end="55" time="0" condition="true">Conditional</animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(4).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(4).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(4).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <posx>820</posx>
+                <animation effect="rotatey" center="1200" start="55" end="55" time="0" condition="true">Conditional</animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(3).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(3).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(3).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <posx>730</posx>
+                <animation effect="rotatey" center="1110" start="55" end="55" time="0" condition="true">Conditional</animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(2).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(2).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(2).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <posx>640</posx>
+                <animation effect="rotatey" center="1020" start="55" end="55" time="0" condition="true">Conditional</animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(1).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(1).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(1).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <visible>Container.OnNext</visible>
+                <animation effect="slide" end="50,0" time="250" reversible="false">Hidden</animation>
+                <control type="group">
+                    <posx>550</posx>
+                    <visible>Container.OnNext</visible>
+                    <animation effect="rotatey" center="930" start="0" end="-55" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+                    <animation effect="rotatey" center="930" start="55" end="55" time="0" condition="true">Conditional</animation>
+                    <control type="group">
+                        <control type="image">
+                            <include>MovieShowcaseThumb</include>
+                            <info>Container(51).ListItem(0).Thumb</info>
+                        </control>
+                        <control type="image">
+                            <include>MovieShowcaseThumbReflection</include>
+                            <info>Container(51).ListItem(0).Thumb</info>
+                        </control>
+                        <control type="image">
+                            <include>MovieShowcaseWatched</include>
+                            <texture>$INFO[ListItem(0).Overlay,overlays/,/view_51_watched.png]</texture>
+                        </control>
+                    </control>
+                </control>
+                <control type="group">
+                    <posx>505</posx>
+                    <visible>Container.OnNext</visible>
+                    <animation effect="rotatey" center="405" start="0" end="-55" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
+                    <control type="group">
+                        <control type="image">
+                            <include>MovieShowcaseThumb</include>
+                            <info>Container(51).ListItem(-1).Thumb</info>
+                        </control>
+                        <control type="image">
+                            <include>MovieShowcaseThumbReflection</include>
+                            <info>Container(51).ListItem(-1).Thumb</info>
+                        </control>
+                        <control type="image">
+                            <include>MovieShowcaseWatched</include>
+                            <texture>$INFO[ListItem(-1).Overlay,overlays/,/view_51_watched.png]</texture>
+                        </control>
+                    </control>
+                </control>
+            </control>
+        </control>
+        <!-- On Previous-->
+        <control type="group" id="6002">
+            <posy>367</posy>
+            <camera x="640" y="500" />
+            <visible>Control.IsVisible(51) + Container.OnPrevious + !Skin.HasSetting(flattenshowcase)</visible>
+            <animation effect="slide" end="90,0" time="250" reversible="false">Hidden</animation>
+            <control type="group">
+                <!-- +7 Fade out-->
+                <posx>1000</posx>
+                <visible>Container.OnPrevious</visible>
+                <animation effect="fade" start="100" end="0" time="250" tween="cubic" easing="out" reversible="false">Hidden</animation>
+                <animation effect="rotatey" center="1380" start="55" end="55" time="0" condition="true">Conditional</animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(7).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(7).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(7).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <posx>910</posx>
+                <animation effect="rotatey" center="1290" start="55" end="55" time="0" condition="true">Conditional</animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(6).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(6).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(6).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <posx>820</posx>
+                <animation effect="rotatey" center="1200" start="55" end="55" time="0" condition="true">Conditional</animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(5).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(5).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(5).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <posx>730</posx>
+                <animation effect="rotatey" center="1110" start="55" end="55" time="0" condition="true">Conditional</animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(4).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(4).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(4).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <posx>640</posx>
+                <animation effect="rotatey" center="1020" start="55" end="55" time="0" condition="true">Conditional</animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(3).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(3).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(3).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <posx>550</posx>
+                <animation effect="rotatey" center="930" start="55" end="55" time="0" condition="true">Conditional</animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(2).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(2).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(2).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <!-- -6 Fade In-->
+                <posx>-80</posx>
+                <visible>!Container.OnPrevious</visible>
+                <animation effect="fade" start="0" end="100" delay="0" time="250" tween="cubic" easing="in" reversible="false">Visible</animation>
+                <animation effect="rotatey" center="-180" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(-6).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(-6).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(-6).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <posx>10</posx>
+                <animation effect="rotatey" center="-90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(-5).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(-5).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(-5).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <posx>100</posx>
+                <animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(-4).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(-4).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(-4).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <posx>190</posx>
+                <animation effect="rotatey" center="90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(-3).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(-3).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(-3).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <posx>280</posx>
+                <animation effect="rotatey" center="180" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(-2).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(-2).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(-2).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <posx>370</posx>
+                <animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(-1).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(-1).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(-1).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <visible>Container.OnPrevious</visible>
+                <animation effect="slide" end="-50,0" time="250" reversible="false">Hidden</animation>
+                <control type="group">
+                    <posx>460</posx>
+                    <visible>Container.OnPrevious</visible>
+                    <animation effect="rotatey" center="360" start="0" end="55" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+                    <animation effect="rotatey" center="360" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                    <control type="group">
+                        <control type="image">
+                            <include>MovieShowcaseThumb</include>
+                            <info>Container(51).ListItem(0).Thumb</info>
+                        </control>
+                        <control type="image">
+                            <include>MovieShowcaseThumbReflection</include>
+                            <info>Container(51).ListItem(0).Thumb</info>
+                        </control>
+                        <control type="image">
+                            <include>MovieShowcaseWatched</include>
+                            <texture>$INFO[ListItem(0).Overlay,overlays/,/view_51_watched.png]</texture>
+                        </control>
+                    </control>
+                </control>
+                <control type="group">
+                    <posx>505</posx>
+                    <visible>Container.OnPrevious</visible>
+                    <animation effect="rotatey" center="885" start="0" end="55" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
+                    <control type="group">
+                        <control type="image">
+                            <include>MovieShowcaseThumb</include>
+                            <info>Container(51).ListItem(1).Thumb</info>
+                        </control>
+                        <control type="image">
+                            <include>MovieShowcaseThumbReflection</include>
+                            <info>Container(51).ListItem(1).Thumb</info>
+                        </control>
+                        <control type="image">
+                            <include>MovieShowcaseWatched</include>
+                            <texture>$INFO[ListItem(1).Overlay,overlays/,/view_51_watched.png]</texture>
+                        </control>
+                    </control>
+                </control>
+            </control>
+        </control>
+        <!-- No Move -->
+        <control type="group" id="6000">
+            <posy>367</posy>
+            <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)" reversible="false">
+                <effect type="fade" start="100" end="0" time="10" delay="800" tween="cubic" easing="inout" />
+            </animation>
+            <animation effect="fade" time="250">WindowClose</animation>
+            <visible>Control.IsVisible(51) + !Control.IsVisible(6001) + !Control.IsVisible(6002)</visible>
+            <camera x="640" y="500" />
+            <control type="group">
+                <!-- -7 Puffer -->
+                <control type="group">
+                    <control type="image">
+                        <posx>-7</posx>
+                        <posy>-7</posy>
+                        <width>1</width>
+                        <height>1</height>
+                        <texture background="true">poster_default.png</texture>
+                        <info>Container(51).ListItem(-7).Thumb</info>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <!-- +7 Puffer -->
+                <control type="group">
+                    <control type="image">
+                        <posx>-7</posx>
+                        <posy>-7</posy>
+                        <width>1</width>
+                        <height>1</height>
+                        <texture background="true">poster_default.png</texture>
+                        <info>Container(51).ListItem(7).Thumb</info>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <!-- -6 -->
+                <posx>10</posx>
+                <animation effect="rotatey" center="-90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
+                    <effect type="rotatey" center="-90" start="0" end="55" time="250" tween="cubic" easing="inout" />
+                    <effect type="slide" start="0" end="-1028" time="250" tween="cubic" easing="inout" />
+                </animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(-6).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(-6).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(-6).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <!-- -5 -->
+                <posx>100</posx>
+                <animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
+                    <effect type="rotatey" center="0" start="0" end="55" time="250" tween="cubic" easing="inout" />
+                    <effect type="slide" start="0" end="-866" time="250" tween="cubic" easing="inout" />
+                </animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(-5).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(-5).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(-5).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <!-- -4 -->
+                <posx>190</posx>
+                <animation effect="rotatey" center="90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
+                    <effect type="rotatey" center="90" start="0" end="55" time="250" tween="cubic" easing="inout" />
+                    <effect type="slide" start="0" end="-704" time="250" tween="cubic" easing="inout" />
+                </animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(-4).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(-4).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(-4).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <!-- -3 -->
+                <posx>280</posx>
+                <animation effect="rotatey" center="180" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
+                    <effect type="rotatey" center="180" start="0" end="55" time="250" tween="cubic" easing="inout" />
+                    <effect type="slide" start="0" end="-315" time="250" tween="cubic" easing="inout" />
+                </animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(-3).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(-3).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(-3).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <!-- -2 -->
+                <posx>370</posx>
+                <animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
+                    <effect type="rotatey" center="270" start="0" end="55" time="250" tween="cubic" easing="inout" />
+                    <effect type="slide" start="0" end="-225" time="250" tween="cubic" easing="inout" />
+                </animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(-2).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(-2).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(-2).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <!-- -1 -->
+                <posx>461</posx>
+                <!-- add +1 -->
+                <animation effect="rotatey" center="360" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
+                    <effect type="rotatey" center="360" start="0" end="55" time="250" tween="cubic" easing="inout" />
+                    <effect type="slide" start="0" end="-135" time="250" tween="cubic" easing="inout" />
+                </animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(-1).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(-1).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(-1).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <!-- +6 -->
+                <posx>1000</posx>
+                <animation effect="rotatey" center="1380" start="55" end="55" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
+                    <effect type="rotatey" center="1380" start="0" end="-55" time="250" tween="cubic" easing="inout" />
+                    <effect type="slide" start="0" end="1028" time="250" tween="cubic" easing="inout" />
+                </animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(6).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(6).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(6).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <!-- +5 -->
+                <posx>910</posx>
+                <animation effect="rotatey" center="1290" start="55" end="55" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
+                    <effect type="rotatey" center="1290" start="0" end="-55" time="250" tween="cubic" easing="inout" />
+                    <effect type="slide" start="0" end="866" time="250" tween="cubic" easing="inout" />
+                </animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(5).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(5).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(5).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <!-- +4 -->
+                <posx>820</posx>
+                <animation effect="rotatey" center="1200" start="55" end="55" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
+                    <effect type="rotatey" center="1200" start="0" end="-55" time="250" tween="cubic" easing="inout" />
+                    <effect type="slide" start="0" end="704" time="250" tween="cubic" easing="inout" />
+                </animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(4).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(4).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(4).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <!-- +3 -->
+                <posx>730</posx>
+                <animation effect="rotatey" center="1110" start="55" end="55" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
+                    <effect type="rotatey" center="1110" start="0" end="-55" time="250" tween="cubic" easing="inout" />
+                    <effect type="slide" start="0" end="315" time="250" tween="cubic" easing="inout" />
+                </animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(3).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(3).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(3).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <!-- +2 -->
+                <posx>640</posx>
+                <animation effect="rotatey" center="1020" start="55" end="55" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
+                    <effect type="rotatey" center="1020" start="0" end="-55" time="250" tween="cubic" easing="inout" />
+                    <effect type="slide" start="0" end="225" time="250" tween="cubic" easing="inout" />
+                </animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(2).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(2).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(2).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <!-- +1 -->
+                <posx>547</posx>
+                <!-- add +1 -->
+                <animation effect="rotatey" center="930" start="55" end="55" time="0" condition="true">Conditional</animation>
+                <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
+                    <effect type="rotatey" center="930" start="0" end="-55" time="250" tween="cubic" easing="inout" />
+                    <effect type="slide" start="0" end="135" time="250" tween="cubic" easing="inout" />
+                </animation>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumb</include>
+                        <info>Container(51).ListItem(1).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflection</include>
+                        <info>Container(51).ListItem(1).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(1).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <!-- 0 -->
+                <posx>505</posx>
+                <control type="group">
+                    <control type="image">
+                        <include>MovieShowcaseThumbMain</include>
+                        <info>Container(51).ListItem(0).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseThumbReflectionMain</include>
+                        <info>Container(51).ListItem(0).Thumb</info>
+                    </control>
+                    <control type="image">
+                        <include>MovieShowcaseWatched</include>
+                        <texture>$INFO[ListItem(0).Overlay,overlays/,/view_51_watched.png]</texture>
+                    </control>
+                </control>
+            </control>
+        </control>
+    </include>
+</includes>

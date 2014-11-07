@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Titan-->
+<window>
+    <defaultcontrol always="true">3</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <controls>
+        <!--Dialog Overlay-->
+        <include>DialogOverlay</include>
+        <!--Dialog Content Settings-->
+        <control type="group">
+            <include>animation_dialog</include>
+            <visible>!Window.IsVisible(addonsettings)</visible>
+            <control type="image">
+                <posx>613</posx>
+                <posy>155</posy>
+                <width>53</width>
+                <height>40</height>
+                <texture>dialogs/default/arrow.png</texture>
+            </control>
+            <control type="image">
+                <posx>297</posx>
+                <posy>168</posy>
+                <width>687</width>
+                <height>384</height>
+                <texture border="39">dialogs/default/bg.png</texture>
+            </control>
+            <control type="label" id="1">
+                <description>Heading</description>
+                <posx>315</posx>
+                <posy>127</posy>
+                <width>649</width>
+                <label>20333</label>
+                <align>center</align>
+                <include>DialogHeader</include>
+            </control>
+            <control type="group" id="8001">
+                <posx>319</posx>
+                <posy>191</posy>
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>641</width>
+                    <height>41</height>
+                    <texture border="5">dialogs/default/inner.png</texture>
+                </control>
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>49</posy>
+                    <width>512</width>
+                    <height>121</height>
+                    <texture border="5">dialogs/default/inner.png</texture>
+                </control>
+                <control type="image">
+                    <posx>521</posx>
+                    <posy>49</posy>
+                    <width>120</width>
+                    <height>121</height>
+                    <texture border="5">dialogs/default/inner.png</texture>
+                </control>
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>179</posy>
+                    <width>641</width>
+                    <height>161</height>
+                    <texture border="5">dialogs/default/inner.png</texture>
+                </control>
+                <control type="spincontrolex" id="3">
+                    <description>Directory Content</description>
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>641</width>
+                    <label>20344</label>
+                    <align>left</align>
+                    <include>DialogButton</include>
+                    <textoffsetx>13</textoffsetx>
+                    <spinposx>5</spinposx>
+                    <textureup>common/spinctrl/arrow-light-up-nf.png</textureup>
+                    <texturedown>common/spinctrl/arrow-light-down-nf.png</texturedown>
+                    <textureupfocus>common/spinctrl/arrow-light-up-fo.png</textureupfocus>
+                    <texturedownfocus>common/spinctrl/arrow-light-down-fo.png</texturedownfocus>
+                    <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+                    <onup>8002</onup>
+                    <ondown>4</ondown>
+                    <onleft>8002</onleft>
+                    <onright>8002</onright>
+                </control>
+                <control type="image">
+                    <description>Used Scraper Image</description>
+                    <posx>522</posx>
+                    <posy>50</posy>
+                    <width>119</width>
+                    <height>119</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture>$INFO[ListItem.Icon]</texture>
+                </control>
+                <control type="list" id="4">
+                    <posx>0</posx>
+                    <posy>49</posy>
+                    <width>512</width>
+                    <height>120</height>
+                    <onup>3</onup>
+                    <onleft>8002</onleft>
+                    <onright>60</onright>
+                    <ondown>5</ondown>
+                    <pagecontrol>60</pagecontrol>
+                    <scrolltime tween="cubic" easing="out">500</scrolltime>
+                    <itemlayout height="40">
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>1</posy>
+                            <width>512</width>
+                            <height>40</height>
+                            <texture>dialogs/default/separator.png</texture>
+                        </control>
+                        <control type="image">
+                            <posx>13</posx>
+                            <posy>7</posy>
+                            <width>27</width>
+                            <height>27</height>
+                            <info>ListItem.Thumb</info>
+                        </control>
+                        <control type="label">
+                            <posx>50</posx>
+                            <posy>0</posy>
+                            <width>422</width>
+                            <height>40</height>
+                            <include>DialogListNF</include>
+                            <info>ListItem.Label</info>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <scroll>false</scroll>
+                            <visible>!IsEmpty(ListItem.Thumb)</visible>
+                        </control>
+                        <control type="label">
+                            <posx>13</posx>
+                            <posy>0</posy>
+                            <width>459</width>
+                            <height>40</height>
+                            <include>DialogListNF</include>
+                            <info>ListItem.Label</info>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <scroll>false</scroll>
+                            <visible>IsEmpty(ListItem.Thumb)</visible>
+                        </control>
+                        <control type="image">
+                            <posx>472</posx>
+                            <posy>0</posy>
+                            <width>40</width>
+                            <height>40</height>
+                            <texture>dialogs/select/selected.png</texture>
+                            <visible>ListItem.IsSelected</visible>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="40">
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>1</posy>
+                            <width>512</width>
+                            <height>40</height>
+                            <texture>dialogs/default/separator.png</texture>
+                        </control>
+                        <control type="image">
+                            <width>512</width>
+                            <height>40</height>
+                            <texture border="2">dialogs/default/highlight.png</texture>
+                            <visible>Control.HasFocus(4)</visible>
+                        </control>
+                        <control type="image">
+                            <posx>13</posx>
+                            <posy>7</posy>
+                            <width>27</width>
+                            <height>27</height>
+                            <info>ListItem.Thumb</info>
+                        </control>
+                        <control type="label">
+                            <posx>13</posx>
+                            <posy>0</posy>
+                            <width>459</width>
+                            <height>40</height>
+                            <include>DialogListNF</include>
+                            <info>ListItem.Label</info>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <scroll>false</scroll>
+                            <visible>!Control.HasFocus(4) + IsEmpty(ListItem.Thumb)</visible>
+                        </control>
+                        <control type="label">
+                            <posx>50</posx>
+                            <posy>0</posy>
+                            <width>422</width>
+                            <height>40</height>
+                            <include>DialogListNF</include>
+                            <info>ListItem.Label</info>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <scroll>false</scroll>
+                            <visible>!Control.HasFocus(4) + !IsEmpty(ListItem.Thumb)</visible>
+                        </control>
+                        <control type="label">
+                            <posx>13</posx>
+                            <posy>0</posy>
+                            <width>459</width>
+                            <height>40</height>
+                            <include>DialogListFO</include>
+                            <info>ListItem.Label</info>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <scroll>false</scroll>
+                            <visible>Control.HasFocus(4) + IsEmpty(ListItem.Thumb)</visible>
+                        </control>
+                        <control type="label">
+                            <posx>50</posx>
+                            <posy>0</posy>
+                            <width>422</width>
+                            <height>40</height>
+                            <include>DialogListFO</include>
+                            <info>ListItem.Label</info>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <scroll>false</scroll>
+                            <visible>Control.HasFocus(4) + !IsEmpty(ListItem.Thumb)</visible>
+                        </control>
+                        <control type="image">
+                            <posx>472</posx>
+                            <posy>0</posy>
+                            <width>40</width>
+                            <height>40</height>
+                            <texture>dialogs/select/selected.png</texture>
+                            <visible>ListItem.IsSelected</visible>
+                        </control>
+                    </focusedlayout>
+                </control>
+                <control type="image" id="62">
+                    <animation effect="fade" start="100" end="0" time="0" delay="1500">WindowOpen</animation>
+                </control>
+                <control type="image" id="61">
+                    <animation effect="fade" start="0" end="100" time="0">Visible</animation>
+                    <animation effect="fade" start="100" end="0" time="0">Hidden</animation>
+                    <visible>Control.HasFocus(60) | !Control.IsVisible(62)</visible>
+                </control>
+                <control type="image" id="61">
+                    <animation effect="fade" start="0" end="100" time="0">Visible</animation>
+                    <animation effect="fade" start="100" end="0" time="0" delay="1000">Hidden</animation>
+                    <visible>!Control.HasFocus(60) + [Container(4).Scrolling | Container(4).OnScrollNext | Container(4).OnScrollPrevious]</visible>
+                </control>
+                <control type="scrollbar" id="60">
+                    <posx>503</posx>
+                    <posy>51</posy>
+                    <width>7</width>
+                    <height>116</height>
+                    <texturesliderbackground>-</texturesliderbackground>
+                    <texturesliderbar border="0,6,0,6">dialogs/default/scrollbar.png</texturesliderbar>
+                    <texturesliderbarfocus border="0,6,0,6">dialogs/default/scrollbar.png</texturesliderbarfocus>
+                    <textureslidernib>-</textureslidernib>
+                    <textureslidernibfocus>-</textureslidernibfocus>
+                    <onleft>4</onleft>
+                    <onright>8002</onright>
+                    <showonepage>false</showonepage>
+                    <orientation>vertical</orientation>
+                    <animation effect="fade" start="75" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(61)">Conditional</animation>
+                </control>
+                <control type="grouplist" id="5">
+                    <description>Control Area</description>
+                    <posx>0</posx>
+                    <posy>179</posy>
+                    <width>641</width>
+                    <height>200</height>
+                    <orientation>vertical</orientation>
+                    <itemgap>0</itemgap>
+                    <onup>4</onup>
+                    <ondown>8002</ondown>
+                    <onleft>8002</onleft>
+                    <onright>8002</onright>
+                    <scrolltime tween="cubic" easing="out">500</scrolltime>
+                </control>
+                <control type="button" id="7">
+                    <description>default</description>
+                    <height>40</height>
+                    <align>left</align>
+                    <textoffsetx>13</textoffsetx>
+                    <include>DialogButton</include>
+                </control>
+                <control type="radiobutton" id="8">
+                    <description>radioButton</description>
+                    <height>40</height>
+                    <align>left</align>
+                    <textoffsetx>13</textoffsetx>
+                    <radioposx>568</radioposx>
+                    <include>DialogButton</include>
+                    <textureradioon>common/radio/radio-light-fo.png</textureradioon>
+                    <textureradiooff>common/radio/radio-light-nf.png</textureradiooff>
+                    <texturefocus>dialogs/default/highlight.png</texturefocus>
+                    <texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
+                </control>
+            </control>
+            <control type="group" id="8002">
+                <posx>311</posx>
+                <posy>529</posy>
+                <control type="button" id="28">
+                    <description>OK</description>
+                    <label>OK</label>
+                    <include>DialogButtonOKCancel</include>
+                    <texturefocus>common/select-fo.png</texturefocus>
+                    <texturenofocus>common/select-nf.png</texturenofocus>
+                    <align>left</align>
+                    <textoffsetx>67</textoffsetx>
+                    <width>233</width>
+                    <height>67</height>
+                    <onleft>6</onleft>
+                    <onright>29</onright>
+                    <onup>5</onup>
+                    <ondown>3</ondown>
+                    <animation effect="fade" start="100" end="75" time="0" condition="!Control.IsEnabled(28)">Conditional</animation>
+                </control>
+                <control type="button" id="29">
+                    <posx>133</posx>
+                    <description>Cancel</description>
+                    <label>$LOCALIZE[222]</label>
+                    <include>DialogButtonOKCancel</include>
+                    <texturefocus>common/cancel-fo.png</texturefocus>
+                    <texturenofocus>common/cancel-nf.png</texturenofocus>
+                    <align>left</align>
+                    <textoffsetx>67</textoffsetx>
+                    <width>233</width>
+                    <height>67</height>
+                    <onleft>28</onleft>
+                    <onright>6</onright>
+                    <onup>5</onup>
+                    <ondown>3</ondown>
+                    <animation effect="fade" start="100" end="75" time="0" condition="!Control.IsEnabled(29)">Conditional</animation>
+                </control>
+                <control type="button" id="6">
+                    <posx>493</posx>
+                    <description>Settings</description>
+                    <label>$LOCALIZE[5]</label>
+                    <include>DialogButtonOKCancel</include>
+                    <texturefocus>common/options-fo.png</texturefocus>
+                    <texturenofocus>common/options-nf.png</texturenofocus>
+                    <align>left</align>
+                    <textoffsetx>67</textoffsetx>
+                    <width>233</width>
+                    <height>67</height>
+                    <onleft>29</onleft>
+                    <onright>28</onright>
+                    <onup>5</onup>
+                    <ondown>3</ondown>
+                    <animation effect="fade" start="100" end="75" time="0" condition="!Control.IsEnabled(6)">Conditional</animation>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

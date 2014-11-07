@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Titan-->
+<window>
+    <defaultcontrol>5</defaultcontrol>
+    <backgroundcolor>0</backgroundcolor>
+    <controls>
+        <!--Dialog Overlay-->
+        <include>DialogOverlay</include>
+        <!--Dialog Profile Setting-->
+        <control type="group">
+            <include>animation_dialog</include>
+            <visible>!Window.IsVisible(filebrowser) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(locksettings)</visible>
+            <!--Panel-->
+            <control type="image">
+                <posx>613</posx>
+                <posy>204</posy>
+                <width>53</width>
+                <height>40</height>
+                <texture>dialogs/default/arrow.png</texture>
+            </control>
+            <control type="image">
+                <posx>363</posx>
+                <posy>217</posy>
+                <width>555</width>
+                <height>285</height>
+                <texture border="39">dialogs/default/bg.png</texture>
+            </control>
+            <control type="image">
+                <posx>385</posx>
+                <posy>240</posy>
+                <width>509</width>
+                <height>241</height>
+                <texture border="5">dialogs/default/inner.png</texture>
+            </control>
+            <control type="image" id="2">
+                <description>profile image</description>
+                <posx>613</posx>
+                <posy>157</posy>
+                <width>53</width>
+                <height>53</height>
+                <align>center</align>
+                <aspectratio>scale</aspectratio>
+                <texture diffuse="common/profil/profile_mask.png" />
+            </control>
+            <control type="label">
+                <posx>315</posx>
+                <posy>173</posy>
+                <width>649</width>
+                <include>DialogHeader</include>
+                <align>center</align>
+                <label>$INFO[Control.GetLabel(1000)]</label>
+                <visible>IsEmpty(Control.GetLabel(2))</visible>
+            </control>
+            <control type="grouplist" id="5">
+                <description>Control Area</description>
+                <posx>385</posx>
+                <posy>240</posy>
+                <width>509</width>
+                <height>240</height>
+                <itemgap>0</itemgap>
+                <orientation>vertical</orientation>
+                <pagecontrol>60</pagecontrol>
+                <onleft>1004</onleft>
+                <onright>1004</onright>
+                <onup>1004</onup>
+                <ondown>1004</ondown>
+                <scrolltime tween="cubic" easing="out">500</scrolltime>
+            </control>
+            <control type="label" id="1000">
+                <description>profile name</description>
+                <posx>881</posx>
+                <posy>240</posy>
+                <width>235</width>
+                <height>40</height>
+                <align>right</align>
+                <include>DialogLabel</include>
+                <visible>!ControlGroup(5).HasFocus() | !ControlGroup(5).HasFocus(30)</visible>
+            </control>
+            <control type="label">
+                <description>profile name</description>
+                <posx>881</posx>
+                <posy>240</posy>
+                <width>235</width>
+                <height>40</height>
+                <align>right</align>
+                <label>$INFO[Control.GetLabel(1000)]</label>
+                <include>DialogLabel</include>
+                <visible>ControlGroup(5).HasFocus() + ControlGroup(5).HasFocus(30)</visible>
+            </control>
+            <control type="image">
+                <description>profile image</description>
+                <posx>855</posx>
+                <posy>287</posy>
+                <width>27</width>
+                <height>27</height>
+                <texture>$INFO[Control.GetLabel(2)]</texture>
+            </control>
+            <control type="label" id="1001">
+                <description>profile location</description>
+                <posx>881</posx>
+                <posy>320</posy>
+                <width>235</width>
+                <height>40</height>
+                <align>right</align>
+                <include>DialogLabel</include>
+                <visible>[!ControlGroup(5).HasFocus() | !ControlGroup(5).HasFocus(32)] + !IsEmpty(Control.GetLabel(33))</visible>
+            </control>
+            <control type="label">
+                <description>profile location</description>
+                <posx>881</posx>
+                <posy>320</posy>
+                <width>235</width>
+                <height>40</height>
+                <align>right</align>
+                <label>$INFO[Control.GetLabel(1001)]</label>
+                <include>DialogLabel</include>
+                <visible>ControlGroup(5).HasFocus() + ControlGroup(5).HasFocus(32) + !IsEmpty(Control.GetLabel(33))</visible>
+            </control>
+            <control type="button" id="7">
+                <description>-</description>
+                <height>40</height>
+                <align>left</align>
+                <textwidth>235</textwidth>
+                <textoffsetx>13</textoffsetx>
+                <include>DialogButton</include>
+                <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+                <texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
+            </control>
+            <control type="radiobutton" id="8">
+                <description>-</description>
+                <height>40</height>
+                <align>left</align>
+                <textwidth>235</textwidth>
+                <textoffsetx>13</textoffsetx>
+                <radioposx>568</radioposx>
+                <include>DialogButton</include>
+                <textureradioon>common/radio/radio-light-fo.png</textureradioon>
+                <textureradiooff>common/radio/radio-light-nf.png</textureradiooff>
+                <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+                <texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
+            </control>
+            <control type="spincontrolex" id="9">
+                <description>-</description>
+                <textureup>common/spinctrl/arrow-light-up-nf.png</textureup>
+                <texturedown>common/spinctrl/arrow-light-down-nf.png</texturedown>
+                <textureupfocus>common/spinctrl/arrow-light-up-fo.png</textureupfocus>
+                <texturedownfocus>common/spinctrl/arrow-light-down-fo.png</texturedownfocus>
+                <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+                <texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
+                <include>DialogButton</include>
+                <align>left</align>
+                <textwidth>235</textwidth>
+                <textoffsetx>13</textoffsetx>
+                <spinposx>5</spinposx>
+            </control>
+            <control type="sliderex" id="10">
+                <description>Slider</description>
+                <include>DialogButton</include>
+                <textwidth>235</textwidth>
+                <textoffsetx>13</textoffsetx>
+                <sliderwidth>140</sliderwidth>
+                <sliderheight>20</sliderheight>
+                <align>left</align>
+                <texturesliderbar>osd/slider_back.png</texturesliderbar>
+                <textureslidernib>osd/orb_nofo.png</textureslidernib>
+                <textureslidernibfocus>buttons/OSD/orb_fo.png</textureslidernibfocus>
+            </control>
+            <control type="group" id="1004">
+                <posx>377</posx>
+                <posy>477</posy>
+                <control type="button" id="28">
+                    <description>OK</description>
+                    <label>OK</label>
+                    <include>DialogButtonOKCancel</include>
+                    <texturefocus>common/select-fo.png</texturefocus>
+                    <texturenofocus>common/select-nf.png</texturenofocus>
+                    <align>left</align>
+                    <textoffsetx>67</textoffsetx>
+                    <width>233</width>
+                    <height>67</height>
+                    <onleft>29</onleft>
+                    <onright>29</onright>
+                    <onup>5</onup>
+                    <ondown>5</ondown>
+                    <animation effect="fade" start="100" end="75" time="0" condition="!Control.IsEnabled(28)">Conditional</animation>
+                </control>
+                <control type="button" id="29">
+                    <posx>133</posx>
+                    <description>Cancel</description>
+                    <label>$LOCALIZE[222]</label>
+                    <include>DialogButtonOKCancel</include>
+                    <texturefocus>common/cancel-fo.png</texturefocus>
+                    <texturenofocus>common/cancel-nf.png</texturenofocus>
+                    <align>left</align>
+                    <textoffsetx>67</textoffsetx>
+                    <width>233</width>
+                    <height>67</height>
+                    <onleft>28</onleft>
+                    <onright>28</onright>
+                    <onup>5</onup>
+                    <ondown>5</ondown>
+                    <animation effect="fade" start="100" end="75" time="0" condition="!Control.IsEnabled(29)">Conditional</animation>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

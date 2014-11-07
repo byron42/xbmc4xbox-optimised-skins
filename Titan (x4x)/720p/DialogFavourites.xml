@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Titan-->
+<window type="dialog" id="134">
+    <defaultcontrol always="true">450</defaultcontrol>
+    <allowoverlay>yes</allowoverlay>
+    <controls>
+        <control type="group">
+            <posx>367</posx>
+            <posy>100</posy>
+            <include>animation_dialog</include>
+            <control type="image">
+                <width>400</width>
+                <height>400</height>
+                <texture border="39">dialogs/default/bg.png</texture>
+                <aspectratio>stretch</aspectratio>
+            </control>
+            <control type="label" id="1">
+                <description>header label</description>
+                <posx>0</posx>
+                <posy>33</posy>
+                <width>400</width>
+                <align>center</align>
+                <textcolor>midgrey</textcolor>
+                <font>Light40</font>
+                <label>1036</label>
+            </control>
+            <control type="list" id="450">
+                <posx>13</posx>
+                <posy>100</posy>
+                <width>373</width>
+                <height>460</height>
+                <onleft>450</onleft>
+                <onright>450</onright>
+                <onup>450</onup>
+                <ondown>450</ondown>
+                <itemlayout height="40">
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <height>40</height>
+                        <width>400</width>
+                        <texture>common/button-nf.png</texture>
+                    </control>
+                    <control type="label">
+                        <posx>33</posx>
+                        <width>400</width>
+                        <height>40</height>
+                        <textcolor>midgrey</textcolor>
+                        <info>ListItem.Label</info>
+                    </control>
+                    <control type="label">
+                        <posx>400</posx>
+                        <width>400</width>
+                        <height>40</height>
+                        <align>right</align>
+                        <textcolor>midgrey</textcolor>
+                        <info>ListItem.Label2</info>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="40">
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <height>40</height>
+                        <width>400</width>
+                        <texture>common/button-fo.png</texture>
+                    </control>
+                    <control type="label">
+                        <posx>33</posx>
+                        <width>400</width>
+                        <height>40</height>
+                        <textcolor>white</textcolor>
+                        <info>ListItem.Label</info>
+                    </control>
+                    <control type="label">
+                        <posx>400</posx>
+                        <width>400</width>
+                        <height>40</height>
+                        <align>right</align>
+                        <textcolor>white</textcolor>
+                        <info>ListItem.Label2</info>
+                    </control>
+                </focusedlayout>
+            </control>
+            <control type="image">
+                <description>Large Icon Image</description>
+                <posx>470</posx>
+                <posy>218</posy>
+                <width>200</width>
+                <height>300</height>
+                <texture>$INFO[Container(450).ListItem.Icon]</texture>
+            </control>
+        </control>
+    </controls>
+</window>

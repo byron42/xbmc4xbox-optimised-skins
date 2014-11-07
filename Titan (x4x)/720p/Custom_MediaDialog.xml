@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Titan-->
+<window type="dialog" id="3004">
+    <defaultcontrol always="true">2</defaultcontrol>
+    <controls>
+        <!--Dialog Overlay-->
+        <include>DialogOverlay</include>
+        <!--Dialog Custom Media Dialog-->
+        <control type="group">
+            <include>animation_dialog</include>
+            <visible>!Window.IsVisible(filebrowser) + !Window.IsVisible(selectdialog) + !Window.IsVisible(DialogSelect.xml) + !Window.IsVisible(progressdialog) + !Window.IsVisible(virtualkeyboard) + !Window.IsVisible(yesnodialog) + !Window.IsVisible(okdialog) + !Window.IsVisible(addonsettings)</visible>
+            <!--Header-->
+            <control type="label">
+                <description>Heading</description>
+                <posx>315</posx>
+                <posy>133</posy>
+                <width>649</width>
+                <label>$LOCALIZE[13511]</label>
+                <include>DialogHeader</include>
+                <align>center</align>
+            </control>
+            <!--Panel-->
+            <control type="image">
+                <!--Arrow-->
+                <posx>613</posx>
+                <posy>165</posy>
+                <width>53</width>
+                <height>40</height>
+                <texture>dialogs/default/arrow.png</texture>
+            </control>
+            <control type="image">
+                <!--Panel-->
+                <posx>403</posx>
+                <posy>177</posy>
+                <width>475</width>
+                <height>365</height>
+                <texture border="39">dialogs/default/bg.png</texture>
+            </control>
+            <control type="image">
+                <!--Inner-->
+                <posx>425</posx>
+                <posy>200</posy>
+                <width>429</width>
+                <height>321</height>
+                <texture border="5">dialogs/default/inner.png</texture>
+            </control>
+            <!--Get Thumb-->
+            <control type="button" id="2">
+                <description>Get thumb</description>
+                <posx>425</posx>
+                <posy>200</posy>
+                <width>429</width>
+                <height>40</height>
+                <label>$LOCALIZE[13511]</label>
+                <align>left</align>
+                <textoffsetx>13</textoffsetx>
+                <include>DialogButton</include>
+                <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+                <texturenofocus>dialogs/default/separator.png</texturenofocus>
+                <onclick>SendClick(2003,10)</onclick>
+                <onup>3</onup>
+                <ondown>3</ondown>
+                <onleft>7</onleft>
+                <onright>7</onright>
+            </control>
+            <!--Label Artwork Downloader-->
+            <control type="button">
+                <posx>425</posx>
+                <posy>245</posy>
+                <width>429</width>
+                <height>35</height>
+                <label>[B]Artwork Downloader[/B]</label>
+                <align>left</align>
+                <textoffsetx>13</textoffsetx>
+                <include>DialogButton</include>
+                <texturenofocus border="0,0,0,2">dialogs/default/separator.png</texturenofocus>
+                <visible>System.HasAddon(script.artwork.downloader)</visible>
+            </control>
+            <!--List ID=3 Poster, Fanart, Clearart,..-->
+            <control type="list" id="3">
+                <posx>425</posx>
+                <posy>280</posy>
+                <width>429</width>
+                <height>240</height>
+                <onleft>7</onleft>
+                <onright>7</onright>
+                <onup>2</onup>
+                <ondown>2</ondown>
+                <pagecontrol>61</pagecontrol>
+                <scrolltime tween="cubic" easing="out">500</scrolltime>
+                <visible>System.HasAddon(script.artwork.downloader)</visible>
+                <itemlayout height="40">
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>1</posy>
+                        <width>429</width>
+                        <height>40</height>
+                        <texture>dialogs/default/separator.png</texture>
+                    </control>
+                    <control type="label">
+                        <posx>13</posx>
+                        <posy>0</posy>
+                        <width>403</width>
+                        <height>40</height>
+                        <info>ListItem.Label</info>
+                        <include>DialogListNF</include>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <scroll>false</scroll>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="40">
+                    <control type="group">
+                        <visible>!Control.HasFocus(3)</visible>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>1</posy>
+                            <width>429</width>
+                            <height>40</height>
+                            <texture>dialogs/default/separator.png</texture>
+                        </control>
+                        <control type="label">
+                            <posx>13</posx>
+                            <posy>0</posy>
+                            <width>403</width>
+                            <height>40</height>
+                            <info>ListItem.Label</info>
+                            <include>DialogListNF</include>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <scroll>false</scroll>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <visible>Control.HasFocus(3)</visible>
+                        <control type="image">
+                            <width>429</width>
+                            <height>40</height>
+                            <texture border="2">dialogs/default/highlight.png</texture>
+                        </control>
+                        <control type="label">
+                            <posx>13</posx>
+                            <posy>0</posy>
+                            <width>403</width>
+                            <height>40</height>
+                            <info>ListItem.Label</info>
+                            <include>DialogListFO</include>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                        </control>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <item id="1">
+                        <!--Get poster-->
+                        <label>Poster</label>
+                        <onclick condition="Container.Content(Movies)">RunScript(script.artwork.downloader,mode=gui,mediatype=movie,dbid=$INFO[ListItem.DBID],poster)</onclick>
+                        <onclick condition="Container.Content(TVShows)">RunScript(script.artwork.downloader,mode=gui,mediatype=tvshow,dbid=$INFO[ListItem.DBID],poster)</onclick>
+                    </item>
+                    <item id="2">
+                        <!--Get fanart-->
+                        <label>Fanart</label>
+                        <onclick condition="Container.Content(Movies)">RunScript(script.artwork.downloader,mode=gui,mediatype=movie,dbid=$INFO[ListItem.DBID],fanart)</onclick>
+                        <onclick condition="Container.Content(TVShows)">RunScript(script.artwork.downloader,mode=gui,mediatype=tvshow,dbid=$INFO[ListItem.DBID],fanart)</onclick>
+                    </item>
+                    <item id="3">
+                        <!--Get banner-->
+                        <label>Banner</label>
+                        <onclick>RunScript(script.artwork.downloader,mode=gui,mediatype=tvshow,dbid=$INFO[ListItem.DBID],banner)</onclick>
+                        <visible>Container.Content(TVShows)</visible>
+                    </item>
+                    <item id="4">
+                        <!--Get landscape-->
+                        <label>Landscape</label>
+                        <onclick condition="Container.Content(Movies)">RunScript(script.artwork.downloader,mode=gui,mediatype=movie,dbid=$INFO[ListItem.DBID],landscape)</onclick>
+                        <onclick condition="Container.Content(TVShows)">RunScript(script.artwork.downloader,mode=gui,mediatype=tvshow,dbid=$INFO[ListItem.DBID],landscape)</onclick>
+                    </item>
+                    <item id="5">
+                        <!--Get clearlogo-->
+                        <label>Logo</label>
+                        <onclick condition="Container.Content(Movies)">RunScript(script.artwork.downloader,mode=gui,mediatype=movie,dbid=$INFO[ListItem.DBID],clearlogo)</onclick>
+                        <onclick condition="Container.Content(TVShows)">RunScript(script.artwork.downloader,mode=gui,mediatype=tvshow,dbid=$INFO[ListItem.DBID],clearlogo)</onclick>
+                    </item>
+                    <item id="6">
+                        <!--Get clearart-->
+                        <label>ClearArt</label>
+                        <onclick condition="Container.Content(Movies)">RunScript(script.artwork.downloader,mode=gui,mediatype=movie,dbid=$INFO[ListItem.DBID],clearart)</onclick>
+                        <onclick condition="Container.Content(TVShows)">RunScript(script.artwork.downloader,mode=gui,mediatype=tvshow,dbid=$INFO[ListItem.DBID],clearart)</onclick>
+                    </item>
+                </content>
+            </control>
+            <!--Buttons-->
+            <control type="group" id="8000">
+                <posx>417</posx>
+                <posy>517</posy>
+                <control type="button" id="7">
+                    <description>Close</description>
+                    <label>$LOCALIZE[222]</label>
+                    <texturefocus>common/cancel-fo.png</texturefocus>
+                    <texturenofocus>common/cancel-nf.png</texturenofocus>
+                    <align>left</align>
+                    <textoffsetx>67</textoffsetx>
+                    <pulseonselect>false</pulseonselect>
+                    <width>233</width>
+                    <height>67</height>
+                    <onclick>Action(close)</onclick>
+                    <onleft>7</onleft>
+                    <onright>7</onright>
+                    <onup>3</onup>
+                    <ondown>3</ondown>
+                    <animation effect="fade" start="100" end="75" time="0" condition="!Control.IsEnabled(7)">Conditional</animation>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

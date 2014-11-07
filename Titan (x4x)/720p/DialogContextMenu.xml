@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Titan-->
+<window id="106">
+    <defaultcontrol always="true">1000</defaultcontrol>
+    <allowoverlay>yes</allowoverlay>
+    <controls>
+        <!--Dialog Context Menu-->
+        <control type="group">
+            <posx>473</posx>
+            <posy>100</posy>
+            <include>animation_dialog</include>
+            <!--Panel-->
+            <control type="image">
+                <posx>307</posx>
+                <posy>240</posy>
+                <width>40</width>
+                <height>53</height>
+                <texture flipx="true">dialogs/default/arrow-left-black.png</texture>
+            </control>
+            <control type="image">
+                <width>333</width>
+                <height>573</height>
+                <texture border="39">dialogs/default/bg-black.png</texture>
+                <aspectratio>stretch</aspectratio>
+            </control>
+            <!--Label Menu: -->
+            <control type="label" id="200">
+                <!--Label Menu-->
+                <posx>14</posx>
+                <posy>40</posy>
+                <width>305</width>
+                <align>left</align>
+                <textoffsetx>33</textoffsetx>
+                <font>Light40</font>
+                <textcolor>mainblue</textcolor>
+                <label>$LOCALIZE[41090]:</label>
+            </control>
+            <control type="image" id="201">
+                <!--Seperator-->
+                <posx>14</posx>
+                <posy>80</posy>
+                <width>305</width>
+                <height>13</height>
+                <align>left</align>
+                <texture>common/menu-separator.png</texture>
+            </control>
+            <control type="grouplist" id="996">
+                <posx>14</posx>
+                <posy>113</posy>
+                <width></width>
+                <height>420</height>
+                <itemgap>2</itemgap>
+                <!--Buttons-->
+                <control type="button" id="1000">
+                    <description>Buttons</description>
+                    <include>SubMenuButton</include>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

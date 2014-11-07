@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Titan-->
+<window>
+    <defaultcontrol>-</defaultcontrol>
+    <zorder>3</zorder>
+    <!--Normal "1" over DialogVideoInfo.xml and DialogSelect.xml-->
+    <controls>
+        <control type="image" id="400">
+            <description>Icon</description>
+            <posx>-13</posx>
+            <posy>-13</posy>
+            <width>1</width>
+            <height>1</height>
+            <texture>-</texture>
+        </control>
+        <control type="label" id="401">
+            <description>Line 1</description>
+            <font>-</font>
+        </control>
+        <control type="label" id="402">
+            <description>Line 2</description>
+            <font>-</font>
+        </control>
+        <!-- Default notification -->
+        <control type="group">
+            <include>animation_static_dialog</include>
+            <include>animation_fade_visible_hidden</include>
+            <include>animation_fade_open_close</include>
+            <posx>40</posx>
+            <posy>27</posy>
+            <visible>!Window.IsActive(fullscreenvideo) + !Window.IsActive(visualisation) + !Window.IsVisible(startup)</visible>
+            <control type="group">
+                <control type="image">
+                    <description>Icon</description>
+                    <posx>0</posx>
+                    <posy>10</posy>
+                    <width>43</width>
+                    <height>43</height>
+                    <aspectratio>scale</aspectratio>
+                    <texture>dialogs/kaitoast/info.png</texture>
+                </control>
+                <control type="label">
+                    <description>Line 1</description>
+                    <posx>60</posx>
+                    <posy>0</posy>
+                    <width>333</width>
+                    <height>33</height>
+                    <label>$INFO[Control.GetLabel(401)]</label>
+                    <font>Bold38</font>
+                    <textcolor>ccmainblue</textcolor>
+                    <scroll>false</scroll>
+                </control>
+                <control type="label">
+                    <description>Line 2</description>
+                    <posx>60</posx>
+                    <posy>27</posy>
+                    <width>333</width>
+                    <height>33</height>
+                    <label>$INFO[Control.GetLabel(402)]</label>
+                    <font>Reg30</font>
+                    <textcolor>eewhite</textcolor>
+                    <scroll>false</scroll>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

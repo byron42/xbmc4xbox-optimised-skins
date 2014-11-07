@@ -1,0 +1,13 @@
+<skin>
+	<defaultresolution>720p</defaultresolution>
+	<defaultresolutionwide>720p</defaultresolutionwide>
+	<defaultthemename>Textures.xpr</defaultthemename>
+	<version>3.5.0</version>
+	<skinversion>2.11</skinversion>
+	<effectslowdown>0.75</effectslowdown>
+	<credits>
+		<skinname>Titan (x4x)</skinname>
+		<name>Titan by reazorFX</name>
+		<name>Titan (x4x) port by byron</name>
+	</credits>
+</skin>

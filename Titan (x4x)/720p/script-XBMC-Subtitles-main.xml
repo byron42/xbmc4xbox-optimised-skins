@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+    <allowoverlay>no</allowoverlay>
+    <zorder>1</zorder>
+    <onunload>Skin.Reset(subtitle)</onunload>
+    <onload>Skin.SetBool(subtitle)</onload>
+    <controls>
+        <control type="group" id="250">
+            <animation time="600" effect="fade">WindowOpen</animation>
+            <animation time="600" effect="fade">WindowClose</animation>
+            <!--Panel-->
+            <control type="image">
+                <posx>157</posx>
+                <posy>60</posy>
+                <width>1000</width>
+                <height>433</height>
+                <texture border="39">dialogs/default/bg.png</texture>
+            </control>
+            <!--Top Label-->
+            <control type="group">
+                <control type="label">
+                    <!--Header-->
+                    <posx>210</posx>
+                    <posy>100</posy>
+                    <width>367</width>
+                    <height>33</height>
+                    <font>Reg40</font>
+                    <label>[B]XBMC SUBTITLES[/B]</label>
+                    <align>Left</align>
+                    <textcolor>midgrey</textcolor>
+                </control>
+                <control type="label" id="100">
+                    <!--textarea-->
+                    <posx>210</posx>
+                    <posy>133</posy>
+                    <width>520</width>
+                    <height>33</height>
+                    <font>Light32</font>
+                    <textcolor>midgrey</textcolor>
+                    <align>Left</align>
+                    <wrapmultiline>false</wrapmultiline>
+                </control>
+                <control type="image" id="110">
+                    <!--Logo-->
+                    <posx>7</posx>
+                    <posy>7</posy>
+                    <width>167</width>
+                    <height>27</height>
+                    <colordiffuse>00ffffff</colordiffuse>
+                    <aspectratio>keep</aspectratio>
+                </control>
+            </control>
+            <!--Left Menu-->
+            <control type="group">
+                <control type="image">
+                    <!--Inner-->
+                    <posx>177</posx>
+                    <posy>80</posy>
+                    <width>710</width>
+                    <height>393</height>
+                    <texture border="5">dialogs/default/inner.png</texture>
+                </control>
+                <control type="list" id="120">
+                    <!--List 120-->
+                    <posx>177</posx>
+                    <posy>187</posy>
+                    <width>867</width>
+                    <height>233</height>
+                    <!--onleft>121</onleft-->
+                    <onleft>-</onleft>
+                    <onright>150</onright>
+                    <onup>120</onup>
+                    <ondown>120</ondown>
+                    <viewtype label="535">list</viewtype>
+                    <pagecontrol>121</pagecontrol>
+                    <scrolltime>200</scrolltime>
+                    <itemlayout width="867" height="33">
+                        <control type="image">
+                            <!--Flag-->
+                            <posx>33</posx>
+                            <posy>3</posy>
+                            <width>41</width>
+                            <height>28</height>
+                            <texture>$INFO[ListItem.Thumb,dialogs/xbmcsubtitles/,/flag.png]</texture>
+                        </control>
+                        <control type="label">
+                            <!--Language-->
+                            <posx>100</posx>
+                            <posy>0</posy>
+                            <width>73</width>
+                            <height>33</height>
+                            <font>Light30</font>
+                            <aligny>center</aligny>
+                            <textcolor>midgrey</textcolor>
+                            <selectedcolor>midgrey</selectedcolor>
+                            <align>left</align>
+                            <info>ListItem.Label</info>
+                        </control>
+                        <!--control type="image">
+							<posx>210</posx>
+							<posy>0</posy>
+							<width>80</width>
+							<height>50</height>
+							<texture>dialogs/xbmcsubtitles/icon_hi.png</texture>
+							<visible>ListItem.property(hearing_imp)</visible>
+						</control>
+						<control type="image">
+							<posx>210</posx>
+							<posy>0</posy>
+							<width>121</width>
+							<height>50</height>
+							<texture>dialogs/xbmcsubtitles/icon_sync.png</texture>
+							<visible>ListItem.property(sync)</visible>                               
+						</control-->
+                        <control type="label">
+                            <!--Label 2-->
+                            <posx>200</posx>
+                            <posy>0</posy>
+                            <width>400</width>
+                            <height>33</height>
+                            <font>Light32</font>
+                            <aligny>center</aligny>
+                            <textcolor>midgrey</textcolor>
+                            <selectedcolor>midgrey</selectedcolor>
+                            <align>left</align>
+                            <info>ListItem.Label2</info>
+                        </control>
+                        <control type="group">
+                            <!--Rating not visible-->
+                            <visible>!IntegerGreaterThan(ListItem.ActualIcon,9)</visible>
+                            <control type="image">
+                                <posx>620</posx>
+                                <posy>0</posy>
+                                <width>33</width>
+                                <height>33</height>
+                                <texture>dialogs/xbmcsubtitles/star_nofo.png</texture>
+                            </control>
+                            <control type="label">
+                                <posx>683</posx>
+                                <posy>0</posy>
+                                <width>67</width>
+                                <height>33</height>
+                                <font>Light30</font>
+                                <textcolor>midgrey</textcolor>
+                                <selectedcolor>midgrey</selectedcolor>
+                                <label>$INFO[ListItem.ActualIcon,,.0]</label>
+                                <align>right</align>
+                                <aligny>center</aligny>
+                                <scroll>false</scroll>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <!--Rating visible-->
+                            <visible>IntegerGreaterThan(ListItem.ActualIcon,9)</visible>
+                            <control type="image">
+                                <posx>620</posx>
+                                <posy>0</posy>
+                                <width>33</width>
+                                <height>33</height>
+                                <texture>dialogs/xbmcsubtitles/star_fo.png</texture>
+                            </control>
+                            <control type="label">
+                                <posx>683</posx>
+                                <posy>0</posy>
+                                <width>67</width>
+                                <height>33</height>
+                                <font>Light30</font>
+                                <textcolor>midgrey</textcolor>
+                                <selectedcolor>midgrey</selectedcolor>
+                                <label>$INFO[ListItem.ActualIcon]</label>
+                                <align>right</align>
+                                <aligny>center</aligny>
+                                <scroll>false</scroll>
+                            </control>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout width="867" height="33">
+                        <control type="image">
+                            <!--Slider-->
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>710</width>
+                            <height>33</height>
+                            <texture>dialogs/default/highlight.png</texture>
+                            <visible>Control.HasFocus(120)</visible>
+                        </control>
+                        <control type="image">
+                            <!--Flag-->
+                            <posx>33</posx>
+                            <posy>3</posy>
+                            <width>41</width>
+                            <height>28</height>
+                            <texture>$INFO[ListItem.Thumb,dialogs/xbmcsubtitles/,/flag.png]</texture>
+                        </control>
+                        <control type="label">
+                            <!--Language-->
+                            <posx>100</posx>
+                            <posy>0</posy>
+                            <width>73</width>
+                            <height>33</height>
+                            <font>Light30</font>
+                            <aligny>center</aligny>
+                            <textcolor>white</textcolor>
+                            <selectedcolor>white</selectedcolor>
+                            <align>left</align>
+                            <info>ListItem.Label</info>
+                        </control>
+                        <!--control type="image">						
+							<posx>210</posx>
+							<posy>0</posy>
+							<width>80</width>
+							<height>50</height>
+							<texture>dialogs/xbmcsubtitles/icon_hi.png</texture>
+							<visible>ListItem.property(hearing_imp)</visible>
+						</control>
+						<control type="image">
+							<posx>210</posx>
+							<posy>0</posy>
+							<width>121</width>
+							<height>50</height>
+							<texture>dialogs/xbmcsubtitles/icon_sync.png</texture>
+							<visible>ListItem.property(sync)</visible>                               
+						</control-->
+                        <control type="label">
+                            <!--Label 2-->
+                            <posx>200</posx>
+                            <posy>0</posy>
+                            <width>400</width>
+                            <height>33</height>
+                            <font>Light32</font>
+                            <aligny>center</aligny>
+                            <textcolor>white</textcolor>
+                            <selectedcolor>white</selectedcolor>
+                            <align>left</align>
+                            <info>ListItem.Label2</info>
+                        </control>
+                        <control type="group">
+                            <!--Rating not visible-->
+                            <visible>!IntegerGreaterThan(ListItem.ActualIcon,9)</visible>
+                            <control type="image">
+                                <posx>620</posx>
+                                <posy>0</posy>
+                                <width>33</width>
+                                <height>33</height>
+                                <texture>dialogs/xbmcsubtitles/star_nofo.png</texture>
+                            </control>
+                            <control type="label">
+                                <posx>683</posx>
+                                <posy>0</posy>
+                                <width>67</width>
+                                <height>33</height>
+                                <font>Light30</font>
+                                <textcolor>white</textcolor>
+                                <selectedcolor>white</selectedcolor>
+                                <label>$INFO[ListItem.ActualIcon,,.0]</label>
+                                <align>right</align>
+                                <aligny>center</aligny>
+                                <scroll>false</scroll>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <!--Rating visible-->
+                            <visible>IntegerGreaterThan(ListItem.ActualIcon,9)</visible>
+                            <control type="image">
+                                <posx>620</posx>
+                                <posy>0</posy>
+                                <width>33</width>
+                                <height>33</height>
+                                <texture>dialogs/xbmcsubtitles/star_fo.png</texture>
+                            </control>
+                            <control type="label">
+                                <posx>683</posx>
+                                <posy>0</posy>
+                                <width>67</width>
+                                <height>33</height>
+                                <font>Light30</font>
+                                <textcolor>white</textcolor>
+                                <selectedcolor>white</selectedcolor>
+                                <label>$INFO[ListItem.ActualIcon]</label>
+                                <align>right</align>
+                                <aligny>center</aligny>
+                                <scroll>false</scroll>
+                            </control>
+                        </control>
+                    </focusedlayout>
+                </control>
+                <control type="spincontrol" id="121">
+                    <!--Next Page Button-->
+                    <posx>870</posx>
+                    <posy>433</posy>
+                    <width>33</width>
+                    <height>33</height>
+                    <font>Light28</font>
+                    <align>right</align>
+                    <subtype>page</subtype>
+                    <textcolor>midgrey</textcolor>
+                    <onleft>120</onleft>
+                    <onright>120</onright>
+                    <ondown>120</ondown>
+                    <onup>120</onup>
+                    <textoffsetx>7</textoffsetx>
+                    <textureup></textureup>
+                    <texturedown></texturedown>
+                    <textureupfocus></textureupfocus>
+                    <texturedownfocus></texturedownfocus>
+                    <showonepage>false</showonepage>
+                    <visible>Control.IsVisible(120)</visible>
+                </control>
+                <control type="group" id="111">
+                    <!--Local Subtitle-->
+                    <control type="grouplist">
+                        <posx>210</posx>
+                        <posy>433</posy>
+                        <width>267</width>
+                        <height>33</height>
+                        <align>Left</align>
+                        <orientation>horizontal</orientation>
+                        <itemgap>3</itemgap>
+                        <control type="label">
+                            <!--label-->
+                            <width min="7" max="333">auto</width>
+                            <height>33</height>
+                            <font>Light28</font>
+                            <textcolor>midgrey</textcolor>
+                            <label>$LOCALIZE[SCRIPT655]</label>
+                            <wrapmultiline>false</wrapmultiline>
+                        </control>
+                    </control>
+                </control>
+            </control>
+            <!--Right Menu-->
+            <control type="group">
+                <control type="image">
+                    <!--Inner-->
+                    <posx>900</posx>
+                    <posy>80</posy>
+                    <width>233</width>
+                    <height>393</height>
+                    <texture border="5">dialogs/default/inner.png</texture>
+                </control>
+                <control type="group">
+                    <!--Button no Focus-->
+                    <posy>80</posy>
+                    <control type="image">
+                        <!--Button 1 nofocus-->
+                        <posx>900</posx>
+                        <posy>0</posy>
+                        <width>233</width>
+                        <height>40</height>
+                        <texture>dialogs/default/separator.png</texture>
+                    </control>
+                    <control type="image">
+                        <!--Button 2 nofocus-->
+                        <posx>900</posx>
+                        <posy>40</posy>
+                        <width>233</width>
+                        <height>40</height>
+                        <texture>dialogs/default/separator.png</texture>
+                    </control>
+                    <control type="image">
+                        <!--Button 3 nofocus-->
+                        <posx>900</posx>
+                        <posy>80</posy>
+                        <width>233</width>
+                        <height>40</height>
+                        <texture>dialogs/default/separator.png</texture>
+                    </control>
+                </control>
+                <control type="list" id="150">
+                    <!--List 150-->
+                    <posx>900</posx>
+                    <posy>80</posy>
+                    <width>233</width>
+                    <height>289</height>
+                    <onleft>120</onleft>
+                    <onright>120</onright>
+                    <onup>150</onup>
+                    <ondown>150</ondown>
+                    <viewtype label="535">list</viewtype>
+                    <scrolltime>200</scrolltime>
+                    <itemlayout width="233" height="40">
+                        <control type="label">
+                            <posx>27</posx>
+                            <posy>0</posy>
+                            <width>200</width>
+                            <height>40</height>
+                            <font>Light32</font>
+                            <aligny>center</aligny>
+                            <textcolor>FF585858</textcolor>
+                            <selectedcolor>FF585858</selectedcolor>
+                            <align>left</align>
+                            <info>ListItem.Label</info>
+                            <visible>!ListItem.property(man)</visible>
+                        </control>
+                        <control type="label">
+                            <posx>27</posx>
+                            <posy>0</posy>
+                            <width>200</width>
+                            <height>40</height>
+                            <font>Light32</font>
+                            <aligny>center</aligny>
+                            <textcolor>FF585858</textcolor>
+                            <selectedcolor>FF585858</selectedcolor>
+                            <align>left</align>
+                            <info>ListItem.Label</info>
+                            <visible>ListItem.property(man)</visible>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout width="233" height="40">
+                        <control type="image">
+                            <!--Button-->
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>233</width>
+                            <height>40</height>
+                            <texture>dialogs/default/highlight-grey.png</texture>
+                            <visible>Control.HasFocus(150)</visible>
+                        </control>
+                        <control type="label">
+                            <visible>Control.HasFocus(150)</visible>
+                            <posx>27</posx>
+                            <posy>0</posy>
+                            <width>200</width>
+                            <height>40</height>
+                            <font>Light32</font>
+                            <aligny>center</aligny>
+                            <textcolor>eewhite</textcolor>
+                            <align>left</align>
+                            <info>ListItem.Label</info>
+                            <visible>!ListItem.property(man)</visible>
+                        </control>
+                        <control type="label">
+                            <visible>Control.HasFocus(150)</visible>
+                            <posx>27</posx>
+                            <posy>0</posy>
+                            <width>200</width>
+                            <height>40</height>
+                            <font>Light32</font>
+                            <aligny>center</aligny>
+                            <textcolor>eewhite</textcolor>
+                            <align>left</align>
+                            <info>ListItem.Label</info>
+                            <visible>ListItem.property(man)</visible>
+                        </control>
+                        <control type="label">
+                            <visible>!Control.HasFocus(150)</visible>
+                            <posx>27</posx>
+                            <posy>0</posy>
+                            <width>200</width>
+                            <height>40</height>
+                            <font>Light32</font>
+                            <aligny>center</aligny>
+                            <textcolor>FF585858</textcolor>
+                            <align>left</align>
+                            <info>ListItem.Label</info>
+                            <visible>!ListItem.property(man)</visible>
+                        </control>
+                        <control type="label">
+                            <visible>!Control.HasFocus(150)</visible>
+                            <posx>27</posx>
+                            <posy>0</posy>
+                            <width>200</width>
+                            <height>40</height>
+                            <font>Light32</font>
+                            <aligny>center</aligny>
+                            <textcolor>FF585858</textcolor>
+                            <align>left</align>
+                            <info>ListItem.Label</info>
+                            <visible>ListItem.property(man)</visible>
+                        </control>
+                    </focusedlayout>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

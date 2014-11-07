@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Titan-->
+<includes>
+    <!--NowPlayingMusic-->
+    <include name="NowPlayingMusic">
+        <control type="group">
+            <!--Panel-->
+            <visible>Player.HasAudio</visible>
+            <animation effect="fade" time="600" delay="1000" reversible="false">Visible</animation>
+            <animation effect="fade" time="200" reversible="false">Hidden</animation>
+            <animation effect="fade" time="600" delay="800" reversible="false">WindowOpen</animation>
+            <animation effect="fade" time="200" reversible="false">WindowClose</animation>
+            <visible>!Window.IsActive(Settings.xml) + !Window.IsActive(SettingsCategory.xml)  + !Window.IsActive(SettingsSystemInfo.xml) + !Window.IsActive(SkinSettings.xml)</visible>
+            <visible>!Window.IsActive(DialogKaiToast.xml) + !Window.IsActive(DialogExtendedProgressBar.xml)</visible>
+            <visible>![Window.IsActive(DialogVideoInfo.xml) + !substring(ListItem.Path,plugin)]</visible>
+            <posx>433</posx>
+            <posy>0</posy>
+            <control type="image">
+                <!--Panel-->
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>422</width>
+                <height>159</height>
+                <texture>dialogs/nowplaying/nowplaying_music.png</texture>
+            </control>
+            <control type="image">
+                <!--Cover-->
+                <posx>60</posx>
+                <posy>29</posy>
+                <width>89</width>
+                <height>89</height>
+                <fadetime>200</fadetime>
+                <texture background="true" diffuse="covermatte_cdart.png">$INFO[MusicPlayer.Cover]</texture>
+                <aspectratio align="center" aligny="top">stretch</aspectratio>
+            </control>
+            <control type="label">
+                <!--Now Playing-->
+                <posx>170</posx>
+                <posy>27</posy>
+                <width>190</width>
+                <align>left</align>
+                <font>Reg28</font>
+                <textcolor>darkgrey</textcolor>
+                <label>Now Playing</label>
+            </control>
+            <control type="fadelabel">
+                <!--Title-->
+                <posx>170</posx>
+                <posy>50</posy>
+                <width>190</width>
+                <align>left</align>
+                <font>Bold34</font>
+                <textcolor>darkgrey</textcolor>
+                <label>$INFO[MusicPlayer.Title]</label>
+            </control>
+            <control type="label">
+                <!--Play Time-->
+                <posx>170</posx>
+                <posy>83</posy>
+                <width>190</width>
+                <align>left</align>
+                <font>Reg28</font>
+                <textcolor>darkgrey</textcolor>
+                <label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
+            </control>
+            <control type="progress">
+                <!--Process-->
+                <posx>170</posx>
+                <posy>83</posy>
+                <width>190</width>
+                <texturebg></texturebg>
+                <midtexture border="4">osd/ProgressMidSmall.png</midtexture>
+                <info>Player.Progress</info>
+                <visible>true</visible>
+            </control>
+        </control>
+    </include>
+    <!--NowPlayingVideo-->
+    <include name="NowPlayingVideo">
+        <control type="group">
+            <!--Panel-->
+            <visible>Player.HasVideo</visible>
+            <animation effect="fade" time="600" delay="1000" reversible="false">Visible</animation>
+            <animation effect="fade" time="500" reversible="false">Hidden</animation>
+            <animation effect="fade" time="600" delay="1000" reversible="false">WindowOpen</animation>
+            <animation effect="fade" time="200" reversible="false">WindowClose</animation>
+            <visible>!Window.IsActive(Settings.xml) + !Window.IsActive(SettingsCategory.xml)  + !Window.IsActive(SettingsSystemInfo.xml) + !Window.IsActive(SkinSettings.xml)</visible>
+            <visible>!Window.IsActive(DialogKaiToast.xml) + !Window.IsActive(DialogExtendedProgressBar.xml)</visible>
+            <visible>![Window.IsActive(DialogVideoInfo.xml) + !substring(ListItem.Path,plugin)]</visible>
+            <posx>393</posx>
+            <posy>0</posy>
+            <control type="image">
+                <!--Panel-->
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>489</width>
+                <height>159</height>
+                <texture>dialogs/nowplaying/nowplaying_video.png</texture>
+            </control>
+            <control type="image">
+                <!--Black Back-->
+                <posx>60</posx>
+                <posy>29</posy>
+                <width>160</width>
+                <!-- +8 -->
+                <height>89</height>
+                <!-- +2 -->
+                <texture>common/black.png</texture>
+            </control>
+            <control type="label">
+                <!--Now Playing-->
+                <posx>237</posx>
+                <posy>27</posy>
+                <width>190</width>
+                <align>left</align>
+                <font>Reg28</font>
+                <textcolor>darkgrey</textcolor>
+                <label>Now Playing</label>
+            </control>
+            <control type="fadelabel">
+                <!--Title-->
+                <posx>238</posx>
+                <posy>50</posy>
+                <width>190</width>
+                <align>left</align>
+                <font>Bold34</font>
+                <textcolor>darkgrey</textcolor>
+                <label>$INFO[VideoPlayer.Title]</label>
+                <scroll>false</scroll>
+            </control>
+            <control type="label">
+                <!--Play Time-->
+                <posx>237</posx>
+                <posy>83</posy>
+                <width>190</width>
+                <align>left</align>
+                <font>Reg28</font>
+                <textcolor>darkgrey</textcolor>
+                <label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
+            </control>
+            <control type="progress">
+                <!--Process-->
+                <posx>238</posx>
+                <posy>83</posy>
+                <width>190</width>
+                <texturebg></texturebg>
+                <midtexture border="4">osd/ProgressMidSmall.png</midtexture>
+                <info>Player.Progress</info>
+                <visible>true</visible>
+            </control>
+        </control>
+        <control type="group">
+            <!--Video Window-->
+            <visible>Player.HasVideo</visible>
+            <animation effect="slide" start="1000" end="0" time="0" delay="1500" reversible="false">WindowOpen</animation>
+            <animation effect="slide" start="0" end="1000" time="0" reversible="false">WindowClose</animation>
+            <animation effect="slide" start="1000" end="0" time="0" delay="1500" reversible="false">Visible</animation>
+            <animation effect="slide" start="0" end="1000" time="0" reversible="false">Hidden</animation>
+            <visible>!Window.IsActive(Settings.xml) + !Window.IsActive(SettingsCategory.xml)  + !Window.IsActive(SettingsSystemInfo.xml) + !Window.IsActive(SkinSettings.xml)</visible>
+            <visible>!Window.IsActive(DialogKaiToast.xml) + !Window.IsActive(DialogExtendedProgressBar.xml)</visible>
+            <visible>![Window.IsActive(DialogVideoInfo.xml) + !substring(ListItem.Path,plugin)]</visible>
+            <posx>393</posx>
+            <posy>0</posy>
+            <control type="videowindow">
+                <!--Video Window-->
+                <posx>63</posx>
+                <posy>30</posy>
+                <width>155</width>
+                <!--1,777-->
+                <height>87</height>
+            </control>
+        </control>
+    </include>
+</includes>

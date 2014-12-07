@@ -1,13 +1,23 @@
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
-12.7.14 Version 3.5.01
+12.7.14 Version 3.5.02
 
 	12.7.14
 ------------------------------------------------------------------------------
 		= fixed missing labels in skin settings...for whatever reason 
-		  <onclick></onclick> has to be ==> <onclick>-</onclick> for
-		  whatever reason.  
+		  <onclick></onclick> has to be ==> <onclick>-</onclick>.  
+
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+1.16.14 Version 3.5.01 
+
+	1.16.14
+------------------------------------------------------------------------------
+		= Changed code in includes.xml/MyVideoNav.xml to make dvd images appear in icon
+	 	  and item views for video library
 
 
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo

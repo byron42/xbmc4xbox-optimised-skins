@@ -915,204 +915,204 @@
 						<content>
 							<item id="1">
 								<label>$LOCALIZE[10000] - $LOCALIZE[3]</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/videos.jpg</icon>
 								<thumb>$INFO[Skin.String(Home_Custom_Back_Videos_Folder)]</thumb>
 							</item>
 							<item id="2">
 								<label>$LOCALIZE[10000] - $LOCALIZE[342]</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/movies.jpg</icon>
 								<thumb>$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</thumb>
 								<visible>!Skin.HasSetting(Home_Movies_Fanart_Background)</visible>
 							</item>
 							<item id="2">
 								<label>$LOCALIZE[10000] - $LOCALIZE[342]</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/movies.png</icon>
 								<thumb>special://skin/backgrounds/movies.png</thumb>
 								<visible>Skin.HasSetting(Home_Movies_Fanart_Background)</visible>
 							</item>
 							<item id="3">
 								<label>$LOCALIZE[10000] - $LOCALIZE[20343]</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/tvshows.jpg</icon>
 								<thumb>$INFO[Skin.String(Home_Custom_Back_TVShows_Folder)]</thumb>
 								<visible>!Skin.HasSetting(Home_TVShows_Fanart_Background)</visible>
 							</item>
 							<item id="3">
 								<label>$LOCALIZE[10000] - $LOCALIZE[20343]</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/tvshows.png</icon>
 								<thumb>special://skin/backgrounds/tvshows.png</thumb>
 								<visible>Skin.HasSetting(Home_TVShows_Fanart_Background)</visible>
 							</item>
 							<item id="4">
 								<label>$LOCALIZE[10000] - $LOCALIZE[20389]</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/musicvideos.jpg</icon>
 								<thumb>$INFO[Skin.String(Home_Custom_Back_MusicVideos_Folder)]</thumb>
 							</item>
 							<item id="5">
 								<label>$LOCALIZE[10000] - TV ($LOCALIZE[1223])</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/tv.jpg</icon>
 								<thumb>$INFO[Skin.String(Home_Custom_Back_TV_Folder)]</thumb>
 							</item>
 							<item id="6">
 								<label>$LOCALIZE[10000] - $LOCALIZE[2]</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/music.jpg</icon>
 								<thumb>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</thumb>
 								<visible>!Skin.HasSetting(Home_Music_Fanart_Background)</visible>
 							</item>
 							<item id="6">
 								<label>$LOCALIZE[10000] - $LOCALIZE[2]</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/music.png</icon>
 								<thumb>special://skin/backgrounds/music.png</thumb>
 								<visible>Skin.HasSetting(Home_Music_Fanart_Background)</visible>
 							</item>
 							<item id="7">
 								<label>$LOCALIZE[10000] - $LOCALIZE[1]</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/pictures.jpg</icon>
 								<thumb>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</thumb>
 							</item>
 							<item id="8">
 								<label>$LOCALIZE[10000] - $LOCALIZE[0]</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/programs.jpg</icon>
 								<thumb>$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</thumb>
 							</item>
 							<item id="9">
 								<label>$LOCALIZE[10000] - $LOCALIZE[8]</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/weather.jpg</icon>
 								<thumb>special://skin/backgrounds/home-weather-conditional/$INFO[Weather.FanartCode]</thumb>
 								<visible>!Skin.HasSetting(Home_Weather_Conditional_Backgrounds) + !Skin.HasSetting(Home_Weather_Custom_Conditional_Backgrounds)</visible>
 							</item>
 							<item id="9">
 								<label>$LOCALIZE[10000] - $LOCALIZE[8]</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/background-weather.jpg</icon>
 								<thumb>$INFO[Skin.String(Home_Back_Weather_Custom_Conditional_Folder)]$INFO[Weather.FanartCode]</thumb>
 								<visible>!Skin.HasSetting(Home_Weather_Conditional_Backgrounds) + Skin.HasSetting(Home_Weather_Custom_Conditional_Backgrounds)</visible>
 							</item>
 							<item id="9">
 								<label>$LOCALIZE[10000] - $LOCALIZE[8]</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/weather.jpg</icon>
 								<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>
 								<visible>Skin.HasSetting(Home_Weather_Conditional_Backgrounds)</visible>
 							</item>
 							<item id="10">
 								<label>$LOCALIZE[10000] - $LOCALIZE[1036]</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/favourites.jpg</icon>
 								<thumb>$INFO[Skin.String(Home_Custom_Back_Favourites_Folder)]</thumb>
 							</item>
 							<item id="11">
 								<label>$LOCALIZE[10000] - $LOCALIZE[5]</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/settings.jpg</icon>
 								<thumb>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</thumb>
 							</item>
 							<item id="12">
 								<label>$LOCALIZE[10000] - $LOCALIZE[341]</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/playdisc.jpg</icon>
 								<thumb>$INFO[Skin.String(Home_Custom_Back_PlayDisc_Folder)]</thumb>
 							</item>
 							<item id="13">
 								<label>$LOCALIZE[10000] - $LOCALIZE[636] 1</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/settings.jpg</icon>
 								<thumb>$INFO[Skin.String(Home_Custom_Back_Custom1_Folder)]</thumb>
 							</item>
 							<item id="14">
 								<label>$LOCALIZE[10000] - $LOCALIZE[636] 2</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/settings.jpg</icon>
 								<thumb>$INFO[Skin.String(Home_Custom_Back_Custom2_Folder)]</thumb>
 							</item>
 							<item id="15">
 								<label>$LOCALIZE[10000] - $LOCALIZE[636] 3</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/settings.jpg</icon>
 								<thumb>$INFO[Skin.String(Home_Custom_Back_Custom3_Folder)]</thumb>
 							</item>
 							<item id="16">
 								<label>$LOCALIZE[3]</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/background-videos.jpg</icon>
 								<thumb>$INFO[Skin.String(Custom_Back_Videos_Folder)]</thumb>
 							</item>
 							<item id="17">
 								<label>$LOCALIZE[342]</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/background-movies.jpg</icon>
 								<thumb>$INFO[Skin.String(Custom_Back_Movies_Folder)]</thumb>
 							</item>
 							<item id="18">
 								<label>$LOCALIZE[20343]</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/background-tvshows.jpg</icon>
 								<thumb>$INFO[Skin.String(Custom_Back_TVShows_Folder)]</thumb>
 							</item>
 							<item id="19">
 								<label>$LOCALIZE[20389]</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/background-musicvideos.jpg</icon>
 								<thumb>$INFO[Skin.String(Custom_Back_MusicVideos_Folder)]</thumb>
 							</item>
 							<item id="20">
 								<label>TV</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/background-tv.jpg</icon>
 								<thumb>$INFO[Skin.String(Custom_Back_TV_Folder)]</thumb>
 							</item>
 							<item id="21">
 								<label>$LOCALIZE[2]</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/background-music.jpg</icon>
 								<thumb>$INFO[Skin.String(Custom_Back_Music_Folder)]</thumb>
 							</item>
 							<item id="22">
 								<label>$LOCALIZE[1]</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/background-pictures.jpg</icon>
 								<thumb>$INFO[Skin.String(Custom_Back_Pictures_Folder)]</thumb>
 							</item>
 							<item id="23">
 								<label>$LOCALIZE[0]</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/background-programs.jpg</icon>
 								<thumb>$INFO[Skin.String(Custom_Back_Programs_Folder)]</thumb>
 							</item>
 							<item id="24">
 								<label>$LOCALIZE[8]</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/background-weather.jpg</icon>
 								<thumb>$INFO[Skin.String(Custom_Back_Weather_Conditional_Folder)]$INFO[Weather.FanartCode]</thumb>
 								<visible>Skin.HasSetting(Weather_Conditional_Backgrounds)</visible>
 							</item>
 							<item id="24">
 								<label>$LOCALIZE[8]</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/background-weather.jpg</icon>
 								<thumb>$INFO[Skin.String(Custom_Back_Weather_Folder)]</thumb>
 								<visible>!Skin.HasSetting(Weather_Conditional_Backgrounds)</visible>
 							</item>
 							<item id="25">
 								<label>$LOCALIZE[5]</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/background-settings.jpg</icon>
 								<thumb>$INFO[Skin.String(Custom_Back_Settings_Folder)]</thumb>
 							</item>
 							<item id="26">
 								<label>$LOCALIZE[20096]</label>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/background-login.jpg</icon>
 								<thumb>$INFO[Skin.String(Custom_Back_Login_Folder)]</thumb>
 							</item>

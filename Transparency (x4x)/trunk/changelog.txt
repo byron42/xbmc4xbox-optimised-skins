@@ -8,6 +8,9 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 		= fixed missing labels in skin settings...for whatever reason 
 		  <onclick></onclick> has to be ==> <onclick>-</onclick>.  
 
+		= Fixed a problem with video submenu not removing items that
+		  were supposed to be removed via skin settings.
+
 
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
@@ -16,8 +19,8 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 	1.16.14
 ------------------------------------------------------------------------------
-		= Changed code in includes.xml/MyVideoNav.xml to make dvd images appear in icon
-	 	  and item views for video library
+		= Changed code in includes.xml/MyVideoNav.xml to make dvd images appear
+		  in icon and item views for video library
 
 
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo

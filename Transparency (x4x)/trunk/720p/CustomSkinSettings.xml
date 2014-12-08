@@ -2690,8 +2690,8 @@
 						<label>[B]$LOCALIZE[14022][/B]</label>
 						<include>ButtonMenuSettings2</include>
 						<onfocus>Skin.SetString(VideosCustom,0)</onfocus>
-						<onclick>Skin.ToggleSetting(Menu_Videos_VideoLibrary)</onclick>
-						<selected>!Skin.HasSetting(Menu_Videos_VideoLibrary)</selected>
+						<onclick>Skin.ToggleSetting(Menu_Videos_Sub_VideoLibrary)</onclick>
+						<selected>!Skin.HasSetting(Menu_Videos_Sub_VideoLibrary)</selected>
 						<enable>!Skin.HasSetting(Menu_Videos_Sub)</enable>
 					</control>
 				<!---------------(added these for video submenu)---------------------->	

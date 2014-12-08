@@ -654,19 +654,19 @@
 						<description>Menu Videos Sub VideoFiles</description>
 						<label>$LOCALIZE[1214]</label>
 						<onclick>ActivateWindow(VideoFiles)</onclick>
-						<visible>!Skin.HasSetting(Menu_Movies_Sub_Files)</visible>
+						<visible>!Skin.HasSetting(Menu_Videos_Sub_Files)</visible>
 					</item>
 					<item id="81002">
 						<description>Menu Videos Sub VideoPlugins</description>
 						<label>$LOCALIZE[1037]</label>
 						<onclick>ActivateWindow(VideoFiles,plugins,return)</onclick>
-						<visible>!Skin.HasSetting(Menu_Movies_Sub_Plugins)</visible>
+						<visible>!Skin.HasSetting(Menu_Videos_Sub_Plugins)</visible>
 					</item>
 					<item id="81003">
 						<description>Menu Videos Sub VideoLibrary</description>
 						<label>$LOCALIZE[14022]</label>
 						<onclick>ActivateWindow(VideoLibrary)</onclick>
-						<visible>!Skin.HasSetting(Menu_Movies_Sub_VideoLibrary)</visible>
+						<visible>!Skin.HasSetting(Menu_Videos_Sub_VideoLibrary)</visible>
 					</item>
 				<!---------------(added these for video submenu)---------------------->
 					<item id="8102">

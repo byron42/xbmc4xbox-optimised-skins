@@ -1,0 +1,1 @@
+This is a collection of skins specifically geared towards the xbmc4xbox environment.  Ultimately the goal is to provide the community with full functioning lite skins to choose from with the most available working features that xbmc has to offer.

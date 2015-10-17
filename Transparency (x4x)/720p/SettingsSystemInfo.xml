@@ -228,12 +228,23 @@
 					<shadowcolor>black</shadowcolor>
 					<font>font-20</font>
 				</control>
-				<control type="label">
-					<description>Transparency! Version</description>
+				<control type="label" id="53">
+					<description>Mplayer DLL Version</description>
 					<posx>0</posx>
 					<posy>370</posy>
 					<width>880</width>
-					<label>$INFO[System.AddonTitle(skin.transparency)] v5.0.9</label>
+					<label>144</label>
+					<textcolor>blue</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<font>font-20</font>
+					<visible>System.Platform.Xbox</visible>
+				</control>
+				<control type="label">
+					<description>Transparency! Version</description>
+					<posx>0</posx>
+					<posy>390</posy>
+					<width>880</width>
+					<label>$INFO[System.AddonTitle(skin.transparency)]v5.0.9</label>
 					<textcolor>blue</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<font>font-20</font>
@@ -708,6 +719,28 @@
 					<label>13281</label>
 					<onback>SetFocus(5999)</onback>
 				</control>
+				<control type="button" id="92">
+					<description>HDD</description>
+					<!------------------------------------------------------------------------------------------------------(NewButtonCommonValues)---------------------->
+					<include condition="!Skin.HasSetting(HateTransparency) + !Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">SlimSideLikeTransparency</include>
+					<include condition="!Skin.HasSetting(HateTransparency) + Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">WideSideLikeTransparency</include>
+					<include condition="Skin.HasSetting(HateTransparency) + !Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">SlimSideHateTransparency</include>
+					<include condition="Skin.HasSetting(HateTransparency) + Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">WideSideHateTransparency</include>
+					<!------------------------------------------------------------------------------------------------------(NewButtonCommonValues)---------------------->
+					<label>13275</label>
+					<onback>SetFocus(5999)</onback>
+				</control>
+				<control type="button" id="93">
+					<description>DVD</description>
+					<!------------------------------------------------------------------------------------------------------(NewButtonCommonValues)---------------------->
+					<include condition="!Skin.HasSetting(HateTransparency) + !Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">SlimSideLikeTransparency</include>
+					<include condition="!Skin.HasSetting(HateTransparency) + Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">WideSideLikeTransparency</include>
+					<include condition="Skin.HasSetting(HateTransparency) + !Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">SlimSideHateTransparency</include>
+					<include condition="Skin.HasSetting(HateTransparency) + Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">WideSideHateTransparency</include>
+					<!------------------------------------------------------------------------------------------------------(NewButtonCommonValues)---------------------->
+					<label>13276</label>
+					<onback>SetFocus(5999)</onback>
+				</control>
 				<control type="button" id="99">
 					<description>Button PVR</description>
 					<!------------------------------------------------------------------------------------------------------(NewButtonCommonValues)---------------------->
@@ -718,6 +751,7 @@
 					<!------------------------------------------------------------------------------------------------------(NewButtonCommonValues)---------------------->
 					<label>19191</label>
 					<onback>SetFocus(5999)</onback>
+					<visible>false</visible>
 				</control>
 			</control>
 		</control>

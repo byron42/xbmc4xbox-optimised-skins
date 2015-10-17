@@ -1,0 +1,433 @@
+<window>
+	<defaultcontrol always="true">9001</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<!--CommonVideoPlayingBackground------------------------------------------------------------------------------------>
+		<control type="videowindow">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<visible>Skin.HasSetting(VideoBackgrounds) + Player.HasVideo</visible>
+		</control>
+		<!--CommonVideoPlayingBackground------------------------------------------------------------------------------------>
+		<control type="multiimage">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<imagepath fallback="special://skin/backgrounds/background-weather.jpg" background="true">$INFO[Skin.String(Custom_Back_Weather_Folder)]</imagepath>
+			<aspectratio>scale</aspectratio>
+			<timeperimage>5000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>2000</fadetime>
+			<include condition="Skin.HasSetting(AnimateBackgrounds)" file="Includes.xml">backgroundanimation</include>
+			<visible>!Skin.HasSetting(Weather_Conditional_Backgrounds) + ![Player.HasVideo + Skin.HasSetting(VideoBackgrounds)]</visible>
+		</control>
+		<control type="multiimage">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<imagepath background="true">special://skin/backgrounds/weather-conditional/$INFO[Window(Weather).Property(Current.FanartCode)]</imagepath>
+			<aspectratio>scale</aspectratio>
+			<timeperimage>5000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>2000</fadetime>
+			<include condition="Skin.HasSetting(AnimateBackgrounds)" file="Includes.xml">backgroundanimation</include>
+			<visible>Skin.HasSetting(Weather_Conditional_Backgrounds) + ![Player.HasVideo + Skin.HasSetting(VideoBackgrounds)]</visible>
+		</control>
+		<!--CommonVisualizationBackground------------------------------------------------------------------------------------------->
+		<control type="visualisation">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<visible>Skin.HasSetting(VizBackgrounds) + Player.HasAudio + !SubString(Window(VideoLibrary).Property(TvTunesIsAlive),True)</visible>
+		</control>
+		<!--CommonVisualizationBackground------------------------------------------------------------------------------------------->
+		<control type="group">
+			<!--ContentFade-->
+			<animation effect="fade" start="100" end="0" time="500" condition="Window.IsVisible(ShutdownMenu) | Window.IsVisible(FileBrowser)
+			| Window.IsVisible(FileBrowser) | Window.IsVisible(MediaSource) | Window.IsVisible(ProfileSettings) | Window.IsVisible(LockSettings)
+			| Window.IsVisible(ContentSettings) | Window.IsVisible(Favourites) | Window.IsVisible(SongInformation) | Window.IsVisible(SmartPlaylistEditor)
+			| Window.IsVisible(PictureInfo) | Window.IsVisible(MusicInformation) | Window.IsVisible(MovieInformation) | Window.IsVisible(TextViewer)
+			| Window.IsVisible(PluginSettings) | Window.IsVisible(script-XBMC_Lyrics-settings.xml) | Window.IsVisible(script-GmailChecker-main.xml)
+			| Window.IsVisible(script-svnri-iteminfo.xml) | Window.IsVisible(script-xbmc-audio-mixer.xml)">Conditional</animation>
+			
+			<include condition="IsEmpty(Weather.Plugin)" file="Includes_Weather.xml">weather</include>
+			<include condition="!IsEmpty(Weather.Plugin) + !StringCompare(Weather.Plugin,weather.wunderground)" file="Includes_WeatherAddons.xml">weatherplus</include>
+			<include condition="StringCompare(Weather.Plugin,weather.wunderground)" file="Includes_Wunderground.xml">weatherextended</include>
+		</control>
+	<!--FocusControlButton-->	
+		<control type="button" id="9001">
+			<description>fake button to steal focus</description>
+			<onleft>9000</onleft>
+			<onright>5998</onright>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>-</onclick>
+		</control>
+		
+		<control type="grouplist">
+			<posx>-177</posx>
+			<posy>150</posy>
+			<!--ContentFade-->
+			<animation effect="fade" start="100" end="0" time="500" condition="Window.IsVisible(ShutdownMenu) | Window.IsVisible(FileBrowser)
+			| Window.IsVisible(FileBrowser) | Window.IsVisible(MediaSource) | Window.IsVisible(ProfileSettings) | Window.IsVisible(LockSettings)
+			| Window.IsVisible(ContentSettings) | Window.IsVisible(Favourites) | Window.IsVisible(SongInformation) | Window.IsVisible(SmartPlaylistEditor)
+			| Window.IsVisible(PictureInfo) | Window.IsVisible(MusicInformation) | Window.IsVisible(MovieInformation) | Window.IsVisible(TextViewer)
+			| Window.IsVisible(PluginSettings) | Window.IsVisible(script-XBMC_Lyrics-settings.xml) | Window.IsVisible(script-GmailChecker-main.xml)
+			| Window.IsVisible(script-svnri-iteminfo.xml) | Window.IsVisible(script-xbmc-audio-mixer.xml)">Conditional</animation>
+			<!--Window_OpenClose_Left_Panel_Animation-->
+			<animation effect="slide" start="-400,0" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="-400,0" time="300" tween="quadratic" easing="out">WindowClose</animation>
+			<!--Window_OpenClose_Left_Panel_Animation-->
+			<include condition="!StringCompare(Weather.Plugin,weather.wunderground)">CommonNowPlaying</include>
+			<control type="group" id="9000">
+				<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus</visible>
+				
+				<include condition="!Skin.HasSetting(WideSideMenuButtons)">Window_OpenClose_Left_Panel_Position_Normal</include>
+				<include condition="Skin.HasSetting(WideSideMenuButtons)">Window_OpenClose_Left_Panel_Position_Wide</include>
+				<animation effect="slide" start="0,0" end="177,0" time="400" tween="quadratic" easing="out" condition="!Skin.HasSetting(WideSideMenuButtons)">VisibleChange</animation>
+				<animation effect="slide" start="0,0" end="252,0" time="400" tween="quadratic" easing="out" condition="Skin.HasSetting(WideSideMenuButtons)">VisibleChange</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>-16</posy>
+					<height>16</height>
+					<texture border="0,0,10,0">shadow-top2.png</texture>
+					<include condition="!Skin.HasSetting(WideSideMenuButtons)">ButtonCommonValuesNormal</include>
+					<include condition="Skin.HasSetting(WideSideMenuButtons)">ButtonCommonValuesWide</include>
+				</control>
+				<control type="spincontrolex" id="3">
+					<description>change location button</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<font>-</font>
+					<textoffsetx>5</textoffsetx>
+					<!------------------------------------------------------------------------------------------------------(NewButtonCommonValues)---------------------->
+					<include condition="!Skin.HasSetting(HateTransparency) + !Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">SlimSideLikeTransparency</include>
+					<include condition="!Skin.HasSetting(HateTransparency) + Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">WideSideLikeTransparency</include>
+					<include condition="Skin.HasSetting(HateTransparency) + !Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">SlimSideHateTransparency</include>
+					<include condition="Skin.HasSetting(HateTransparency) + Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">WideSideHateTransparency</include>
+					<!------------------------------------------------------------------------------------------------------(NewButtonCommonValues)---------------------->
+					<onleft>6000</onleft>
+					<onright>9001</onright>
+					<onup>4</onup>
+					<ondown>101</ondown>
+					<visible>!Skin.HasSetting(KioskMode)</visible>
+				</control>
+				<control type="label">
+					<description>change location label</description>
+					<posx>13</posx>
+					<posy>0</posy>
+					<height>44</height>
+					<width>270</width>
+					<font>font-20bc</font>
+					<label>21873</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>!Control.HasFocus(3) + !Skin.HasSetting(KioskMode)</visible>
+				</control>
+				<control type="label">
+					<description>change location label</description>
+					<posx>13</posx>
+					<posy>0</posy>
+					<height>44</height>
+					<width>270</width>
+					<font>font-20bc</font>
+					<label>21873</label>
+					<textcolor>blue</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Control.HasFocus(3) + !Skin.HasSetting(KioskMode)</visible>
+				</control>
+				<control type="button" id="101">
+					<description>Current button</description>
+					<posx>0</posx>
+					<posy>45</posy>
+					<!------------------------------------------------------------------------------------------------------(NewButtonCommonValues)---------------------->
+					<include condition="!Skin.HasSetting(HateTransparency) + !Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">SlimSideLikeTransparency</include>
+					<include condition="!Skin.HasSetting(HateTransparency) + Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">WideSideLikeTransparency</include>
+					<include condition="Skin.HasSetting(HateTransparency) + !Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">SlimSideHateTransparency</include>
+					<include condition="Skin.HasSetting(HateTransparency) + Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">WideSideHateTransparency</include>
+					<!------------------------------------------------------------------------------------------------------(NewButtonCommonValues)---------------------->
+					<label>33006</label>
+					<onleft>6000</onleft>
+					<onright>9001</onright>
+					<onup>3</onup>
+					<ondown>102</ondown>
+					<onfocus>Skin.SetString(WeatherExtended,1)</onfocus>
+					<animation effect="slide" end="0,-45" time="0" condition="Skin.HasSetting(KioskMode)">Conditional</animation>
+					<visible>StringCompare(Weather.Plugin,weather.wunderground)</visible>
+				</control>
+				<control type="button" id="102">
+					<description>Hourly button</description>
+					<posx>0</posx>
+					<posy>90</posy>
+					<!------------------------------------------------------------------------------------------------------(NewButtonCommonValues)---------------------->
+					<include condition="!Skin.HasSetting(HateTransparency) + !Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">SlimSideLikeTransparency</include>
+					<include condition="!Skin.HasSetting(HateTransparency) + Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">WideSideLikeTransparency</include>
+					<include condition="Skin.HasSetting(HateTransparency) + !Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">SlimSideHateTransparency</include>
+					<include condition="Skin.HasSetting(HateTransparency) + Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">WideSideHateTransparency</include>
+					<!------------------------------------------------------------------------------------------------------(NewButtonCommonValues)---------------------->
+					<label>33036</label>
+					<onleft>6000</onleft>
+					<onright>9001</onright>
+					<onup>101</onup>
+					<ondown>103</ondown>
+					<onfocus>Skin.SetString(WeatherExtended,2)</onfocus>
+					<animation effect="slide" end="0,-45" time="0" condition="Skin.HasSetting(KioskMode)">Conditional</animation>
+					<visible>StringCompare(Weather.Plugin,weather.wunderground)</visible>
+				</control>
+				<control type="button" id="103">
+					<description>36 hour button</description>
+					<posx>0</posx>
+					<posy>135</posy>
+					<!------------------------------------------------------------------------------------------------------(NewButtonCommonValues)---------------------->
+					<include condition="!Skin.HasSetting(HateTransparency) + !Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">SlimSideLikeTransparency</include>
+					<include condition="!Skin.HasSetting(HateTransparency) + Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">WideSideLikeTransparency</include>
+					<include condition="Skin.HasSetting(HateTransparency) + !Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">SlimSideHateTransparency</include>
+					<include condition="Skin.HasSetting(HateTransparency) + Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">WideSideHateTransparency</include>
+					<!------------------------------------------------------------------------------------------------------(NewButtonCommonValues)---------------------->
+					<label>33034</label>
+					<onleft>6000</onleft>
+					<onright>9001</onright>
+					<onup>102</onup>
+					<ondown>104</ondown>
+					<onfocus>Skin.SetString(WeatherExtended,3)</onfocus>
+					<animation effect="slide" end="0,-45" time="0" condition="Skin.HasSetting(KioskMode)">Conditional</animation>
+					<visible>StringCompare(Weather.Plugin,weather.wunderground)</visible>
+				</control>
+				<control type="button" id="104">
+					<description>weekend button</description>
+					<posx>0</posx>
+					<posy>180</posy>
+					<!------------------------------------------------------------------------------------------------------(NewButtonCommonValues)---------------------->
+					<include condition="!Skin.HasSetting(HateTransparency) + !Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">SlimSideLikeTransparency</include>
+					<include condition="!Skin.HasSetting(HateTransparency) + Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">WideSideLikeTransparency</include>
+					<include condition="Skin.HasSetting(HateTransparency) + !Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">SlimSideHateTransparency</include>
+					<include condition="Skin.HasSetting(HateTransparency) + Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">WideSideHateTransparency</include>
+					<!------------------------------------------------------------------------------------------------------(NewButtonCommonValues)---------------------->
+					<label>33037</label>
+					<onleft>6000</onleft>
+					<onright>9001</onright>
+					<onup>103</onup>
+					<ondown>105</ondown>
+					<onfocus>Skin.SetString(WeatherExtended,4)</onfocus>
+					<animation effect="slide" end="0,-45" time="0" condition="Skin.HasSetting(KioskMode)">Conditional</animation>
+					<visible>StringCompare(Weather.Plugin,weather.wunderground)</visible>
+				</control>
+				<control type="button" id="105">
+					<description>10 day button</description>
+					<posx>0</posx>
+					<posy>225</posy>
+					<!------------------------------------------------------------------------------------------------------(NewButtonCommonValues)---------------------->
+					<include condition="!Skin.HasSetting(HateTransparency) + !Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">SlimSideLikeTransparency</include>
+					<include condition="!Skin.HasSetting(HateTransparency) + Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">WideSideLikeTransparency</include>
+					<include condition="Skin.HasSetting(HateTransparency) + !Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">SlimSideHateTransparency</include>
+					<include condition="Skin.HasSetting(HateTransparency) + Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">WideSideHateTransparency</include>
+					<!------------------------------------------------------------------------------------------------------(NewButtonCommonValues)---------------------->
+					<label>31600</label>
+					<onleft>6000</onleft>
+					<onright>9001</onright>
+					<onup>104</onup>
+					<ondown>106</ondown>
+					<onfocus>Skin.SetString(WeatherExtended,5)</onfocus>
+					<animation effect="slide" end="0,-45" time="0" condition="Skin.HasSetting(KioskMode)">Conditional</animation>
+					<visible>StringCompare(Weather.Plugin,weather.wunderground)</visible>
+				</control>
+				<control type="button" id="106">
+					<description>alerts button</description>
+					<posx>0</posx>
+					<posy>270</posy>
+					<!------------------------------------------------------------------------------------------------------(NewButtonCommonValues)---------------------->
+					<include condition="!Skin.HasSetting(HateTransparency) + !Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">SlimSideLikeTransparency</include>
+					<include condition="!Skin.HasSetting(HateTransparency) + Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">WideSideLikeTransparency</include>
+					<include condition="Skin.HasSetting(HateTransparency) + !Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">SlimSideHateTransparency</include>
+					<include condition="Skin.HasSetting(HateTransparency) + Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">WideSideHateTransparency</include>
+					<!------------------------------------------------------------------------------------------------------(NewButtonCommonValues)---------------------->
+					<label>33050</label>
+					<onleft>6000</onleft>
+					<onright>9001</onright>
+					<onup>105</onup>
+					<ondown>2</ondown>
+					<onfocus>Skin.SetString(WeatherExtended,6)</onfocus>
+					<animation effect="slide" end="0,-45" time="0" condition="Skin.HasSetting(KioskMode)">Conditional</animation>
+					<visible>StringCompare(Weather.Plugin,weather.wunderground) + !IsEmpty(Window.Property(Alerts.RSS))</visible>
+				</control>
+				<control type="button" id="2">
+					<description>Refresh button</description>
+					<posx>0</posx>
+					<posy>315</posy>
+					<!------------------------------------------------------------------------------------------------------(NewButtonCommonValues)---------------------->
+					<include condition="!Skin.HasSetting(HateTransparency) + !Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">SlimSideLikeTransparency</include>
+					<include condition="!Skin.HasSetting(HateTransparency) + Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">WideSideLikeTransparency</include>
+					<include condition="Skin.HasSetting(HateTransparency) + !Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">SlimSideHateTransparency</include>
+					<include condition="Skin.HasSetting(HateTransparency) + Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">WideSideHateTransparency</include>
+					<!------------------------------------------------------------------------------------------------------(NewButtonCommonValues)---------------------->
+					<label>-</label>
+					<onleft>6000</onleft>
+					<onright>9001</onright>
+					<onup>106</onup>
+					<ondown>4</ondown>
+					<animation effect="slide" end="0,-90" time="0" condition="Skin.HasSetting(KioskMode)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,-270" time="0" condition="!StringCompare(Weather.Plugin,weather.wunderground)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,-45" time="0" condition="StringCompare(Weather.Plugin,weather.wunderground) + IsEmpty(Window.Property(Alerts.RSS))">Conditional</animation>
+				</control>
+				<control type="button" id="4">
+					<description>Settings</description>
+					<posx>0</posx>
+					<posy>360</posy>
+					<!------------------------------------------------------------------------------------------------------(NewButtonCommonValues)---------------------->
+					<include condition="!Skin.HasSetting(HateTransparency) + !Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">SlimSideLikeTransparency</include>
+					<include condition="!Skin.HasSetting(HateTransparency) + Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">WideSideLikeTransparency</include>
+					<include condition="Skin.HasSetting(HateTransparency) + !Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">SlimSideHateTransparency</include>
+					<include condition="Skin.HasSetting(HateTransparency) + Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">WideSideHateTransparency</include>
+					<!------------------------------------------------------------------------------------------------------(NewButtonCommonValues)---------------------->
+					<label>5</label>
+					<onleft>6000</onleft>
+					<onright>9001</onright>
+					<onup>2</onup>
+					<ondown>610</ondown>
+					<onclick>ActivateWindow(WeatherSettings)</onclick>
+					<animation effect="slide" end="0,-90" time="0" condition="Skin.HasSetting(KioskMode)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,-270" time="0" condition="!StringCompare(Weather.Plugin,weather.wunderground)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,-45" time="0" condition="StringCompare(Weather.Plugin,weather.wunderground) + IsEmpty(Window.Property(Alerts.RSS))">Conditional</animation>
+				</control>
+				<control type="button" id="610">
+					<description>PlayerControls</description>
+					<posx>0</posx>
+					<posy>360</posy>
+					<!------------------------------------------------------------------------------------------------------(NewButtonCommonValues)---------------------->
+					<include condition="!Skin.HasSetting(HateTransparency) + !Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">SlimSideLikeTransparency</include>
+					<include condition="!Skin.HasSetting(HateTransparency) + Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">WideSideLikeTransparency</include>
+					<include condition="Skin.HasSetting(HateTransparency) + !Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">SlimSideHateTransparency</include>
+					<include condition="Skin.HasSetting(HateTransparency) + Skin.HasSetting(WideSideMenuButtons)" file="Includes.xml">WideSideHateTransparency</include>
+					<!------------------------------------------------------------------------------------------------------(NewButtonCommonValues)---------------------->
+					<label>16003</label>
+					<onleft>6000</onleft>
+					<onright>6000</onright>
+					<onup>2</onup>
+					<ondown>3</ondown>
+					<onclick>ActivateWindow(playercontrols)</onclick>
+					<animation effect="slide" end="0,-90" time="0" condition="Skin.HasSetting(KioskMode)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,-270" time="0" condition="!StringCompare(Weather.Plugin,weather.wunderground)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,-45" time="0" condition="StringCompare(Weather.Plugin,weather.wunderground) + IsEmpty(Window.Property(Alerts.RSS))">Conditional</animation>
+					<visible>Player.HasAudio | Player.HasVideo</visible>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>362</posy>
+					<height>16</height>
+					<texture border="0,0,10,0">shadow-bottom2.png</texture>
+					<animation effect="slide" end="0,-90" time="0" condition="Skin.HasSetting(KioskMode)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,-270" time="0" condition="!StringCompare(Weather.Plugin,weather.wunderground)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,-45" time="0" condition="StringCompare(Weather.Plugin,weather.wunderground) + IsEmpty(Window.Property(Alerts.RSS))">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,45" time="0" condition="Player.HasAudio | Player.HasVideo">Conditional</animation>
+					<include condition="!Skin.HasSetting(WideSideMenuButtons)">ButtonCommonValuesNormal</include>
+					<include condition="Skin.HasSetting(WideSideMenuButtons)">ButtonCommonValuesWide</include>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<!--ContentFade-->
+			<animation effect="fade" start="100" end="0" time="500" condition="Window.IsVisible(ShutdownMenu) | Window.IsVisible(FileBrowser)
+			| Window.IsVisible(FileBrowser) | Window.IsVisible(MediaSource) | Window.IsVisible(ProfileSettings) | Window.IsVisible(LockSettings)
+			| Window.IsVisible(ContentSettings) | Window.IsVisible(Favourites) | Window.IsVisible(SongInformation) | Window.IsVisible(SmartPlaylistEditor)
+			| Window.IsVisible(PictureInfo) | Window.IsVisible(MusicInformation) | Window.IsVisible(MovieInformation) | Window.IsVisible(TextViewer)
+			| Window.IsVisible(PluginSettings) | Window.IsVisible(script-XBMC_Lyrics-settings.xml) | Window.IsVisible(script-GmailChecker-main.xml)
+			| Window.IsVisible(script-svnri-iteminfo.xml) | Window.IsVisible(script-xbmc-audio-mixer.xml)">Conditional</animation>
+			
+			<!-- Window_OpenClose_Header_Animation -->
+			<animation effect="slide" start="0,-75" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,-75" time="300" tween="quadratic" easing="out">WindowClose</animation>
+
+			<!--ooooooooooooooooooooooooooooooooooooooooooooo (T-Header1) oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>74</height>
+				<texture>Header.png</texture>
+				<!-------------------------------------------------------------------(T-Level)------------------->
+				<include condition="Skin.String(Trans,10)" file="Includes_Transparency.xml">T-Level10</include>
+				<include condition="Skin.String(Trans,20)" file="Includes_Transparency.xml">T-Level20</include>
+				<include condition="Skin.String(Trans,30)" file="Includes_Transparency.xml">T-Level30</include>
+				<include condition="Skin.String(Trans,40)" file="Includes_Transparency.xml">T-Level40</include>
+				<include condition="Skin.String(Trans,50)" file="Includes_Transparency.xml">T-Level50</include>
+				<include condition="Skin.String(Trans,60)" file="Includes_Transparency.xml">T-Level60</include>
+				<include condition="Skin.String(Trans,70)" file="Includes_Transparency.xml">T-Level70</include>
+				<include condition="Skin.String(Trans,80)" file="Includes_Transparency.xml">T-Level80</include>
+				<include condition="Skin.String(Trans,90)" file="Includes_Transparency.xml">T-Level90</include>
+				<include condition="Skin.String(Trans,100)" file="Includes_Transparency.xml">T-Level100</include>
+				<!-------------------------------------------------------------------(T-Level)------------------->
+				<visible>Skin.HasSetting(HateTransparency)</visible>
+			</control>
+			<!--ooooooooooooooooooooooooooooooooooooooooooooo (T-Header1) oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>74</height>
+				<texture>Header.png</texture>
+			</control>
+			<control type="grouplist">
+				<!-- Breadcrumbs -->
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>455</width>
+				<height>30</height>
+				<orientation>horizontal</orientation>
+				<itemgap>0</itemgap>
+				<!-- Breadcrumbs-Weather -->
+				<control type="image">
+					<width>29</width>
+					<height>30</height>
+					<texture>dot.png</texture>
+				</control>
+				<control type="label">
+					<description>Weather</description>
+					<label>$LOCALIZE[8]</label>
+					<!-- WindowTitleCommons -->
+					<width min="10" max="425">auto</width>
+					<height>30</height>
+					<font>font-24c</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<animation effect="zoom" start="1" end="100" center="0,15" time="400" tween="back" easing="out">Visible</animation>
+					<animation effect="zoom" start="100" end="1" center="0,15" time="400" tween="back" easing="in">Hidden</animation>
+					<!-- WindowTitleCommons -->
+				</control>
+			</control>
+			<control type="label">
+				<description>weather location label</description>
+				<posx>1268</posx>
+				<posy>5</posy>
+				<width>500</width>
+				<height>20</height>
+				<font>font-20</font>
+				<textcolor>white</textcolor>
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>$INFO[Window(Weather).Property(Location)]</label>
+			</control>
+		</control>
+		<!--<include condition="Skin.HasSetting(TouchScreenMode)">TouchScreenControls</include>-->
+		<control type="label">
+			<posx>1268</posx>
+			<posy>696</posy>
+			<width>1200</width>
+			<height>20</height>
+			<label>[B]$LOCALIZE[31605] $INFO[Window(Weather).Property(WeatherProvider)][/B]</label>
+			<font>font-15</font>
+			<align>right</align>
+			<textcolor>white</textcolor>
+			<animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
+		</control>
+	</controls>
+</window>

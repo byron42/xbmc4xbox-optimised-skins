@@ -1,0 +1,197 @@
+<window>
+	<defaultcontrol>2</defaultcontrol>
+	<coordinates>
+		<posx>240</posx>
+		<posy>20</posy>
+	</coordinates>
+	<!-- dialogeffect -->
+	<animation effect="fade" time="300">WindowOpen</animation>
+	<animation effect="fade" time="300">WindowClose</animation>
+	<controls>
+		<!--ooooooooooooooooooooooooooooooooooooooooooooo (T-Panel7) oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>800</width>
+			<height>525</height>
+			<texture border="30">panel.png</texture>
+			<bordertexture border="45">panel-shadow.png</bordertexture>
+			<bordersize>22</bordersize>
+			<!-------------------------------------------------------------------(T-Level)------------------->
+			<include condition="Skin.String(Trans,10)" file="Includes_Transparency.xml">T-Level10</include>
+			<include condition="Skin.String(Trans,20)" file="Includes_Transparency.xml">T-Level20</include>
+			<include condition="Skin.String(Trans,30)" file="Includes_Transparency.xml">T-Level30</include>
+			<include condition="Skin.String(Trans,40)" file="Includes_Transparency.xml">T-Level40</include>
+			<include condition="Skin.String(Trans,50)" file="Includes_Transparency.xml">T-Level50</include>
+			<include condition="Skin.String(Trans,60)" file="Includes_Transparency.xml">T-Level60</include>
+			<include condition="Skin.String(Trans,70)" file="Includes_Transparency.xml">T-Level70</include>
+			<include condition="Skin.String(Trans,80)" file="Includes_Transparency.xml">T-Level80</include>
+			<include condition="Skin.String(Trans,90)" file="Includes_Transparency.xml">T-Level90</include>
+			<include condition="Skin.String(Trans,100)" file="Includes_Transparency.xml">T-Level100</include>
+			<!-------------------------------------------------------------------(T-Level)------------------->
+			<visible>Skin.HasSetting(HateTransparency)</visible>
+		</control>
+		<!--ooooooooooooooooooooooooooooooooooooooooooooo (T-Panel7) oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>800</width>
+			<height>525</height>
+			<texture border="30">panel.png</texture>
+			<bordertexture border="45">panel-shadow.png</bordertexture>
+			<bordersize>22</bordersize>
+		</control>
+		<control type="button">
+			<posx>744</posx>
+			<posy>32</posy>
+			<width>20</width>
+			<height>20</height>
+			<texturefocus>close-window-focus.png</texturefocus>
+			<texturenofocus>close-window-nofocus.png</texturenofocus>
+			<onclick>Dialog.Close(visualisationpresetlist)</onclick>
+			<visible>Skin.HasSetting(TouchScreenMode)</visible>
+		</control>
+		<control type="label" id="3">
+			<description>heading label</description>
+			<posx>40</posx>
+			<posy>40</posy>
+			<width>720</width>
+			<height>30</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>font-32</font>
+			<textcolor>blue</textcolor>
+		</control>
+		<control type="image">
+			<posx>40</posx>
+			<posy>78</posy>
+			<width>720</width>
+			<height>2</height>
+			<texture>separator.png</texture>
+		</control>
+		<control type="label" id="4">
+			<description>No Presets at all label</description>
+			<posx>40</posx>
+			<posy>200</posy>
+			<width>720</width>
+			<height>30</height>
+			<label>13389</label>
+			<align>center</align>
+			<font>font-23</font>
+			<textcolor>white</textcolor>
+		</control>
+		<control type="list" id="2">
+			<posx>45</posx>
+			<posy>85</posy>
+			<width>710</width>
+			<height>378</height>
+			<onleft>61</onleft>
+			<onright>61</onright>
+			<onup>2</onup>
+			<ondown>2</ondown>
+			<pagecontrol>61</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout width="710" height="29">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>710</width>
+					<height>30</height>
+					<texture border="7">list-nofocus.png</texture>
+				</control>
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>690</width>
+					<height>30</height>
+					<font>font-20</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<selectedcolor>blue</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout width="710" height="29">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>710</width>
+					<height>30</height>
+					<texture border="7">list-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>710</width>
+					<height>30</height>
+					<visible>Control.HasFocus(2)</visible>
+					<texture border="7">list-focus2.png</texture>
+					<!-----ListFocusScroll11------->
+					<animation effect="slide" start="0,-29" end="0,0" time="100" reversible="false" tween="quadratic" easing="out" condition="Container(2).OnNext">focus</animation>
+					<animation effect="slide" start="0,29" end="0,0" time="100" reversible="false" tween="quadratic" easing="out" condition="Container(2).OnPrevious">focus</animation>
+					<animation effect="fade" start="70" end="100" time="750" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>690</width>
+					<height>30</height>
+					<font>font-20</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<selectedcolor>blue</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<!--CommonFileCount12----------------------------------------------------------------------------------------------------->
+		<control type="grouplist">
+			<posx>254</posx>
+			<posy>470</posy>
+			<width>500</width>
+			<height>30</height>
+			<align>right</align>
+			<orientation>horizontal</orientation>
+			<itemgap>0</itemgap>
+			<animation effect="slide" time="0" end="-75,0" condition="Control.IsVisible(61)">Conditional</animation>
+			<control type="label">
+				<description>Page Count Label</description>
+				<width min="10" max="250">auto</width>
+				<height>30</height>
+				<aligny>center</aligny>
+				<font>font-20</font>
+				<textcolor>white</textcolor>
+				<label>$LOCALIZE[31024] $INFO[Container(2).CurrentPage]/$INFO[Container(2).NumPages]</label>
+			</control>
+			<control type="image">
+				<width>29</width>
+				<height>30</height>
+				<texture>dot.png</texture>
+			</control>
+			<control type="label">
+				<description>Item Count Label</description>
+				<width min="10" max="250">auto</width>
+				<height>30</height>
+				<aligny>center</aligny>
+				<font>font-20</font>
+				<textcolor>white</textcolor>
+				<label>$INFO[Container(2).NumItems] $LOCALIZE[31025]</label>
+			</control>
+		</control>
+		<!--CommonFileCount12----------------------------------------------------------------------------------------------------->
+		<control type="spincontrol" id="61">
+			<description>Next page button</description>
+			<posx>690</posx>
+			<posy>470</posy>
+			<subtype>page</subtype>
+			<font>font-20</font>
+			<onleft>2</onleft>
+			<onright>2</onright>
+			<ondown>2</ondown>
+			<onup>2</onup>
+			<textcolor>-</textcolor>
+			<showonepage>false</showonepage>
+		</control>
+	</controls>
+</window>

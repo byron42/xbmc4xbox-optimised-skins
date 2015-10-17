@@ -1,0 +1,88 @@
+<includes>
+	<include name="Fanart-Addons-Extras">
+		<control type="group">
+			<visible>Control.IsVisible(50)</visible>
+			<include>Window_OpenClose_Visible_FanartInfo_Animation</include>
+			<include condition="Skin.HasSetting(HateTransparency)">T-Underlay118</include>
+			<control type="image">
+				<posx>0</posx>
+				<posy>560</posy>
+				<width>875</width>
+				<height>140</height>
+				<texture border="10">underlay.png</texture>
+			</control>
+			<control type="label">
+				<posx>225</posx>
+				<posy>572</posy>
+				<width>636</width>
+				<height>30</height>
+				<font>font-30</font>
+				<textcolor>blue</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Label]</label>
+				<visible>!stringcompare(ListItem.Label,..)</visible>
+			</control>
+			<control type="textbox">
+				<description>textarea</description>
+				<posx>245</posx>
+				<posy>604</posy>
+				<width>600</width>
+				<height>85</height>
+				<label>$INFO[ListItem.Property(Addon.Description)]</label>
+				<font>font-19</font>
+				<align>justify</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<autoscroll time="3000" delay="16000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+			</control>
+			<control type="textbox">
+				<description>plot description used by addons</description>
+				<posx>245</posx>
+				<posy>604</posy>
+				<width>600</width>
+				<height>85</height>
+				<label>$INFO[ListItem.Plot]</label>
+				<font>font-19</font>
+				<align>justify</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<autoscroll time="3000" delay="16000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+				<visible>IsEmpty(ListItem.Property(Addon.Description)) + !IsEmpty(ListItem.Plot)</visible>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Control.IsVisible(50)</visible>
+			<include>Window_OpenClose_Visible_FanartIcon_Animation</include>
+			<control type="image">
+				<posx>8</posx>
+				<posy>505</posy>
+				<width>210</width>
+				<height>210</height>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<visible>stringcompare(Listitem.Label,..)</visible>
+			</control>
+			<control type="image">
+				<posx>8</posx>
+				<posy>505</posy>
+				<width>210</width>
+				<height>210</height>
+				<texture>thumb-shadow.png</texture>
+				<visible>!stringcompare(ListItem.Label,..) + !ListItem.IsFolder</visible>
+			</control>
+			<control type="image">
+				<posx>8</posx>
+				<posy>505</posy>
+				<width>210</width>
+				<height>210</height>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<texture diffuse="thumb-diffuse.png" background="true" fallback="DefaultAddon.png">$INFO[Listitem.Icon]</texture>
+				<bordersize>6</bordersize>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<visible>!stringcompare(ListItem.Label,..)</visible>
+			</control>
+		</control>
+	</include>
+</includes>

@@ -1,0 +1,105 @@
+<window type="dialog" id="1114">
+	<defaultcontrol>888</defaultcontrol>
+	<coordinates>
+		<posx>240</posx>
+		<posy>200</posy>
+	</coordinates>
+	<!-- dialogeffect -->
+	<animation effect="fade" time="300">WindowOpen</animation>
+	<animation effect="fade" time="300">WindowClose</animation>
+	<controls>
+		<control type="group">
+			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(SliderDialog)">Conditional</animation>
+			<!--ooooooooooooooooooooooooooooooooooooooooooooo (T-Panel7) oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>800</width>
+				<height>525</height>
+				<texture border="30">panel.png</texture>
+				<bordertexture border="45">panel-shadow.png</bordertexture>
+				<bordersize>22</bordersize>
+				<!-------------------------------------------------------------------(T-Level)------------------->
+				<include condition="Skin.String(Trans,10)" file="Includes_Transparency.xml">T-Level10</include>
+				<include condition="Skin.String(Trans,20)" file="Includes_Transparency.xml">T-Level20</include>
+				<include condition="Skin.String(Trans,30)" file="Includes_Transparency.xml">T-Level30</include>
+				<include condition="Skin.String(Trans,40)" file="Includes_Transparency.xml">T-Level40</include>
+				<include condition="Skin.String(Trans,50)" file="Includes_Transparency.xml">T-Level50</include>
+				<include condition="Skin.String(Trans,60)" file="Includes_Transparency.xml">T-Level60</include>
+				<include condition="Skin.String(Trans,70)" file="Includes_Transparency.xml">T-Level70</include>
+				<include condition="Skin.String(Trans,80)" file="Includes_Transparency.xml">T-Level80</include>
+				<include condition="Skin.String(Trans,90)" file="Includes_Transparency.xml">T-Level90</include>
+				<include condition="Skin.String(Trans,100)" file="Includes_Transparency.xml">T-Level100</include>
+				<!-------------------------------------------------------------------(T-Level)------------------->
+				<visible>Skin.HasSetting(HateTransparency)</visible>
+			</control>
+			<!--ooooooooooooooooooooooooooooooooooooooooooooo (T-Panel7) oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+			<control type="image">
+				<description>background image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>800</width>
+				<height>165</height>
+				<texture border="30">panel.png</texture>
+				<bordertexture border="45">panel-shadow.png</bordertexture>
+				<bordersize>22</bordersize>
+			</control>
+			<control type="button">
+				<posx>744</posx>
+				<posy>32</posy>
+				<width>20</width>
+				<height>20</height>
+				<texturefocus>close-window-focus.png</texturefocus>
+				<texturenofocus>close-window-nofocus.png</texturenofocus>
+				<onclick>Dialog.Close(1114)</onclick>
+				<visible>Skin.HasSetting(TouchScreenMode)</visible>
+			</control>
+			<control type="label">
+				<description>heading label</description>
+				<posx>40</posx>
+				<posy>40</posy>
+				<width>720</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font-32</font>
+				<label>481</label>
+				<textcolor>blue</textcolor>
+			</control>
+			<control type="image">
+				<posx>40</posx>
+				<posy>78</posy>
+				<width>720</width>
+				<height>2</height>
+				<texture>separator.png</texture>
+			</control>
+			<control type="image">
+				<posx>45</posx>
+				<posy>90</posy>
+				<width>710</width>
+				<height>30</height>
+				<texture border="7">list-focus.png</texture>
+			</control>
+			<control type="label">
+				<posx>55</posx>
+				<posy>95</posy>
+				<width>710</width>
+				<height>30</height>
+				<label>$LOCALIZE[13376]</label>
+				<font>font-20</font>
+				<textcolor>white</textcolor>
+			</control>
+			<control type="slider" id="888">
+				<description>Default Slider</description>
+				<posx>545</posx>
+				<posy>95</posy>
+				<width>200</width>
+				<height>20</height>
+				<texturesliderbar>osd_slider_bg.png</texturesliderbar>
+				<textureslidernib>osd_slider_nibNF.png</textureslidernib>
+				<textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+				<action>volume</action>
+			</control>
+		</control>
+	</controls>
+</window>

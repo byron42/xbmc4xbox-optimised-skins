@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+
+<strings>
+	<!--Dialog etikette-->
+	<string id="31000">Deel gedemp</string>
+	<string id="31001">Working...</string>
+	<!--Leë snare van id 31002-31021-->
+	<!--Page etikette-->
+	<string id="31022">Musiek lêers</string>
+	<!--Leë string met id 31023-->
+	<string id="31024">Page</string>
+	<string id="31025">Items</string>
+	<string id="31026">Video Library</string>
+	<string id="31027">Music Library</string>
+	<!--Leë snare van id 31028-31029-->
+	<!--Viewmode etikette-->
+	<string id="31030">FanArt</string>
+	<string id="31031">Volledige lys</string>
+	<string id="31032">Cover vloei</string>
+	<string id="31033">Pic duim</string>
+	<string id="31034">Wide ikone</string>
+	<string id="31035">Skyfie</string>
+	<string id="31036">Polaroid</string>
+	<!--Leë string met id 31037-->
+	<string id="31038">Wall</string>
+	<string id="31039">Item</string>
+	<string id="31040">Jukebox</string>
+	<!--Leë string met id 31041-->
+	<!--Misc etikette-->
+	<string id="31042">Speel</string>
+	<string id="31043">Statusinligting</string>
+	<string id="31044">Vinnig vorentoe</string>
+	<string id="31045">Rewind</string>
+	<string id="31046">Welkom by XBMC - Teken asseblief</string>
+	<string id="31047">Laaste aangemeld</string>
+	<!--Leë snare van id 31048-31049-->
+	<string id="31050">Eindtyd</string>
+	<string id="31051">Shutdown in 90 minute</string>
+	<string id="31052">IMDB</string>
+	<!--Lirieke skrip Ekstra etikette-->
+	<string id="31053">XBMC LYRICS</string>
+	<!--Leë string met id 31054-->
+	<!--Playlist Editor etikette-->
+	<string id="31055">Open playlist</string>
+	<string id="31056">Save playlist</string>
+	<string id="31057">Close playlist</string>
+	<string id="31058">System musiek lêers</string>
+	<string id="31059">Huidige playlist</string>
+	<string id="31060">Hierdie lêer is gestapel, kies die deel wat jy wil om te speel uit.</string>
+	<!--Leë snare van id 31061-31100-->
+	<!--Skin instellings etikette-->
+	<string id="31101">Home skerm opsies</string>
+	<string id="31102">Agtergronde</string>
+	<string id="31103">Wys blaai titels</string>
+	<string id="31104">Steek gevalle</string>
+	<string id="31105">Skakel geval animasie</string>
+	<string id="31106">Diverse opsies</string>
+	<!--Leë snare van id 31107-31108-->
+	<string id="31109">Skakel logo</string>
+	<string id="31110">Animated FanArt</string>
+	<!--Leë string met id 31111-->
+	<string id="31112">Gebruik visualisering agtergrond</string>
+	<string id="31113">Enkele beeld</string>
+	<string id="31114">Multi Image</string>
+	<string id="31115">Veilige modus</string>
+	<string id="31116">Wide kant menu knoppies</string>
+	<string id="31117">Wide huis knoppies</string>
+	<string id="31118">Horisontale huis spyskaart</string>
+	<string id="31119">Steek visualisering agtergrond</string>
+	<!--Leë snare van id 31120-31121-->
+	<string id="31122">Voorwaardelike</string>
+	<string id="31123">Steek video agtergrond</string>
+	<!--Leë string met id 31124-->
+	<string id="31125">Skakel cdArt</string>
+	<string id="31126">Skakel clearArt</string>
+	<string id="31127">Musiek gids pad</string>
+	<!--Leë snare van id 31128-31132-->
+	<string id="31133">Gebruik kunstenaar-Album sodat albums</string>
+	<string id="31134">Geanimeerde agtergronde</string>
+	<string id="31135">Animated weer ikone</string>
+	<string id="31136">Gebruik genre ikone</string>
+	<string id="31137">Wys media vlae</string>
+	<string id="31138">Custom Shutdown Menu</string>
+	<string id="31139">Gebruik plakkate</string>
+	<string id="31140">Ek haat Transparency!</string>
+	<!--Leë string met id 31141-->
+	<string id="31142">FanArt - Medium lys</string>
+	<string id="31143">FanArt - Kort lys</string>
+	<string id="31144">FanArt - lang lys</string>
+	<!--Leë string met id 31145-->
+	<string id="31146">Speel altyd sleepwaens volskerm</string>
+	<!--Leë snare van id 31147-31148-->
+	<string id="31149">Steek sleepwa ikoon</string>
+	<string id="31150">Button label:</string>
+	<string id="31151">Bron naam:</string>
+	<!--Leë string met id 31152-->
+	<string id="31153">Weer ikoon</string>
+	<string id="31154">Aansoek</string>
+	<string id="31155">Command:</string>
+	<string id="31156">Gunsteling</string>
+	<string id="31157">Kies gunsteling:</string>
+	<string id="31158">Jou verander...</string>
+	<string id="31159">[B]INSTEL VIDEO-INSTELLINGS[/B][CR]Bestuur jou video biblioteek - Stel die video speel opsies - Change video lys opsies[CR]Stel subtitel fonts</string>
+	<string id="31160">[B]INSTEL TV-INSTELLINGS[/B][CR]Verander volskerm info - Bestuur EPG data instellings[CR]Stel opname opsies</string>
+	<string id="31161">[B]INSTEL MUSIEK STELLINGS[/B][CR]Bestuur jou musiek biblioteek - Stel musiek speel opsies - Change musiek lys opsies[CR]Setup lied voorlegging - Stel karaoke opsies</string>
+	<string id="31162">[B]INSTEL FOTO SETTINGS[/B][CR]Stel prentjie lys opsies[CR]Instel slideshows</string>
+	<string id="31163">[B]INSTEL WEER INSTELLINGS[/B][CR]Stel drie stede weer inligting in te samel[CR]Kies 'n weer addon</string>
+	<string id="31164">[B]INSTEL STELSEL INSTELLINGS[/B][CR]Setup en kalibreer uitstallings - Stel klank uitvoer - Setup afstandbeheerders[CR]Stel krag besparing opsies - Skakel ontfouting - Setup meester slot</string>
+	<string id="31165">[B]INSTEL DIENS INSTELLINGS[/B][CR]Setup beheer van XBMC via UPnP en HTTP - Stel die sharing[CR]Aktiveer airplay</string>
+	<string id="31166">[B]INSTEL PROFIEL INSTELLINGS[/B][CR]Kies jou XBMC gebruiker Profile[CR]Aan te meld en gaan voort</string>
+	<string id="31167">[B]UITLEG INSTEL INSTELLINGS[/B][CR]Kies 'n vel - Die taal en streek - Verandering lêer lys opsies[CR]Stel 'n screensaver</string>
+	<string id="31168">[B]INSTEL VEL INSTELLINGS[/B][CR]Stel die Transparency! vel - verwyder en voeg die huis menu items[CR]Change vel agtergronde</string>
+	<string id="31169">[B]INSTEL BYVOEGINGS[/B][CR]Bestuur jou geïnstalleerde byvoegings - Soek vir en installeer Byvoegings van xbmc.org[CR]Verander byvoeging instellings</string>
+	<string id="31170">[B]CHECK SYTEM INLIGTING[/B][CR]Wys jou hardeware - Gaan die netwerk instellings[CR]Monitor gratis discspace</string>
+	<string id="31171">Gebruik seisoen FanArt</string>
+	<string id="31172">Gebruik ekstra FanArt</string>
+	<string id="31173">Gebruik ekstra duime</string>
+	<string id="31174">Random Items</string>
+	<string id="31175">Random</string>
+	<!--Leë string met id 31176-->
+	<string id="31177">Skakel touchscreen af...</string>
+	<string id="31178">Skakel kiosk af</string>
+	<string id="31179">Volgende episode:</string>
+	<string id="31180">Gebruik video agtergrond</string>
+	<string id="31181">Wys baniere in die lys</string>
+	<string id="31182">Steek info paneel</string>
+	<string id="31183">Gebruik pasgemaakte logo</string>
+	<string id="31184">Pas visualisering agtergrond</string>
+	<string id="31185">Gelys programme</string>
+	<string id="31186">Uitsaai vandag</string>
+	<string id="31187">Gebruik genre agtergronde</string>
+	<string id="31188">Aanbevole Items</string>
+	<string id="31189">Tip</string>
+	<string id="31190">Kies byvoeging:</string>
+	<!--Leë snare van id 31191-31199-->
+	<!--Script instellings etikette-->
+	<string id="31200">Custom byvoeging opsies</string>
+	<!--Leë snare van id 31201-31209-->
+	<string id="31210">Skakel TvTunes add-on</string>
+	<string id="31211">Skakel NextAired add-on</string>
+	<string id="31212">Skakel Qlock add-on</string>
+	<string id="31213">Wys teater ervaring knoppie in die film info dialoog</string>
+	<string id="31214">Integreer Cinema ervaring in die huis movie knoppies</string>
+	<string id="31215">Steek GlobalSearch knoppie</string>
+	<string id="31216">Extras</string>
+	<!--Leë snare van id 31217-31218-->
+	<string id="31219">Logo</string>
+	<string id="31220">ClearArt</string>
+	<string id="31221">Ekstra FanArt</string>
+	<string id="31222">TV Tune</string>
+	<string id="31223">Update gradering</string>
+	<string id="31224">Ekstra Thumbs</string>
+	<string id="31225">Kunstenaar skyfievertoning add-on</string>
+	<string id="31226">Akteur info</string>
+	<string id="31227">Direkteur info</string>
+	<string id="31228">Skrywer info</string>
+	<string id="31229">DiscArt</string>
+	<!--Leë snare van id 31230-31300-->
+	<string id="31301">Speler</string>
+	<string id="31302">Begin</string>
+	<string id="31303">Verlaat</string>
+	<string id="31304">Tik speler name...</string>
+	<string id="31305">Dit is jou beurt</string>
+	<string id="31306">Press UP voort te sit...</string>
+	<string id="31307">Telling</string>
+	<string id="31308">Oorwinning</string>
+	<string id="31309">Gewen het</string>
+	<!--Leë snare van id 31310-31399-->
+	<!--Tuisblad etikette-->
+	<string id="31400">Nuwe:</string>
+	<!--Leë snare van id 31401-31408-->
+	<string id="31409">Speler beheer</string>
+	<string id="31410">Onlangs bygevoeg</string>
+	<string id="31411">Onlangs gespeel</string>
+	<!--Leë snare van id 31412-31500-->
+	<!--Temp PVR etikette-->
+	<string id="31501">Show TV info</string>
+	<!--Leë snare van id 31502-31599-->
+	<!--Weer etikette-->
+	<string id="31600">10 Day</string>
+	<!--Leë snare van id 31601-31604-->
+	<string id="31605">Weer Voorspelling verskaf deur:</string>
+	<!--Leë snare van id 31606-31700-->
+	<!--Font etikette-->
+	<string id="31701">Default</string>
+	<string id="31702">Arial</string>
+	<string id="31703">Default Big</string>
+	<string id="31704">Arial Big</string>
+	<string id="31705">Default Big Vet</string>
+	<string id="31706">Arial groot vet</string>
+</strings>

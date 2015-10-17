@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+
+<strings>
+	<!--Étiquettes de dialogue-->
+	<string id="31000">Volume coupé</string>
+	<string id="31001">Travail...</string>
+	<!--Chaînes vides de id 31002-31021-->
+	<!--Étiquettes # de la page-->
+	<string id="31022">Fichiers de musique</string>
+	<!--Chaîne vide avec id 31023-->
+	<string id="31024">Page</string>
+	<string id="31025">Articles</string>
+	<string id="31026">Vidéothèque</string>
+	<string id="31027">Music Library</string>
+	<!--Chaînes vides de id 31028-31029-->
+	<!--Étiquettes ViewMode-->
+	<string id="31030">Fanart</string>
+	<string id="31031">Pleine liste</string>
+	<string id="31032">Cover Flow</string>
+	<string id="31033">Pic pouce</string>
+	<string id="31034">Larges icônes</string>
+	<string id="31035">Glisser</string>
+	<string id="31036">Polaroid</string>
+	<!--Chaîne vide avec id 31037-->
+	<string id="31038">Mur</string>
+	<string id="31039">Article</string>
+	<string id="31040">Jukebox</string>
+	<!--Chaîne vide avec id 31041-->
+	<!--Étiquettes Divers-->
+	<string id="31042">JEU</string>
+	<string id="31043">PAUSE</string>
+	<string id="31044">FAST FORWARD</string>
+	<string id="31045">REWIND</string>
+	<string id="31046">Bienvenue sur XBMC - S'il vous plaît Accès</string>
+	<string id="31047">Dernière connecté</string>
+	<!--Chaînes vides de id 31048-31049-->
+	<string id="31050">Heure de fin</string>
+	<string id="31051">Arrêt en 90 minutes</string>
+	<string id="31052">IMDB</string>
+	<!--Paroles Script étiquettes Extra-->
+	<string id="31053">XBMC LYRICS</string>
+	<!--Chaîne vide avec id 31054-->
+	<!--Étiquettes de l'éditeur de Playlist-->
+	<string id="31055">Ouvrir playlist</string>
+	<string id="31056">Sauvegarder playlist</string>
+	<string id="31057">Fermer playlist</string>
+	<string id="31058">Fichiers musicaux système</string>
+	<string id="31059">Playlist actuelle</string>
+	<string id="31060">Ce fichier est empilé, sélectionnez la partie que vous voulez jouer de.</string>
+	<!--Chaînes vides de id 31061-31100-->
+	<!--Paramètres de la peau étiquettes-->
+	<string id="31101">Options de l'écran d'accueil</string>
+	<string id="31102">Milieux</string>
+	<string id="31103">Afficher défilement des titres</string>
+	<String id="31104">Masquer cas</string>
+	<string id="31105">Animation cas Désactiver</string>
+	<string id="31106">Options diverses</string>
+	<!--Chaînes vides de id 31107-31108-->
+	<String id="31109">Activer logos</string>
+	<string id="31110">Animation fanart</string>
+	<!--Chaîne vide avec id 31111-->
+	<string id="31112">Utilisation visualisation fond</string>
+	<string id="31113">Seule image</string>
+	<string id="31114">Multi image</string>
+	<string id="31115">Mode sans échec</string>
+	<string id="31116">Larges boutons du menu latéral</string>
+	<string id="31117">Larges boutons de menu de la maison</string>
+	<string id="31118">Menu d'accueil horizontale</string>
+	<string id="31119">Masquer visualisation fond</string>
+	<!--Chaînes vides de id 31120-31121-->
+	<string id="31122">Conditionnelle</string>
+	<string id="31123">Masquer vidéo de fond</string>
+	<!--Chaîne vide avec id 31124-->
+	<string id="31125">Activer cdArt</string>
+	<string id="31126">Activer Clearart</string>
+	<string id="31127">Chemin de dossier de musique</string>
+	<!--Chaînes vides de id 31128-31132-->
+	<string id="31133">Pour utilisation Artiste-Album pour les albums</string>
+	<string id="31134">Milieux animés</string>
+	<string id="31135">Icônes météo animées</string>
+	<string id="31136">Icônes utilisation de genre</string>
+	<String id="31137">Afficher drapeaux des médias</string>
+	<string id="31138">Arrêt de menu personnalisé</string>
+	<string id="31139">Utilisation affiches</string>
+	<string id="31140">Je déteste la transparence!</string>
+	<!--Chaîne vide avec id 31141-->
+	<string id="31142">Fanart - Liste moyen</string>
+	<string id="31143">Fanart - Short list</string>
+	<string id="31144">Fanart - Longue liste</string>
+	<!--Chaîne vide avec id 31145-->
+	<string id="31146">Jouent toujours remorques plein écran</string>
+	<!--Chaînes vides de id 31147-31148-->
+	<string id="31149">Masquer remorque icône</string>
+	<string id="31150">étiquette du bouton:</string>
+	<string id="31151">Nom de Source:</string>
+	<!--Chaîne vide avec id 31152-->
+	<string id="31153">Icône météo</string>
+	<string id="31154">Application</string>
+	<string id="31155">Commande:</string>
+	<string id="31156">Favori</string>
+	<string id="31157">Sélectionnez préféré:</string>
+	<string id="31158">Modifier vos paramètres...</string>
+	<string id="31159">[B]CONFIGURER LES PARAMÈTRES DE VIDÉO[/B][CR]Gérez votre bibliothèque vidéo - Définir les options de lecture vidéo - Changer nos options vidéo[CR]Définir les polices de sous-titres</string>
+	<string id="31160">[B]CONFIGURER LES PARAMÈTRES DE TV[/B][CR]Changer infos plein écran - Gérer les paramètres de données EPG[CR]Configurer les options d'enregistrement</string>
+	<string id="31161">[B]CONFIGURATION RÉGLAGES MUSIQUE[/B][CR]Gérer votre bibliothèque de musique - musique Set options de lecture - Changer de musique options de liste[CR]Configuration chanson soumission - Options de karaoké Set</string>
+	<string id="31162">[B]CONFIGURER LES PARAMÈTRES DE L'IMAGE[/B][CR]Définir une image options de liste[CR]Configurer diaporamas</string>
+	<string id="31163">[B]CONFIGURER LES PARAMÈTRES DE METEO[/B][CR]Définir trois villes pour recueillir des informations de temps[CR]Sélectionnez un addon de temps</string>
+	<string id="31164">[B]REGLAGES SYSTEME CONFIGURATION[/B][CR]Configuration et étalonner des écrans - Programmation de la sortie audio - Configuration des télécommandes[CR]Définir les options d'économie d'énergie - Activer le débogage - Master Lock Setup </string>
+	<string id="31165">[B]CONFIGURATION DE SERVICE CONFIGURATION[/B][CR]Commande d'installation de XBMC via UPnP et HTTP - Configurer le partage de fichiers[CR]Activer AirPlay</string>
+	<string id="31166">[B]CONFIGUREZ PROFIL[/B][CR]Choisissez votre profil d'utilisateur de XBMC[CR]Pour vous connecter et continuer</string>
+	<string id="31167">[B]CONFIGURER LES PARAMÈTRES DE APPARENCE[/B][CR]Sélectionner une peau - langue et Définir la région - Changement fichier options de liste[CR]Configurer un écran</string>
+	<string id="31168">[B]CONFIGURER LES PARAMÈTRES DE PEAU[/B][CR]Configuration sur la transparence! peau - Ajouter et supprimer des éléments du menu d'accueil[CR]Changer de peau milieux</string>
+	<string id="31169">[B]CONFIGURATION ADD-ONS[/B][CR]Gérer vos add-ons installés - Parcourir et installer des modules complémentaires de xbmc.org[CR]Modifier Add-on paramètres</string>
+	<string id="31170">[B]INFORMATIONS SUR LA VERIFICATION SYTEM[/B][CR]Afficher votre matériel - Vérifiez les paramètres actuels du réseau[CR]Surveillance discspace libre</string>
+	<string id="31171">Utilisez saison fanart</string>
+	<string id="31172">Utilisez fanart supplémentaire</string>
+	<string id="31173">Utilisez pouces supplémentaires</string>
+	<string id="31174">Articles au hasard</string>
+	<string id="31175">Aléatoire</string>
+	<!--Chaîne vide avec id 31176-->
+	<string id="31177">Activer le mode tactile</string>
+	<string id="31178">Activer le mode kiosque</string>
+	<string id="31179">Prochain épisode:</string>
+	<string id="31180">Utilisation vidéo de fond</string>
+	<string id="31181">Afficher bannières dans la liste</string>
+	<string id="31182">Masquer info panneau</string>
+	<String id="31183">Utilisez logo personnalisé</string>
+	<string id="31184">Personnaliser la visualisation de fond</string>
+	<string id="31185">Spectacles cotées</string>
+	<string id="31186">Diffusée aujourd'hui</string>
+	<string id="31187">Milieux utilisation de genre</string>
+	<string id="31188">Articles recommandés</string>
+	<string id="31189">Astuce</string>
+	<string id="31190">Sélectionnez add-on:</string>
+	<!--Chaînes vides de id 31191-31199-->
+	<!--Paramètres de script étiquettes-->
+	<string id="31200">Personnalisé add-on des options</string>
+	<!--Chaînes vides de id 31201-31209-->
+	<string id="31210">Activer TvTunes module</string>
+	<string id="31211">Activer NextAired module</string>
+	<string id="31212">Activer Qlock module</string>
+	<string id="31213">Bouton Experience Show Cinéma dialogue info de film dans</string>
+	<string id="31214">Intégrer Cinéma expérience dans les boutons du menu de film à la maison</string>
+	<string id="31215">Hide bouton GlobalSearch</string>
+	<string id="31216">Extras</string>
+	<!--Chaînes vides de id 31217-31218-->
+	<string id="31219">Logo</string>
+	<string id="31220">Clearart</string>
+	<string id="31221">Supplémentaire Fanart</string>
+	<string id="31222">TV Tune</string>
+	<string id="31223">Note de mise à jour</string>
+	<string id="31224">Supplémentaire pouces</string>
+	<string id="31225">Artiste diaporama add-on</string>
+	<string id="31226">Infos Acteur</string>
+	<string id="31227">Info Directeur</string>
+	<string id="31228">Info Writer</string>
+	<string id="31229">Discart</string>
+	<!--Chaînes vides de id 31230-31300-->
+	<string id="31301">JOUEUR</string>
+	<string id="31302">Début</string>
+	<string id="31303">QUIT</string>
+	<string id="31304">S'il vous plaît entrer les noms des joueurs...</string>
+	<string id="31305">C'est à votre tour</string>
+	<string id="31306">Appuyez sur HAUT pour continuer...</string>
+	<string id="31307">Score</string>
+	<string id="31308">Victoires</string>
+	<string id="31309">A gagné</string>
+	<!--Chaînes vides de id 31310-31399-->
+	<!--Accueil étiquettes-->
+	<string id="31400">Nouveau:</string>
+	<!--Chaînes vides de id 31401-31408-->
+	<string id="31409">Commandes du lecteur</string>
+	<string id="31410">Ajouté récemment</string>
+	<string id="31411">Récemment Joué</string>
+	<!--Chaînes vides de id 31412-31500-->
+	<!--Temp étiquettes de PVR-->
+	<string id="31501">Afficher infos tv</string>
+	<!--Chaînes vides de id 31502-31599-->
+	<!--Étiquettes météo-->
+	<string id="31600">10 jours</string>
+	<!--Chaînes vides de id 31601-31604-->
+	<string id="31605">Prévisions météo  fournie par:</string>
+	<!--Chaînes vides de id 31606-31700-->
+	<!--Étiquettes de Police-->
+	<string id="31701">Défaut</string>
+	<string id="31702">Arial</string>
+	<string id="31703">Default Big</string>
+	<string id="31704">Arial Big</string>
+	<string id="31705">Défaut Big Gras</string>
+	<string id="31706">Arial Gras Big</string>
+</strings>
